@@ -349,7 +349,7 @@ class ChessBoard(QFrame):
 
         # inform user
         if self.move_complete_callback:
-            allowed = self.move_complete_callback(self, move)
+            self.move_complete_callback(self, move)
 
     def game_over(self):
         legal_moves = list(filter(self.model.is_legal,

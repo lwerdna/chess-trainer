@@ -23,30 +23,25 @@ def pv_to_san(pv, board):
 if __name__ == '__main__':
     board = chess.Board()
     board.set_fen('2k5/2P5/8/3K4/8/8/8/8 w - - 0 1')
+    board.set_fen('8/5k2/8/8/1P4K1/8/8/8 w - - 0 1') # keep opposition, race to key square
+    board.set_fen('8/5k2/8/5K2/1P6/8/8/8 b - - 1 1') # after 1.Kf5
+    board.set_fen('8/4k3/8/4K3/1P6/8/8/8 b - - 3 2') # after 2.Ke5
 
     engine = chess.engine.SimpleEngine.popen_uci("/usr/local/bin/stockfish")
 
     # demonstrate normal streaming evaluation
-    if 0:
+    if 1:
         with engine.analysis(board) as analysis:
             # analysis: chess.engine.SimpleAnalysisResult
             #     info: dict with keys like 'depth', 'seldepth', 'multipv', 'score', etc.
             for info in analysis:
-                print('    score: ' + str(info.get('score'))) # chess.engine.Score
-                print('       pv: ' + str(info.get('pv')))
-                print('    depth: ' + str(info.get('depth')))
-                print(' seldepth: ' + str(info.get('seldepth')))
+                #print('    score: ' + str(info.get('score'))) # chess.engine.PovScore
+                #print('       pv: ' + str(info.get('pv')))
+                #print('    depth: ' + str(info.get('depth')))
+                #print(' seldepth: ' + str(info.get('seldepth')))
 
-                if info.get('pv'):
-                    btmp = board.copy()
-                    san_strs = []
-                    for m in info.get('pv'):
-                        san_strs.append(btmp.san(m))
-                        btmp.push(m)
-                    print('  pv(san): ' + ' '.join(san_strs))
-
-                print('----')
-                breakpoint()
+                if 'pv' in info:
+                    print('  pv(san): ' + pv_to_san(info.get('pv'), board))
 
                 # Arbitrary stop condition.
                 if info.get("seldepth", 0) > 40:
@@ -81,8 +76,8 @@ if __name__ == '__main__':
                 if info.get("seldepth", 0) > 40:
                     break
 
-    # demonstrate multiple principal variations
-    if 1:
+    # demonstrate multiple moves
+    if 0:
         move0 = chess.Move.from_uci('d5c6')
         move1 = chess.Move.from_uci('d5d6')
         move2 = chess.Move.from_uci('d5e6')

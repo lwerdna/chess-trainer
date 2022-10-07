@@ -6,6 +6,7 @@ import random
 import chess
 import chess.engine
 
+import evaluation
 import debug
 
 from PyQt5.QtGui import QIcon
@@ -22,33 +23,22 @@ import pgnfile
 state = 'INIT' # INIT, WON, LOST, PLAYING
 database = None
 problem = None
-engine = None
+player_color = None
 
-def get_evaluation(model):
-    global engine
-    info = engine.analyse(model, chess.engine.Limit(time=.5))
-
-    best_move = None
-    if info.get('pv'):
-        best_move = info.get('pv')[0]
-
-    return (best_move, info['score'].white())
-
-def is_winning(model):
-    global engine
-    (move, result) = get_evaluation(model)
-    match type(result):
-        case chess.engine.Mate: winning = True
-        case chess.engine.Cp: winning = result.score() > 10
+def is_winning(score):
+    match type(score):
+        case chess.engine.Mate: return True
+        case chess.engine.Cp: return score.score() > 10
         case _: assert False
-    return winning
 
 def select_problem(board):
-    global problem, state
+    global problem, state, player_color
     problem = random.choice(database)
     problem = database.games[79]
     board.set_fen(problem.headers['FEN'])
     board.update_view()
+
+    player_color = board.model.turn
     state = 'PLAYING'
     print(f'selected problem: {problem}')
 
@@ -59,8 +49,7 @@ def on_move_request(board, move):
     return True
 
 def on_move_complete(board, move):
-    global state
-    global engine
+    global state, player_color
 
     print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
     
@@ -82,7 +71,9 @@ def on_move_complete(board, move):
         state = 'WON'
 
     # did the evaluation remain a win?
-    if not is_winning(board.model):
+    (score, reply) = evaluation.evaluate(board.model, player_color)
+
+    if not is_winning(score):
         print('non-winning board detected')
         state = 'LOST'
 
@@ -96,17 +87,24 @@ def on_move_complete(board, move):
             # update PGN
             select_problem(board)
         case 'PLAYING':
-            result = engine.play(board.model, chess.engine.Limit(time=0.1))
-            board.model.push(result.move)
+            # select opponent reply
+            #print(f'evaluation.evaluate() returned {reply0}')
+            #reply1 = evaluation.bestmove(board.model)
+
+            b = board.model.copy()
+            m = b.pop()
+            reply = evaluation.best_reply_to(b, m)
+            print(f'found opponent reply: {reply}')
+            board.model.push(reply)
             board.update_view()
+
         case _:
             breakpoint()
 
 def on_board_init(board):
-    global engine
     global database
 
-    engine = chess.engine.SimpleEngine.popen_uci("/usr/local/bin/stockfish")
+    evaluation.init()
 
     database = pgnfile.PgnFile(sys.argv[1])
 
@@ -117,8 +115,7 @@ def on_board_init(board):
     select_problem(board)
 
 def on_exit():
-    global engine
-    engine.quit()
+    evaluation.exit()
 
 #------------------------------------------------------------------------------
 # GUI

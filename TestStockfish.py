@@ -26,17 +26,33 @@ def on_move_complete(board, move):
 
     print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
     
-    if not engine:
-        engine = chess.engine.SimpleEngine.popen_uci('/usr/local/bin/stockfish')
+    move = None
 
-    result = engine.play(board.model, chess.engine.Limit(time=0.1))
-    board.model.push(result.move)
+    with engine.analysis(board.model) as analysis:
+        # analysis: chess.engine.SimpleAnalysisResult
+        #     info: dict with keys like 'depth', 'seldepth', 'multipv', 'score', etc.
+        for info in analysis:
+            print('    score: ' + str(info.get('score'))) # chess.engine.Score
+            print('       pv: ' + str(info.get('pv')))
+            print('    depth: ' + str(info.get('depth')))
+            print(' seldepth: ' + str(info.get('seldepth')))
+            print('---------')
+
+            score = info.get('score') # chess.engine.Score
+            if 'pv' in info:
+                move = info['pv'][0]
+            if info.get("seldepth", 0) >= 20:
+                break
+
+    board.model.push(move)
     board.update_view()
 
 pickup = ''
 mode = ''
 def on_board_init(board):
-    global mode, pickup
+    global mode, pickup, engine
+    
+    engine = chess.engine.SimpleEngine.popen_uci('/usr/local/bin/stockfish')
     mode = 'game'
     pickup = 'white'
     board.set_mode(mode)
@@ -48,7 +64,8 @@ def on_board_init(board):
 
 def on_exit():
     global engine
-    engine.quit()
+    if engine:
+        engine.quit()
 
 #------------------------------------------------------------------------------
 # GUI
