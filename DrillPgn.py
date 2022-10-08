@@ -34,7 +34,7 @@ def is_winning(score):
 def select_problem(board):
     global problem, state, player_color
     problem = random.choice(database)
-    problem = database.games[79]
+    #problem = database.games[79]
     board.set_fen(problem.headers['FEN'])
     board.update_view()
 
@@ -71,7 +71,9 @@ def on_move_complete(board, move):
         state = 'WON'
 
     # did the evaluation remain a win?
-    (score, reply) = evaluation.evaluate(board.model, player_color)
+    bcopy = board.model.copy()
+    bcopy.pop()
+    (reply, score) = evaluation.best_reply_to(bcopy, move)
 
     if not is_winning(score):
         print('non-winning board detected')
@@ -91,9 +93,6 @@ def on_move_complete(board, move):
             #print(f'evaluation.evaluate() returned {reply0}')
             #reply1 = evaluation.bestmove(board.model)
 
-            b = board.model.copy()
-            m = b.pop()
-            reply = evaluation.best_reply_to(b, m)
             print(f'found opponent reply: {reply}')
             board.model.push(reply)
             board.update_view()
