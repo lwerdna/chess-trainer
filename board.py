@@ -39,6 +39,7 @@ class ChessBoard(QFrame):
         self.difficulty = None
         self.autosave = None
         self.saved = True
+        self.auto_promote_to = None # chess.QUEEN, etc.
 
         self.move_request_callback = None
         self.move_complete_callback = None
@@ -562,69 +563,72 @@ class PieceLabel(QLabel):
                 self.dst_square = square
                 break
 
-        uci = self.src_square.objectName() + self.dst_square.objectName()
 
-        a, b = self.src_square.objectName(), self.dst_square.objectName()
-        if a == b:
+        # get name like 'a7' or 'g8'
+        sqr_src = chess.parse_square(self.src_square.objectName())
+        sqr_dst = chess.parse_square(self.dst_square.objectName())
+
+        if sqr_src == sqr_dst:
             return
 
-        move = chess.Move.from_uci(a + b)
+        piece = self.board.model.piece_at(sqr_src)
+
+        promotion = False
+
+        if piece.piece_type == chess.PAWN:
+            if piece.color == chess.WHITE and chess.square_rank(sqr_dst)+1 == 8:
+                promotion = True
+            elif piece.color == chess.BLACK and chess.square_rank(sqr_dst)+1 == 1:
+                promotion = True
+
+        prom_piece = None
+        if promotion:
+            if self.board.auto_promote_to != None:
+                print(f'HERP: {self.board.auto_promote_to}')
+                print(f'HERP: {type(self.board.auto_promote_to)}')
+                prom_piece = self.board.auto_promote_to
+            else:
+                # prompt for the promotion piece
+                promotion_prompt = QMessageBox()
+                promotion_prompt.setWindowIcon(QIcon('./assets/icons/pawn_icon.png'))
+                promotion_prompt.setIcon(QMessageBox.Question)
+                promotion_prompt.setWindowTitle("Chess")
+                promotion_prompt.setText("Choose promotion piece.")
+                knight_btn = promotion_prompt.addButton("Knight", QMessageBox.AcceptRole)
+                bishop_btn = promotion_prompt.addButton("Bishop", QMessageBox.AcceptRole)
+                rook_btn = promotion_prompt.addButton("Rook", QMessageBox.AcceptRole)
+                queen_btn = promotion_prompt.addButton("Queen", QMessageBox.AcceptRole)
+                promotion_prompt.exec()
+
+                cb = promotion_prompt.clickedButton()
+                if cb == knight_btn:
+                    prom_piece = chess.KNIGHT
+                elif cb == bishop_btn:
+                    prom_piece = chess.BISHOP
+                elif cb == rook_btn:
+                    prom_piece = chess.ROOK
+                elif cb == queen_btn:
+                    prom_piece = chess.QUEEN
+
+        print(f'sqr_src: {sqr_src}')
+        print(f'sqr_dst: {sqr_dst}')
+        print(f'prom_piece: {prom_piece}')
+        move = chess.Move(sqr_src, sqr_dst, promotion=prom_piece)
+        print(f'move: {move}')
         self.board.move_inputted(move)
         self.board.update_view()
 
         return
 
-        if self.dst_square.objectName() in self.legal_dst_squares:  # If legal move
+#        if self.dst_square.objectName() in self.legal_dst_squares:  # If legal move
             # Snap to destination square
-            self.board.layout.removeWidget(self)
-            row = self.dst_square.y() / self.board.sqr_size
-            col = self.dst_square.x() / self.board.sqr_size
-            self.board.layout.addWidget(self, round(row), round(col))
+#            self.board.layout.removeWidget(self)
+#            row = self.dst_square.y() / self.board.sqr_size
+#            col = self.dst_square.x() / self.board.sqr_size
+#            self.board.layout.addWidget(self, round(row), round(col))
 
 
-#
-#                    return
-#
-#                    #src_sqr_index = common.san_to_index[self.src_square.objectName()]
-#                    #dst_sqr_index = common.san_to_index[self.dst_square.objectName()]
-#                    #from_to = (src_sqr_index << 6) + dst_sqr_index
-#
-#                    # If enemy piece is at destination square, remove it from the board (capture)
-#                    piece_label = self.board.view_piece_at_square(dst_sqr_index)
-#                    if piece_label:
-#                        if piece_label.is_white != self.is_white:
-#                            piece_label.setParent(None)
-#
-#                    for move in self.legal_moves:
-#                        if move & 0xFFF == from_to:
-#                            move_made = move
-#
-#                    move_type = move_made & (0x3 << 14)
-#
-#                    if move_type == PROMOTION:
-#                        promotion_prompt = QMessageBox()
-#                        promotion_prompt.setWindowIcon(QIcon('./assets/icons/pawn_icon.png'))
-#                        promotion_prompt.setIcon(QMessageBox.Question)
-#                        promotion_prompt.setWindowTitle("Chess")
-#                        promotion_prompt.setText("Choose promotion piece.")
-#                        knight_btn = promotion_prompt.addButton("Knight", QMessageBox.AcceptRole)
-#                        bishop_btn = promotion_prompt.addButton("Bishop", QMessageBox.AcceptRole)
-#                        rook_btn = promotion_prompt.addButton("Rook", QMessageBox.AcceptRole)
-#                        queen_btn = promotion_prompt.addButton("Queen", QMessageBox.AcceptRole)
-#                        promotion_prompt.exec()
-#
-#                        if promotion_prompt.clickedButton() == knight_btn:
-#                            move_made = PROMOTION + KNIGHT_PROMOTION + from_to
-#                            self.setPixmap(QPixmap('./assets/pieces/{}.png'.format('wn' if self.is_white else 'bn')))
-#                        elif promotion_prompt.clickedButton() == bishop_btn:
-#                            move_made = PROMOTION + BISHOP_PROMOTION + from_to
-#                            self.setPixmap(QPixmap('./assets/pieces/{}.png'.format('wb' if self.is_white else 'bb')))
-#                        elif promotion_prompt.clickedButton() == rook_btn:
-#                            move_made = PROMOTION + ROOK_PROMOTION + from_to
-#                            self.setPixmap(QPixmap('./assets/pieces/{}.png'.format('wr' if self.is_white else 'br')))
-#                        elif promotion_prompt.clickedButton() == queen_btn:
-#                            move_made = PROMOTION + QUEEN_PROMOTION + from_to
-#                            self.setPixmap(QPixmap('./assets/pieces/{}.png'.format('wq' if self.is_white else 'bq')))
+
 #                    elif move_type == CASTLING:
 #                        self.board.do_rook_castle(move_made & 0x3F, False)
 #

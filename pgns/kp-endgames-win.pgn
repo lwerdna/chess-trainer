@@ -1,5 +1,6 @@
 [EVENT "Position #0"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/P7/8/8/8/4K3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -7,6 +8,7 @@
 
 [EVENT "Position #1"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/1P1K4/8/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -14,6 +16,7 @@
 
 [EVENT "Position #2"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/2P1K3/8/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -21,6 +24,7 @@
 
 [EVENT "Position #3"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/1K1P4/8/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -28,6 +32,7 @@
 
 [EVENT "Position #4"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "7K/7P/7k/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -35,6 +40,7 @@
 
 [EVENT "Position #5"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2Pk4/K7/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -42,6 +48,7 @@
 
 [EVENT "Position #6"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2kP4/5K2/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -49,6 +56,7 @@
 
 [EVENT "Position #7"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3kP3/6K1/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -56,6 +64,7 @@
 
 [EVENT "Position #8"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/5P1k/8/6K1/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -63,6 +72,7 @@
 
 [EVENT "Position #9"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/5Pk1/4K3/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -70,6 +80,7 @@
 
 [EVENT "Position #10"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/kP6/3K4/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -77,6 +88,7 @@
 
 [EVENT "Position #11"]
 [DESCRIPTION "pawn on 7th"]
+[AUTO_PROMOTE "Q"]
 [FEN "K7/P7/1k6/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -84,6 +96,7 @@
 
 [EVENT "Position #12"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/5P2/3K4/8/8/8/8 w - - 1 3"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -91,6 +104,7 @@
 
 [EVENT "Position #13"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/8/2P5/3K4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -98,6 +112,7 @@
 
 [EVENT "Position #14"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/8/2P5/4K3/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -105,6 +120,7 @@
 
 [EVENT "Position #15"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/8/1K1P4/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -112,6 +128,7 @@
 
 [EVENT "Position #16"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/8/3PK3/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -119,6 +136,7 @@
 
 [EVENT "Position #17"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/2K1P3/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -126,6 +144,7 @@
 
 [EVENT "Position #18"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/4P3/3K4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -133,6 +152,7 @@
 
 [EVENT "Position #19"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/4PK2/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -140,6 +160,7 @@
 
 [EVENT "Position #20"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "4K3/8/1kP5/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -147,6 +168,7 @@
 
 [EVENT "Position #21"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "5k2/8/3P4/8/6K1/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -154,6 +176,7 @@
 
 [EVENT "Position #22"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "5k2/8/4P1K1/8/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -161,6 +184,7 @@
 
 [EVENT "Position #23"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2k5/4P3/8/1K6/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -168,6 +192,7 @@
 
 [EVENT "Position #24"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/5P2/2K5/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -175,6 +200,7 @@
 
 [EVENT "Position #25"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/2Pk4/K7/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -182,6 +208,7 @@
 
 [EVENT "Position #26"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3kP3/5K2/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -189,6 +216,7 @@
 
 [EVENT "Position #27"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/5P1k/8/6K1/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -196,6 +224,7 @@
 
 [EVENT "Position #28"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/5Pk1/4K3/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -203,6 +232,7 @@
 
 [EVENT "Position #29"]
 [DESCRIPTION "pawn on 6th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/K7/P7/1k6/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -210,6 +240,7 @@
 
 [EVENT "Position #30"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1K6/3k4/8/2P5/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -217,6 +248,7 @@
 
 [EVENT "Position #31"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/8/2K5/1P6/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -224,6 +256,7 @@
 
 [EVENT "Position #32"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/8/K7/2P5/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -231,6 +264,7 @@
 
 [EVENT "Position #33"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2K5/8/8/2k1P3/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -238,6 +272,7 @@
 
 [EVENT "Position #34"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/4K3/8/2P5/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -245,6 +280,7 @@
 
 [EVENT "Position #35"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/8/8/1P1K4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -252,6 +288,7 @@
 
 [EVENT "Position #36"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3K4/8/8/3k1P2/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -259,6 +296,7 @@
 
 [EVENT "Position #37"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/2K5/3P4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -266,6 +304,7 @@
 
 [EVENT "Position #38"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/8/3P1K2/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -273,6 +312,7 @@
 
 [EVENT "Position #39"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/8/K1P5/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -280,6 +320,7 @@
 
 [EVENT "Position #40"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "4k3/8/5K2/2P5/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -287,6 +328,7 @@
 
 [EVENT "Position #41"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "5k2/7K/8/5P2/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -294,6 +336,7 @@
 
 [EVENT "Position #42"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "6K1/8/1k6/3P4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -301,6 +344,7 @@
 
 [EVENT "Position #43"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "6k1/8/7K/3P4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -308,6 +352,7 @@
 
 [EVENT "Position #44"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "6k1/8/8/3P4/8/4K3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -315,6 +360,7 @@
 
 [EVENT "Position #45"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "7K/8/8/4P2k/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -322,6 +368,7 @@
 
 [EVENT "Position #46"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/8/3Pk3/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -329,6 +376,7 @@
 
 [EVENT "Position #47"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2k5/8/3P1K2/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -336,6 +384,7 @@
 
 [EVENT "Position #48"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2k5/8/4P3/4K3/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -343,6 +392,7 @@
 
 [EVENT "Position #49"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2k5/8/5P2/2K5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -350,6 +400,7 @@
 
 [EVENT "Position #50"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/K7/P7/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -357,6 +408,7 @@
 
 [EVENT "Position #51"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/7k/8/5P2/5K2/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -364,6 +416,7 @@
 
 [EVENT "Position #52"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3k4/PK6/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -371,6 +424,7 @@
 
 [EVENT "Position #53"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/7k/5P2/2K5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -378,6 +432,7 @@
 
 [EVENT "Position #54"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/1P2k3/8/2K5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -385,6 +440,7 @@
 
 [EVENT "Position #55"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/1kP5/3K4/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -392,6 +448,7 @@
 
 [EVENT "Position #56"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/3P2k1/8/4K3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -399,6 +456,7 @@
 
 [EVENT "Position #57"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4P2k/8/K7/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -406,6 +464,7 @@
 
 [EVENT "Position #58"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4Pk2/3K4/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -413,6 +472,7 @@
 
 [EVENT "Position #59"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4kP2/6K1/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -420,6 +480,7 @@
 
 [EVENT "Position #60"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4kP2/7K/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -427,6 +488,7 @@
 
 [EVENT "Position #61"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/P2k4/1K6/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -434,6 +496,7 @@
 
 [EVENT "Position #62"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/kP6/2K5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -441,6 +504,7 @@
 
 [EVENT "Position #63"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/k7/8/2P5/5K2/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -448,6 +512,7 @@
 
 [EVENT "Position #64"]
 [DESCRIPTION "pawn on 5th"]
+[AUTO_PROMOTE "Q"]
 [FEN "K7/8/8/k2P4/8/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -455,6 +520,7 @@
 
 [EVENT "Position #65"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "1K6/4k3/8/8/3P4/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -462,6 +528,7 @@
 
 [EVENT "Position #66"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "2K5/8/1k6/8/4P3/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -469,6 +536,7 @@
 
 [EVENT "Position #67"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/8/4K3/7P/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -476,6 +544,7 @@
 
 [EVENT "Position #68"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "4K3/2k5/8/8/3P4/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -483,6 +552,7 @@
 
 [EVENT "Position #69"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "6k1/8/8/8/4P3/1K6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -490,6 +560,7 @@
 
 [EVENT "Position #70"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "7k/8/8/8/5PK1/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -497,6 +568,7 @@
 
 [EVENT "Position #71"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/8/6k1/4P3/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -504,6 +576,7 @@
 
 [EVENT "Position #72"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1k6/8/8/5P2/8/2K5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -511,6 +584,7 @@
 
 [EVENT "Position #73"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2K5/5k2/8/4P3/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -518,6 +592,7 @@
 
 [EVENT "Position #74"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2K5/k7/8/1P6/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -525,6 +600,7 @@
 
 [EVENT "Position #75"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2k5/8/3K4/2P5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -532,6 +608,7 @@
 
 [EVENT "Position #76"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/8/5K2/4P3/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -539,6 +616,7 @@
 
 [EVENT "Position #77"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/8/8/3KP3/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -546,6 +624,7 @@
 
 [EVENT "Position #78"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/K7/8/P7/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -553,6 +632,7 @@
 
 [EVENT "Position #79"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/5k2/8/8/1P4K1/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -560,6 +640,7 @@
 
 [EVENT "Position #80"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/6k1/8/8/4KP2/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -567,6 +648,7 @@
 
 [EVENT "Position #81"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4K3/8/1kP5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -574,6 +656,7 @@
 
 [EVENT "Position #82"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/6k1/8/3K1P2/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -581,6 +664,7 @@
 
 [EVENT "Position #83"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/7k/8/5P2/5K2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -588,6 +672,7 @@
 
 [EVENT "Position #84"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/6k1/3P4/5K2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -595,6 +680,7 @@
 
 [EVENT "Position #85"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/1P2k3/8/2K5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -602,6 +688,7 @@
 
 [EVENT "Position #86"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/3kP3/5K2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -609,6 +696,7 @@
 
 [EVENT "Position #87"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/P2k4/K7/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -616,6 +704,7 @@
 
 [EVENT "Position #88"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/k7/8/3P4/1K6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -623,6 +712,7 @@
 
 [EVENT "Position #89"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "k7/8/8/8/1KP5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -630,6 +720,7 @@
 
 [EVENT "Position #90"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "k7/8/8/8/3P4/1K6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -637,6 +728,7 @@
 
 [EVENT "Position #91"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "k7/8/8/8/1KP5/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -644,6 +736,7 @@
 
 [EVENT "Position #92"]
 [DESCRIPTION "pawn on 4th"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/8/2K5/5P2/8/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -651,6 +744,7 @@
 
 [EVENT "Position #93"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/5K2/8/8/8/2P5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -658,6 +752,7 @@
 
 [EVENT "Position #94"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1K6/3k4/8/2P5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -665,6 +760,7 @@
 
 [EVENT "Position #95"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/8/8/k7/3P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -672,6 +768,7 @@
 
 [EVENT "Position #96"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "5k2/2K5/8/8/8/5P2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -679,6 +776,7 @@
 
 [EVENT "Position #97"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "2K5/8/1k6/8/8/5P2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -686,6 +784,7 @@
 
 [EVENT "Position #98"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "5K2/8/6k1/8/8/3P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -693,6 +792,7 @@
 
 [EVENT "Position #99"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/8/4K3/8/7P/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -700,6 +800,7 @@
 
 [EVENT "Position #100"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4k3/6K1/7P/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -707,6 +808,7 @@
 
 [EVENT "Position #101"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1k6/8/8/K1P5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -714,6 +816,7 @@
 
 [EVENT "Position #102"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1k6/8/K7/8/1P6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -721,6 +824,7 @@
 
 [EVENT "Position #103"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1k6/3K4/8/8/1P6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -728,6 +832,7 @@
 
 [EVENT "Position #104"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/6k1/8/3K1P2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -735,6 +840,7 @@
 
 [EVENT "Position #105"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/k7/8/8/K2P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -742,6 +848,7 @@
 
 [EVENT "Position #106"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/7k/5P2/2K5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -749,6 +856,7 @@
 
 [EVENT "Position #107"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/7K/5k1P/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -756,6 +864,7 @@
 
 [EVENT "Position #108"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/k7/8/8/1PK5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -763,6 +872,7 @@
 
 [EVENT "Position #109"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/7k/8/5P2/5K2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -770,6 +880,7 @@
 
 [EVENT "Position #110"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/8/8/8/1PK5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -777,6 +888,7 @@
 
 [EVENT "Position #111"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "K7/3k4/8/8/8/2P5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -784,6 +896,7 @@
 
 [EVENT "Position #112"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3k4/8/5K2/4P3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -791,6 +904,7 @@
 
 [EVENT "Position #113"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/6K1/8/8/1P4k1/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -798,6 +912,7 @@
 
 [EVENT "Position #114"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3k4/8/4K3/1P6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -805,6 +920,7 @@
 
 [EVENT "Position #115"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1k6/8/8/5P2/8/2K5 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -812,6 +928,7 @@
 
 [EVENT "Position #116"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1K6/8/8/4P1k1/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -819,6 +936,7 @@
 
 [EVENT "Position #117"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/1k6/8/5P2/8/2K5 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -826,6 +944,7 @@
 
 [EVENT "Position #118"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "k7/8/8/8/8/3P4/8/2K5 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -833,6 +952,7 @@
 
 [EVENT "Position #119"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4k3/8/5K2/4P3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -840,6 +960,7 @@
 
 [EVENT "Position #120"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/8/1P3k2/8/4K3 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -847,6 +968,7 @@
 
 [EVENT "Position #121"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/6k1/8/8/8/4KP2/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -854,6 +976,7 @@
 
 [EVENT "Position #122"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/8/k7/8/3P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -861,6 +984,7 @@
 
 [EVENT "Position #123"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1k6/8/K7/1P6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -868,6 +992,7 @@
 
 [EVENT "Position #124"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/2k5/8/8/4P3/4K3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -875,6 +1000,7 @@
 
 [EVENT "Position #125"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "5K2/8/6k1/8/8/2P5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -882,6 +1008,7 @@
 
 [EVENT "Position #126"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2K5/8/8/3k4/P7/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -889,6 +1016,7 @@
 
 [EVENT "Position #127"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "4k3/8/8/8/8/K2P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -896,6 +1024,7 @@
 
 [EVENT "Position #128"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/8/8/8/8/4P3/8/3K4 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -903,6 +1032,7 @@
 
 [EVENT "Position #129"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/7k/8/8/5P2/2K5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -910,6 +1040,7 @@
 
 [EVENT "Position #130"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1K6/8/8/1k2P3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -917,6 +1048,7 @@
 
 [EVENT "Position #131"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3K4/8/4k3/8/1P6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -924,6 +1056,7 @@
 
 [EVENT "Position #132"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/7K/7P/6k1/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -931,6 +1064,7 @@
 
 [EVENT "Position #133"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/4k3/8/8/3P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -938,6 +1072,7 @@
 
 [EVENT "Position #134"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/8/3kP3/6K1/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -945,6 +1080,7 @@
 
 [EVENT "Position #135"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/7K/8/8/4P2k/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -952,6 +1088,7 @@
 
 [EVENT "Position #136"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "6K1/1k6/8/8/8/3P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -959,6 +1096,7 @@
 
 [EVENT "Position #137"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4k3/8/2PK4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -966,6 +1104,7 @@
 
 [EVENT "Position #138"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/8/4Pk2/3K4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -973,6 +1112,7 @@
 
 [EVENT "Position #139"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "2k5/8/8/8/8/1K2P3/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -980,6 +1120,7 @@
 
 [EVENT "Position #140"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3K4/8/4k3/8/1P6/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -987,6 +1128,7 @@
 
 [EVENT "Position #141"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/5K2/8/8/6k1/3P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -994,6 +1136,7 @@
 
 [EVENT "Position #142"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/7K/8/8/8/k2P4/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1001,6 +1144,7 @@
 
 [EVENT "Position #143"]
 [DESCRIPTION "pawn on the 3rd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/k7/8/1KP5/8/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1008,6 +1152,7 @@
 
 [EVENT "Position #144"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/5k2/2K5/8/8/8/5P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1015,6 +1160,7 @@
 
 [EVENT "Position #145"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/4k3/6K1/8/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1022,6 +1168,7 @@
 
 [EVENT "Position #146"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/8/4K3/8/8/7P/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1029,6 +1176,7 @@
 
 [EVENT "Position #147"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3k4/8/8/2K5/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1036,6 +1184,7 @@
 
 [EVENT "Position #148"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/5K2/8/4k3/P7/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1043,6 +1192,7 @@
 
 [EVENT "Position #149"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/5k2/8/8/8/3PK3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1050,6 +1200,7 @@
 
 [EVENT "Position #150"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/5K2/8/8/4k3/1P6/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1057,6 +1208,7 @@
 
 [EVENT "Position #151"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/1k6/8/3K4/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1064,6 +1216,7 @@
 
 [EVENT "Position #152"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "4k3/8/8/8/8/8/2P5/6K1 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1071,6 +1224,7 @@
 
 [EVENT "Position #153"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4k3/8/5K2/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1078,6 +1232,7 @@
 
 [EVENT "Position #154"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/4k3/7K/8/8/8/7P/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1085,6 +1240,7 @@
 
 [EVENT "Position #155"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3K4/8/4k3/8/8/1P6/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1092,6 +1248,7 @@
 
 [EVENT "Position #156"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/2k5/8/4K3/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1099,6 +1256,7 @@
 
 [EVENT "Position #157"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/1k6/8/8/1KP5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1106,6 +1264,7 @@
 
 [EVENT "Position #158"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "7K/4k3/8/8/8/8/7P/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1113,6 +1272,7 @@
 
 [EVENT "Position #159"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "6K1/8/8/7k/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1120,6 +1280,7 @@
 
 [EVENT "Position #160"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/1k6/3K4/8/8/1P6/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1127,6 +1288,7 @@
 
 [EVENT "Position #161"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/6K1/1k6/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1134,6 +1296,7 @@
 
 [EVENT "Position #162"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/K7/8/5k2/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1141,6 +1304,7 @@
 
 [EVENT "Position #163"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4k3/8/5K2/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1148,6 +1312,7 @@
 
 [EVENT "Position #164"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "5K2/8/6k1/8/8/8/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1155,6 +1320,7 @@
 
 [EVENT "Position #165"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/8/k7/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1162,6 +1328,7 @@
 
 [EVENT "Position #166"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4k3/8/5K2/8/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1169,6 +1336,7 @@
 
 [EVENT "Position #167"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/2k5/8/8/8/3PK3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1176,6 +1344,7 @@
 
 [EVENT "Position #168"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/7k/8/8/8/8/5P2/5K2 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1183,6 +1352,7 @@
 
 [EVENT "Position #169"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "6K1/4k3/8/8/8/8/5P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1190,6 +1360,7 @@
 
 [EVENT "Position #170"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/k7/8/2P5/5K2 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1197,6 +1368,7 @@
 
 [EVENT "Position #171"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/2k5/8/1K6/8/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1204,6 +1376,7 @@
 
 [EVENT "Position #172"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "7K/2k5/8/8/8/8/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1211,6 +1384,7 @@
 
 [EVENT "Position #173"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/6k1/8/7K/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1218,6 +1392,7 @@
 
 [EVENT "Position #174"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/4k3/6K1/8/8/8/7P/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1225,6 +1400,7 @@
 
 [EVENT "Position #175"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/k7/8/8/K4P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1232,6 +1408,7 @@
 
 [EVENT "Position #176"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/8/8/8/8/4P3/K7 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1239,6 +1416,7 @@
 
 [EVENT "Position #177"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "5K2/k7/8/8/8/8/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1246,6 +1424,7 @@
 
 [EVENT "Position #178"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/7K/8/6k1/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1253,6 +1432,7 @@
 
 [EVENT "Position #179"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3K4/8/4k3/8/8/1P6/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1260,6 +1440,7 @@
 
 [EVENT "Position #180"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "4k3/8/8/8/8/8/4P3/K7 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1267,6 +1448,7 @@
 
 [EVENT "Position #181"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/4k3/K7/8/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1274,6 +1456,7 @@
 
 [EVENT "Position #182"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "1k6/8/8/8/8/8/5P2/K7 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1281,6 +1464,7 @@
 
 [EVENT "Position #183"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4k3/8/2K5/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1288,6 +1472,7 @@
 
 [EVENT "Position #184"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/K7/5k2/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1295,6 +1480,7 @@
 
 [EVENT "Position #185"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "3K4/5k2/8/8/8/8/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1302,6 +1488,7 @@
 
 [EVENT "Position #186"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/4K3/8/5k2/8/8/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1309,6 +1496,7 @@
 
 [EVENT "Position #187"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3k4/8/4K3/8/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1316,6 +1504,7 @@
 
 [EVENT "Position #188"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "3k4/8/8/8/8/8/5P2/1K6 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1323,6 +1512,7 @@
 
 [EVENT "Position #189"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/2k5/8/8/3K4/8/7P/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1330,6 +1520,7 @@
 
 [EVENT "Position #190"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/k7/8/8/1KP5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1337,6 +1528,7 @@
 
 [EVENT "Position #191"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/5k2/8/4K3/8/P7/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1344,6 +1536,7 @@
 
 [EVENT "Position #192"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/5k2/8/8/7K/5P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1351,6 +1544,7 @@
 
 [EVENT "Position #193"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/5K2/8/6k1/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1358,6 +1552,7 @@
 
 [EVENT "Position #194"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/7K/2k5/8/8/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1365,6 +1560,7 @@
 
 [EVENT "Position #195"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "2K5/k7/8/8/8/8/1P6/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1372,6 +1568,7 @@
 
 [EVENT "Position #196"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/5k2/8/8/3P2K1/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1379,6 +1576,7 @@
 
 [EVENT "Position #197"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/2K5/8/3k4/5P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1386,6 +1584,7 @@
 
 [EVENT "Position #198"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/3k4/8/8/5K2/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1393,6 +1592,7 @@
 
 [EVENT "Position #199"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/3k4/8/8/2K2P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1400,6 +1600,7 @@
 
 [EVENT "Position #200"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/6K1/8/8/5k2/2P5/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1407,6 +1608,7 @@
 
 [EVENT "Position #201"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "4K3/8/8/8/5k2/8/1P6/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1414,6 +1616,7 @@
 
 [EVENT "Position #202"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "1K6/4k3/8/8/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1421,6 +1624,7 @@
 
 [EVENT "Position #203"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/6K1/8/8/5k2/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1428,6 +1632,7 @@
 
 [EVENT "Position #204"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/1K6/6k1/8/8/8/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1435,6 +1640,7 @@
 
 [EVENT "Position #205"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/3k4/8/8/8/8/3P2K1/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1442,6 +1648,7 @@
 
 [EVENT "Position #206"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "1K6/8/8/8/k7/8/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1449,6 +1656,7 @@
 
 [EVENT "Position #207"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/7k/8/8/8/8/4P3/6K1 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1456,6 +1664,7 @@
 
 [EVENT "Position #208"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/k7/8/2P5/2K5 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1463,6 +1672,7 @@
 
 [EVENT "Position #209"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/6K1/1k6/8/8/8/3P4/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1470,6 +1680,7 @@
 
 [EVENT "Position #210"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/4k3/8/8/4PK2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1477,6 +1688,7 @@
 
 [EVENT "Position #211"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "k7/8/8/8/8/8/1P6/5K2 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1484,6 +1696,7 @@
 
 [EVENT "Position #212"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/8/2k5/4P3/7K w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1491,6 +1704,7 @@
 
 [EVENT "Position #213"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "6k1/1K6/8/8/8/8/5P2/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1498,6 +1712,7 @@
 
 [EVENT "Position #214"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4k3/8/8/2K5/4P3/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1505,6 +1720,7 @@
 
 [EVENT "Position #215"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/4k3/7K/8/8/7P/8 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 
@@ -1512,6 +1728,7 @@
 
 [EVENT "Position #216"]
 [DESCRIPTION "pawn on 2nd"]
+[AUTO_PROMOTE "Q"]
 [FEN "8/8/8/8/4k3/8/1P6/2K5 w - - 0 1"]
 [PROBLEM_TYPE "checkmate_or_promote_to_queen"]
 

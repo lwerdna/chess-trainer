@@ -35,12 +35,18 @@ def select_problem(board):
     global problem, state, player_color
     problem = random.choice(database)
     #problem = database.games[79]
+
+    if 'AUTO_PROMOTE' in problem.headers:
+        board.auto_promote_to = chess.Piece.from_symbol(problem.headers['AUTO_PROMOTE']).piece_type
+    else:
+        board.auto_promote_to = None
+
     board.set_fen(problem.headers['FEN'])
     board.update_view()
 
     player_color = board.model.turn
     state = 'PLAYING'
-    print(f'selected problem: {problem}')
+    #print(f'selected problem: {problem}')
 
 # callbacks
 state = 'ONE'
@@ -52,7 +58,7 @@ def on_move_complete(board, move):
     global state, player_color
 
     print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
-    
+
     # did player win?
     outcome = board.model.outcome()
     if outcome == None:
@@ -64,7 +70,7 @@ def on_move_complete(board, move):
     else:
         print('non checkmate outcome detected')
         state = 'LOST'
-    
+
     # did the player promote to queen?
     if move.promotion == chess.QUEEN:
         print('queen promotion detected')
@@ -151,7 +157,7 @@ class Window(QMainWindow):
         self.setWindowIcon(QIcon('./assets/icons/pawn_icon.png'))
         self.setMinimumSize(900, 900)
         self.show()
-        
+
     def closeEvent(self, event):
         print('CLOSING!')
         on_exit()

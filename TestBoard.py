@@ -39,10 +39,11 @@ pickup = ''
 mode = ''
 def on_board_init(board):
     global mode, pickup
-    mode = 'free'
+    mode = 'game'
     pickup = 'white'
     board.set_mode(mode)
     board.set_fen(chess.STARTING_BOARD_FEN)
+    board.set_fen('8/PK5k/8/8/8/8/8/8 w - - 0 1')
     board.update_view()
         
     board.set_move_request_callback(on_move_request)
