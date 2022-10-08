@@ -43,7 +43,7 @@ def best_reply_to(board, move):
             if info['seldepth'] > 30 or info['depth'] > 30:
                 break
 
-    print(f'  pv(san): {pv_to_san(pv, board)} with score {score}')
+    #print(f'  pv(san): {pv_to_san(pv, board)} with score {score}')
 
     return (pv[1], score)
 

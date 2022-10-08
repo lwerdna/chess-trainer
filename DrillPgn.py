@@ -31,10 +31,13 @@ def is_winning(score):
         case chess.engine.Cp: return score.score() > 10
         case _: assert False
 
-def select_problem(board):
+def select_problem(board, replay=False):
     global problem, state, player_color
-    problem = random.choice(database)
-    #problem = database.games[79]
+
+    if replay:
+        pass
+    else:
+        problem = random.choice(database)
 
     if 'AUTO_PROMOTE' in problem.headers:
         board.auto_promote_to = chess.Piece.from_symbol(problem.headers['AUTO_PROMOTE']).piece_type
@@ -51,13 +54,13 @@ def select_problem(board):
 # callbacks
 state = 'ONE'
 def on_move_request(board, move):
-    print(f'MOVE REQUEST: {move} board state: {board.get_fen()}')
+    #print(f'MOVE REQUEST: {move} board state: {board.get_fen()}')
     return True
 
 def on_move_complete(board, move):
-    global state, player_color
+    global state, player_color, problem
 
-    print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
+    #print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
 
     # did player win?
     outcome = board.model.outcome()
@@ -72,9 +75,10 @@ def on_move_complete(board, move):
         state = 'LOST'
 
     # did the player promote to queen?
-    if move.promotion == chess.QUEEN:
-        print('queen promotion detected')
-        state = 'WON'
+    if problem.headers.get('PROBLEM_TYPE') == 'checkmate_or_promote_to_queen':
+        if move.promotion == chess.QUEEN:
+            print('queen promotion detected, WIN!')
+            state = 'WON'
 
     # did the evaluation remain a win?
     bcopy = board.model.copy()
@@ -85,21 +89,23 @@ def on_move_complete(board, move):
         print('non-winning board detected')
         state = 'LOST'
 
-    print(f'logic state: {state}')
+    #print(f'logic state: {state}')
 
     match state:
         case 'LOST':
             # update PGN
-            select_problem(board)
+            problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'L'
+            select_problem(board, True)
         case 'WON':
             # update PGN
+            problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'W'
             select_problem(board)
         case 'PLAYING':
             # select opponent reply
             #print(f'evaluation.evaluate() returned {reply0}')
             #reply1 = evaluation.bestmove(board.model)
 
-            print(f'found opponent reply: {reply}')
+            #print(f'found opponent reply: {reply}')
             board.model.push(reply)
             board.update_view()
 
@@ -120,6 +126,8 @@ def on_board_init(board):
     select_problem(board)
 
 def on_exit():
+    database.write()
+
     evaluation.exit()
 
 #------------------------------------------------------------------------------

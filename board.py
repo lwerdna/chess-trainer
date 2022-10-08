@@ -183,7 +183,6 @@ class ChessBoard(QFrame):
             return []
         elif type(self.model) == chess.Board:
             moves = list(self.model.generate_pseudo_legal_moves())
-            #print(moves)
 
             # convert moves to internal representation
             moves = [(m.from_square << 6) | m.to_square for m in moves]
@@ -318,8 +317,6 @@ class ChessBoard(QFrame):
         #    self.do_rook_castle(dst_index, is_undo)
 
     def move_inputted(self, move):
-        #print(f'move_inputted({move.from_square} -> {move.to_square})')
-
         # ignore moves to same square
         if move.from_square == move.to_square:
             return
@@ -584,8 +581,6 @@ class PieceLabel(QLabel):
         prom_piece = None
         if promotion:
             if self.board.auto_promote_to != None:
-                print(f'HERP: {self.board.auto_promote_to}')
-                print(f'HERP: {type(self.board.auto_promote_to)}')
                 prom_piece = self.board.auto_promote_to
             else:
                 # prompt for the promotion piece
@@ -610,11 +605,7 @@ class PieceLabel(QLabel):
                 elif cb == queen_btn:
                     prom_piece = chess.QUEEN
 
-        print(f'sqr_src: {sqr_src}')
-        print(f'sqr_dst: {sqr_dst}')
-        print(f'prom_piece: {prom_piece}')
         move = chess.Move(sqr_src, sqr_dst, promotion=prom_piece)
-        print(f'move: {move}')
         self.board.move_inputted(move)
         self.board.update_view()
 
