@@ -1,0 +1,647 @@
+[Event "Position #0"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/5K2/8/8/4k3/8/7P/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #1"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/4k3/6K1/8/7P/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #2"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/1K6/8/8/2k5/7P/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #3"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/4k3/6KP/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #4"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "4K3/8/8/8/3k4/8/7P/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #5"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/K2k4/8/8/P7/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #6"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/7K/4k3/8/7P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WLW"]
+
+*
+
+[Event "Position #7"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/7K/8/4k3/8/7P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "LWW"]
+
+*
+
+[Event "Position #8"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/7K/8/8/4k3/8/7P/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "LWW"]
+
+*
+
+[Event "Position #9"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "5K2/8/8/4k3/7P/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #10"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/3k4/1K6/8/8/P7/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #11"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/4k2K/8/8/8/7P/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "LW"]
+
+*
+
+[Event "Position #12"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "5K2/8/8/5k1P/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #13"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/7K/7P/7k w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #14"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "3k4/8/K7/8/8/P7/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #15"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/K7/8/3k4/8/8/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #16"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "K7/8/8/P1k5/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #17"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/3k4/PK6/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WWW"]
+
+*
+
+[Event "Position #18"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "7K/4k3/8/8/8/8/7P/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #19"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "6K1/4k3/8/8/8/7P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #20"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "4K3/8/8/8/8/3k3P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #21"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "4K3/8/8/8/8/3k3P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "LWW"]
+
+*
+
+[Event "Position #22"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "4k3/8/5K2/8/7P/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #23"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "7K/7P/5k2/8/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #24"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/8/6K1/8/5k2/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #25"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/3K4/8/8/2k5/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #26"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/8/7K/7P/7k/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #27"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "3K4/8/4k3/8/8/P7/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #28"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/3k4/K7/8/P7/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #29"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/4k3/7K/8/7P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #30"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/8/4k2P/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WWW"]
+
+*
+
+[Event "Position #31"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "3k4/8/K7/8/8/8/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #32"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "3K4/8/8/4k3/8/8/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #33"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/5K2/8/8/5k1P/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #34"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "7K/8/8/5k1P/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #35"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/5K2/8/8/4k3/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #36"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/K7/P7/k7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #37"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/K7/P7/1k6/8/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #38"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "2K5/8/8/3k4/P7/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #39"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/8/3k4/PK6/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WWWW"]
+
+*
+
+[Event "Position #40"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "K7/8/8/3k4/P7/8/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+
+*
+
+[Event "Position #41"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/7K/4k3/8/8/7P/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
+[Event "Position #42"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/8/5K2/8/8/P4k2/8/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #43"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[AUTO_PROMOTE "Q"]
+[DESCRIPTION ""]
+[FEN "8/4k3/8/3K4/8/8/P7/8 w - - 0 1"]
+[PROBLEM_TYPE "checkmate_or_promote_to_queen"]
+[RECORD "W"]
+
+*
+
