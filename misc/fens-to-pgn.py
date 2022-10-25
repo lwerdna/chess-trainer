@@ -19,7 +19,7 @@ if __name__ == '__main__':
             
             fen = line.strip()
 
-            print(f'[EVENT "Position #{position_i}"]')
+            print(f'[Event "Position #{position_i}"]')
             print(f'[DESCRIPTION "{description}"]')
             print(f'[FEN "{fen}"]')
             print(f'[PROBLEM_TYPE "checkmate_or_promote_to_queen"]')
