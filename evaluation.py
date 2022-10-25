@@ -59,7 +59,8 @@ def best_reply_to(board, move):
                 case chess.WHITE: score = pov_score.white()
                 case chess.BLACK: score = pov_score.black()
 
-            if info['seldepth'] > 30 or info['depth'] > 30:
+            #if info['seldepth'] > 30 or info['depth'] > 30:
+            if info['depth'] > 30:
                 break
 
     #print(f'  pv(san): {pv_to_san(pv, board)} with score {score}')
@@ -130,8 +131,12 @@ def top_three_moves(board):
                 print('----')
 
             # Arbitrary stop condition.
-            if info.get("seldepth", 0) > 30 or info.get('depth', 0) > 30:
-                break
+            if info.get('depth', 0) > 30:
+                print('exited loop since depth > 30')
+                break            
+            #if info.get("seldepth", 0) > 30:
+            #    print('exited loop since seldepth > 30')
+            #    break
 
     return list(zip(moves, scores))
 

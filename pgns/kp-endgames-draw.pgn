@@ -1,0 +1,2624 @@
+[Event "Position #0"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "k7/2P5/8/8/8/8/3K4/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #1"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4K3/8/5Pk1/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #2"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/5K2/8/8/2P3k1/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #3"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/4P3/2k5/7K b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #4"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/5k2/5P2/2K5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #5"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1k6/8/1P6/3K4/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #6"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3K4/8/4P3/5k2/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #7"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2k5/4P3/8/8/8/6K1/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #8"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7k/5P2/8/2K5/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #9"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/6k1/8/8/5K2/1P6/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #10"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/6K1/3P4/2k5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #11"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7K/8/8/P7/4k3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #12"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3K4/8/5k2/8/8/1P6/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #13"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/8/5P2/7k/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #14"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/7K/8/8/1P6/2k5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #15"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/8/8/4P3/7k/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #16"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5k2/8/7K/5P2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #17"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4k3/8/2PK4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #18"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3K4/8/P2k4/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #19"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/1P3K2/3k4/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #20"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3K4/8/8/1P2k3/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "L"]
+
+*
+
+[Event "Position #21"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/7P/4k3/8/8/8/K7 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #22"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3k4/8/8/2K5/1P6/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #23"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/8/2P2K2/3k4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #24"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2P5/k7/8/8/8/8/7K b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #25"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/1P6/4k3/8/8/4K3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #26"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/7k/8/3P3K/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #27"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3k4/8/2K5/4P3/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #28"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/3k4/6K1/8/8/4P3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #29"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7K/8/1P6/4k3/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #30"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/8/3P2k1/4K3 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #31"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/3P4/7k/8/8/3K4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #32"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/7K/8/4P3/7k/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #33"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "5k2/8/8/8/2P1K3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #34"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3K1k2/8/8/8/8/8/5P2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #35"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/2k5/8/3K4/5P2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #36"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/5K2/8/4P3/5k2 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #37"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "4K3/8/k7/2P5/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #38"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/7k/5P2/3K4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #39"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4P3/2k5/K7/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #40"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/4K3/8/8/4P3/5k2 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #41"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "k7/2P5/8/8/7K/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #42"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5k2/P2K4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #43"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "6K1/8/8/3P3k/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #44"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/5k2/8/4KP2/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #45"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/5K2/8/8/2P5/k7/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #46"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2K5/5k2/8/8/8/2P5/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #47"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4K3/8/P7/4k3/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #48"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7k/2K5/8/8/8/5P2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #49"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4k3/8/3K4/4P3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #50"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/3K4/8/8/8/2P5/3k4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #51"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/8/3P1K2/3k4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #52"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7K/3P4/1k6/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #53"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5k2/K7/P7/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #54"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/K7/8/3P1k2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #55"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "K7/8/1Pk5/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #56"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/5k2/8/8/3K4/5P2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #57"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3P4/5k2/8/8/8/8/7K b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #58"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2K5/8/3k4/1P6/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #59"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/6K1/8/5Pk1/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #60"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/7P/4k2K/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #61"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3k4/8/1K6/P7/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #62"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/2K5/8/3P4/2k5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #63"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2k5/P7/8/8/8/1K6/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #64"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4k3/4P3/3K4/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #65"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/1k6/8/8/8/KP6/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #66"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1k6/3P4/8/8/8/2K5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #67"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2K5/8/8/5P2/7k/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #68"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/2k5/8/3K4/5P2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #69"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/7k/8/1P4K1/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "LLLLL"]
+
+*
+
+[Event "Position #70"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2K5/8/7k/8/4P3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #71"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/1K6/8/Pk6/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #72"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/K7/8/8/3k4/P7/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #73"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/2k5/4K3/7P/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #74"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/2K5/8/4P3/2k5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #75"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1K6/8/8/8/8/8/1P6/2k5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #76"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/1P1K4/1k6/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #77"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "4k3/8/8/8/1P1K4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #78"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/2K5/8/5P1k/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #79"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2k5/4P3/8/8/8/8/8/K7 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #80"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "K4k2/8/3P4/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #81"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/1K6/4P3/6k1/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #82"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/1K6/8/8/8/P7/k7 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #83"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4P1k1/8/8/7K/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #84"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/7P/5k2/8/8/2K5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #85"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2k5/4P3/8/8/8/3K4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #86"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3k4/1P6/8/8/8/8/6K1/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #87"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/2P1K3/2k5/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #88"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/1k6/8/8/3P4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #89"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/2k5/6K1/7P/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #90"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/P7/4k3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #91"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/2k5/8/3K4/5P2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #92"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/1P6/5k2/8/8/3K4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #93"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/K7/8/8/8/3P4/4k3 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #94"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/6K1/8/8/8/8/P7/k7 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #95"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/3K4/6k1/8/8/4P3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #96"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4P1k1/8/8/K7/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #97"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/2P1K3/1k6/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #98"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3k1P2/8/8/8/8/6K1/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #99"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/K7/2k5/P7/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "LW"]
+
+*
+
+[Event "Position #100"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7k/5P2/8/8/8/5K2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #101"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "5k2/4P3/5K2/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #102"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4k3/2K5/8/4P3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #103"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/6K1/8/7k/3P4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #104"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3K4/8/8/5P1k/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #105"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/3K4/8/3P4/4k3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #106"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7k/8/2K2P2/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #107"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/K7/8/4P3/7k/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #108"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4K3/8/3kP3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #109"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/6K1/8/8/8/7P/4k3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #110"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1K6/8/8/1P6/3k4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #111"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5K2/8/8/P3k3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #112"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/6K1/P7/4k3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #113"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/6K1/8/8/5k1P/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #114"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/4P3/2k5/5K2 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #115"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/k7/8/K2P4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #116"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/8/7P/2K3k1 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #117"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/7K/8/1P6/5k2/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #118"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1k6/3P4/8/8/4K3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #119"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3k1P2/8/8/8/8/8/3K4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #120"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/1K6/8/4P1k1/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #121"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4P1k1/8/5K2/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #122"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/6k1/8/8/8/4PK2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "LLLW"]
+
+*
+
+[Event "Position #123"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/5P1k/8/8/3K4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #124"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "5k2/7P/8/1K6/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #125"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2P5/K1k5/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #126"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5K2/8/8/5P2/5k2 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #127"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1k6/8/8/2K5/3P4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #128"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/8/4P2K/4k3 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #129"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/1k6/8/2KP4/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #130"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/5P2/2k5/8/8/4K3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #131"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7k/5P2/8/8/6K1/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #132"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/P7/K2k4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #133"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/1K6/8/8/3k1P2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #134"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2k1P3/8/2K5/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #135"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/4P3/K6k/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #136"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/5K1P/7k/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #137"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/7K/8/8/8/8/1P6/2k5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #138"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/7P/5k1K/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #139"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/6K1/8/2P5/6k1/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #140"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/7K/8/1P6/6k1/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #141"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/6K1/8/8/P4k2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #142"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4k3/2KP4/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #143"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/4K3/8/7P/7k b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #144"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4P3/2k5/8/8/K7/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #145"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/2K5/5P1k/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #146"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/5k1P/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #147"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/1k2P3/8/6K1 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #148"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5P2/1k6/3K4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #149"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "7K/8/8/5P2/3k4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #150"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2P1k3/8/8/8/8/8/5K2 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #151"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4K3/8/k7/8/2P5/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #152"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1K1k4/8/8/3P4/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #153"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2k5/8/8/3K4/2P5/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #154"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/K7/8/1P6/2k5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #155"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/2K5/8/1k6/8/4P3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #156"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2P5/4k3/8/8/8/8/1K6 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #157"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/k7/8/1PK5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #158"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "K7/8/8/1P6/3k4/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #159"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "1K6/3P4/4k3/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #160"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/5k2/3K4/8/P7/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #161"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4P1k1/8/8/8/8/K7/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #162"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/K7/8/8/5P2/k7/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #163"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/6K1/8/8/8/2P5/3k4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #164"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/3K4/5P2/5k2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #165"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4k3/8/8/4K3/2P5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #166"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/7P/4k2K/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #167"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/4P2k/8/3K4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #168"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "4K3/8/8/1P3k2/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #169"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/7K/8/3P4/3k4 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #170"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/2K5/8/8/8/3P4/2k5 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #171"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/4K3/8/7k/5P2/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #172"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "6k1/4P3/8/8/8/8/8/K7 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #173"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "5k2/3K4/5P2/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #174"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/6K1/8/3P4/1k6/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #175"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "4k3/8/8/4K3/2P5/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #176"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "k7/2P5/8/8/5K2/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #177"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/1k6/3P4/4K3/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #178"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "6K1/8/8/8/8/4P3/k7/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "WW"]
+
+*
+
+[Event "Position #179"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "5k2/3K4/8/5P2/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #180"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/8/2P2k2/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #181"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "K7/2P5/1k6/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #182"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/k7/8/8/8/8/2P2K2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #183"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "2k5/4P3/8/8/8/3K4/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #184"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/3k4/8/4KP2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #185"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "3k4/1P6/8/8/4K3/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+[RECORD "W"]
+
+*
+
+[Event "Position #186"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/5k1P/8/8/8/8/8/4K3 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #187"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2K5/8/8/8/8/1k1P4/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #188"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/5K2/8/8/4k2P/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #189"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/7k/8/3P3K/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #190"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/P1K5/k7/8/8/8/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #191"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/2K5/8/8/8/8/P2k4/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #192"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3P1k2/8/8/8/7K/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #193"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/8/4K3/7P/6k1 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #194"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/3K4/8/8/8/8/3P2k1/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #195"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/8/4P2K/2k5/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #196"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/3k4/8/8/8/2KP4/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #197"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/8/8/4K3/8/5k1P/8/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+
+[Event "Position #198"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[DESCRIPTION ""]
+[FEN "8/4K3/8/8/8/2P5/5k2/8 b - - 0 1"]
+[PROBLEM_TYPE "draw_for_three_moves"]
+
+*
+

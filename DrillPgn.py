@@ -21,6 +21,7 @@ import pgnfile
 #------------------------------------------------------------------------------
 
 state = 'INIT' # INIT, WON, LOST, PLAYING
+moves = 0
 database = None
 problem = None
 player_color = None
@@ -32,7 +33,7 @@ def is_winning(score):
         case _: assert False
 
 def select_problem(board, replay=False):
-    global problem, state, player_color
+    global problem, state, player_color, moves
 
     if replay:
         pass
@@ -49,6 +50,7 @@ def select_problem(board, replay=False):
 
     player_color = board.model.turn
     state = 'PLAYING'
+    moves = 0
     #print(f'selected problem: {problem}')
 
 # callbacks
@@ -58,36 +60,54 @@ def on_move_request(board, move):
     return True
 
 def on_move_complete(board, move):
-    global state, player_color, problem
+    global state, player_color, problem, moves
 
     #print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
+
+    problem_type = problem.headers.get('PROBLEM_TYPE')
 
     # did player win?
     outcome = board.model.outcome()
     if outcome == None:
         pass
-    elif outcome.termination == chess.CHECKMATE:
-        if outcome.winner == chess.WHITE:
-            print('white checkmate detected')
+    elif outcome.termination == chess.Termination.CHECKMATE:
+        if outcome.winner == player_color:
+            print('WON: checkmate detected')
             state = 'WON'
     else:
-        print('non checkmate outcome detected')
-        state = 'LOST'
+        if problem_type == 'checkmate_or_promote_to_queen':
+            print('LOST: non-checkmate outcome detected')
+            state = 'LOST'
+
+    # EVALUATION-INDEPENDENT WIN CONDITIONS
 
     # did the player promote to queen?
-    if problem.headers.get('PROBLEM_TYPE') == 'checkmate_or_promote_to_queen':
+    if problem_type == 'checkmate_or_promote_to_queen':
         if move.promotion == chess.QUEEN:
-            print('queen promotion detected, WIN!')
+            print('WON:: queen promotion detected')
             state = 'WON'
 
-    # did the evaluation remain a win?
+    # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
     bcopy = board.model.copy()
     bcopy.pop()
     (reply, score) = evaluation.best_reply_to(bcopy, move)
 
-    if not is_winning(score):
-        print('non-winning board detected')
-        state = 'LOST'
+    if problem_type == 'draw_for_three_moves':
+        if not evaluation.is_even(score):
+            print('LOST: non-drawing board detected')
+            state = 'LOST'
+        else:
+            if moves >= 2:
+                print('WON: kept drawing evaluation for 3 moves')
+                state = 'WON'
+            else:
+                print(f'keep going')
+    elif problem_type == 'checkmate_or_promote_to_queen':
+        if not is_winning(score):
+            print('LOST: non-winning board detected')
+    else:
+        debug.breakpoint()
+
 
     #print(f'logic state: {state}')
 
@@ -108,9 +128,10 @@ def on_move_complete(board, move):
             #print(f'found opponent reply: {reply}')
             board.model.push(reply)
             board.update_view()
+            moves += 1
 
         case _:
-            breakpoint()
+            debug.breakpoint()
 
 def on_board_init(board):
     global database
