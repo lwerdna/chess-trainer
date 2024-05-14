@@ -1,5 +1,9 @@
-import operator
+import os
 import re
+import operator
+
+import chess
+import chess.engine
 
 # FEN string for starting chess position
 starting_fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
@@ -65,4 +69,17 @@ for row, rank in enumerate('87654321'):
     for col, file in enumerate('abcdefgh'):
         square_to_coords[file + rank] = (col, row)
 
+def get_stockfish_path():
+    paths = [   '/usr/local/bin/stockfish',
+                '/usr/games/stockfish'
+            ]
 
+    for path in paths:
+        if os.path.exists(path):
+            return path
+
+    raise Exception('Can\'t find stockfish!')
+
+def get_engine():
+    path = get_stockfish_path()
+    return chess.engine.SimpleEngine.popen_uci(path)

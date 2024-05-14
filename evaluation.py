@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 
+import os
+
 import chess
 import chess.engine
+
+import common
 
 engine = None
 
 def init():
     global engine
-    engine = chess.engine.SimpleEngine.popen_uci("/usr/local/bin/stockfish")
+    engine = common.get_engine()
 
 def newgame():
     global engine

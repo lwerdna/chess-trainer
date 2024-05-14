@@ -6,6 +6,7 @@ import chess
 import chess.engine
 
 import debug
+import common
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget
@@ -52,7 +53,7 @@ mode = ''
 def on_board_init(board):
     global mode, pickup, engine
     
-    engine = chess.engine.SimpleEngine.popen_uci('/usr/local/bin/stockfish')
+    engine = common.get_engine()
     mode = 'game'
     pickup = 'white'
     board.set_mode(mode)

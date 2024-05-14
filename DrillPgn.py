@@ -95,6 +95,7 @@ def on_move_complete(board, move):
     if problem_type == 'draw_for_three_moves':
         if not evaluation.is_even(score):
             print('LOST: non-drawing board detected')
+            breakpoint()
             state = 'LOST'
         else:
             if moves >= 2:
