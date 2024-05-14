@@ -15,12 +15,13 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBo
 from board import ChessBoard
 
 import pgnfile
+from common import *
 
 #------------------------------------------------------------------------------
 # LOGIC
 #------------------------------------------------------------------------------
 
-state = 'INIT' # INIT, WON, LOST, PLAYING
+state = 'INIT' # INIT, SUCCESS, FAILURE, PLAYING
 moves = 0
 database = None
 problem = None
@@ -72,40 +73,44 @@ def on_move_complete(board, move):
         pass
     elif outcome.termination == chess.Termination.CHECKMATE:
         if outcome.winner == player_color:
-            print('WON: checkmate detected')
-            state = 'WON'
+            print('SUCCESS: checkmate detected')
+            state = 'SUCCESS'
     else:
         if problem_type == 'checkmate_or_promote_to_queen':
-            print('LOST: non-checkmate outcome detected')
-            state = 'LOST'
+            print('FAILURE: non-checkmate outcome detected')
+            state = 'FAILURE'
 
     # EVALUATION-INDEPENDENT WIN CONDITIONS
 
     # did the player promote to queen?
     if problem_type == 'checkmate_or_promote_to_queen':
         if move.promotion == chess.QUEEN:
-            print('WON:: queen promotion detected')
-            state = 'WON'
+            print('SUCCESS:: queen promotion detected')
+            state = 'SUCCESS'
 
     # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
     bcopy = board.model.copy()
     bcopy.pop()
     (reply, score) = evaluation.best_reply_to(bcopy, move)
 
-    if problem_type == 'draw_for_three_moves':
+    if problem_type == 'draw_kk_or_repetition':
         if not evaluation.is_even(score):
-            print('LOST: non-drawing board detected')
-            breakpoint()
-            state = 'LOST'
+            print('FAILURE: non-drawing board detected')
+            print(f'{board.get_fen()} has evaluation {score} after {reply}')
+            #debug.breakpoint()
+            state = 'FAILURE'
+        elif only_kings(board.model):
+            print('SUCCESS: draw with only kings')
+            state = 'SUCCESS'
+        elif board.model.can_claim_threefold_repetition():
+            print(f'SUCCESS: draw by threefold repetition')
+            state = 'SUCCESS'
         else:
-            if moves >= 2:
-                print('WON: kept drawing evaluation for 3 moves')
-                state = 'WON'
-            else:
-                print(f'keep going')
+            # player continues
+            pass
     elif problem_type == 'checkmate_or_promote_to_queen':
         if not is_winning(score):
-            print('LOST: non-winning board detected')
+            print('FAILURE: non-winning board detected')
     else:
         debug.breakpoint()
 
@@ -113,11 +118,11 @@ def on_move_complete(board, move):
     #print(f'logic state: {state}')
 
     match state:
-        case 'LOST':
+        case 'FAILURE':
             # update PGN
             problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'L'
             select_problem(board, True)
-        case 'WON':
+        case 'SUCCESS':
             # update PGN
             problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'W'
             select_problem(board)

@@ -83,3 +83,6 @@ def get_stockfish_path():
 def get_engine():
     path = get_stockfish_path()
     return chess.engine.SimpleEngine.popen_uci(path)
+
+def only_kings(board):
+    return all(p.symbol() in 'Kk' for p in board.piece_map().values())
