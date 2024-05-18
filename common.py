@@ -70,8 +70,9 @@ for row, rank in enumerate('87654321'):
         square_to_coords[file + rank] = (col, row)
 
 def get_stockfish_path():
-    paths = [   '/usr/local/bin/stockfish',
-                '/usr/games/stockfish'
+    paths = [   '/usr/local/bin/stockfish', # Linux
+                '/usr/games/stockfish', # Linux
+                '/opt/homebrew/bin/stockfish' # MacOS
             ]
 
     for path in paths:

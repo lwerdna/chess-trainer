@@ -1,0 +1,19 @@
+TYPE: PlayBest5
+FEN: 4r3/1p1qp1k1/2p3Bb/p2pP3/P2P1rPN/2P5/1P2Q3/4R1K1 w - - 0 1
+LEITNER_BOX: 0
+LEITNER_DUE: 2024
+
+# comment
+
+TYPE: PlayBest2
+FEN: 3r2k1/pp3pp1/2p3np/2Qq4/3PNn2/P4N1P/1P3PPK/4R3 b - - 0 1
+FRONT: 
+BACK: ChessTempo #169555, fork looks spoiled, but isn't due to "appended attack"
+
+
+# comment
+
+FEN: q6k/r2B1Rbp/p5p1/1nB5/3pr1Q1/8/P1P3PP/1R4K1 w - - 0 1
+
+
+# comment
