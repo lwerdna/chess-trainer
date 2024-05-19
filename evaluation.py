@@ -153,32 +153,10 @@ def get_best_line(board, length=None):
         board.set_fen(fen)
 
     score, pv = evaluate(board, board.turn)
-    pv = pv_to_san(pv, board).split(' ')
-    moveNum = 1
-    skip = (board.turn == chess.BLACK)
-
-    result = []
-
-    while pv and (length == None or (moveNum <= length)):
-        result.append(str(moveNum) + ('...' if skip else '.'))
-
-        result.append(pv.pop(0))
-
-        if skip:
-            moveNum += 1
-            skip = False
-            continue
-        
-        # quit early if we just needed the n'th move and we got it by white
-        if board.turn == chess.WHITE and (length and moveNum >= length):
-            break;
-
-        result.append(pv.pop(0))
-        moveNum += 1
-
-    result.append('*')
-
-    return ' '.join(result)
+    halfMoves = length + (length-1)
+    result = board.variation_san(pv[0:halfMoves])
+    result = result + ' *'
+    return result
 
 def does_only_one_move_win(board):
     ttm = top_three_moves(board)

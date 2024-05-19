@@ -44,8 +44,14 @@ def write(dbinfo, path='database.txt'):
     with open(path, 'w') as fp:
         for entry in dbinfo:
             for key in ['TYPE', 'FEN', 'LINE', 'FRONT', 'BACK', 'LEITNER']:
-                if key in entry:
-                    fp.write('%s: %s\n' % (key, entry[key]))
+                if not key in entry:
+                    continue
+
+                value = entry[key]
+                if key == 'LEITNER':
+                    fp.write('LEITNER: %s, %s\n' % (value[0], value[1]))
+                else:
+                    fp.write(f'{key}: {value}\n')
             fp.write('\n')
     fp.close()
 
