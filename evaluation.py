@@ -77,7 +77,7 @@ def evaluate(board, pov):
     print(f'evaluate({board.fen()})')
 
     best_score = None
-    best_move = None
+    best_line = None
 
     with engine.analysis(board) as analysis:
         # analysis: chess.engine.SimpleAnalysisResult
@@ -89,7 +89,8 @@ def evaluate(board, pov):
             #print(' seldepth: ' + str(info.get('seldepth')))
 
             if 'pv' in info:
-                print('  pv(san): ' + pv_to_san(info.get('pv'), board))
+                #print('  pv(san): ' + pv_to_san(info.get('pv'), board))
+                pass
 
             if 'pv' in info and 'score' in info:
                 pov_score = info.get('score')
@@ -99,7 +100,7 @@ def evaluate(board, pov):
 
                 if best_score == None or score > best_score:
                     best_score = score
-                    best_move = info.get('pv')[0]
+                    best_line = info.get('pv')
 
 
 #            print('    score: ' + str(info.get('score'))) # chess.engine.Score
@@ -111,7 +112,8 @@ def evaluate(board, pov):
             if info.get("seldepth", 0) > 40 or info.get('depth', 0) > 40:
                 break
 
-    return (best_score, best_move)
+    # best move is pv[0]
+    return best_score, best_line
 
 def top_three_moves(board):
     with engine.analysis(board, multipv=3) as analysis:
@@ -143,6 +145,40 @@ def top_three_moves(board):
             #    break
 
     return list(zip(moves, scores))
+
+def get_best_line(board, length=None):
+    if type(board) == str:
+        fen = board
+        board = chess.Board()
+        board.set_fen(fen)
+
+    score, pv = evaluate(board, board.turn)
+    pv = pv_to_san(pv, board).split(' ')
+    moveNum = 1
+    skip = (board.turn == chess.BLACK)
+
+    result = []
+
+    while pv and (length == None or (moveNum <= length)):
+        result.append(str(moveNum) + ('...' if skip else '.'))
+
+        result.append(pv.pop(0))
+
+        if skip:
+            moveNum += 1
+            skip = False
+            continue
+        
+        # quit early if we just needed the n'th move and we got it by white
+        if board.turn == chess.WHITE and (length and moveNum >= length):
+            break;
+
+        result.append(pv.pop(0))
+        moveNum += 1
+
+    result.append('*')
+
+    return ' '.join(result)
 
 def does_only_one_move_win(board):
     ttm = top_three_moves(board)

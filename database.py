@@ -5,7 +5,9 @@ def read(path='database.txt'):
     state = 'WAITING'
     entry = {}
     result = []
+    lineNum = 0
     for line in open('database.txt', 'r').readlines():
+        lineNum += 1
         line = line.strip()
         if line=='' or line.isspace():
             if state == 'WAITING':
@@ -20,18 +22,32 @@ def read(path='database.txt'):
                 # default values
                 entry = {   'TYPE': 'PlayBest2',
                             'FEN': '',
-                            'FRONT': '',
-                            'BACK': '',
-                            'LEITNER_BOX': 0,
-                            'LEITNER_DUE': int(time.time())
+                            'FRONT': '(blank)',
+                            'BACK': '(blank)',
+                            'LEITNER': (0, int(time.time())),
+                            'lineNum': lineNum
                         }
                 state = 'BUSY'
             # override defaults
             name, value = m.group(1, 2)
+            if name == 'LEITNER':
+                box, due = value.split(', ')
+                value = int(box), int(due)
             entry[name] = value
-    if entry:
+
+    if state != 'WAITING':
         result.append(entry)
+
     return result
+
+def write(dbinfo, path='database.txt'):
+    with open(path, 'w') as fp:
+        for entry in dbinfo:
+            for key in ['TYPE', 'FEN', 'LINE', 'FRONT', 'BACK', 'LEITNER']:
+                if key in entry:
+                    fp.write('%s: %s\n' % (key, entry[key]))
+            fp.write('\n')
+    fp.close()
 
 if __name__ == '__main__':
     import json
