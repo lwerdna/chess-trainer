@@ -5,6 +5,8 @@ import operator
 import chess
 import chess.engine
 
+import debug
+
 # FEN string for starting chess position
 starting_fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
 
@@ -87,3 +89,32 @@ def get_engine():
 
 def only_kings(board):
     return all(p.symbol() in 'Kk' for p in board.piece_map().values())
+
+def is_winning(score):
+    match type(score):
+        case chess.engine.Mate: return True
+        case chess.engine.Cp: return score.score() > 10
+        case _: assert False
+
+# "1. e6 Qd6 2. Bxe8 Bg5 3. Ng2 Re4 4. Qf3 Qxe6 5. Rf1"
+# ->
+# ['e6', 'Qd6', 'Bxe8', 'Bg5', 'Ng2', 'Re4', 'Qf3', 'Qxe6', 'Rf1']
+def line_to_moves(line):
+    # get rid of possible "1..."
+    if m := re.match(r'^\d\.+(.*)$', line):
+        line = m.group(1)
+    # get rid of possible " *"
+    if line.endswith(' *'):
+        line = line[0:-2]
+    # remove move numbers
+    line = re.sub(r'\d+\.', '', line)
+    # remove leading and trailing spaces
+    line = line.strip()
+    # split on spaces
+    return re.split(r'\s+', line)
+
+def last_move_as_san(board):
+    bcopy = board.copy()
+    move = bcopy.pop()
+    return bcopy.san(move)
+

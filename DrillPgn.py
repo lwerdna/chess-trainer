@@ -24,31 +24,28 @@ from common import *
 #------------------------------------------------------------------------------
 
 window = None
-
-state = 'INIT' # INIT, SUCCESS, FAILURE, PLAYING
-moves = 0
 dbinfo = None
-problem = None
-player_color = None
 
-def is_winning(score):
-    match type(score):
-        case chess.engine.Mate: return True
-        case chess.engine.Cp: return score.score() > 10
-        case _: assert False
+problem_context = {
+    'problem': None,
+    'type': None,
+    'state': 'INIT', # INIT, SUCCESS, FAILURE, PLAYING
+    'halfmove_index': 0,
+    'player_color': None
+}
 
 def select_problem(replay=False):
     global window
-    global problem, state, player_color, moves, dbinfo
+    global problem_context
 
     # collect problems that are due
     due_indices = []
     now = int(time.time())
     for i, entry in enumerate(dbinfo):
         due = entry['LEITNER'][1]
-        print(f'comparing {now} >= {due} for entry at line {entry["lineNum"]}')
+        #print(f'comparing {now} >= {due} for entry at line {entry["lineNum"]}')
         if now >= due:
-            print('DUE!')
+            #print('DUE!')
             due_indices.append(i)
         else:
             print('NOT!')
@@ -59,7 +56,6 @@ def select_problem(replay=False):
         print('wtf')
         return False
 
-    print('wtf2')
     # grab one at random
     problem = dbinfo[random.choice(due_indices)]
     print(f'selected problem from line number: {problem["lineNum"]}')
@@ -71,9 +67,13 @@ def select_problem(replay=False):
     board.set_fen(problem['FEN'])
     board.update_view()
 
-    player_color = board.model.turn
-    state = 'PLAYING'
-    moves = 0
+    problem_context = {
+        'state': 'PLAYING',
+        'type': problem['TYPE'],
+        'problem': problem,
+        'player_color': board.model.turn,
+        'halfmove_index': 0
+    }
             
     #if 'AUTO_PROMOTE' in problem.headers:
     #    board.auto_promote_to = chess.Piece.from_symbol(problem.headers['AUTO_PROMOTE']).piece_type
@@ -92,82 +92,111 @@ def on_move_request(board, move):
     return True
 
 def on_move_complete(board, move):
-    global state, player_color, problem, moves
+    global problem_context
 
     #print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
 
-    problem_type = problem['TYPE']
+    problem_type = problem_context['type']
 
     # did player win?
-    outcome = board.model.outcome()
-    if outcome == None:
-        pass
-    elif outcome.termination == chess.Termination.CHECKMATE:
-        if outcome.winner == player_color:
-            print('SUCCESS: checkmate detected')
-            state = 'SUCCESS'
-    else:
-        if problem_type == 'checkmate_or_promote_to_queen':
-            print('FAILURE: non-checkmate outcome detected')
-            state = 'FAILURE'
+#    outcome = board.model.outcome()
+#    if outcome == None:
+#        pass
+#    elif outcome.termination == chess.Termination.CHECKMATE:
+#        if outcome.winner == player_color:
+#            print('SUCCESS: checkmate detected')
+#            state = 'SUCCESS'
+#    else:
+#        if problem_type == 'checkmate_or_promote_to_queen':
+#            print('FAILURE: non-checkmate outcome detected')
+#            state = 'FAILURE'
 
     # EVALUATION-INDEPENDENT WIN CONDITIONS
 
     # did the player promote to queen?
-    if problem_type == 'checkmate_or_promote_to_queen':
-        if move.promotion == chess.QUEEN:
-            print('SUCCESS:: queen promotion detected')
-            state = 'SUCCESS'
+#    if problem_type == 'checkmate_or_promote_to_queen':
+#        if move.promotion == chess.QUEEN:
+#            print('SUCCESS:: queen promotion detected')
+#            state = 'SUCCESS'
 
     # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
-    bcopy = board.model.copy()
-    debug.breakpoint()
-    bcopy.pop() # undo user move
-    reply, score = evaluation.best_reply_to(bcopy, move)
+#    bcopy = board.model.copy()
+#    debug.breakpoint()
+#    bcopy.pop() # undo user move
+#    reply, score = evaluation.best_reply_to(bcopy, move)
+#
 
-    if problem_type == 'draw_kk_or_repetition':
-        if not evaluation.is_even(score):
-            print('FAILURE: non-drawing board detected')
-            print(f'{board.get_fen()} has evaluation {score} after {reply}')
-            #debug.breakpoint()
-            state = 'FAILURE'
-        elif only_kings(board.model):
-            print('SUCCESS: draw with only kings')
-            state = 'SUCCESS'
-        elif board.model.can_claim_threefold_repetition():
-            print(f'SUCCESS: draw by threefold repetition')
-            state = 'SUCCESS'
+    # user has to make one side's halfmoves
+    if problem_type == 'halfmoves':
+
+        # did he make the last
+        lastmove = last_move_as_san(board.model)
+        print(f'last move: {lastmove}')
+
+        line_moves = line_to_moves(problem_context['problem']['LINE'])
+        expect_move = line_moves[problem_context['halfmove_index']]
+
+        print(f'line moves: {line_moves}')
+        print(f'halfmove_index: {problem_context["halfmove_index"]}')
+
+        print(f'expect move: {expect_move}')
+
+        if lastmove != expect_move:
+            #problem_context['state'] = 'FAILURE'
+            board.model.pop()
+        elif problem_context['halfmove_index'] == len(line_moves)-1:
+            problem_context['state'] = 'SUCCESS'
         else:
-            # player continues
-            pass
-    elif problem_type == 'checkmate_or_promote_to_queen':
-        if not is_winning(score):
-            print('FAILURE: non-winning board detected')
-    elif m := re.match(r'^PlayBest(\d+)$', problem_type):
-        moves_needed = int(m.group(1))
-    else:
-        debug.breakpoint()
+            problem_context['halfmove_index'] += 1
+            board.model.push_san(line_moves[problem_context['halfmove_index']])
+            problem_context['halfmove_index'] += 1
+
+#    if problem_type == 'draw_kk_or_repetition':
+#        if not evaluation.is_even(score):
+#            print('FAILURE: non-drawing board detected')
+#            print(f'{board.get_fen()} has evaluation {score} after {reply}')
+#            #debug.breakpoint()
+#            state = 'FAILURE'
+#        elif only_kings(board.model):
+#            print('SUCCESS: draw with only kings')
+#            state = 'SUCCESS'
+#        elif board.model.can_claim_threefold_repetition():
+#            print(f'SUCCESS: draw by threefold repetition')
+#            state = 'SUCCESS'
+#        else:
+#            # player continues
+#            pass
+#    elif problem_type == 'checkmate_or_promote_to_queen':
+#        if not is_winning(score):
+#            print('FAILURE: non-winning board detected')
+#    elif m := re.match(r'^PlayBest(\d+)$', problem_type):
+#        moves_needed = int(m.group(1))
+#    else:
+#        debug.breakpoint()
 
     #print(f'logic state: {state}')
     ok = True
-    match state:
+    match problem_context['state']:
         case 'FAILURE':
             # update PGN
-            problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'L'
-            ok = select_problem(board, True)
+            #problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'L'
+            print('FAILURE')
+            ok = select_problem()
         case 'SUCCESS':
             # update PGN
-            problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'W'
-            ok = select_problem(board)
+            #problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'W'
+            print('SUCCESS')
+            ok = select_problem()
         case 'PLAYING':
             # select opponent reply
             #print(f'evaluation.evaluate() returned {reply0}')
             #reply1 = evaluation.bestmove(board.model)
 
             #print(f'found opponent reply: {reply}')
-            board.model.push(reply)
-            board.update_view()
-            moves += 1
+            #board.model.push(reply)
+            #board.update_view()
+            #moves += 1
+            print('PLAYING')
 
         case _:
             debug.breakpoint()
@@ -248,11 +277,8 @@ def except_hook(cls, exception, traceback):
 
 if __name__ == '__main__':
     sys.excepthook = except_hook
-    print('AAA set WINDOW')
     app = QApplication(sys.argv)
-    print('BBB set WINDOW')
     window = Window()
-    print('CCC set WINDOW')
 
     select_problem()
 
