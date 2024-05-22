@@ -53,18 +53,21 @@ def select_problem(replay=False):
 
     print(due_indices)
     if not due_indices:
-        print('wtf')
         return False
 
     # grab one at random
-    problem = dbinfo[random.choice(due_indices)]
+    #problem = dbinfo[random.choice(due_indices)]
+    problem = dbinfo[1]
+
     print(f'selected problem from line number: {problem["lineNum"]}')
 
     window.frame.frontText.setText(problem['FRONT'])
     window.frame.backText.setText(problem['BACK'])
 
     board = window.frame.board
+
     board.set_fen(problem['FEN'])
+    board.setPerspective(board.model.turn)
     board.update_view()
 
     problem_context = {

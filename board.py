@@ -27,7 +27,28 @@ class ChessBoard(QFrame):
         self.layout = QGridLayout()
         self.layout.setContentsMargins(0, 0, 0, 0)
         self.layout.setSpacing(0)
-        self.draw_squares()
+
+        # create squares
+        # held in list, index is 8*row + col (where row and column are Qt layout coordinates, not chess)
+        # +-----+-----+-----+-----+
+        # | 0,0 | 0,1 | ... | 0,7 |
+        # +-----+-----+-----+-----+
+        # | 1,0 | 1,1 | ... | 1,7 |
+        # +-----+-----+-----+-----+
+        # | ...
+        # +-----+-----+-----+-----+
+        # | 7,0 | 7,1 | ... | 7,7 |
+        # +-----+-----+-----+-----+
+        self.squares = []
+        for row in range(8):
+            for col in range(8):
+                square = QWidget(self)
+                square.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+                self.layout.addWidget(square, row, col)
+                self.squares.append(square)
+
+        self.setPerspective(chess.WHITE)
+
         self.setLayout(self.layout)
 
         #self.model = chess.Board()
@@ -50,6 +71,37 @@ class ChessBoard(QFrame):
 
         self.update()
 
+    def setPerspective(self, perspective):
+        self.perspective = perspective
+
+        i = 0
+
+        ranks = list('87654321')
+        files = list('abcdefgh')
+
+        colors = ['#B58863', '#F0D9B5']
+        color_idx = False
+
+        if perspective == chess.WHITE:
+            pass
+        elif perspective == chess.BLACK:
+            ranks.reverse()
+            files.reverse()
+            color_idx = not color_idx
+        else:
+            raise Exception()
+
+        i = 0
+        for rank in ranks:
+            color_idx = not color_idx
+            for file in files:
+                name = file + rank
+                self.squares[i].setObjectName(name)
+                self.squares[i].setStyleSheet('background-color: ' + colors[color_idx])
+                print(f'set square[{i}] name={name} color={color_idx}')
+                color_idx = not color_idx
+                i += 1
+
     def set_move_request_callback(self, func):
         self.move_request_callback = func
 
@@ -64,20 +116,8 @@ class ChessBoard(QFrame):
             self.resize(event.size().width(), event.size().width())
             self.sqr_size = int(event.size().width() / 8)
 
-    def draw_squares(self):
-        for row, rank in enumerate('87654321'):
-            for col, file in enumerate('abcdefgh'):
-                square = QWidget(self)
-                square.setObjectName(file + rank)
-                square.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-                if row % 2 == col % 2:
-                    square.setStyleSheet('background-color: #F0D9B5')
-                else:
-                    square.setStyleSheet('background-color: #B58863')
-                self.layout.addWidget(square, row, col)
-
     # square_name: str like 'a7'
-    # piece: str       like 'R'
+    # piece:       str like 'R'
     def place_piece(self, sqr_name, piece):
         #print(f'place_piece(sqr_name={sqr_name}, piece={piece})')
         col, row = common.square_to_coords[sqr_name]
@@ -147,6 +187,8 @@ class ChessBoard(QFrame):
         self.update_view()
 
     def highlight(self, sq):
+        print(f'higlighting {sq}')
+
         # If square index given, convert to SAN
         if not common.regex_square.match(str(sq)):
             sq = common.index_to_san[sq]
