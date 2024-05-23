@@ -56,8 +56,8 @@ def select_problem(replay=False):
         return False
 
     # grab one at random
-    #problem = dbinfo[random.choice(due_indices)]
-    problem = dbinfo[1]
+    problem = dbinfo[random.choice(due_indices)]
+    #problem = dbinfo[3]
 
     print(f'selected problem from line number: {problem["lineNum"]}')
 
@@ -67,7 +67,7 @@ def select_problem(replay=False):
     board = window.frame.board
 
     board.set_fen(problem['FEN'])
-    #board.setPerspective(board.model.turn)
+    board.setPerspective(board.model.turn)
     board.update_view()
 
     problem_context = {

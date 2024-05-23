@@ -20,7 +20,7 @@ def read(path='database.txt'):
         elif m := re.match(r'^([A-Z]+):\s*(.*)$', line):
             if state == 'WAITING':
                 # default values
-                entry = {   'TYPE': 'PlayBest2',
+                entry = {   'TYPE': 'untyped',
                             'FEN': '',
                             'FRONT': '(blank)',
                             'BACK': '(blank)',

@@ -146,15 +146,19 @@ def top_three_moves(board):
 
     return list(zip(moves, scores))
 
-def get_best_line(board, length=None):
+def get_best_line(board, fullMoves=None):
     if type(board) == str:
         fen = board
         board = chess.Board()
         board.set_fen(fen)
 
     score, pv = evaluate(board, board.turn)
-    halfMoves = length + (length-1)
-    result = board.variation_san(pv[0:halfMoves])
+
+    if fullMoves:
+        halfMoves = length + (length-1)
+        pv = pv[0:halfMoves]
+
+    result = board.variation_san(pv)
     result = result + ' *'
     return result
 

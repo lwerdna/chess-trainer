@@ -25,6 +25,12 @@ if __name__ == '__main__':
                 result = evaluation.get_best_line(entry['FEN'], length)
                 print(f'  result: {result}')
                 entry['LINE'] = result
+        elif entry['TYPE'] == 'untyped':
+            print(f'calculating line (length=?) for position {entry["FEN"]}')
+            result = evaluation.get_best_line(entry['FEN'])
+            print(f'  result: {result}')
+            entry['TYPE'] = 'halfmoves'
+            entry['LINE'] = result
 
     print('writing database')
     database.write(dbinfo)

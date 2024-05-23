@@ -23,7 +23,8 @@ class ChessBoard(QFrame):
 
         #self.square_colors = ['#B58863', '#F0D9B5']
         self.square_colors = ['#F0D9B5', '#B58863']
-        self.highlight_colors = ['#DAC34B', '#F7EC74']
+        #self.highlight_colors = ['#DAC34B', '#F7EC74']
+        self.highlight_colors = ['#F7EC74', '#DAC34B']
 
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.setContentsMargins(0, 0, 0, 0)
@@ -40,7 +41,7 @@ class ChessBoard(QFrame):
                 square = QWidget(self)
                 square.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
                 self.layout.addWidget(square, qt_row, qt_col)
-                print(f'square[{len(self.squares)}] is at qt row={qt_row}, col={qt_col}')
+                #print(f'square[{len(self.squares)}] is at qt row={qt_row}, col={qt_col}')
                 self.squares.append(square) # important ordering
 
         self.setPerspective(chess.WHITE)
@@ -78,7 +79,6 @@ class ChessBoard(QFrame):
 
             color = self.square_colors[self.indexToLightDark(i)]
             self.squares[i].setStyleSheet('background-color: ' + color)
-            print(f'set square[{i}] color={color}')
 
     def sanToIndex(self, san):
         index = {   'a8': 56, 'b8': 57, 'c8': 58, 'd8': 59, 'e8': 60, 'f8': 61, 'g8': 62, 'h8': 63,
@@ -111,6 +111,13 @@ class ChessBoard(QFrame):
         else:
             return lookup[63-i]
 
+    def indexToSquareWidget(self, i):
+        if self.perspective == chess.WHITE:
+            return self.squares[i]
+        else:
+            return self.squares[63-i]
+
+    # converts a (module chess) index 0..63 to the row,col coordinate of the widget in the QGridLayout
     def indexToQtCoords(self, i):
         lookup   = {56:(0,0), 57:(0,1), 58:(0,2), 59:(0,3), 60:(0,4), 61:(0,5), 62:(0,6), 63: (0,7),
                     48:(1,0), 49:(1,1), 50:(1,2), 51:(1,3), 52:(1,4), 53:(1,5), 54:(1,6), 55: (1,7),
@@ -142,15 +149,16 @@ class ChessBoard(QFrame):
 
     # square_name: str like 'a7'
     # piece:       str like 'R'
-    def place_piece(self, sqr_name, piece):
+    def place_piece(self, sqr_index, piece):
         #print(f'place_piece(sqr_name={sqr_name}, piece={piece})')
-        col, row = common.square_to_coords[sqr_name]
+        row, col = self.indexToQtCoords(sqr_index)
         piece_label = PieceLabel(self, piece)
         self.layout.addWidget(piece_label, row, col)
 
     def view_piece_at_square(self, sqr_index):
-        square = self.findChild(QWidget, common.index_to_san[sqr_index])
+        square = self.indexToSquareWidget(sqr_index)
         square_pos = self.layout.getItemPosition(self.layout.indexOf(square))
+
         for piece in self.findChildren(QLabel):
             piece_pos = self.layout.getItemPosition(self.layout.indexOf(piece))
             if square_pos == piece_pos:
@@ -177,33 +185,24 @@ class ChessBoard(QFrame):
 
     # draw the board based on FEN
     def update_view(self):
-        # UPDATE PIECE DISPLAY
         pmap = self.model.piece_map()
         for i in range(64):
-            san = common.index_to_san[i]
+            vpiece = self.view_piece_at_square(i)   # view piece
+            mpiece = pmap.get(i)                    # model piece
 
-            # get the (view) piece on this square
-            vpiece = self.view_piece_at_square(i)
-
-            # is there a (model) piece on this square?
-            if i in pmap:
-                mpiece = pmap[i]
-
-                # if (view) piece matches (model) piece, done!
-                if vpiece:
-                    if vpiece.piece_sym == mpiece.symbol():
-                        pass
-                    else:
-                        vpiece.setParent(None)
-                        self.place_piece(san, mpiece.symbol())
-                else:
-                    self.place_piece(san, mpiece.symbol())
-
-            else:
-                if vpiece:
+            # model has piece but we don't
+            if mpiece and not vpiece:
+                self.place_piece(i, mpiece.symbol())
+            # model doesn't have piece but we do
+            elif not mpiece and vpiece:
+                vpiece.setParent(None)
+            # we both have pieces
+            elif vpiece and mpiece:
+                # if they're the same, done!
+                if vpiece.symbol != mpiece.symbol():
                     vpiece.setParent(None)
+                    self.place_piece(i, mpiece.symbol())
 
-        # UPDATE PICKUP-ABILITY
         self.set_pickup_model()
 
     def reset(self):
@@ -211,13 +210,12 @@ class ChessBoard(QFrame):
         self.update_view()
 
     def highlight(self, idx):
-        print(f'highlighting {idx}')
-        square = self.squares[idx]
+        square = self.indexToSquareWidget(idx)
         color = self.highlight_colors[self.indexToLightDark(idx)]
         square.setStyleSheet('background-color: ' + color)
 
     def unhighlight(self, idx):
-        square = self.squares[idx]
+        square = self.indexToSquareWidget(idx)
         color = self.square_colors[self.indexToLightDark(idx)]
         square.setStyleSheet('background-color: ' + color)
 
@@ -225,7 +223,6 @@ class ChessBoard(QFrame):
         for sqr_index in range(64):
             self.unhighlight(sqr_index)
 
-    # sqr_index is
     def moves_from_square(self, sqr_index):
         result = []
         if type(self.model) == chess.Board:
@@ -430,40 +427,11 @@ class ChessBoard(QFrame):
 
         self.saved = True
 
-# Search algorithm must be run in a separate thread to the main event loop, to prevent the GUI from freezing
-class SearchThread(QThread):
-    move_signal = pyqtSignal(int)
-
-    def __init__(self, board):
-        super().__init__()
-
-        self.board = board
-        self.move_signal.connect(self.board.computer_move)
-
-    def run(self):
-        self.board.set_pickup_none()
-
-        if self.board.difficulty == 1:
-            move = self.board.search.iter_search(max_depth=1)  # Depth 1 search
-        elif self.board.difficulty == 2:
-            move = self.board.search.iter_search(max_depth=2)  # Depth 2 search
-        elif self.board.difficulty == 3:
-            move = self.board.search.iter_search(time_limit=0.1)  # 0.1 second search
-        elif self.board.difficulty == 4:
-            move = self.board.search.iter_search(time_limit=1)  # 1 second search
-        elif self.board.difficulty == 5:
-            move = self.board.search.iter_search(time_limit=5)  # 5 second search
-
-        self.board.position = self.board.search.position
-
-        self.move_signal.emit(move)
-
-
 class PieceLabel(QLabel):
-    def __init__(self, parent, piece):
+    def __init__(self, parent, symbol):
         super().__init__(parent)
 
-        self.piece_sym = piece # str representing the piece PNBRQKpnbrqk
+        self.symbol = symbol # str representing the piece PNBRQKpnbrqk
 
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.setMinimumSize(1, 1)
@@ -472,7 +440,7 @@ class PieceLabel(QLabel):
         self.setAttribute(Qt.WA_TranslucentBackground)
 
         self.board = parent
-        self.is_white = self.piece_sym in list('PNBRQK')
+        self.is_white = self.symbol in list('PNBRQK')
         self.enabled = True
 
         self.src_pos = None
@@ -487,7 +455,7 @@ class PieceLabel(QLabel):
             'p': 'bp', 'n': 'bn', 'b': 'bb', 'r': 'br', 'q': 'bq', 'k': 'bk',
             'P': 'wp', 'N': 'wn', 'B': 'wb', 'R': 'wr', 'Q': 'wq', 'K': 'wk'
         }
-        pixmap = QPixmap(f'./assets/pieces/{lookup[self.piece_sym]}.png')
+        pixmap = QPixmap(f'./assets/pieces/{lookup[self.symbol]}.png')
         self.setPixmap(pixmap)
 
         # When label is scaled, also scale image inside the label
@@ -530,7 +498,7 @@ class PieceLabel(QLabel):
             offset = self.rect().topLeft() - self.rect().center()
             self.move(self.mouse_pos + offset)
 
-            # Identify origin square
+            # Identify origin square by comparing Qt position of PieceLabel to Square (QWidget)
             for square in self.board.squares:
                 if square.pos() == self.src_pos:
                     self.src_square = square
@@ -642,6 +610,7 @@ class PieceLabel(QLabel):
                     prom_piece = chess.QUEEN
 
         move = chess.Move(sqr_src, sqr_dst, promotion=prom_piece)
+        print(f'calling move_inputted({move})')
         self.board.move_inputted(move)
         self.board.update_view()
 
