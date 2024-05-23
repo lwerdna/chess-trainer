@@ -21,6 +21,10 @@ class ChessBoard(QFrame):
 
         self.parent = parent
 
+        #self.square_colors = ['#B58863', '#F0D9B5']
+        self.square_colors = ['#F0D9B5', '#B58863']
+        self.highlight_colors = ['#DAC34B', '#F7EC74']
+
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.setContentsMargins(0, 0, 0, 0)
 
@@ -28,24 +32,16 @@ class ChessBoard(QFrame):
         self.layout.setContentsMargins(0, 0, 0, 0)
         self.layout.setSpacing(0)
 
-        # create squares
-        # held in list, index is 8*row + col (where row and column are Qt layout coordinates, not chess)
-        # +-----+-----+-----+-----+
-        # | 0,0 | 0,1 | ... | 0,7 |
-        # +-----+-----+-----+-----+
-        # | 1,0 | 1,1 | ... | 1,7 |
-        # +-----+-----+-----+-----+
-        # | ...
-        # +-----+-----+-----+-----+
-        # | 7,0 | 7,1 | ... | 7,7 |
-        # +-----+-----+-----+-----+
+        # QT grid layout uses row,col with 0,0 in top left
+        # we lay it out in the order convention by chess module (0 at bottom left) (and append to self.squares)
         self.squares = []
-        for row in range(8):
-            for col in range(8):
+        for qt_row in [7,6,5,4,3,2,1,0]:
+            for qt_col in [0,1,2,3,4,5,6,7]:
                 square = QWidget(self)
                 square.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-                self.layout.addWidget(square, row, col)
-                self.squares.append(square)
+                self.layout.addWidget(square, qt_row, qt_col)
+                print(f'square[{len(self.squares)}] is at qt row={qt_row}, col={qt_col}')
+                self.squares.append(square) # important ordering
 
         self.setPerspective(chess.WHITE)
 
@@ -74,33 +70,61 @@ class ChessBoard(QFrame):
     def setPerspective(self, perspective):
         self.perspective = perspective
 
-        i = 0
+        for i in range(64):
+            if perspective == chess.WHITE:
+                self.squares[i].setObjectName(str(i))
+            else:
+                self.squares[i].setObjectName(str(63-i))
 
-        ranks = list('87654321')
-        files = list('abcdefgh')
+            color = self.square_colors[self.indexToLightDark(i)]
+            self.squares[i].setStyleSheet('background-color: ' + color)
+            print(f'set square[{i}] color={color}')
 
-        colors = ['#B58863', '#F0D9B5']
-        color_idx = False
+    def sanToIndex(self, san):
+        index = {   'a8': 56, 'b8': 57, 'c8': 58, 'd8': 59, 'e8': 60, 'f8': 61, 'g8': 62, 'h8': 63,
+                    'a7': 48, 'b7': 49, 'c7': 50, 'd7': 51, 'e7': 52, 'f7': 53, 'g7': 54, 'h7': 55,
+                    'a6': 40, 'b6': 41, 'c6': 42, 'd6': 43, 'e6': 44, 'f6': 45, 'g6': 46, 'h6': 47,
+                    'a5': 32, 'b5': 33, 'c5': 34, 'd5': 35, 'e5': 36, 'f5': 37, 'g5': 38, 'h5': 39,
+                    'a4': 24, 'b4': 25, 'c4': 26, 'd4': 27, 'e4': 28, 'f4': 29, 'g4': 30, 'h4': 31,
+                    'a3': 16, 'b3': 17, 'c3': 18, 'd3': 19, 'e3': 20, 'f3': 21, 'g3': 22, 'h3': 23,
+                    'a2':  8, 'b2':  9, 'c2': 10, 'd2': 11, 'e2': 12, 'f2': 13, 'g2': 14, 'h2': 15,
+                    'a1':  0, 'b1':  1, 'c1':  2, 'd1':  3, 'e1':  4, 'f1':  5, 'g1':  6, 'h1':  7 }[san]
 
-        if perspective == chess.WHITE:
-            pass
-        elif perspective == chess.BLACK:
-            ranks.reverse()
-            files.reverse()
-            color_idx = not color_idx
+        if self.perspective == chess.WHITE:
+            return index
         else:
-            raise Exception()
+            return 63-index
 
-        i = 0
-        for rank in ranks:
-            color_idx = not color_idx
-            for file in files:
-                name = file + rank
-                self.squares[i].setObjectName(name)
-                self.squares[i].setStyleSheet('background-color: ' + colors[color_idx])
-                print(f'set square[{i}] name={name} color={color_idx}')
-                color_idx = not color_idx
-                i += 1
+    # 0
+    def indexToLightDark(self, i):
+        lookup   = {56:0, 57:1, 58:0, 59:1, 60:0, 61:1, 62:0, 63:1,
+                    48:1, 49:0, 50:1, 51:0, 52:1, 53:0, 54:1, 55:0,
+                    40:0, 41:1, 42:0, 43:1, 44:0, 45:1, 46:0, 47:1,
+                    32:1, 33:0, 34:1, 35:0, 36:1, 37:0, 38:1, 39:0,
+                    24:0, 25:1, 26:0, 27:1, 28:0, 29:1, 30:0, 31:1,
+                    16:1, 17:0, 18:1, 19:0, 20:1, 21:0, 22:1, 23:0,
+                    8: 0,  9:1, 10:0, 11:1, 12:0, 13:1, 14:0, 15:1,
+                    0: 1,  1:0,  2:1,  3:0,  4:1,  5:0,  6:1,  7:0 }
+
+        if self.perspective == chess.WHITE:
+            return lookup[i]
+        else:
+            return lookup[63-i]
+
+    def indexToQtCoords(self, i):
+        lookup   = {56:(0,0), 57:(0,1), 58:(0,2), 59:(0,3), 60:(0,4), 61:(0,5), 62:(0,6), 63: (0,7),
+                    48:(1,0), 49:(1,1), 50:(1,2), 51:(1,3), 52:(1,4), 53:(1,5), 54:(1,6), 55: (1,7),
+                    40:(2,0), 41:(2,1), 42:(2,2), 43:(2,3), 44:(2,4), 45:(2,5), 46:(2,6), 47: (2,7),
+                    32:(3,0), 33:(3,1), 34:(3,2), 35:(3,3), 36:(3,4), 37:(3,5), 38:(3,6), 39: (3,7),
+                    24:(4,0), 25:(4,1), 26:(4,2), 27:(4,3), 28:(4,4), 29:(4,5), 30:(4,6), 31: (4,7),
+                    16:(5,0), 17:(5,1), 18:(5,2), 19:(5,3), 20:(5,4), 21:(5,5), 22:(5,6), 23: (5,7),
+                    8: (6,0),  9:(6,1), 10:(6,2), 11:(6,3), 12:(6,4), 13:(6,5), 14:(6,6), 15: (6,7),
+                    0: (7,0),  1:(7,1),  2:(7,2),  3:(7,3),  4:(7,4),  5:(7,5),  6:(7,6),  7: (7,7) }
+
+        if self.perspective == chess.WHITE:
+            return lookup[i]
+        else:
+            return lookup[63-i]
 
     def set_move_request_callback(self, func):
         self.move_request_callback = func
@@ -156,7 +180,7 @@ class ChessBoard(QFrame):
         # UPDATE PIECE DISPLAY
         pmap = self.model.piece_map()
         for i in range(64):
-            square_sym = common.index_to_san[i]
+            san = common.index_to_san[i]
 
             # get the (view) piece on this square
             vpiece = self.view_piece_at_square(i)
@@ -171,9 +195,9 @@ class ChessBoard(QFrame):
                         pass
                     else:
                         vpiece.setParent(None)
-                        self.place_piece(square_sym, mpiece.symbol())
+                        self.place_piece(san, mpiece.symbol())
                 else:
-                    self.place_piece(square_sym, mpiece.symbol())
+                    self.place_piece(san, mpiece.symbol())
 
             else:
                 if vpiece:
@@ -186,56 +210,31 @@ class ChessBoard(QFrame):
         self.set_fen(common.starting_fen)
         self.update_view()
 
-    def highlight(self, sq):
-        print(f'higlighting {sq}')
+    def highlight(self, idx):
+        print(f'highlighting {idx}')
+        square = self.squares[idx]
+        color = self.highlight_colors[self.indexToLightDark(idx)]
+        square.setStyleSheet('background-color: ' + color)
 
-        # If square index given, convert to SAN
-        if not common.regex_square.match(str(sq)):
-            sq = common.index_to_san[sq]
-
-        square = self.findChild(QWidget, sq)
-
-        col, row = common.square_to_coords[sq]
-
-        if row % 2 == col % 2:  # light square
-            square.setStyleSheet('background-color: #F7EC74')
-        else:  # dark square
-            square.setStyleSheet('background-color: #DAC34B')
-
-    def unhighlight(self, sq):
-        # If square index given, convert to SAN
-        if not common.regex_square.match(str(sq)):
-            sq = common.index_to_san[sq]
-
-        square = self.findChild(QWidget, sq)
-
-        col, row = common.square_to_coords[sq]
-
-        if row % 2 == col % 2:  # light square
-            square.setStyleSheet('background-color: #F0D9B5')
-        else:  # dark square
-            square.setStyleSheet('background-color: #B58863')
+    def unhighlight(self, idx):
+        square = self.squares[idx]
+        color = self.square_colors[self.indexToLightDark(idx)]
+        square.setStyleSheet('background-color: ' + color)
 
     def unhighlight_all(self):
         for sqr_index in range(64):
             self.unhighlight(sqr_index)
 
+    # sqr_index is
     def moves_from_square(self, sqr_index):
-        if type(self.model) == chess.BaseBoard:
-            return []
-        elif type(self.model) == chess.Board:
-            moves = list(self.model.generate_pseudo_legal_moves())
+        result = []
+        if type(self.model) == chess.Board:
+            result = []
+            for move in self.model.generate_pseudo_legal_moves():
+                if move.from_square == sqr_index:
+                    result.append(move.to_square)
 
-            # convert moves to internal representation
-            moves = [(m.from_square << 6) | m.to_square for m in moves]
-
-            # filter moves involving this source square
-            moves = [m for m in moves if (m >> 6) & 0x3F == sqr_index]
-
-            # Filter out illegal moves
-            #moves = list(filter(self.model.is_legal, moves))
-
-            return moves
+            return result
 
     #--------------------------------------------------------------------------
     # set pickup (which pieces the user can interact with)
@@ -532,22 +531,18 @@ class PieceLabel(QLabel):
             self.move(self.mouse_pos + offset)
 
             # Identify origin square
-            all_squares = self.board.findChildren(QWidget, QRegExp(r'[a-h][1-8]'))
-            for square in all_squares:
+            for square in self.board.squares:
                 if square.pos() == self.src_pos:
                     self.src_square = square
+                    print(f'origin square: {square.objectName()}')
                     break
 
             # Identify legal moves
-            sqr_index = common.san_to_index[self.src_square.objectName()]
-            self.legal_moves = self.board.moves_from_square(sqr_index)
-
-            # Only need destination square for each move
-            self.legal_dst_squares = list(map(lambda move: common.index_to_san[move & 0x3F], self.legal_moves))
+            sqr_index = int(self.src_square.objectName())
 
             # Highlight origin and destination squares
             self.board.highlight(sqr_index)
-            for dst_square in self.legal_dst_squares:
+            for dst_square in self.board.moves_from_square(sqr_index):
                 self.board.highlight(dst_square)
 
     def mouseMoveEvent(self, event):
@@ -596,16 +591,15 @@ class PieceLabel(QLabel):
             return
 
         # Identify destination square
-        all_squares = self.board.findChildren(QWidget, QRegExp(r'[a-h][1-8]'))
-        for square in all_squares:
+        for square in self.board.squares:
             if square.rect().contains(square.mapFromGlobal(event.globalPos())):
                 self.dst_square = square
                 break
 
 
-        # get name like 'a7' or 'g8'
-        sqr_src = chess.parse_square(self.src_square.objectName())
-        sqr_dst = chess.parse_square(self.dst_square.objectName())
+        # get square index
+        sqr_src = int(self.src_square.objectName())
+        sqr_dst = int(self.dst_square.objectName())
 
         if sqr_src == sqr_dst:
             return

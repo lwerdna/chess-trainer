@@ -67,7 +67,7 @@ def select_problem(replay=False):
     board = window.frame.board
 
     board.set_fen(problem['FEN'])
-    board.setPerspective(board.model.turn)
+    #board.setPerspective(board.model.turn)
     board.update_view()
 
     problem_context = {
