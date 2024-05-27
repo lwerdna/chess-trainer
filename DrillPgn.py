@@ -130,26 +130,28 @@ def on_move_complete(board, move):
 
     problem_type = solution_state['type']
 
-    # did player win?
-#    outcome = board.model.outcome()
-#    if outcome == None:
-#        pass
-#    elif outcome.termination == chess.Termination.CHECKMATE:
-#        if outcome.winner == player_color:
-#            print('SUCCESS: checkmate detected')
-#            state = 'SUCCESS'
-#    else:
-#        if problem_type == 'checkmate_or_promote_to_queen':
-#            print('FAILURE: non-checkmate outcome detected')
-#            state = 'FAILURE'
+    # GAME ENDED!
+    outcome = board.model.outcome()
+    if outcome == None:
+        pass
+    elif outcome.termination == chess.Termination.CHECKMATE:
+        # in all problem types, achieving checkmate is considered success
+        if outcome.winner == player_color:
+            print('SUCCESS: checkmate detected')
+            solution_state['stage'] = 'SUCCESS'
+    else:
+        if problem_type == 'checkmate_or_promote_to_queen':
+            print('FAILURE: non-checkmate outcome detected')
+            board.model.pop()
+            return
 
     # EVALUATION-INDEPENDENT WIN CONDITIONS
 
     # did the player promote to queen?
-#    if problem_type == 'checkmate_or_promote_to_queen':
-#        if move.promotion == chess.QUEEN:
-#            print('SUCCESS:: queen promotion detected')
-#            state = 'SUCCESS'
+    if problem_type == 'checkmate_or_promote_to_queen':
+        if move.promotion == chess.QUEEN:
+            print('SUCCESS:: queen promotion detected')
+            solution_state['stage'] = 'SUCCESS'
 
     # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
 #    bcopy = board.model.copy()
@@ -160,7 +162,6 @@ def on_move_complete(board, move):
 
     # user has to make one side's halfmoves
     if problem_type == 'halfmoves':
-
         # did he make the last
         lastmove = last_move_as_san(board.model)
         print(f'last move: {lastmove}')
@@ -168,10 +169,9 @@ def on_move_complete(board, move):
         line_moves = line_to_moves(dbinfo[problem_index]['LINE'])
         expect_move = line_moves[solution_state['halfmove_index']]
 
-        print(f'line moves: {line_moves}')
-        print(f'halfmove_index: {solution_state["halfmove_index"]}')
-
-        print(f'expect move: {expect_move}')
+        #print(f'line moves: {line_moves}')
+        #print(f'halfmove_index: {solution_state["halfmove_index"]}')
+        #print(f'expect move: {expect_move}')
 
         if lastmove != expect_move:
             #solution_state['stage'] = 'FAILURE'
@@ -182,6 +182,14 @@ def on_move_complete(board, move):
             solution_state['halfmove_index'] += 1
             board.model.push_san(line_moves[solution_state['halfmove_index']])
             solution_state['halfmove_index'] += 1
+    elif problem_type == 'checkmate_or_promote_to_queen':
+        # select opponent reply
+        reply = evaluation.bestmove(board.model)
+        print(f'evaluation.evaluate() returned {reply}')
+
+        #print(f'found opponent reply: {reply}')
+        board.model.push(reply)
+        board.update_view()
 
 #    if problem_type == 'draw_kk_or_repetition':
 #        if not evaluation.is_even(score):
@@ -207,34 +215,9 @@ def on_move_complete(board, move):
 #        debug.breakpoint()
 
     #print(f'logic state: {state}')
-    ok = True
-    match solution_state['stage']:
-        case 'FAILURE':
-            # update PGN
-            print('FAILURE')
-            post_problem_interaction(board)
-            #ok = select_problem()
-        case 'SUCCESS':
-            # update PGN
-            print('SUCCESS')
-            post_problem_interaction(board)
-            ok = select_problem()
-        case 'PLAYING':
-            # select opponent reply
-            #print(f'evaluation.evaluate() returned {reply0}')
-            #reply1 = evaluation.bestmove(board.model)
-
-            #print(f'found opponent reply: {reply}')
-            #board.model.push(reply)
-            #board.update_view()
-            #moves += 1
-            print('PLAYING')
-
-        case _:
-            debug.breakpoint()
-
-    if not ok:
-        print('NOT OK!')
+    if solution_state['stage'] == 'SUCCESS':
+        post_problem_interaction(board)
+        select_problem()
 
 def on_board_init(board):
     global dbinfo
