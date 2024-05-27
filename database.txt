@@ -1,15 +1,15 @@
 TYPE: halfmoves
 FEN: 4r3/1p1qp1k1/2p3Bb/p2pP3/P2P1rPN/2P5/1P2Q3/4R1K1 w - - 0 1
-LINE: 1. e6 Qd6 2. Bxe8 Bg5 3. Ng2 Re4 4. Qf3 Qxe6 5. Rf1 *
+LINE: 1. e6 Qd6 2. Bxe8 *
 FRONT: (blank)
-BACK: A little tough :P
+BACK: If black doesn't protect against 2.Qd5+ then mega trouble follows.\n\n2...Rf6 3.g5!
 LEITNER: 0, 1716069400
 
 TYPE: halfmoves
 FEN: 3r2k1/pp3pp1/2p3np/2Qq4/3PNn2/P4N1P/1P3PPK/4R3 b - - 0 1
 LINE: 1...Nd3 2. Qxd5 cxd5 *
 FRONT: 
-BACK: fork looks spoiled, but isn't due to "appended attack"\n\n(ChessTempo #169555)
+BACK: The fork looks spoiled, but isn't due to "appended attack".\n\n(ChessTempo #169555)
 LEITNER: 0, 1716093097
 
 TYPE: halfmoves
@@ -30,6 +30,6 @@ TYPE: halfmoves
 FEN: 5kr1/1p2p3/2p1PqB1/p2p1NQ1/P2P4/2P5/1P6/6K1 w - - 2 8
 LINE: 8. Qxf6+ exf6 9. e7# *
 FRONT: (blank)
-BACK: What\n\nUh oh
+BACK: Easy mate :)\n\nCool
 LEITNER: 0, 1716500781
 

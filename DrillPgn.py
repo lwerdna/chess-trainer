@@ -12,7 +12,7 @@ import database
 import evaluation
 
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
 
 from board import ChessBoard
 
@@ -60,10 +60,8 @@ def select_problem(replay=False):
     # grab one at random
     problem_index = random.choice(due_indices)
     problem = dbinfo[problem_index]
-    #problem = dbinfo[3]
 
-    print(f'selected problem from line number: {problem["lineNum"]}')
-
+    #print(f'selected problem from line number: {problem["lineNum"]}')
     window.frame.frontText.setText(problem['FRONT'])
 
     board = window.frame.board
@@ -79,7 +77,7 @@ def select_problem(replay=False):
         'player_color': board.model.turn,
         'halfmove_index': 0
     }
-            
+
     #if 'AUTO_PROMOTE' in problem.headers:
     #    board.auto_promote_to = chess.Piece.from_symbol(problem.headers['AUTO_PROMOTE']).piece_type
     #else:
@@ -94,12 +92,26 @@ def post_problem_interaction(board):
     global dbinfo
     global problem_index
 
+    problem = dbinfo[problem_index]
+
+    # restore the board to the original problem state
+    board.set_fen(problem['FEN'])
+    board.update_view()
+
+    # pop up dialog
     dlg = DoneDialog(board)
     dlg.setWindowTitle('DoneDialog')
-    text = dbinfo[problem_index]['BACK']
+
+    text = problem['BACK']
     text = text.replace('\\n', '\n')
+
     dlg.textEdit.setPlainText(text)
     dlg.exec()
+
+    result = dlg.result
+    print(f'got click result: {result}')
+
+    # save any edited text
     text = dlg.textEdit.toPlainText()
     text = text.replace('\n', '\\n') # actual newline to '\', 'n'
     dbinfo[problem_index]['BACK'] = text
@@ -250,23 +262,59 @@ class DoneDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.setWindowTitle("HELLO!")
+        self.setWindowTitle("Review")
 
-        QBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
+        vLayout = QVBoxLayout()
 
-        self.buttonBox = QDialogButtonBox(QBtn)
-        self.buttonBox.accepted.connect(self.accept)
-        self.buttonBox.rejected.connect(self.reject)
+        # text edit
+        self.textEdit = QTextEdit(self)
+        vLayout.addWidget(self.textEdit)
 
-        self.textEdit = QPlainTextEdit(self)
+        # the buttons
+        hLayout = QHBoxLayout()
+        b = QPushButton('terrible', self)
+        b.clicked.connect(self.clickedTerrible)
+        hLayout.addWidget(b)
+        b = QPushButton('bad', self)
+        b.clicked.connect(self.clickedBad)
+        hLayout.addWidget(b)
+        b = QPushButton('ok', self)
+        b.clicked.connect(self.clickedOk)
+        hLayout.addWidget(b)
+        b = QPushButton('good', self)
+        b.clicked.connect(self.clickedGood)
+        hLayout.addWidget(b)
+        b = QPushButton('easy', self)
+        b.clicked.connect(self.clickedEasy)
+        hLayout.addWidget(b)
 
-        self.layout = QVBoxLayout()
-        message = QLabel("Back:")
-        self.layout.addWidget(message)
-        self.layout.addWidget(self.textEdit)
-        self.layout.addWidget(self.buttonBox)
-        self.setLayout(self.layout)
+        vLayout.addLayout(hLayout)
 
+        # done
+        self.setLayout(vLayout)
+
+        #
+        self.result = None
+
+    def clickedTerrible(self, text):
+        self.result = 'terrible'
+        self.close()
+
+    def clickedBad(self, text):
+        self.result = 'bad'
+        self.close()
+
+    def clickedOk(self, text):
+        self.result = 'ok'
+        self.close()
+
+    def clickedGood(self, text):
+        self.result = 'good'
+        self.close()
+
+    def clickedEasy(self, text):
+        self.result = 'easy'
+        self.close()
 
 class TestFrame(QFrame):
     def __init__(self, parent):
