@@ -12,7 +12,7 @@ import database
 import evaluation
 
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit
 
 from board import ChessBoard
 
@@ -26,17 +26,19 @@ from common import *
 window = None
 dbinfo = None
 
-problem_context = {
-    'problem': None,
+problem_index = None
+
+solution_state = {
     'type': None,
-    'state': 'INIT', # INIT, SUCCESS, FAILURE, PLAYING
+    'stage': 'INIT', # INIT, SUCCESS, FAILURE, PLAYING
     'halfmove_index': 0,
     'player_color': None
 }
 
 def select_problem(replay=False):
     global window
-    global problem_context
+    global problem_index
+    global solution_state
 
     # collect problems that are due
     due_indices = []
@@ -56,13 +58,13 @@ def select_problem(replay=False):
         return False
 
     # grab one at random
-    problem = dbinfo[random.choice(due_indices)]
+    problem_index = random.choice(due_indices)
+    problem = dbinfo[problem_index]
     #problem = dbinfo[3]
 
     print(f'selected problem from line number: {problem["lineNum"]}')
 
     window.frame.frontText.setText(problem['FRONT'])
-    window.frame.backText.setText(problem['BACK'])
 
     board = window.frame.board
 
@@ -70,8 +72,8 @@ def select_problem(replay=False):
     board.setPerspective(board.model.turn)
     board.update_view()
 
-    problem_context = {
-        'state': 'PLAYING',
+    solution_state = {
+        'stage': 'PLAYING',
         'type': problem['TYPE'],
         'problem': problem,
         'player_color': board.model.turn,
@@ -88,18 +90,33 @@ def select_problem(replay=False):
 
     return True
 
+def post_problem_interaction(board):
+    global dbinfo
+    global problem_index
+
+    dlg = DoneDialog(board)
+    dlg.setWindowTitle('DoneDialog')
+    text = dbinfo[problem_index]['BACK']
+    text = text.replace('\\n', '\n')
+    dlg.textEdit.setPlainText(text)
+    dlg.exec()
+    text = dlg.textEdit.toPlainText()
+    text = text.replace('\n', '\\n') # actual newline to '\', 'n'
+    dbinfo[problem_index]['BACK'] = text
+
 # callbacks
-state = 'ONE'
 def on_move_request(board, move):
+    global problem_index
     #print(f'MOVE REQUEST: {move} board state: {board.get_fen()}')
     return True
 
 def on_move_complete(board, move):
-    global problem_context
+    global problem_index
+    global solution_state
 
     #print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
 
-    problem_type = problem_context['type']
+    problem_type = solution_state['type']
 
     # did player win?
 #    outcome = board.model.outcome()
@@ -136,23 +153,23 @@ def on_move_complete(board, move):
         lastmove = last_move_as_san(board.model)
         print(f'last move: {lastmove}')
 
-        line_moves = line_to_moves(problem_context['problem']['LINE'])
-        expect_move = line_moves[problem_context['halfmove_index']]
+        line_moves = line_to_moves(dbinfo[problem_index]['LINE'])
+        expect_move = line_moves[solution_state['halfmove_index']]
 
         print(f'line moves: {line_moves}')
-        print(f'halfmove_index: {problem_context["halfmove_index"]}')
+        print(f'halfmove_index: {solution_state["halfmove_index"]}')
 
         print(f'expect move: {expect_move}')
 
         if lastmove != expect_move:
-            #problem_context['state'] = 'FAILURE'
+            #solution_state['stage'] = 'FAILURE'
             board.model.pop()
-        elif problem_context['halfmove_index'] == len(line_moves)-1:
-            problem_context['state'] = 'SUCCESS'
+        elif solution_state['halfmove_index'] == len(line_moves)-1:
+            solution_state['stage'] = 'SUCCESS'
         else:
-            problem_context['halfmove_index'] += 1
-            board.model.push_san(line_moves[problem_context['halfmove_index']])
-            problem_context['halfmove_index'] += 1
+            solution_state['halfmove_index'] += 1
+            board.model.push_san(line_moves[solution_state['halfmove_index']])
+            solution_state['halfmove_index'] += 1
 
 #    if problem_type == 'draw_kk_or_repetition':
 #        if not evaluation.is_even(score):
@@ -179,16 +196,16 @@ def on_move_complete(board, move):
 
     #print(f'logic state: {state}')
     ok = True
-    match problem_context['state']:
+    match solution_state['stage']:
         case 'FAILURE':
             # update PGN
-            #problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'L'
             print('FAILURE')
-            ok = select_problem()
+            post_problem_interaction(board)
+            #ok = select_problem()
         case 'SUCCESS':
             # update PGN
-            #problem.headers['RECORD'] = problem.headers.get('RECORD', '') + 'W'
             print('SUCCESS')
+            post_problem_interaction(board)
             ok = select_problem()
         case 'PLAYING':
             # select opponent reply
@@ -220,12 +237,36 @@ def on_board_init(board):
 
 
 def on_exit():
-    #database.write(dbinfo)
+    global dbinfo
+    print('on_exit')
+    database.write(dbinfo)
     evaluation.exit()
 
 #------------------------------------------------------------------------------
 # GUI
 #------------------------------------------------------------------------------
+
+class DoneDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        self.setWindowTitle("HELLO!")
+
+        QBtn = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
+
+        self.buttonBox = QDialogButtonBox(QBtn)
+        self.buttonBox.accepted.connect(self.accept)
+        self.buttonBox.rejected.connect(self.reject)
+
+        self.textEdit = QPlainTextEdit(self)
+
+        self.layout = QVBoxLayout()
+        message = QLabel("Back:")
+        self.layout.addWidget(message)
+        self.layout.addWidget(self.textEdit)
+        self.layout.addWidget(self.buttonBox)
+        self.setLayout(self.layout)
+
 
 class TestFrame(QFrame):
     def __init__(self, parent):
@@ -233,7 +274,7 @@ class TestFrame(QFrame):
 
         self.parent = parent
 
-        self.setStyleSheet('background-color: #4B4945')
+        #self.setStyleSheet('background-color: #4B4945')
 
         l = QVBoxLayout()
 
@@ -242,9 +283,6 @@ class TestFrame(QFrame):
 
         self.board = ChessBoard(self)
         l.addWidget(self.board)
-
-        self.backText = QLineEdit()
-        l.addWidget(self.backText)
 
         self.setLayout(l)
 

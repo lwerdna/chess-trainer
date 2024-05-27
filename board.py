@@ -16,6 +16,7 @@ import chess
 SQR_SIZE = 100
 
 class ChessBoard(QFrame):
+    # parent is TestFrame
     def __init__(self, parent):
         super().__init__(parent)
 
@@ -238,22 +239,22 @@ class ChessBoard(QFrame):
     #--------------------------------------------------------------------------
 
     def set_pickup_none(self):
-        for piece in self.findChildren(QLabel):
+        for piece in self.findChildren(PieceLabel):
             piece.enabled = False
 
     def set_pickup_all(self):
-        for piece in self.findChildren(QLabel):
+        for piece in self.findChildren(PieceLabel):
             piece.enabled = True
 
     def set_pickup_white(self):
-        for piece in self.findChildren(QLabel):
+        for piece in self.findChildren(PieceLabel):
             if piece.is_white:
                 piece.enabled = True
             else:
                 piece.enabled = False
 
     def set_pickup_black(self):
-        for piece in self.findChildren(QLabel):
+        for piece in self.findChildren(PieceLabel):
             if piece.is_white:
                 piece.enabled = False
             else:
