@@ -31,8 +31,10 @@ def read(path='database.txt'):
             # override defaults
             name, value = m.group(1, 2)
             if name == 'LEITNER':
-                box, due = value.split(', ')
-                value = int(box), int(due)
+                box, due_str = value.split(', ')
+                struct_time = time.strptime(due_str, '%Y-%m-%d %H:%M:%S')
+                epoch = int(time.mktime(struct_time))
+                value = int(box), epoch
             entry[name] = value
 
     if state != 'WAITING':
@@ -49,7 +51,10 @@ def write(dbinfo, path='database.txt'):
 
                 value = entry[key]
                 if key == 'LEITNER':
-                    fp.write('LEITNER: %s, %s\n' % (value[0], value[1]))
+                    box, epoch = value
+                    struct_time = time.localtime(epoch)
+                    due_str = time.strftime('%Y-%m-%d %H:%M:%S', struct_time)
+                    fp.write('LEITNER: %s, %s\n' % (box, due_str))
                 else:
                     fp.write(f'{key}: {value}\n')
             fp.write('\n')

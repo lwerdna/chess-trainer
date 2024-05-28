@@ -44,16 +44,13 @@ def select_problem(replay=False):
     due_indices = []
     now = int(time.time())
     for i, entry in enumerate(dbinfo):
-        due = entry['LEITNER'][1]
+        box, due = entry['LEITNER']
         #print(f'comparing {now} >= {due} for entry at line {entry["lineNum"]}')
         if now >= due:
-            #print('DUE!')
             due_indices.append(i)
-        else:
-            print('NOT!')
     due_indices = [i for i, entry in enumerate(dbinfo) if entry['LEITNER'][1] < int(time.time())]
 
-    print(due_indices)
+    print(f'due indices: {due_indices}')
     if not due_indices:
         return False
 
@@ -111,6 +108,27 @@ def post_problem_interaction(board):
     result = dlg.result
     print(f'got click result: {result}')
 
+    box, due = problem['LEITNER']
+    match result:
+        case 'terrible':
+            box = 0
+        case 'bad':
+            box = box-1
+        case 'ok':
+            box = max(box, 1)
+        case 'good':
+            box = box+1
+        case 'easy':
+            box = box+2
+
+    now_epoch = int(time.time())
+    due_epoch = now_epoch + 10*60 * 5**(box)
+
+    time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
+    print(f'next due date: {time_str}')
+
+    problem['LEITNER'] = box, due_epoch
+
     # save any edited text
     text = dlg.textEdit.toPlainText()
     text = text.replace('\n', '\\n') # actual newline to '\', 'n'
@@ -136,7 +154,7 @@ def on_move_complete(board, move):
         pass
     elif outcome.termination == chess.Termination.CHECKMATE:
         # in all problem types, achieving checkmate is considered success
-        if outcome.winner == player_color:
+        if outcome.winner == solution_state['player_color']:
             print('SUCCESS: checkmate detected')
             solution_state['stage'] = 'SUCCESS'
     else:
@@ -217,7 +235,9 @@ def on_move_complete(board, move):
     #print(f'logic state: {state}')
     if solution_state['stage'] == 'SUCCESS':
         post_problem_interaction(board)
-        select_problem()
+        problems_remaining = select_problem()
+        if not problems_remaining:
+            print(f'TODO: close app, problems done!')
 
 def on_board_init(board):
     global dbinfo
