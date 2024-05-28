@@ -96,9 +96,15 @@ def line_to_moves(line):
     # get rid of possible "1..."
     if m := re.match(r'^\d\.+(.*)$', line):
         line = m.group(1)
-    # get rid of possible " *"
+    # get rid of game result strings
     if line.endswith(' *'):
         line = line[0:-2]
+    if line.endswith(' 1/2-1/2'):
+        line = line[0:-8]
+    if line.endswith(' 1-0'):
+        line = line[0:-4]
+    if line.endswith(' 0-1'):
+        line = line[0:-4]
     # remove move numbers
     line = re.sub(r'\d+\.', '', line)
     # remove leading and trailing spaces

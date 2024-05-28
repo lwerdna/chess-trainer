@@ -1,6 +1,19 @@
 import re
 import time
 
+def special_handle_defaults(entry):
+    # convert text Leitner data to epoch for easy comparison by higher logic
+    if value := entry.get('LEITNER'):
+        box, due_str = value.split(', ')
+        struct_time = time.strptime(due_str, '%Y-%m-%d %H:%M:%S')
+        epoch = int(time.mktime(struct_time))
+        value = int(box), epoch
+        entry['LEITNER'] = value
+
+    # if no type is given, but a correct line is given, then type is halfmoves
+    if entry.get('TYPE')=='untyped' and entry.get('LINE'):
+        entry['TYPE'] = 'halfmoves'
+
 def read(path='database.txt'):
     state = 'WAITING'
     entry = {}
@@ -13,31 +26,29 @@ def read(path='database.txt'):
             if state == 'WAITING':
                 pass
             else:
+                special_handle_defaults(entry)
                 result.append(entry)
                 state = 'WAITING'
         elif line.startswith('#'):
             continue
         elif m := re.match(r'^([A-Z]+):\s*(.*)$', line):
+            name, value = m.group(1, 2)
+
             if state == 'WAITING':
                 # default values
                 entry = {   'TYPE': 'untyped',
                             'FEN': '',
                             'FRONT': '(blank)',
                             'BACK': '(blank)',
-                            'LEITNER': (0, int(time.time())),
+                            'LEITNER': '0, ' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()),
                             'lineNum': lineNum
                         }
                 state = 'BUSY'
-            # override defaults
-            name, value = m.group(1, 2)
-            if name == 'LEITNER':
-                box, due_str = value.split(', ')
-                struct_time = time.strptime(due_str, '%Y-%m-%d %H:%M:%S')
-                epoch = int(time.mktime(struct_time))
-                value = int(box), epoch
+
             entry[name] = value
 
     if state != 'WAITING':
+        special_handle_defaults(entry)
         result.append(entry)
 
     return result
