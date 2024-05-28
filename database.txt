@@ -2,7 +2,7 @@ TYPE: halfmoves
 FEN: 4r3/1p1qp1k1/2p3Bb/p2pP3/P2P1rPN/2P5/1P2Q3/4R1K1 w - - 0 1
 LINE: 1. e6 Qd6 2. Bxe8 *
 FRONT: (blank)
-BACK: If black doesn't protect against 2.Qd5+ then mega trouble follows.\n\n2...Rf6 3.g5!
+BACK: 1.e6 removes the protector of the rook.\n\nIf black holds on protecting, like 1...Qd8 then:\n\n2. Qd5+ Rf6 3.g5!
 LEITNER: 0, 1716069400
 
 TYPE: halfmoves
@@ -23,7 +23,7 @@ TYPE: halfmoves
 FEN: 6k1/4qp2/1p2P3/1PrB1Q1p/2n3p1/P1p1P1P1/4PK1P/5R2 b - - 0 1
 LINE: 1. Rxd5 Qxd5 2. Qf6+ Kg1 3. Qxf1+ Kxf1 4. Nxe3+ Kg1 5. Nxd5
 FRONT: (blank)
-BACK: The potential for Nxd3 makes d5, f5, f1 likely squares for a combination.
+BACK: The potential Nxd3 highlights squares upon which a combination is likely.
 LEITNER: 0, 1716500474
 
 TYPE: halfmoves
@@ -36,7 +36,7 @@ LEITNER: 0, 1716500781
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
 FRONT: (blank)
-BACK: After 1.Kh6, his king will move to g8 on plies 1,3,5,... and your pawn will deliver the "squeeze" on 3 reply.
+BACK: Recall the three patterns: squeeze, eviction, path claiming.\n\n1.Kh6 Kg8 leads to a squeeze.\n\n1.g5 Kg8 2.Kh6 Kh8 leads to a squeeze.
 LEITNER: 0, 1716850866
 
 TYPE: halfmoves
@@ -45,4 +45,41 @@ LINE: 1.g5 Kg8 2.Kf7 Kh7 3.g6+ Kh8 4.g7+ Kh7 5.g8=Q *
 FRONT: (blank)
 BACK: Weird case of queening the knight pawn.
 LEITNER: 0, 1716850866
+
+TYPE: checkmate_or_promote_to_queen
+FEN: 6k1/8/6K1/6P1/8/8/8/8 w - - 0 1
+FRONT: (blank)
+BACK: Recall the three techniques: squeeze, eviction, path claiming.\n\nCalculate to the squeeze: 1.Kh6 Kh8 2.g6 Kg8 3.g7!
+LEITNER: 0, 1716902655
+
+TYPE: checkmate_or_promote_to_queen
+FEN: 7k/8/6K1/6P1/8/8/8/8 w - - 0 1
+FRONT: (blank)
+BACK: After 1.Kf7 you must calculate the checks lead to eviction: 1...Kh7 2.g6+ Kh8 3.g7+ Kh7
+LEITNER: 0, 1716902655
+
+TYPE: halfmoves
+FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
+LINE: 1.Kf7 Kh7 2.g5 Kg8 3.g6 0-0
+FRONT: Show how white can misplay and lead to a draw.
+BACK: You must calculate the squeezing moves push him to refuge.
+LEITNER: 0, 1716902655
+
+TYPE: checkmate_or_promote_to_queen
+FEN: 7k/5K2/8/6P1/8/8/8/8 w - - 0 1
+FRONT: (blank)
+BACK: Discard g6 since stalemate. Calculate to the squeeze: 1.Kg6 Kg8 2.Kh6 Kh8 3.g6 Kg8 4.g7 Kf7
+LEITNER: 0, 1716902655
+
+TYPE: checkmate_or_promote_to_queen
+FEN: k7/2K5/8/1P6/8/8/8/8 w - - 0 1
+FRONT: (blank)
+BACK: Recall the 3 techniques: squeeze, evict, path claiming.\n\nDiscard b6 since stalemate. Calculate to the squeeze: 1.Kb6 Kb8 2.Ka6 Ka8 3.b6 Kb8 4.b7 Kc7
+LEITNER: 0, 1716902655
+
+TYPE: checkmate_or_promote_to_queen
+FEN: 1k6/8/1K6/8/1P6/8/8/8 w - - 0 1
+FRONT: (blank)
+BACK: Recall the three patterns: squeeze, eviction, path claiming. 1.Ka6 Ka8 leads to failed eviction. 1.b5 Ka8 2.Ka6 leads to a failed eviction. 1.b5 Ka8 4.Kc7 claims the path and evicts.
+LEITNER: 0, 1716902655
 
