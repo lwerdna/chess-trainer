@@ -117,3 +117,5 @@ def last_move_as_san(board):
     move = bcopy.pop()
     return bcopy.san(move)
 
+def move_as_san(board, move):
+    return board.san(move)

@@ -307,12 +307,13 @@ class ChessBoard(QFrame):
             case chess.BaseBoard: return 'free'
             case chess.Board: return 'game'
 
-    def piece_glide(self, piece, dst_index):
+    #
+    def piece_glide(self, piece, sqr_index):
         piece.raise_()
-        dst_square = self.findChild(QWidget, common.index_to_san[dst_index])
+        square = self.indexToSquareWidget(sqr_index)
         self.glide = QPropertyAnimation(piece, b'pos')
-        self.glide.setDuration(500)
-        self.glide.setEndValue(dst_square.pos())
+        self.glide.setDuration(100)
+        self.glide.setEndValue(square.pos())
         self.glide.start()
 
         # Start local event loop, so program waits until glide is completed
@@ -341,9 +342,11 @@ class ChessBoard(QFrame):
             rook = self.view_piece_at_square(rook_src)
             self.piece_glide(rook, rook_dst)
 
-    def move_glide(self, move, is_undo):
-        src_index = (move >> 6) & 0x3F
-        dst_index = move & 0x3F
+    def move_glide(self, move_san, is_undo):
+        move = self.model.parse_san(move_san)
+
+        src_index = move.from_square
+        dst_index = move.to_square
 
         if not is_undo:
             piece = self.view_piece_at_square(src_index)
@@ -352,8 +355,9 @@ class ChessBoard(QFrame):
 
         self.piece_glide(piece, src_index if is_undo else dst_index)
 
-        #if move & (0x3 << 14) == CASTLING:
-        #    self.do_rook_castle(dst_index, is_undo)
+        self.model.push_san(move_san)
+
+        # TODO: handle castling, see do_rook_castle
 
     def move_inputted(self, move):
         # ignore moves to same square

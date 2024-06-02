@@ -198,16 +198,16 @@ def on_move_complete(board, move):
             solution_state['stage'] = 'SUCCESS'
         else:
             solution_state['halfmove_index'] += 1
-            board.model.push_san(line_moves[solution_state['halfmove_index']])
+            move = line_moves[solution_state['halfmove_index']] # san string, like "Qd6"
+            board.move_glide(move, False)
+            #board.model.push_san(line_moves[solution_state['halfmove_index']])
             solution_state['halfmove_index'] += 1
     elif problem_type == 'checkmate_or_promote_to_queen':
         # select opponent reply
-        reply = evaluation.bestmove(board.model)
-        print(f'evaluation.evaluate() returned {reply}')
-
-        #print(f'found opponent reply: {reply}')
-        board.model.push(reply)
-        board.update_view()
+        reply_move = evaluation.bestmove(board.model)
+        reply_san = move_as_san(board.model, reply_move)
+        print(f'evaluation.evaluate() returned {reply_san}')
+        board.move_glide(reply_san, False)
 
 #    if problem_type == 'draw_kk_or_repetition':
 #        if not evaluation.is_even(score):
@@ -244,7 +244,8 @@ def on_board_init(board):
 
     evaluation.init()
 
-    dbinfo = database.read()
+    path = sys.argv[1] if sys.argv[1:] else 'database.txt'
+    dbinfo = database.read(path)
 
     board.set_mode('game')
     board.set_move_request_callback(on_move_request)
@@ -254,7 +255,8 @@ def on_board_init(board):
 def on_exit():
     global dbinfo
     print('on_exit')
-    database.write(dbinfo)
+    path = sys.argv[1] if sys.argv[1:] else 'database.txt'
+    database.write(dbinfo, path)
     evaluation.exit()
 
 #------------------------------------------------------------------------------

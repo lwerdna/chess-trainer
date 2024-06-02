@@ -14,12 +14,12 @@ def special_handle_defaults(entry):
     if entry.get('TYPE')=='untyped' and entry.get('LINE'):
         entry['TYPE'] = 'halfmoves'
 
-def read(path='database.txt'):
+def read(path):
     state = 'WAITING'
     entry = {}
     result = []
     lineNum = 0
-    for line in open('database.txt', 'r').readlines():
+    for line in open(path, 'r').readlines():
         lineNum += 1
         line = line.strip()
         if line=='' or line.isspace():
@@ -53,7 +53,7 @@ def read(path='database.txt'):
 
     return result
 
-def write(dbinfo, path='database.txt'):
+def write(dbinfo, path):
     with open(path, 'w') as fp:
         for entry in dbinfo:
             for key in ['TYPE', 'FEN', 'LINE', 'FRONT', 'BACK', 'LEITNER']:
