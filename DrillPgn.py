@@ -17,6 +17,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBo
 from board import ChessBoard
 
 import pgnfile
+from problemstate import *
 from common import *
 
 #------------------------------------------------------------------------------
@@ -27,18 +28,12 @@ window = None
 dbinfo = None
 
 problem_index = None
-
-solution_state = {
-    'type': None,
-    'stage': 'INIT', # INIT, SUCCESS, FAILURE, PLAYING
-    'halfmove_index': 0,
-    'player_color': None
-}
+problem_state = None
 
 def select_problem(replay=False):
     global window
     global problem_index
-    global solution_state
+    global problem_state
 
     # collect problems that are due
     due_indices = []
@@ -61,19 +56,11 @@ def select_problem(replay=False):
     #print(f'selected problem from line number: {problem["lineNum"]}')
     window.frame.frontText.setText(problem['FRONT'])
 
-    board = window.frame.board
+    problem_state = create_problem_state_from_db_data(problem)
 
-    board.set_fen(problem['FEN'])
-    board.setPerspective(board.model.turn)
-    board.update_view()
+    cboard = window.frame.board
 
-    solution_state = {
-        'stage': 'PLAYING',
-        'type': problem['TYPE'],
-        'problem': problem,
-        'player_color': board.model.turn,
-        'halfmove_index': 0
-    }
+    problem_state.initialize_chessboard(cboard)
 
     #if 'AUTO_PROMOTE' in problem.headers:
     #    board.auto_promote_to = chess.Piece.from_symbol(problem.headers['AUTO_PROMOTE']).piece_type
@@ -85,18 +72,18 @@ def select_problem(replay=False):
 
     return True
 
-def post_problem_interaction(board):
+def post_problem_interaction(cboard):
     global dbinfo
     global problem_index
 
     problem = dbinfo[problem_index]
 
-    # restore the board to the original problem state
-    board.set_fen(problem['FEN'])
-    board.update_view()
+    # restore the cboard to the original problem state
+    cboard.set_fen(problem['FEN'])
+    cboard.update_view()
 
     # pop up dialog
-    dlg = DoneDialog(board)
+    dlg = DoneDialog(cboard)
     dlg.setWindowTitle('DoneDialog')
 
     text = problem['BACK']
@@ -137,16 +124,33 @@ def post_problem_interaction(board):
 # callbacks
 def on_move_request(board, move):
     global problem_index
-    #print(f'MOVE REQUEST: {move} board state: {board.get_fen()}')
+    #print(f'MOVE REQUEST: {move} board st ate: {board.get_fen()}')
     return True
 
-def on_move_complete(board, move):
+def on_move_complete(cboard, move):
     global problem_index
-    global solution_state
+    global problem_state
+
+    # consume move
+    if problem_state.test_move(move):
+        problem_state.update_move(move, cboard)
+    else:
+        cboard.undo_glide()
+
+    # is problem finished?
+    if problem_state.is_done():
+        post_problem_interaction(cboard)
+        problems_remaining = select_problem()
+        if not problems_remaining:
+            print(f'TODO: close app, problems done!')
+
+def on_move_complete2(board, move):
+    global problem_index
+    global problem_state
 
     #print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
 
-    problem_type = solution_state['type']
+    problem_type = problem_state['type']
 
     # GAME ENDED!
     outcome = board.model.outcome()
@@ -154,9 +158,9 @@ def on_move_complete(board, move):
         pass
     elif outcome.termination == chess.Termination.CHECKMATE:
         # in all problem types, achieving checkmate is considered success
-        if outcome.winner == solution_state['player_color']:
+        if outcome.winner == problem_state['player_color']:
             print('SUCCESS: checkmate detected')
-            solution_state['stage'] = 'SUCCESS'
+            problem_state['stage'] = 'SUCCESS'
     else:
         if problem_type == 'checkmate_or_promote_to_queen':
             print('FAILURE: non-checkmate outcome detected')
@@ -169,7 +173,7 @@ def on_move_complete(board, move):
     if problem_type == 'checkmate_or_promote_to_queen':
         if move.promotion == chess.QUEEN:
             print('SUCCESS:: queen promotion detected')
-            solution_state['stage'] = 'SUCCESS'
+            problem_state['stage'] = 'SUCCESS'
 
     # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
 #    bcopy = board.model.copy()
@@ -185,23 +189,23 @@ def on_move_complete(board, move):
         print(f'last move: {lastmove}')
 
         line_moves = line_to_moves(dbinfo[problem_index]['LINE'])
-        expect_move = line_moves[solution_state['halfmove_index']]
+        expect_move = line_moves[problem_state['halfmove_index']]
 
         #print(f'line moves: {line_moves}')
-        #print(f'halfmove_index: {solution_state["halfmove_index"]}')
+        #print(f'halfmove_index: {problem_state["halfmove_index"]}')
         #print(f'expect move: {expect_move}')
 
         if lastmove != expect_move:
-            #solution_state['stage'] = 'FAILURE'
+            #problem_state['stage'] = 'FAILURE'
             board.model.pop()
-        elif solution_state['halfmove_index'] == len(line_moves)-1:
-            solution_state['stage'] = 'SUCCESS'
+        elif problem_state['halfmove_index'] == len(line_moves)-1:
+            problem_state['stage'] = 'SUCCESS'
         else:
-            solution_state['halfmove_index'] += 1
-            move = line_moves[solution_state['halfmove_index']] # san string, like "Qd6"
+            problem_state['halfmove_index'] += 1
+            move = line_moves[problem_state['halfmove_index']] # san string, like "Qd6"
             board.move_glide(move, False)
-            #board.model.push_san(line_moves[solution_state['halfmove_index']])
-            solution_state['halfmove_index'] += 1
+            #board.model.push_san(line_moves[problem_state['halfmove_index']])
+            problem_state['halfmove_index'] += 1
     elif problem_type == 'checkmate_or_promote_to_queen':
         # select opponent reply
         reply_move = evaluation.bestmove(board.model)
@@ -233,7 +237,7 @@ def on_move_complete(board, move):
 #        debug.breakpoint()
 
     #print(f'logic state: {state}')
-    if solution_state['stage'] == 'SUCCESS':
+    if problem_state['stage'] == 'SUCCESS':
         post_problem_interaction(board)
         problems_remaining = select_problem()
         if not problems_remaining:

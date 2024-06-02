@@ -308,18 +308,6 @@ class ChessBoard(QFrame):
             case chess.Board: return 'game'
 
     #
-    def piece_glide(self, piece, sqr_index):
-        piece.raise_()
-        square = self.indexToSquareWidget(sqr_index)
-        self.glide = QPropertyAnimation(piece, b'pos')
-        self.glide.setDuration(100)
-        self.glide.setEndValue(square.pos())
-        self.glide.start()
-
-        # Start local event loop, so program waits until glide is completed
-        loop = QEventLoop()
-        self.glide.finished.connect(loop.quit)
-        loop.exec()
 
     def do_rook_castle(self, king_dst, is_undo):
         if king_dst == 2:
@@ -342,8 +330,24 @@ class ChessBoard(QFrame):
             rook = self.view_piece_at_square(rook_src)
             self.piece_glide(rook, rook_dst)
 
-    def move_glide(self, move_san, is_undo):
-        move = self.model.parse_san(move_san)
+    def piece_glide(self, piece, sqr_index):
+        piece.raise_()
+        square = self.indexToSquareWidget(sqr_index)
+        self.glide = QPropertyAnimation(piece, b'pos')
+        self.glide.setDuration(100)
+        self.glide.setEndValue(square.pos())
+        self.glide.start()
+
+        # Start local event loop, so program waits until glide is completed
+        loop = QEventLoop()
+        self.glide.finished.connect(loop.quit)
+        loop.exec()
+
+    def move_glide(self, move_san, is_undo=False):
+        if is_undo:
+            move = self.model.peek()
+        else:
+            move = self.model.parse_san(move_san)
 
         src_index = move.from_square
         dst_index = move.to_square
@@ -355,9 +359,16 @@ class ChessBoard(QFrame):
 
         self.piece_glide(piece, src_index if is_undo else dst_index)
 
-        self.model.push_san(move_san)
+        if is_undo:
+            self.model.pop()
+        else:
+            self.model.push_san(move_san)
 
         # TODO: handle castling, see do_rook_castle
+
+    def undo_glide(self):
+        lastmove = common.last_move_as_san(self.model)
+        self.move_glide(lastmove, True)
 
     def move_inputted(self, move):
         # ignore moves to same square
@@ -390,7 +401,8 @@ class ChessBoard(QFrame):
 
         # inform user
         if self.move_complete_callback:
-            self.move_complete_callback(self, move)
+            move_san = common.last_move_as_san(self.model)
+            self.move_complete_callback(self, move_san)
 
     def game_over(self):
         legal_moves = list(filter(self.model.is_legal,

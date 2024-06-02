@@ -52,7 +52,7 @@ index_to_san = {56: 'a8', 57: 'b8', 58: 'c8', 59: 'd8', 60: 'e8', 61: 'f8', 62: 
                 8:  'a2', 9:  'b2', 10: 'c2', 11: 'd2', 12: 'e2', 13: 'f2', 14: 'g2', 15: 'h2',
                 0:  'a1', 1:  'b1', 2:  'c1', 3:  'd1', 4:  'e1', 5:  'f1', 6:  'g1', 7:  'h1' }
 
-# Generate a list of all squares on the board in algebraic notation         
+# Generate a list of all squares on the board in algebraic notation
 squares_san = []
 for rank in '12345678':
     for file in 'abcdefgh':
@@ -92,7 +92,7 @@ def is_winning(score):
 # "1. e6 Qd6 2. Bxe8 Bg5 3. Ng2 Re4 4. Qf3 Qxe6 5. Rf1"
 # ->
 # ['e6', 'Qd6', 'Bxe8', 'Bg5', 'Ng2', 'Re4', 'Qf3', 'Qxe6', 'Rf1']
-def line_to_moves(line):
+def split_line_string(line):
     # get rid of possible "1..."
     if m := re.match(r'^\d\.+(.*)$', line):
         line = m.group(1)
