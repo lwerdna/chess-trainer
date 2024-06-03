@@ -10,9 +10,9 @@ def special_handle_defaults(entry):
         value = int(box), epoch
         entry['LEITNER'] = value
 
-    # if no type is given, but a correct line is given, then type is halfmoves
+    # if no type is given, but a correct line is given, then type is follow_variations
     if entry.get('TYPE')=='untyped' and entry.get('LINE'):
-        entry['TYPE'] = 'halfmoves'
+        entry['TYPE'] = 'follow_variations'
 
 def read(path):
     state = 'WAITING'

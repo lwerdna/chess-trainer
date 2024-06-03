@@ -90,10 +90,11 @@ class FollowVariationsProblemState(ProblemState):
         self.halfmove_index = 0
 
         for i,exercise in enumerate(self.exercises):
-            print(f'exercise {i}: FEN:{exercise["FEN"]} LINE:{exercise["LINE"]}')
+            print(f'exercise {i}: FEN: {exercise["FEN"]} LINE: {exercise["LINE"]}')
 
     def initialize_chessboard(self, cboard):
         cboard.model = self.board.copy()
+        cboard.setPerspective(self.player_color)
         cboard.update_view()
 
     # test if a player move is correct

@@ -13,7 +13,7 @@ import database
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
 
-from board import ChessBoard
+from cboard import ChessBoard
 
 import pgnfile
 from problemstate import *

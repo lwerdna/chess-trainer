@@ -4,6 +4,7 @@ import io
 import operator
 
 import chess
+import chess.pgn
 import chess.engine
 
 import debug

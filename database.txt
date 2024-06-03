@@ -3,12 +3,12 @@ FEN: 4r3/1p1qp1k1/2p3Bb/p2pP3/P2P1rPN/2P5/1P2Q3/4R1K1 w - - 0 1
 LINE: 1. e6 Qd6 2. Bxe8 *
 FRONT: (blank)
 BACK: 1.e6 removes the protector of the rook.\n\nIf black holds on protecting, like 1...Qd8 then:\n\n2. Qd5+ Rf6 3.g5!
-LEITNER: 3, 2024-06-03 05:40:09
+LEITNER: 4, 2024-06-08 02:02:20
 
 TYPE: follow_variations
 FEN: 3r2k1/pp3pp1/2p3np/2Qq4/3PNn2/P4N1P/1P3PPK/4R3 b - - 0 1
 LINE: 1...Nd3 2. Qxd5 cxd5 *
-FRONT:
+FRONT: 
 BACK: The fork looks spoiled, but isn't due to "appended attack".\n\n(ChessTempo #169555)
 LEITNER: 4, 2024-06-06 17:00:03
 
@@ -17,21 +17,21 @@ FEN: q6k/r2B1Rbp/p5p1/1nB5/3pr1Q1/8/P1P3PP/1R4K1 w - - 0 1
 LINE: 1. Qf3 Re3 2. Qxa8+ *
 FRONT: (blank)
 BACK: Take me (Bxa7) and I'll take you back (Rxg4) situation, but the Q escapes to a square that pins the rook and focus fires f8.\n\nIf 1...Rb7 2.Qxe4.\nIf 1...Rc7 2.Bf8 is best but hard to find.\nIf 1...Re3 2.Qxa8 Rxa8 3.Nxb5 axb5 4.Rxg7 Kxg7 5.Bxd4+ {winning the rook}
-LEITNER: 2, 2024-06-03 04:00:51
+LEITNER: 3, 2024-06-04 14:41:02
 
 TYPE: follow_variations
 FEN: 6k1/4qp2/1p2P3/1PrB1Q1p/2n3p1/P1p1P1P1/4PK1P/5R2 b - - 0 1
 LINE: 1. Rxd5 Qxd5 2. Qf6+ Kg1 3. Qxf1+ Kxf1 4. Nxe3+ Kg1 5. Nxd5
 FRONT: (blank)
 BACK: The potential Nxd3 highlights squares upon which a combination is likely.
-LEITNER: 1, 2024-06-03 00:38:08
+LEITNER: 2, 2024-06-03 22:03:44
 
 TYPE: follow_variations
 FEN: 5kr1/1p2p3/2p1PqB1/p2p1NQ1/P2P4/2P5/1P6/6K1 w - - 2 8
 LINE: 8. Qxf6+ exf6 9. e7# *
 FRONT: (blank)
 BACK: Easy mate :)
-LEITNER: 3, 2024-06-03 05:51:35
+LEITNER: 4, 2024-06-08 02:03:30
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
@@ -44,63 +44,98 @@ FEN: 6k1/8/6K1/8/6P1/8/8/8 w - - 0 1
 LINE: 1.g5 Kh8 2.Kf7 Kh7 3.g6+ Kh8 4.g7+ Kh7 5.g8=Q+ *
 FRONT: (blank)
 BACK: Weird case of queening the knight pawn.
-LEITNER: 1, 2024-06-03 00:37:00
+LEITNER: 2, 2024-06-03 22:01:31
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 6k1/8/6K1/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Recall the three techniques: squeeze, eviction, path claiming.\n\nCalculate to the squeeze: 1.Kh6 Kh8 2.g6 Kg8 3.g7!
-LEITNER: 2, 2024-06-03 04:00:27
+LEITNER: 3, 2024-06-04 14:42:36
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
-BACK: After 1.Kf7 you must calculate the checks lead to eviction: 1...Kh7 2.g6+ Kh8 3.g7+ Kh7
-LEITNER: 2, 2024-06-03 04:00:39
+BACK: Eviction!\n\nAfter 1.Kf7 you must calculate the checks lead to eviction: 1...Kh7 2.g6+ Kh8 3.g7+ Kh7
+LEITNER: 3, 2024-06-04 14:42:53
 
 TYPE: follow_variations
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
 LINE: 1.Kf7 Kh7 2.g5 Kh8 3.g6 1/2-1/2
 FRONT: Show how white can misplay and lead to a draw.
 BACK: You must calculate the squeezing moves push him to refuge.
-LEITNER: 2, 2024-06-03 03:14:10
+LEITNER: 3, 2024-06-04 14:38:40
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/5K2/8/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Discard g6 since stalemate.\n\nCalculate to the squeeze: 1.Kg6 Kg8 2.Kh6 Kh8 3.g6 Kg8 4.g7 Kf7
-LEITNER: 2, 2024-06-03 04:00:15
+LEITNER: 3, 2024-06-04 14:43:12
 
 TYPE: checkmate_or_promote_to_queen
 FEN: k7/2K5/8/1P6/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Recall the 3 techniques: squeeze, evict, path claiming.\n\nDiscard b6 since stalemate.\n\nCalculate to the squeeze: 1.Kb6 Kb8 2.Ka6 Ka8 3.b6 Kb8 4.b7 Kc7
-LEITNER: 3, 2024-06-03 05:40:27
+LEITNER: 4, 2024-06-08 02:01:58
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 1k6/8/1K6/8/1P6/8/8/8 w - - 0 1
 FRONT: (blank)
-BACK: Recall the three patterns: squeeze, eviction, path claiming.\n\n1.Ka6 Ka8 leads to failed eviction.\n\n1.b5 Ka8 2.Ka6 leads to a failed eviction.\n\n1.b5 Ka8 4.Kc7 claims the path and evicts.
-LEITNER: 1, 2024-06-03 00:39:39
+BACK: Outflanking to path claiming!\n\nRecall the three patterns: squeeze, eviction, path claiming.\n\n1.Ka6 Ka8 leads to failed eviction.\n\n1.b5 Ka8 2.Ka6 leads to a failed eviction.\n\n1.b5 Ka8 4.Kc7 claims the path and evicts.
+LEITNER: 1, 2024-06-03 18:44:44
 
 TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
 LINE: 1.Ka6 Kb8 2.Kb6 Kc8 3.c7 *
 FRONT: (blank)
 BACK: Squeeze!
-LEITNER: 2, 2024-06-03 03:13:59
+LEITNER: 3, 2024-06-04 14:39:16
 
 TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
 LINE: 1.Ka6 Kb8 2.Kb6 Ka8 3.Kc7 *
 FRONT: (blank)
 BACK: Path-claiming!
-LEITNER: 1, 2024-06-03 00:37:29
+LEITNER: 2, 2024-06-03 22:03:24
 
 TYPE: follow_variations
 FEN: 8/6k1/4P3/6K1/8/8/8/8 w - - 0 1
 LINE: 1.Kf5 Kf8 2.Kf6 Ke8 3.e7 *
 FRONT: (blank)
 BACK: Squeeze!
-LEITNER: 1, 2024-06-03 00:39:54
+LEITNER: 2, 2024-06-03 21:57:59
+
+TYPE: follow_variations
+FEN: 6k1/8/p7/r1r2Pp1/3R2Pp/1p6/1P4P1/3R2K1 w - - 0 1
+LINE: 1.Rd8+ Kf7 (1...Kh7 R1d7+ 2.Kh6 Rh8#) (1...Kg7 2.R1d7+ Kf6 (2...Kh6 3.Rh8#)) 2.R1d7+ Kf6 3.Rf8+ Ke5 4.Re8+ Kf4 (4...Kf6 4.Re6#) 5.Rd4+ Kg3 6.Re3# 1-0
+FRONT: (blank)
+BACK: Yusupov calls this mate along open lines.
+LEITNER: 2, 2024-06-03 21:34:41
+
+TYPE: follow_variations
+FEN: 1q3rbk/Q5pp/8/3P4/1r3n2/R3N3/2B2PPP/5RK1 b - - 0 1
+LINE: 1.Ne2+ 2.Kh1 Qxh2+ 3.Kxh2 Rh4# 0-1
+FRONT: (blank)
+BACK: Anastasia's mate
+LEITNER: 1, 2024-06-03 18:42:12
+
+TYPE: follow_variations
+FEN: 6k1/p4p1p/3p1p2/2p1r3/2PnrqN1/P6P/1P1Q1PP1/3R1RK1 b - - 0 1
+LINE: 1...Ne2+ 2.Kh1 Qxg4 3.hxg4 Rh5+ 4.gxh5 Rh4# 0-1
+FRONT: (blank)
+BACK: Anastasia's mate
+LEITNER: 1, 2024-06-03 18:44:57
+
+TYPE: follow_variations
+FEN: 6k1/5pp1/8/5P2/R6p/1P3N1P/3rnrPK/6R1 b - - 0 1
+LINE: 1...Rxf3 2.gxf3 Nd4+ 3.Kh1 (3.Rg2 Nxf3+ 4.Kh1 Rd1+ 5.Rg1 Rxg1#) Nxf3 4.Rg2 Rd1+ 5.Rg1 Rxg1# 0-1
+FRONT: (blank)
+BACK: Arabian mate
+LEITNER: 1, 2024-06-03 18:39:01
+
+TYPE: follow_variations
+FEN: r2q2rk/ppp4p/3p4/2b2Q2/3pPPR1/2P2n2/PP3P1P/RNB4K b - - 0 1
+LINE: 1...Qh4 2.Rg2 (2.Rxh4 3.Rg1#) Qxh2+ 3.Rxh2 Rg1# 1-0
+FRONT: (blank)
+BACK: Arabian mate
+LEITNER: 1, 2024-06-03 18:45:38
 
