@@ -161,7 +161,7 @@ class ChessBoard(QFrame):
         pos = self.layout.cellRect(row, col)
         piece_label.move(pos.x(), pos.y())
 
-        print(f'added PieceLabel {symbol} to row,col == {row},{col} and its x,y == {piece_label.x()},{piece_label.y()}')
+        #print(f'added PieceLabel {symbol} to row,col == {row},{col} and its x,y == {piece_label.x()},{piece_label.y()}')
         #debug.breakpoint()
 
         piece_label.raise_()
@@ -360,8 +360,8 @@ class ChessBoard(QFrame):
     def move_glide(self, move_san):
         move = self.model.parse_san(move_san)
         piece = self.get_piece_widget_by_square_index(move.from_square)
-        print(f'{piece} .x={piece.x()} .y={piece.y()}')
-        print(f'{move} {move.from_square} -> {move.to_square}')
+        #print(f'{piece} .x={piece.x()} .y={piece.y()}')
+        #print(f'{move} {move.from_square} -> {move.to_square}')
         self.piece_glide(piece, move.to_square)
         self.model.push_san(move_san)
         self.update_view()
@@ -372,8 +372,8 @@ class ChessBoard(QFrame):
         move = self.model.peek()
         piece = self.get_piece_widget_by_square_index(move.to_square)
         if piece:
-            print(f'{piece} .x={piece.x()} .y={piece.y()}')
-            print(f'{move} {move.from_square} -> {move.to_square}')
+            #print(f'{piece} .x={piece.x()} .y={piece.y()}')
+            #print(f'{move} {move.from_square} -> {move.to_square}')
             self.piece_glide(piece, move.from_square)
         self.model.pop()
         self.update_view()
@@ -404,7 +404,7 @@ class ChessBoard(QFrame):
                 self.model.push(move)
 
         self.update_view()
-        print('view is updated!')
+        #print('view is updated!')
 
         # inform user
         if self.move_complete_callback:
@@ -524,7 +524,6 @@ class PieceLabel(QLabel):
             for square in self.board.squares:
                 if square.pos() == self.src_pos:
                     self.src_square = square
-                    print(f'origin square: {square.objectName()}')
                     break
 
             # Identify legal moves
@@ -594,7 +593,6 @@ class PieceLabel(QLabel):
 
         sqr_src = int(self.src_square.objectName())
         sqr_dst = int(self.dst_square.objectName())
-        print(f'{sqr_src} -> {sqr_dst}')
 
         # is the move legal?
         if not sqr_dst in self.legal_dst_squares:
@@ -651,7 +649,6 @@ class PieceLabel(QLabel):
                     prom_piece = chess.QUEEN
 
         move = chess.Move(sqr_src, sqr_dst, promotion=prom_piece)
-        print(f'calling move_inputted({move})')
         self.board.move_inputted(move)
 
         return

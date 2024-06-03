@@ -78,13 +78,22 @@ class CheckmateOrPromoteToQueenProblemState(ProblemState):
 class FollowVariationsProblemState(ProblemState):
     def __init__(self, dbentry):
         self.dbentry = dbentry
-        self.line = split_line_string(dbentry['LINE'])
+
         self.board = chess.Board(dbentry['FEN'])
+        self.player_color = self.board.turn
+
+        self.exercises = generate_variation_exercises(dbentry['FEN'], dbentry['LINE'])
+        assert len(self.exercises) >= 1
+
+        self.exercise_index = 0
+        self.line = split_line_string(self.exercises[0]['LINE'])
         self.halfmove_index = 0
 
+        for i,exercise in enumerate(self.exercises):
+            print(f'exercise {i}: FEN:{exercise["FEN"]} LINE:{exercise["LINE"]}')
+
     def initialize_chessboard(self, cboard):
-        cboard.set_fen(self.dbentry['FEN'])
-        cboard.setPerspective(self.board.turn)
+        cboard.model = self.board.copy()
         cboard.update_view()
 
     # test if a player move is correct
@@ -119,9 +128,31 @@ class FollowVariationsProblemState(ProblemState):
             # update the UI state with the reply
             cboard.move_glide(reply)
             self.halfmove_index += 1
+        else:
+            # advance to next exercise
+            self.exercise_index += 1
+
+            # if there is one, initialize state
+            if self.exercise_index < len(self.exercises):
+                exercise = self.exercises[self.exercise_index]
+                print(f'exercise_index: {self.exercise_index}')
+                print(f'   loading fen: {exercise["FEN"]}')
+                self.board = chess.Board(exercise['FEN'])
+                self.line = split_line_string(exercise['LINE'])
+                print(f'  loading line: {self.line}')
+                self.halfmove_index = 0
+
+                self.initialize_chessboard(cboard)
+
+                # play so it's our move
+                if self.board.turn != self.player_color:
+                    reply = self.line[0]
+                    self.board.push_san(reply)
+                    cboard.move_glide(reply)
+                    self.halfmove_index += 1
 
     def is_done(self):
-        return self.halfmove_index >= len(self.line)
+        return self.exercise_index >= len(self.exercises)
 
 def create_problem_state_from_db_data(entry):
     match entry['TYPE']:

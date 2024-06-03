@@ -34,15 +34,14 @@ def select_problem(replay=False):
     global problem_index
     global problem_state
 
-    # collect problems that are due
+    # collect problems that are ue
     due_indices = []
     now = int(time.time())
     for i, entry in enumerate(dbinfo):
         box, due = entry['LEITNER']
-        #print(f'comparing {now} >= {due} for entry at line {entry["lineNum"]}')
+        print(f'comparing {now} >= {due} for entry at line {entry["lineNum"]}')
         if now >= due:
             due_indices.append(i)
-    due_indices = [i for i, entry in enumerate(dbinfo) if entry['LEITNER'][1] < int(time.time())]
 
     print(f'due indices: {due_indices}')
     if not due_indices:

@@ -1,5 +1,6 @@
 import os
 import re
+import io
 import operator
 
 import chess
@@ -119,3 +120,136 @@ def last_move_as_san(board):
 
 def move_as_san(board, move):
     return board.san(move)
+
+# assign a fullmove number to nodes in a variation tree
+def assign_fullmove(node, current):
+    node.fullmove = current
+    for child in node.variations:
+        assign_fullmove(child, current if node.turn() == chess.WHITE else current+1)
+
+# collect all nodes in a variation tree
+def collect_nodes(node):
+    result = [node]
+    for child in node.variations:
+        result.extend(collect_nodes(child))
+    return result
+
+# get all nodes in a variation tree where branching occurs (and root)
+def get_branch_nodes(node):
+    result = []
+    if type(node) == chess.pgn.Game or len(node.variations)>1:
+        result.append(node)
+    for child in node.variations:
+        result.extend(get_branch_nodes(child))
+    return result
+
+# get all nodes in a depth search to the bottom, always going left (main variation)
+def descend_left(node):
+    result = [node]
+    if node.variations:
+        child = node.variations[0]
+        result.extend(descend_left(child))
+    return result
+
+# convert a GameNode/ChildNode "chain" (a tree with always only one child except leaf)
+# to a string like "1.Rd8+ Kf7 2.R1d7+ Kf6 3.Rf8+ Ke5 4.Re8+ Kf4 5.Rd4+ Kg3 6.Re3#"
+def node_chain_to_san(node):
+    tokens = []
+
+    first = True
+    while not node.is_end():
+        if node.turn() == chess.WHITE:
+            tokens.append(f'{node.fullmove}.')
+        elif first:
+            tokens.append(f'{node.fullmove}...')
+
+        tokens.append(node.variations[0].san())
+
+        first = False
+
+        node = node.variations[0]
+        if not node.is_end():
+            tokens.append(' ')
+
+    return ''.join(tokens)
+
+# convert a list of GameNode/ChildNode
+# to a string like "1.Rd8+ Kf7 2.R1d7+ Kf6 3.Rf8+ Ke5 4.Re8+ Kf4 5.Rd4+ Kg3 6.Re3#"
+#
+# ignore children (held in .variations) and instead use the list as ancestry
+def node_list_to_san(nodes):
+    tokens = []
+
+    for i, node in enumerate(nodes):
+        first = (i == 0)
+        last = (i == len(nodes)-1)
+
+        if first:
+            tokens.append(f'{node.fullmove}' + ('.' if node.turn() == chess.WHITE else '...'))
+        elif node.turn() == chess.WHITE and not last:
+            tokens.append(f'{node.fullmove}.')
+
+        if i < len(nodes)-1:
+            tokens.append(nodes[i+1].san())
+        if i < len(nodes)-2:
+            tokens.append(' ')
+
+        first = False
+
+    return ''.join(tokens)
+
+def generate_variation_exercises_worker(node, line):
+    result = []
+    if node.is_end():
+        result.append(line + [node])
+    else:
+        for i, child in enumerate(node.variations):
+            if i==0:
+                result.extend(generate_variation_exercises_worker(child, line+[node])) # left descent continues current line
+            else:
+                result.extend(generate_variation_exercises_worker(child, [node])) # non-left descent starts new
+    return result
+
+# fen:        starting board state
+# variations: text describes lines
+def generate_variation_exercises(fen, variations):
+    result = []
+
+    # have chess parse it
+    pgn = io.StringIO(f'[FEN "{fen}"]\n{variations}')
+    game = chess.pgn.read_game(pgn)
+    assign_fullmove(game, 1)
+
+    temp = generate_variation_exercises_worker(game, [])
+
+    for nodes in generate_variation_exercises_worker(game, []):
+        fen = nodes[0].board().fen()
+        line_str = node_list_to_san(nodes)
+        result.append({'FEN':fen, 'LINE':line_str})
+
+    return result
+
+def moves_to_dot(fen, variations):
+    pgn = io.StringIO(f'[FEN "{fen}"]\n{variations}')
+    game = chess.pgn.read_game(pgn)
+    assign_fullmove(game, 1)
+
+    print('digraph g {')
+
+    print('\t//nodes')
+    nodes = collect_nodes(game)
+    for node in nodes:
+        print(f'\t{id(node)} [label=""]')
+
+    print('\t//edges')
+    for src in nodes:
+        for dst in src.variations:
+            # X.turn is the color *TO* move at state X
+            if src.turn() == chess.WHITE:
+                move_label = f'{dst.fullmove}.{dst.san()}'
+            else:
+                move_label = f'{dst.fullmove}...{dst.san()}'
+            print(f'\t{id(src)} -> {id(dst)} [label="{move_label}"]')
+
+    print('}')
+
