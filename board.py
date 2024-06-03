@@ -6,6 +6,7 @@
 # Resolution of pieces to square is done by coordinates of the grid layout
 
 import copy
+import time
 
 from PyQt5.QtCore import pyqtSignal, QPropertyAnimation, QEventLoop, QRegExp, Qt, QThread
 from PyQt5.QtGui import QIcon, QPixmap
@@ -46,15 +47,19 @@ class ChessBoard(QFrame):
                 square = QWidget(self)
                 square.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
                 self.layout.addWidget(square, qt_row, qt_col)
-                #print(f'square[{len(self.squares)}] is at qt row={qt_row}, col={qt_col}')
+                print(f'square[{len(self.squares)}] is at qt row={qt_row}, col={qt_col} and x,y={square.x()},{square.y()}')
                 self.squares.append(square) # important ordering
 
         self.setPerspective(chess.WHITE)
 
         self.setLayout(self.layout)
 
-        #self.model = chess.Board()
-        self.model = chess.BaseBoard()
+        print(f'layout.rowCount(): {self.layout.rowCount()}')
+        print(f'layout.columnCount(): {self.layout.columnCount()}')
+
+
+        self.model = chess.Board()
+        #self.model = chess.BaseBoard()
 
         #self.search = Search(self.model)
         #self.search_thread = SearchThread(self)
@@ -155,8 +160,19 @@ class ChessBoard(QFrame):
     # symbol:       str like 'R'
     def place_piece(self, sqr_index, symbol):
         row, col = self.indexToQtCoords(sqr_index)
+
         piece_label = PieceLabel(self, symbol)
-        self.layout.addWidget(piece_label, row, col)
+
+        pos = self.layout.cellRect(row, col)
+        piece_label.move(pos.x(), pos.y())
+
+        #print(f'added PieceLabel {symbol} to row,col == {row},{col} and its x,y == {piece_label.x()},{piece_label.y()}')
+        #debug.breakpoint()
+
+        piece_label.raise_()
+        piece_label.show()
+
+        return piece_label
 
     # NB: square index changes!
     # 0 can be bottom left widget in layout
@@ -166,8 +182,7 @@ class ChessBoard(QFrame):
         square_pos = self.layout.getItemPosition(self.layout.indexOf(square))
 
         for piece in self.findChildren(QLabel):
-            piece_pos = self.layout.getItemPosition(self.layout.indexOf(piece))
-            if square_pos == piece_pos:
+            if piece.pos() == square.pos():
                 return piece
 
     # NB: square san changes!
@@ -205,7 +220,7 @@ class ChessBoard(QFrame):
         # create new labels
         pmap = self.model.piece_map()
         for square_idx, piece_obj in pmap.items():
-            self.place_piece(square_idx, piece_obj.symbol())
+            p = self.place_piece(square_idx, piece_obj.symbol())
 
         self.set_pickup_model()
 
@@ -361,9 +376,10 @@ class ChessBoard(QFrame):
     def undo_glide(self):
         move = self.model.peek()
         piece = self.get_piece_widget_by_square_index(move.to_square)
-        print(f'{piece} .x={piece.x()} .y={piece.y()}')
-        print(f'{move} {move.from_square} -> {move.to_square}')
-        self.piece_glide(piece, move.from_square)
+        if piece:
+            print(f'{piece} .x={piece.x()} .y={piece.y()}')
+            print(f'{move} {move.from_square} -> {move.to_square}')
+            self.piece_glide(piece, move.from_square)
         self.model.pop()
         self.update_view()
 
@@ -447,7 +463,7 @@ class PieceLabel(QLabel):
         self.symbol = symbol # str representing the piece PNBRQKpnbrqk
 
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        self.setMinimumSize(1, 1)
+        self.setMinimumSize(106, 106)
 
         # Make label transparent, so square behind piece is visible
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -475,8 +491,6 @@ class PieceLabel(QLabel):
         self.setScaledContents(True)
 
         self.setMouseTracking(True)
-
-        self.show()
 
     def resizeEvent(self, event):
         if event.size().width() > event.size().height():
@@ -571,6 +585,7 @@ class PieceLabel(QLabel):
 
         # abort if mouse not on on board
         if not self.board.rect().contains(self.board.mapFromGlobal(event.globalPos())):
+            self.move(self.src_pos)
             return
 
         # locate destination square, abort if not found
@@ -579,8 +594,8 @@ class PieceLabel(QLabel):
                 self.dst_square = square
                 break
         else:
-            #print(f'destination square not found, sending back')
-            #self.move(self.src_pos)
+            print(f'destination square not found, sending back')
+            self.move(self.src_pos)
             return
 
         sqr_src = int(self.src_square.objectName())
