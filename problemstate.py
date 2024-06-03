@@ -41,7 +41,7 @@ class FollowVariationsProblemState(ProblemState):
         self.halfmove_index += 1
         self.board.push_san(move)
 
-        # the line isn't ended, animate the reply
+        # the line isn't ended, execute the reply
         if self.halfmove_index+1 < len(self.line):
             reply = self.line[self.halfmove_index]
 
@@ -49,7 +49,7 @@ class FollowVariationsProblemState(ProblemState):
             self.board.push_san(reply)
 
             # update the UI state with the reply
-            cboard.move_glide(reply, False)
+            cboard.move_glide(reply)
             self.halfmove_index += 1
 
     def is_done(self):

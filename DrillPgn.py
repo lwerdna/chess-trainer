@@ -203,7 +203,7 @@ def on_move_complete2(board, move):
         else:
             problem_state['halfmove_index'] += 1
             move = line_moves[problem_state['halfmove_index']] # san string, like "Qd6"
-            board.move_glide(move, False)
+            board.move_glide(move)
             #board.model.push_san(line_moves[problem_state['halfmove_index']])
             problem_state['halfmove_index'] += 1
     elif problem_type == 'checkmate_or_promote_to_queen':
@@ -211,7 +211,7 @@ def on_move_complete2(board, move):
         reply_move = evaluation.bestmove(board.model)
         reply_san = move_as_san(board.model, reply_move)
         print(f'evaluation.evaluate() returned {reply_san}')
-        board.move_glide(reply_san, False)
+        board.move_glide(reply_san)
 
 #    if problem_type == 'draw_kk_or_repetition':
 #        if not evaluation.is_even(score):

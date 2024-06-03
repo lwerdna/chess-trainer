@@ -1,5 +1,9 @@
-# class ChessBoard
-# class PieceLabel
+# class ChessBoard is for the board
+# class PieceLabel is for the pieces
+# class Widget     is for the squares
+
+# The ChessBoard's grid layout contains the squares (Widget) and pieces (PieceLabel).
+# Resolution of pieces to square is done by coordinates of the grid layout
 
 import copy
 
@@ -148,15 +152,16 @@ class ChessBoard(QFrame):
             self.resize(event.size().width(), event.size().width())
             self.sqr_size = int(event.size().width() / 8)
 
-    # square_name: str like 'a7'
-    # piece:       str like 'R'
-    def place_piece(self, sqr_index, piece):
-        #print(f'place_piece(sqr_name={sqr_name}, piece={piece})')
+    # symbol:       str like 'R'
+    def place_piece(self, sqr_index, symbol):
         row, col = self.indexToQtCoords(sqr_index)
-        piece_label = PieceLabel(self, piece)
+        piece_label = PieceLabel(self, symbol)
         self.layout.addWidget(piece_label, row, col)
 
-    def view_piece_at_square(self, sqr_index):
+    # NB: square index changes!
+    # 0 can be bottom left widget in layout
+    # 0 can be top right widget in layout
+    def get_piece_widget_by_square_index(self, sqr_index):
         square = self.indexToSquareWidget(sqr_index)
         square_pos = self.layout.getItemPosition(self.layout.indexOf(square))
 
@@ -164,6 +169,13 @@ class ChessBoard(QFrame):
             piece_pos = self.layout.getItemPosition(self.layout.indexOf(piece))
             if square_pos == piece_pos:
                 return piece
+
+    # NB: square san changes!
+    # a1 can be bottom left widget
+    # a1 can be top right widget
+    def get_piece_widget_by_square_san(self, square):
+        index = self.sanToIndex(square)
+        return self.get_piece_widget_by_square_index(index)
 
     #--------------------------------------------------------------------------
     # get/set fen
@@ -186,23 +198,14 @@ class ChessBoard(QFrame):
 
     # draw the board based on FEN
     def update_view(self):
-        pmap = self.model.piece_map()
-        for i in range(64):
-            vpiece = self.view_piece_at_square(i)   # view piece
-            mpiece = pmap.get(i)                    # model piece
+        # destroy all labels
+        for piece in self.findChildren(QLabel):
+            piece.setParent(None)
 
-            # model has piece but we don't
-            if mpiece and not vpiece:
-                self.place_piece(i, mpiece.symbol())
-            # model doesn't have piece but we do
-            elif not mpiece and vpiece:
-                vpiece.setParent(None)
-            # we both have pieces
-            elif vpiece and mpiece:
-                # if they're the same, done!
-                if vpiece.symbol != mpiece.symbol():
-                    vpiece.setParent(None)
-                    self.place_piece(i, mpiece.symbol())
+        # create new labels
+        pmap = self.model.piece_map()
+        for square_idx, piece_obj in pmap.items():
+            self.place_piece(square_idx, piece_obj.symbol())
 
         self.set_pickup_model()
 
@@ -324,15 +327,16 @@ class ChessBoard(QFrame):
             rook_dst = 61
 
         if is_undo:
-            rook = self.view_piece_at_square(rook_dst)
+            rook = self.get_piece_widget_by_square_index(rook_dst)
             self.piece_glide(rook, rook_src)
         else:
-            rook = self.view_piece_at_square(rook_src)
+            rook = self.get_piece_widget_by_square_index(rook_src)
             self.piece_glide(rook, rook_dst)
 
     def piece_glide(self, piece, sqr_index):
         piece.raise_()
         square = self.indexToSquareWidget(sqr_index)
+
         self.glide = QPropertyAnimation(piece, b'pos')
         self.glide.setDuration(100)
         self.glide.setEndValue(square.pos())
@@ -343,38 +347,29 @@ class ChessBoard(QFrame):
         self.glide.finished.connect(loop.quit)
         loop.exec()
 
-    def move_glide(self, move_san, is_undo=False):
-        if is_undo:
-            move = self.model.peek()
-        else:
-            move = self.model.parse_san(move_san)
-
-        src_index = move.from_square
-        dst_index = move.to_square
-
-        if not is_undo:
-            piece = self.view_piece_at_square(src_index)
-        else:
-            piece = self.view_piece_at_square(dst_index)
-
-        self.piece_glide(piece, src_index if is_undo else dst_index)
-
-        if is_undo:
-            self.model.pop()
-        else:
-            self.model.push_san(move_san)
+    def move_glide(self, move_san):
+        move = self.model.parse_san(move_san)
+        piece = self.get_piece_widget_by_square_index(move.from_square)
+        print(f'{piece} .x={piece.x()} .y={piece.y()}')
+        print(f'{move} {move.from_square} -> {move.to_square}')
+        self.piece_glide(piece, move.to_square)
+        self.model.push_san(move_san)
+        self.update_view()
 
         # TODO: handle castling, see do_rook_castle
 
     def undo_glide(self):
-        lastmove = common.last_move_as_san(self.model)
-        self.move_glide(lastmove, True)
+        move = self.model.peek()
+        piece = self.get_piece_widget_by_square_index(move.to_square)
+        print(f'{piece} .x={piece.x()} .y={piece.y()}')
+        print(f'{move} {move.from_square} -> {move.to_square}')
+        self.piece_glide(piece, move.from_square)
+        self.model.pop()
+        self.update_view()
 
+    # the PieceLabel class calls us
+    # a PieceLabel has been dropped resulting in a valid move
     def move_inputted(self, move):
-        # ignore moves to same square
-        if move.from_square == move.to_square:
-            return
-
         # in game mode, ignore illegal moves
         if self.get_mode() == 'game':
             if not self.model.is_legal(move):
@@ -398,6 +393,7 @@ class ChessBoard(QFrame):
                 self.model.push(move)
 
         self.update_view()
+        print('view is updated!')
 
         # inform user
         if self.move_complete_callback:
@@ -526,9 +522,11 @@ class PieceLabel(QLabel):
             sqr_index = int(self.src_square.objectName())
 
             # Highlight origin and destination squares
+            self.legal_dst_squares = []
             self.board.highlight(sqr_index)
             for dst_square in self.board.moves_from_square(sqr_index):
                 self.board.highlight(dst_square)
+                self.legal_dst_squares.append(dst_square)
 
     def mouseMoveEvent(self, event):
         if not self.enabled:
@@ -558,6 +556,7 @@ class PieceLabel(QLabel):
                 new_pos_y = self.mouse_pos.y() + offset.y()
 
             # Move piece to new position
+            print(f'moving myself {self} ({self.symbol}) to {new_pos_x}, {new_pos_y}')
             self.move(new_pos_x, new_pos_y)
 
     # self: board.PieceLabel
@@ -570,24 +569,40 @@ class PieceLabel(QLabel):
 
         self.board.unhighlight_all()
 
-        # If mouse not released on board, move piece back to origin square, and return
+        # abort if mouse not on on board
         if not self.board.rect().contains(self.board.mapFromGlobal(event.globalPos())):
-            self.move(self.src_pos)
             return
 
-        # Identify destination square
+        # locate destination square, abort if not found
         for square in self.board.squares:
             if square.rect().contains(square.mapFromGlobal(event.globalPos())):
                 self.dst_square = square
                 break
+        else:
+            #print(f'destination square not found, sending back')
+            #self.move(self.src_pos)
+            return
 
-
-        # get square index
         sqr_src = int(self.src_square.objectName())
         sqr_dst = int(self.dst_square.objectName())
+        print(f'{sqr_src} -> {sqr_dst}')
 
+        # is the move legal?
+        if not sqr_dst in self.legal_dst_squares:
+            #print(f'is illegal')
+            return
+
+        # is it a non-move?
         if sqr_src == sqr_dst:
             return
+
+#                    elif move_type == CASTLING:
+#                        self.board.do_rook_castle(move_made & 0x3F, False)
+#
+#                    self.board.move_inputted(move_made)
+#                else:
+#                    # Snap back to origin square
+#                    self.move(self.src_pos)
 
         piece = self.board.model.piece_at(sqr_src)
 
@@ -629,7 +644,6 @@ class PieceLabel(QLabel):
         move = chess.Move(sqr_src, sqr_dst, promotion=prom_piece)
         print(f'calling move_inputted({move})')
         self.board.move_inputted(move)
-        self.board.update_view()
 
         return
 
