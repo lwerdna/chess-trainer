@@ -45,21 +45,16 @@ class ChessBoard(QFrame):
         for qt_row in [7,6,5,4,3,2,1,0]:
             for qt_col in [0,1,2,3,4,5,6,7]:
                 square = QWidget(self)
+                square.setMinimumSize(106, 106)
                 square.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
                 self.layout.addWidget(square, qt_row, qt_col)
-                print(f'square[{len(self.squares)}] is at qt row={qt_row}, col={qt_col} and x,y={square.x()},{square.y()}')
                 self.squares.append(square) # important ordering
 
         self.setPerspective(chess.WHITE)
 
         self.setLayout(self.layout)
 
-        print(f'layout.rowCount(): {self.layout.rowCount()}')
-        print(f'layout.columnCount(): {self.layout.columnCount()}')
-
-
         self.model = chess.Board()
-        #self.model = chess.BaseBoard()
 
         #self.search = Search(self.model)
         #self.search_thread = SearchThread(self)
@@ -166,7 +161,7 @@ class ChessBoard(QFrame):
         pos = self.layout.cellRect(row, col)
         piece_label.move(pos.x(), pos.y())
 
-        #print(f'added PieceLabel {symbol} to row,col == {row},{col} and its x,y == {piece_label.x()},{piece_label.y()}')
+        print(f'added PieceLabel {symbol} to row,col == {row},{col} and its x,y == {piece_label.x()},{piece_label.y()}')
         #debug.breakpoint()
 
         piece_label.raise_()
@@ -570,7 +565,6 @@ class PieceLabel(QLabel):
                 new_pos_y = self.mouse_pos.y() + offset.y()
 
             # Move piece to new position
-            print(f'moving myself {self} ({self.symbol}) to {new_pos_x}, {new_pos_y}')
             self.move(new_pos_x, new_pos_y)
 
     # self: board.PieceLabel

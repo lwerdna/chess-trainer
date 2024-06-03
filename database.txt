@@ -1,106 +1,106 @@
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 4r3/1p1qp1k1/2p3Bb/p2pP3/P2P1rPN/2P5/1P2Q3/4R1K1 w - - 0 1
 LINE: 1. e6 Qd6 2. Bxe8 *
 FRONT: (blank)
 BACK: 1.e6 removes the protector of the rook.\n\nIf black holds on protecting, like 1...Qd8 then:\n\n2. Qd5+ Rf6 3.g5!
-LEITNER: 2, 2024-05-28 16:49:24
+LEITNER: 3, 2024-06-03 05:40:09
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 3r2k1/pp3pp1/2p3np/2Qq4/3PNn2/P4N1P/1P3PPK/4R3 b - - 0 1
 LINE: 1...Nd3 2. Qxd5 cxd5 *
-FRONT: 
+FRONT:
 BACK: The fork looks spoiled, but isn't due to "appended attack".\n\n(ChessTempo #169555)
-LEITNER: 3, 2024-05-29 11:23:36
+LEITNER: 4, 2024-06-06 17:00:03
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: q6k/r2B1Rbp/p5p1/1nB5/3pr1Q1/8/P1P3PP/1R4K1 w - - 0 1
 LINE: 1. Qf3 Re3 2. Qxa8+ *
 FRONT: (blank)
 BACK: Take me (Bxa7) and I'll take you back (Rxg4) situation, but the Q escapes to a square that pins the rook and focus fires f8.\n\nIf 1...Rb7 2.Qxe4.\nIf 1...Rc7 2.Bf8 is best but hard to find.\nIf 1...Re3 2.Qxa8 Rxa8 3.Nxb5 axb5 4.Rxg7 Kxg7 5.Bxd4+ {winning the rook}
-LEITNER: 0, 2024-05-28 12:08:37
+LEITNER: 2, 2024-06-03 04:00:51
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 6k1/4qp2/1p2P3/1PrB1Q1p/2n3p1/P1p1P1P1/4PK1P/5R2 b - - 0 1
 LINE: 1. Rxd5 Qxd5 2. Qf6+ Kg1 3. Qxf1+ Kxf1 4. Nxe3+ Kg1 5. Nxd5
 FRONT: (blank)
 BACK: The potential Nxd3 highlights squares upon which a combination is likely.
-LEITNER: 0, 2024-05-28 12:08:37
+LEITNER: 1, 2024-06-03 00:38:08
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 5kr1/1p2p3/2p1PqB1/p2p1NQ1/P2P4/2P5/1P6/6K1 w - - 2 8
 LINE: 8. Qxf6+ exf6 9. e7# *
 FRONT: (blank)
 BACK: Easy mate :)
-LEITNER: 2, 2024-05-28 18:46:46
+LEITNER: 3, 2024-06-03 05:51:35
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Recall the three patterns: squeeze, eviction, path claiming.\n\n1.Kh6 Kg8 leads to a squeeze.\n\n1.g5 Kg8 2.Kh6 Kh8 leads to a squeeze.
-LEITNER: 2, 2024-05-28 18:45:38
+LEITNER: 3, 2024-06-03 20:37:49
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 6k1/8/6K1/8/6P1/8/8/8 w - - 0 1
-LINE: 1.g5 Kg8 2.Kf7 Kh7 3.g6+ Kh8 4.g7+ Kh7 5.g8=Q *
+LINE: 1.g5 Kh8 2.Kf7 Kh7 3.g6+ Kh8 4.g7+ Kh7 5.g8=Q+ *
 FRONT: (blank)
 BACK: Weird case of queening the knight pawn.
-LEITNER: 0, 2024-05-28 12:08:37
+LEITNER: 1, 2024-06-03 00:37:00
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 6k1/8/6K1/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Recall the three techniques: squeeze, eviction, path claiming.\n\nCalculate to the squeeze: 1.Kh6 Kh8 2.g6 Kg8 3.g7!
-LEITNER: 1, 2024-05-28 15:26:02
+LEITNER: 2, 2024-06-03 04:00:27
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: After 1.Kf7 you must calculate the checks lead to eviction: 1...Kh7 2.g6+ Kh8 3.g7+ Kh7
-LEITNER: 0, 2024-05-28 12:08:37
+LEITNER: 2, 2024-06-03 04:00:39
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
 LINE: 1.Kf7 Kh7 2.g5 Kh8 3.g6 1/2-1/2
 FRONT: Show how white can misplay and lead to a draw.
 BACK: You must calculate the squeezing moves push him to refuge.
-LEITNER: 0, 2024-05-28 12:08:37
+LEITNER: 2, 2024-06-03 03:14:10
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/5K2/8/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Discard g6 since stalemate.\n\nCalculate to the squeeze: 1.Kg6 Kg8 2.Kh6 Kh8 3.g6 Kg8 4.g7 Kf7
-LEITNER: 1, 2024-05-28 15:26:36
+LEITNER: 2, 2024-06-03 04:00:15
 
 TYPE: checkmate_or_promote_to_queen
 FEN: k7/2K5/8/1P6/8/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Recall the 3 techniques: squeeze, evict, path claiming.\n\nDiscard b6 since stalemate.\n\nCalculate to the squeeze: 1.Kb6 Kb8 2.Ka6 Ka8 3.b6 Kb8 4.b7 Kc7
-LEITNER: 2, 2024-05-28 18:47:32
+LEITNER: 3, 2024-06-03 05:40:27
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 1k6/8/1K6/8/1P6/8/8/8 w - - 0 1
 FRONT: (blank)
-BACK: Recall the three patterns: squeeze, eviction, path claiming. 1.Ka6 Ka8 leads to failed eviction. 1.b5 Ka8 2.Ka6 leads to a failed eviction. 1.b5 Ka8 4.Kc7 claims the path and evicts.
-LEITNER: 0, 2024-05-28 12:08:37
+BACK: Recall the three patterns: squeeze, eviction, path claiming.\n\n1.Ka6 Ka8 leads to failed eviction.\n\n1.b5 Ka8 2.Ka6 leads to a failed eviction.\n\n1.b5 Ka8 4.Kc7 claims the path and evicts.
+LEITNER: 1, 2024-06-03 00:39:39
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
 LINE: 1.Ka6 Kb8 2.Kb6 Kc8 3.c7 *
 FRONT: (blank)
 BACK: Squeeze!
-LEITNER: 1, 2024-05-28 15:26:54
+LEITNER: 2, 2024-06-03 03:13:59
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
 LINE: 1.Ka6 Kb8 2.Kb6 Ka8 3.Kc7 *
 FRONT: (blank)
 BACK: Path-claiming!
-LEITNER: 1, 2024-05-28 15:25:15
+LEITNER: 1, 2024-06-03 00:37:29
 
-TYPE: halfmoves
+TYPE: follow_variations
 FEN: 8/6k1/4P3/6K1/8/8/8/8 w - - 0 1
 LINE: 1.Kf5 Kf8 2.Kf6 Ke8 3.e7 *
 FRONT: (blank)
 BACK: Squeeze!
-LEITNER: 0, 2024-05-28 14:22:26
+LEITNER: 1, 2024-06-03 00:39:54
 

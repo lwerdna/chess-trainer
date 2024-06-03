@@ -1,11 +1,79 @@
 import chess
 
 from common import *
+import evaluation
 import debug
 
 class ProblemState():
     def __init__(self):
         self.correct = True
+
+    def initialize_chessboard(self):
+        pass
+
+    def test_move(self):
+        pass
+    def update_move(self):
+        pass
+
+    def is_done(self):
+        pass
+
+class CheckmateOrPromoteToQueenProblemState(ProblemState):
+    def __init__(self, dbentry):
+        self.dbentry = dbentry
+        self.board = chess.Board(dbentry['FEN'])
+        self.player_color = self.board.turn
+
+    def initialize_chessboard(self, cboard):
+        cboard.set_fen(self.dbentry['FEN'])
+        cboard.setPerspective(self.board.turn)
+        cboard.update_view()
+
+    # test if a player move is correct
+    def test_move(self, move):
+        result = True
+
+        self.board.push_san(move)
+
+        outcome = self.board.outcome()
+        if outcome and outcome.termination != chess.Termination.CHECKMATE:
+            result = False
+
+        self.board.pop()
+        return result
+
+    # enter player move (assuming it's tested as correct)
+    def update_move(self, move, cboard):
+        assert self.test_move(move)
+
+        self.board.push_san(move)
+
+        if not self.is_done():
+            reply_move = evaluation.bestmove(self.board)
+            reply_san = move_as_san(self.board, reply_move)
+            print(f'evaluation.evaluate() returned {reply_san}')
+
+            # update our model
+            self.board.push_san(reply_san)
+            # update UI
+            cboard.move_glide(reply_san)
+
+    def is_done(self):
+        # did we checkmate him?
+        outcome = self.board.outcome()
+        if outcome and outcome.termination == chess.Termination.CHECKMATE:
+            if outcome.winner == self.player_color:
+                return True
+
+        # did we promote to queen?
+        if self.board.turn != self.player_color:
+            move = self.board.peek()
+            if move.promotion == chess.QUEEN:
+                return True
+
+        # neither? not done
+        return False
 
 class FollowVariationsProblemState(ProblemState):
     def __init__(self, dbentry):
@@ -15,7 +83,7 @@ class FollowVariationsProblemState(ProblemState):
         self.halfmove_index = 0
 
     def initialize_chessboard(self, cboard):
-        cboard.set_fen(self.board.fen())
+        cboard.set_fen(self.dbentry['FEN'])
         cboard.setPerspective(self.board.turn)
         cboard.update_view()
 
@@ -56,7 +124,10 @@ class FollowVariationsProblemState(ProblemState):
         return self.halfmove_index >= len(self.line)
 
 def create_problem_state_from_db_data(entry):
-    if entry['TYPE'] == 'follow_variations':
-        return FollowVariationsProblemState(entry)
-    else:
-        debug.breakpoint()
+    match entry['TYPE']:
+        case 'follow_variations':
+            return FollowVariationsProblemState(entry)
+        case 'checkmate_or_promote_to_queen':
+            return CheckmateOrPromoteToQueenProblemState(entry)
+        case _:
+            raise Exception('unknown problem type: ' + entry['TYPE'])

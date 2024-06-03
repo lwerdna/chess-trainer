@@ -9,7 +9,6 @@ import chess.engine
 
 import debug
 import database
-import evaluation
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
@@ -167,13 +166,7 @@ def on_move_complete2(board, move):
             board.model.pop()
             return
 
-    # EVALUATION-INDEPENDENT WIN CONDITIONS
 
-    # did the player promote to queen?
-    if problem_type == 'checkmate_or_promote_to_queen':
-        if move.promotion == chess.QUEEN:
-            print('SUCCESS:: queen promotion detected')
-            problem_state['stage'] = 'SUCCESS'
 
     # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
 #    bcopy = board.model.copy()
@@ -182,31 +175,7 @@ def on_move_complete2(board, move):
 #    reply, score = evaluation.best_reply_to(bcopy, move)
 #
 
-    # user has to make one side's halfmoves
-    if problem_type == 'halfmoves':
-        # did he make the last
-        lastmove = last_move_as_san(board.model)
-        print(f'last move: {lastmove}')
-
-        line_moves = line_to_moves(dbinfo[problem_index]['LINE'])
-        expect_move = line_moves[problem_state['halfmove_index']]
-
-        #print(f'line moves: {line_moves}')
-        #print(f'halfmove_index: {problem_state["halfmove_index"]}')
-        #print(f'expect move: {expect_move}')
-
-        if lastmove != expect_move:
-            #problem_state['stage'] = 'FAILURE'
-            board.model.pop()
-        elif problem_state['halfmove_index'] == len(line_moves)-1:
-            problem_state['stage'] = 'SUCCESS'
-        else:
-            problem_state['halfmove_index'] += 1
-            move = line_moves[problem_state['halfmove_index']] # san string, like "Qd6"
-            board.move_glide(move)
-            #board.model.push_san(line_moves[problem_state['halfmove_index']])
-            problem_state['halfmove_index'] += 1
-    elif problem_type == 'checkmate_or_promote_to_queen':
+    if problem_type == 'checkmate_or_promote_to_queen':
         # select opponent reply
         reply_move = evaluation.bestmove(board.model)
         reply_san = move_as_san(board.model, reply_move)
@@ -344,14 +313,13 @@ class TestFrame(QFrame):
         self.setLayout(l)
 
         # setup board
-        self.board.set_mode_free()
+        #self.board.set_mode_free()
 
-        # initiate logic
-        on_board_init(self.board)
-
-class Window(QMainWindow):
+class MyWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+
+        self.board_init_called = False
 
         self.frame = TestFrame(self)
 
@@ -361,6 +329,14 @@ class Window(QMainWindow):
         self.setWindowIcon(QIcon('./assets/icons/pawn_icon.png'))
         self.setMinimumSize(900, 900)
         self.show()
+
+    def event(self, event):
+        #print(event.type())
+        if self.board_init_called == False:
+            on_board_init(self.frame.board)
+            self.board_init_called = True
+
+        return super(MyWindow, self).event(event)
 
     def closeEvent(self, event):
         print('CLOSING!')
@@ -376,7 +352,7 @@ def except_hook(cls, exception, traceback):
 if __name__ == '__main__':
     sys.excepthook = except_hook
     app = QApplication(sys.argv)
-    window = Window()
+    window = MyWindow()
 
     select_problem()
 
