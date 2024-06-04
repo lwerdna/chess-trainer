@@ -24,7 +24,7 @@ FEN: 6k1/4qp2/1p2P3/1PrB1Q1p/2n3p1/P1p1P1P1/4PK1P/5R2 b - - 0 1
 LINE: 1. Rxd5 Qxd5 2. Qf6+ Kg1 3. Qxf1+ Kxf1 4. Nxe3+ Kg1 5. Nxd5
 FRONT: (blank)
 BACK: The potential Nxd3 highlights squares upon which a combination is likely.
-LEITNER: 2, 2024-06-03 22:03:44
+LEITNER: 4, 2024-06-08 07:48:31
 
 TYPE: follow_variations
 FEN: 5kr1/1p2p3/2p1PqB1/p2p1NQ1/P2P4/2P5/1P6/6K1 w - - 2 8
@@ -37,14 +37,14 @@ TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Recall the three patterns: squeeze, eviction, path claiming.\n\n1.Kh6 Kg8 leads to a squeeze.\n\n1.g5 Kg8 2.Kh6 Kh8 leads to a squeeze.
-LEITNER: 3, 2024-06-03 20:37:49
+LEITNER: 5, 2024-06-25 14:38:35
 
 TYPE: follow_variations
 FEN: 6k1/8/6K1/8/6P1/8/8/8 w - - 0 1
 LINE: 1.g5 Kh8 2.Kf7 Kh7 3.g6+ Kh8 4.g7+ Kh7 5.g8=Q+ *
 FRONT: (blank)
-BACK: Weird case of queening the knight pawn.
-LEITNER: 2, 2024-06-03 22:01:31
+BACK: Path taking to eviction.
+LEITNER: 3, 2024-06-04 20:37:51
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 6k1/8/6K1/6P1/8/8/8/8 w - - 0 1
@@ -81,7 +81,7 @@ TYPE: checkmate_or_promote_to_queen
 FEN: 1k6/8/1K6/8/1P6/8/8/8 w - - 0 1
 FRONT: (blank)
 BACK: Outflanking to path claiming!\n\nRecall the three patterns: squeeze, eviction, path claiming.\n\n1.Ka6 Ka8 leads to failed eviction.\n\n1.b5 Ka8 2.Ka6 leads to a failed eviction.\n\n1.b5 Ka8 4.Kc7 claims the path and evicts.
-LEITNER: 1, 2024-06-03 18:44:44
+LEITNER: 2, 2024-06-04 01:59:27
 
 TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
@@ -94,48 +94,120 @@ TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
 LINE: 1.Ka6 Kb8 2.Kb6 Ka8 3.Kc7 *
 FRONT: (blank)
-BACK: Path-claiming!
-LEITNER: 2, 2024-06-03 22:03:24
+BACK: Threaten the squeeze, then path-claiming!
+LEITNER: 4, 2024-06-08 07:50:52
 
 TYPE: follow_variations
 FEN: 8/6k1/4P3/6K1/8/8/8/8 w - - 0 1
 LINE: 1.Kf5 Kf8 2.Kf6 Ke8 3.e7 *
 FRONT: (blank)
 BACK: Squeeze!
-LEITNER: 2, 2024-06-03 21:57:59
+LEITNER: 3, 2024-06-04 20:28:49
 
 TYPE: follow_variations
 FEN: 6k1/8/p7/r1r2Pp1/3R2Pp/1p6/1P4P1/3R2K1 w - - 0 1
 LINE: 1.Rd8+ Kf7 (1...Kh7 R1d7+ 2.Kh6 Rh8#) (1...Kg7 2.R1d7+ Kf6 (2...Kh6 3.Rh8#)) 2.R1d7+ Kf6 3.Rf8+ Ke5 4.Re8+ Kf4 (4...Kf6 4.Re6#) 5.Rd4+ Kg3 6.Re3# 1-0
 FRONT: (blank)
 BACK: Yusupov calls this mate along open lines.
-LEITNER: 2, 2024-06-03 21:34:41
+LEITNER: 4, 2024-06-08 05:59:06
 
 TYPE: follow_variations
 FEN: 1q3rbk/Q5pp/8/3P4/1r3n2/R3N3/2B2PPP/5RK1 b - - 0 1
 LINE: 1.Ne2+ 2.Kh1 Qxh2+ 3.Kxh2 Rh4# 0-1
 FRONT: (blank)
 BACK: Anastasia's mate
-LEITNER: 1, 2024-06-03 18:42:12
+LEITNER: 3, 2024-06-04 18:37:44
 
 TYPE: follow_variations
 FEN: 6k1/p4p1p/3p1p2/2p1r3/2PnrqN1/P6P/1P1Q1PP1/3R1RK1 b - - 0 1
 LINE: 1...Ne2+ 2.Kh1 Qxg4 3.hxg4 Rh5+ 4.gxh5 Rh4# 0-1
 FRONT: (blank)
 BACK: Anastasia's mate
-LEITNER: 1, 2024-06-03 18:44:57
+LEITNER: 2, 2024-06-04 01:59:51
 
 TYPE: follow_variations
 FEN: 6k1/5pp1/8/5P2/R6p/1P3N1P/3rnrPK/6R1 b - - 0 1
 LINE: 1...Rxf3 2.gxf3 Nd4+ 3.Kh1 (3.Rg2 Nxf3+ 4.Kh1 Rd1+ 5.Rg1 Rxg1#) Nxf3 4.Rg2 Rd1+ 5.Rg1 Rxg1# 0-1
 FRONT: (blank)
 BACK: Arabian mate
-LEITNER: 1, 2024-06-03 18:39:01
+LEITNER: 2, 2024-06-04 02:00:23
 
 TYPE: follow_variations
 FEN: r2q2rk/ppp4p/3p4/2b2Q2/3pPPR1/2P2n2/PP3P1P/RNB4K b - - 0 1
 LINE: 1...Qh4 2.Rg2 (2.Rxh4 3.Rg1#) Qxh2+ 3.Rxh2 Rg1# 1-0
 FRONT: (blank)
 BACK: Arabian mate
-LEITNER: 1, 2024-06-03 18:45:38
+LEITNER: 2, 2024-06-04 01:58:10
+
+TYPE: play_best
+FEN: 3r1rk1/pp3ppp/3pn3/1qpN4/5PP1/P5PQ/1PP5/1K1R4 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-1\n\neasy Anastasia
+LEITNER: 2, 2024-06-04 03:57:24
+
+TYPE: play_best
+FEN: 6R1/2p1qr1k/1p1p1r1p/p3p3/2P1P3/2P3Q1/PP3P2/2K3R1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-2\n\nAttraction!
+LEITNER: 2, 2024-06-04 03:49:22
+
+TYPE: play_best
+FEN: 2kr2nr/pp1n1ppp/2p1p3/8/1P1P1B2/2N2Q1P/1PPKBPP1/7q w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-3
+LEITNER: 2, 2024-06-04 03:48:39
+
+TYPE: play_best
+FEN: 5r2/p3Qnkp/1p3Np1/2p3P1/3q4/5P2/PP3R1r/4R1K1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-4
+LEITNER: 1, 2024-06-04 00:37:06
+
+TYPE: play_best
+FEN: r1b2r1k/ppb2ppB/3q4/8/2PN1n1Q/PP6/1B3PPP/R4RK1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-5
+LEITNER: 2, 2024-06-04 03:50:26
+
+TYPE: play_best
+FEN: 5r1k/6p1/p2p1rRp/2pPpq1Q/8/PPp1P3/5P1R/K7 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-6\n\nAbout as "battering ram" as you can get!
+LEITNER: 2, 2024-06-04 03:51:48
+
+TYPE: play_best
+FEN: r1n3k1/pp2q2p/2ppr1pQ/4p3/8/2N4R/PPP3PP/5RK1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-7
+LEITNER: 2, 2024-06-04 03:49:07
+
+TYPE: play_best
+FEN: 4rr1k/p4pb1/5R1p/1p2q3/3p4/3P2R1/PP1Q2BP/7K w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-8\n\nSacrifice to "open lines" mate.
+LEITNER: 2, 2024-06-04 03:49:40
+
+TYPE: play_best2
+FEN: r4r1k/ppn4p/2p2N2/4P3/2pP1N2/5K2/PPP5/6R1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-9
+LEITNER: 2, 2024-06-04 04:02:46
+
+TYPE: play_best2
+FEN: k1r5/1p4pq/p7/5n2/3nQ3/P7/RPP2PPP/2B2RK1 b - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-10
+LEITNER: 2, 2024-06-04 04:01:45
+
+TYPE: play_best2
+FEN: 5r1k/1p1br2p/pqnbpp2/3p4/3P4/P1NQ1N2/1PB2PPP/R3R1K1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-11
+LEITNER: 2, 2024-06-04 04:01:56
+
+TYPE: play_best
+FEN: 2kr1r2/pp1n3p/2p1bp2/8/5B2/8/PP2BP1P/2R1K1R1 w - - 0 1
+FRONT: (blank)
+BACK: Yusupov 1-12
+LEITNER: 2, 2024-06-04 03:50:34
 

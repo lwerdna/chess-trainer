@@ -7,28 +7,68 @@ import debug
 class ProblemState():
     def __init__(self):
         self.correct = True
+        self.dbentry['FEN'] = chess.STARTING_FEN
 
-    def initialize_chessboard(self):
-        pass
+    def initialize_chessboard(self, cboard):
+        cboard.set_fen(self.dbentry['FEN'])
+        cboard.setPerspective(self.board.turn)
+        cboard.update_view()
 
-    def test_move(self):
+    def test_move(self, move_san):
         pass
-    def update_move(self):
+    def update_move(self, move_san, cboard):
         pass
 
     def is_done(self):
         pass
+
+class PlayBestProblemState(ProblemState):
+    def __init__(self, dbentry, moves_required=3):
+        self.dbentry = dbentry
+        self.board = chess.Board(dbentry['FEN'])
+        self.player_color = self.board.turn
+        self.moves_required = moves_required
+        self.moves_made = 0
+
+    def test_move(self, player_move_san):
+        best_move = evaluation.bestmove(self.board)
+        best_move_san = move_as_san(self.board, best_move)
+        if player_move_san == best_move_san:
+            return True
+        else:
+            print(f'wrong move {player_move_san}, expected: {best_move_san}')
+
+    def update_move(self, move, cboard):
+        assert self.test_move(move)
+
+        self.board.push_san(move)
+        self.moves_made += 1
+
+        if not self.is_done():
+            reply_move = evaluation.bestmove(self.board)
+            reply_san = move_as_san(self.board, reply_move)
+            print(f'evaluation.evaluate() returned {reply_san}')
+
+            # update our model
+            self.board.push_san(reply_san)
+            # update UI
+            cboard.move_glide(reply_san)
+
+    def is_done(self):
+        if self.moves_made >= self.moves_required:
+            return True
+
+        outcome = self.board.outcome()
+        if outcome and outcome.termination == chess.Termination.CHECKMATE:
+            return True
+
+        return False
 
 class CheckmateOrPromoteToQueenProblemState(ProblemState):
     def __init__(self, dbentry):
         self.dbentry = dbentry
         self.board = chess.Board(dbentry['FEN'])
         self.player_color = self.board.turn
-
-    def initialize_chessboard(self, cboard):
-        cboard.set_fen(self.dbentry['FEN'])
-        cboard.setPerspective(self.board.turn)
-        cboard.update_view()
 
     # test if a player move is correct
     def test_move(self, move):
@@ -92,11 +132,6 @@ class FollowVariationsProblemState(ProblemState):
         for i,exercise in enumerate(self.exercises):
             print(f'exercise {i}: FEN: {exercise["FEN"]} LINE: {exercise["LINE"]}')
 
-    def initialize_chessboard(self, cboard):
-        cboard.model = self.board.copy()
-        cboard.setPerspective(self.player_color)
-        cboard.update_view()
-
     # test if a player move is correct
     def test_move(self, move):
         expect_move = self.line[self.halfmove_index]
@@ -156,10 +191,14 @@ class FollowVariationsProblemState(ProblemState):
         return self.exercise_index >= len(self.exercises)
 
 def create_problem_state_from_db_data(entry):
-    match entry['TYPE']:
-        case 'follow_variations':
-            return FollowVariationsProblemState(entry)
-        case 'checkmate_or_promote_to_queen':
-            return CheckmateOrPromoteToQueenProblemState(entry)
-        case _:
-            raise Exception('unknown problem type: ' + entry['TYPE'])
+    if entry['TYPE'] == 'follow_variations':
+        return FollowVariationsProblemState(entry)
+    if entry['TYPE'] == 'checkmate_or_promote_to_queen':
+        return CheckmateOrPromoteToQueenProblemState(entry)
+    if entry['TYPE'] == 'play_best':
+        return PlayBestProblemState(entry)
+    if m := re.match(r'^play_best(\d+)$', entry['TYPE']):
+        moves = int(m.group(1))
+        return PlayBestProblemState(entry, moves)
+
+    raise Exception('unknown problem type: ' + entry['TYPE'])
