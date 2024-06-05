@@ -253,4 +253,3 @@ def moves_to_dot(fen, variations):
             print(f'\t{id(src)} -> {id(dst)} [label="{move_label}"]')
 
     print('}')
-

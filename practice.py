@@ -8,6 +8,7 @@ import chess
 import chess.engine
 
 import debug
+import leitner
 import database
 
 from PyQt5.QtGui import QIcon
@@ -38,9 +39,7 @@ def select_problem(replay=False):
     due_indices = []
     now = int(time.time())
     for i, entry in enumerate(dbinfo):
-        box, due = entry['LEITNER']
-        print(f'comparing {now} >= {due} for entry at line {entry["lineNum"]}')
-        if now >= due:
+        if leitner.is_due(entry['LEITNER']):
             due_indices.append(i)
 
     print(f'due indices: {due_indices}')
@@ -80,9 +79,12 @@ def post_problem_interaction(cboard):
     cboard.set_fen(problem['FEN'])
     cboard.update_view()
 
+    # calculate new times
+    box, due = problem['LEITNER']
+    due_times = leitner.calc_due_times(box)
+
     # pop up dialog
-    dlg = DoneDialog(cboard)
-    dlg.setWindowTitle('DoneDialog')
+    dlg = DoneDialog(cboard, due_times)
 
     text = problem['BACK']
     text = text.replace('\\n', '\n')
@@ -93,21 +95,17 @@ def post_problem_interaction(cboard):
     result = dlg.result
     print(f'got click result: {result}')
 
-    box, due = problem['LEITNER']
     match result:
         case 'terrible':
-            box = 0
+            due_epoch = due_times[0]
         case 'bad':
-            box = box-1
+            due_epoch = due_times[1]
         case 'ok':
-            box = max(box, 1)
+            due_epoch = due_times[2]
         case 'good':
-            box = box+1
+            due_epoch = due_times[3]
         case 'easy':
-            box = box+2
-
-    now_epoch = int(time.time())
-    due_epoch = now_epoch + 10*60 * 5**(box)
+            due_epoch = due_times[4]
 
     time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
     print(f'next due date: {time_str}')
@@ -236,7 +234,7 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent=None):
+    def __init__(self, parent, due_times):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
@@ -249,19 +247,23 @@ class DoneDialog(QDialog):
 
         # the buttons
         hLayout = QHBoxLayout()
-        b = QPushButton('terrible', self)
+
+        now = int(time.time())
+        durstrs = [leitner.duration_string(dt - now) for dt in due_times]
+
+        b = QPushButton(f'terrible ({durstrs[0]})', self)
         b.clicked.connect(self.clickedTerrible)
         hLayout.addWidget(b)
-        b = QPushButton('bad', self)
+        b = QPushButton(f'bad ({durstrs[1]})', self)
         b.clicked.connect(self.clickedBad)
         hLayout.addWidget(b)
-        b = QPushButton('ok', self)
+        b = QPushButton(f'ok ({durstrs[2]})', self)
         b.clicked.connect(self.clickedOk)
         hLayout.addWidget(b)
-        b = QPushButton('good', self)
+        b = QPushButton(f'good ({durstrs[3]})', self)
         b.clicked.connect(self.clickedGood)
         hLayout.addWidget(b)
-        b = QPushButton('easy', self)
+        b = QPushButton(f'easy ({durstrs[4]})', self)
         b.clicked.connect(self.clickedEasy)
         hLayout.addWidget(b)
 
