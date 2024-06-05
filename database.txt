@@ -43,8 +43,8 @@ TYPE: follow_variations
 FEN: 6k1/8/6K1/8/6P1/8/8/8 w - - 0 1
 LINE: 1.g5 Kh8 2.Kf7 Kh7 3.g6+ Kh8 4.g7+ Kh7 5.g8=Q+ *
 FRONT: (blank)
-BACK: Path taking to eviction.
-LEITNER: 3, 2024-06-04 20:37:51
+BACK: Outflank, path taking, eviction.
+LEITNER: 3, 2024-06-11 11:15:12
 
 TYPE: checkmate_or_promote_to_queen
 FEN: 6k1/8/6K1/6P1/8/8/8/8 w - - 0 1
@@ -55,8 +55,8 @@ LEITNER: 3, 2024-06-11 10:12:39
 TYPE: checkmate_or_promote_to_queen
 FEN: 7k/8/6K1/6P1/8/8/8/8 w - - 0 1
 FRONT: (blank)
-BACK: Eviction!\n\nAfter 1.Kf7 you must calculate the checks lead to eviction: 1...Kh7 2.g6+ Kh8 3.g7+ Kh7
-LEITNER: 3, 2024-06-04 14:42:53
+BACK: Path-claiming to eviction!\n\nAfter 1.Kf7 you must calculate the checks lead to eviction: 1...Kh7 2.g6+ Kh8 3.g7+ Kh7
+LEITNER: 3, 2024-06-11 11:16:44
 
 TYPE: follow_variations
 FEN: 7k/8/6K1/8/6P1/8/8/8 w - - 0 1
@@ -101,8 +101,8 @@ TYPE: follow_variations
 FEN: 8/6k1/4P3/6K1/8/8/8/8 w - - 0 1
 LINE: 1.Kf5 Kf8 2.Kf6 Ke8 3.e7 *
 FRONT: (blank)
-BACK: Squeeze!
-LEITNER: 3, 2024-06-04 20:28:49
+BACK: Use pawn's attacked square f7 to break opposition, then squeeze!
+LEITNER: 3, 2024-06-08 06:26:29
 
 TYPE: follow_variations
 FEN: 6k1/8/p7/r1r2Pp1/3R2Pp/1p6/1P4P1/3R2K1 w - - 0 1
@@ -123,21 +123,21 @@ FEN: 6k1/p4p1p/3p1p2/2p1r3/2PnrqN1/P6P/1P1Q1PP1/3R1RK1 b - - 0 1
 LINE: 1...Ne2+ 2.Kh1 Qxg4 3.hxg4 Rh5+ 4.gxh5 Rh4# 0-1
 FRONT: (blank)
 BACK: Anastasia's mate
-LEITNER: 2, 2024-06-04 01:59:51
+LEITNER: 2, 2024-06-11 11:16:06
 
 TYPE: follow_variations
 FEN: 6k1/5pp1/8/5P2/R6p/1P3N1P/3rnrPK/6R1 b - - 0 1
 LINE: 1...Rxf3 2.gxf3 Nd4+ 3.Kh1 (3.Rg2 Nxf3+ 4.Kh1 Rd1+ 5.Rg1 Rxg1#) Nxf3 4.Rg2 Rd1+ 5.Rg1 Rxg1# 0-1
 FRONT: (blank)
 BACK: Arabian mate
-LEITNER: 2, 2024-06-04 02:00:23
+LEITNER: 2, 2024-06-08 06:24:35
 
 TYPE: follow_variations
 FEN: r2q2rk/ppp4p/3p4/2b2Q2/3pPPR1/2P2n2/PP3P1P/RNB4K b - - 0 1
 LINE: 1...Qh4 2.Rg2 (2.Rxh4 3.Rg1#) Qxh2+ 3.Rxh2 Rg1# 1-0
 FRONT: (blank)
-BACK: Arabian mate
-LEITNER: 2, 2024-06-04 01:58:10
+BACK: double threat to Arabian mate
+LEITNER: 2, 2024-06-08 06:25:02
 
 TYPE: play_best
 FEN: 3r1rk1/pp3ppp/3pn3/1qpN4/5PP1/P5PQ/1PP5/1K1R4 w - - 0 1
@@ -149,7 +149,7 @@ TYPE: play_best
 FEN: 6R1/2p1qr1k/1p1p1r1p/p3p3/2P1P3/2P3Q1/PP3P2/2K3R1 w - - 0 1
 FRONT: (blank)
 BACK: Yusupov 1-2\n\nAttraction!
-LEITNER: 2, 2024-06-04 03:49:22
+LEITNER: 2, 2024-06-08 06:27:30
 
 TYPE: play_best
 FEN: 2kr2nr/pp1n1ppp/2p1p3/8/1P1P1B2/2N2Q1P/1PPKBPP1/7q w - - 0 1
@@ -160,14 +160,14 @@ LEITNER: 2, 2024-06-08 05:25:27
 TYPE: play_best
 FEN: 5r2/p3Qnkp/1p3Np1/2p3P1/3q4/5P2/PP3R1r/4R1K1 w - - 0 1
 FRONT: (blank)
-BACK: Yusupov 1-4
-LEITNER: 1, 2024-06-04 00:37:06
+BACK: Yusupov 1-4\n\nAwesome Arabian!
+LEITNER: 1, 2024-06-08 06:27:42
 
 TYPE: play_best
 FEN: r1b2r1k/ppb2ppB/3q4/8/2PN1n1Q/PP6/1B3PPP/R4RK1 w - - 0 1
 FRONT: (blank)
 BACK: Yusupov 1-5
-LEITNER: 2, 2024-06-04 03:50:26
+LEITNER: 2, 2024-06-15 22:47:42
 
 TYPE: play_best
 FEN: 5r1k/6p1/p2p1rRp/2pPpq1Q/8/PPp1P3/5P1R/K7 w - - 0 1
@@ -196,8 +196,8 @@ LEITNER: 2, 2024-06-08 05:26:54
 TYPE: play_best2
 FEN: k1r5/1p4pq/p7/5n2/3nQ3/P7/RPP2PPP/2B2RK1 b - - 0 1
 FRONT: (blank)
-BACK: Yusupov 1-10
-LEITNER: 2, 2024-06-04 04:01:45
+BACK: Yusupov 1-10\n\nDiscovered attack possible due to Anastasia-like mate pattern.
+LEITNER: 2, 2024-06-08 06:25:37
 
 TYPE: play_best2
 FEN: 5r1k/1p1br2p/pqnbpp2/3p4/3P4/P1NQ1N2/1PB2PPP/R3R1K1 w - - 0 1
@@ -210,4 +210,18 @@ FEN: 2kr1r2/pp1n3p/2p1bp2/8/5B2/8/PP2BP1P/2R1K1R1 w - - 0 1
 FRONT: (blank)
 BACK: Yusupov 1-12\n\nBoden's mate!
 LEITNER: 2, 2024-06-08 05:39:35
+
+TYPE: follow_variations
+FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+LINE: 1.e4 e5 2.Nf3 Nc6 3.Bc4 d6 4.Nc3 Bg4 5.h3 Bh5 6.Nxe5 Bxd1 7.Bxf7+ Ke7 8.Nd5#
+FRONT: Play Legal's mate.
+BACK: "dynamic unpinning"
+LEITNER: 2, 2024-06-08 06:09:41
+
+TYPE: follow_variations
+FEN: r2qkb1r/ppp1pppp/1n6/3Pn3/4P1b1/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 1
+LINE: 1.Nxe5 Bxd1 2.Bb5+ c6 (2...Nd7 3.Bxd7+ Qxd7 4.Nxd7 {and white is ahead}) 3.dxc6 Qc7 (3...a6 4.c7+ axb5 5.cxd8=Q Rxd8 6.Nxd1 {and white is ahead}) 4.cxb7+ Kd8 (4...Nd7 5.bxa8=Q+ {and white is ahead}) 5.Nxf7#
+FRONT: (blank)
+BACK: "dynamic unpinning"
+LEITNER: 0, 2024-06-06 08:15:41
 

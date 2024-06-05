@@ -1,6 +1,8 @@
 import re
 import time
 
+import chess
+
 def special_handle_defaults(entry):
     # convert text Leitner data to epoch for easy comparison by higher logic
     if value := entry.get('LEITNER'):
@@ -13,6 +15,10 @@ def special_handle_defaults(entry):
     # if no type is given, but a correct line is given, then type is follow_variations
     if entry.get('TYPE')=='untyped' and entry.get('LINE'):
         entry['TYPE'] = 'follow_variations'
+
+    # if no fen given, initialize with start fen
+    if not 'FEN' in entry:
+        entry['FEN'] = chess.STARTING_FEN
 
 def read(path):
     state = 'WAITING'
