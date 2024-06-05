@@ -17,7 +17,7 @@ FEN: q6k/r2B1Rbp/p5p1/1nB5/3pr1Q1/8/P1P3PP/1R4K1 w - - 0 1
 LINE: 1. Qf3 Re3 2. Qxa8+ *
 FRONT: (blank)
 BACK: Take me (Bxa7) and I'll take you back (Rxg4) situation, but the Q escapes to a square that pins the rook and focus fires f8.\n\nIf 1...Rb7 2.Qxe4.\nIf 1...Rc7 2.Bf8 is best but hard to find.\nIf 1...Re3 2.Qxa8 Rxa8 3.Nxb5 axb5 4.Rxg7 Kxg7 5.Bxd4+ {winning the rook}
-LEITNER: 3, 2024-06-04 14:41:02
+LEITNER: 3, 2024-06-15 21:58:20
 
 TYPE: follow_variations
 FEN: 6k1/4qp2/1p2P3/1PrB1Q1p/2n3p1/P1p1P1P1/4PK1P/5R2 b - - 0 1
@@ -87,8 +87,8 @@ TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
 LINE: 1.Ka6 Kb8 2.Kb6 Kc8 3.c7 *
 FRONT: (blank)
-BACK: Squeeze!
-LEITNER: 3, 2024-06-04 14:39:16
+BACK: Opposition then squeeze!
+LEITNER: 3, 2024-06-11 10:28:01
 
 TYPE: follow_variations
 FEN: k7/8/2P5/K7/8/8/8/8 w - - 0 1
@@ -116,7 +116,7 @@ FEN: 1q3rbk/Q5pp/8/3P4/1r3n2/R3N3/2B2PPP/5RK1 b - - 0 1
 LINE: 1.Ne2+ 2.Kh1 Qxh2+ 3.Kxh2 Rh4# 0-1
 FRONT: (blank)
 BACK: Anastasia's mate
-LEITNER: 3, 2024-06-04 18:37:44
+LEITNER: 3, 2024-06-11 10:27:24
 
 TYPE: follow_variations
 FEN: 6k1/p4p1p/3p1p2/2p1r3/2PnrqN1/P6P/1P1Q1PP1/3R1RK1 b - - 0 1
@@ -173,7 +173,7 @@ TYPE: play_best
 FEN: 5r1k/6p1/p2p1rRp/2pPpq1Q/8/PPp1P3/5P1R/K7 w - - 0 1
 FRONT: (blank)
 BACK: Yusupov 1-6\n\nAbout as "battering ram" as you can get!
-LEITNER: 2, 2024-06-04 03:51:48
+LEITNER: 2, 2024-06-08 05:38:47
 
 TYPE: play_best
 FEN: r1n3k1/pp2q2p/2ppr1pQ/4p3/8/2N4R/PPP3PP/5RK1 w - - 0 1
@@ -208,6 +208,6 @@ LEITNER: 2, 2024-06-08 05:26:08
 TYPE: play_best
 FEN: 2kr1r2/pp1n3p/2p1bp2/8/5B2/8/PP2BP1P/2R1K1R1 w - - 0 1
 FRONT: (blank)
-BACK: Yusupov 1-12
-LEITNER: 2, 2024-06-04 03:50:34
+BACK: Yusupov 1-12\n\nBoden's mate!
+LEITNER: 2, 2024-06-08 05:39:35
 

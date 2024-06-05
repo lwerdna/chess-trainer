@@ -119,18 +119,27 @@ class FollowVariationsProblemState(ProblemState):
     def __init__(self, dbentry):
         self.dbentry = dbentry
 
-        self.board = chess.Board(dbentry['FEN'])
+        # parse problem
+        fen, line = (dbentry[k] for k in ['FEN', 'LINE'])
+        self.board = chess.Board(fen)
         self.player_color = self.board.turn
 
-        self.exercises = generate_variation_exercises(dbentry['FEN'], dbentry['LINE'])
+        # generate the exercises
+        self.exercises = generate_variation_exercises(fen, line)
         assert len(self.exercises) >= 1
-
-        self.exercise_index = 0
-        self.line = split_line_string(self.exercises[0]['LINE'])
-        self.halfmove_index = 0
-
         for i,exercise in enumerate(self.exercises):
             print(f'exercise {i}: FEN: {exercise["FEN"]} LINE: {exercise["LINE"]}')
+
+        # load first exercise
+        self.exercise_index = 0
+        self.load_current_exercise()
+
+    # we override the parent to set the perspective to the root position
+    def initialize_chessboard(self, cboard):
+        exercise = self.exercises[self.exercise_index]
+        cboard.set_fen(exercise['FEN'])
+        cboard.setPerspective(self.player_color)
+        cboard.update_view()
 
     # test if a player move is correct
     def test_move(self, move):
@@ -165,18 +174,10 @@ class FollowVariationsProblemState(ProblemState):
             cboard.move_glide(reply)
             self.halfmove_index += 1
         else:
-            # advance to next exercise
+            # advance, load next exercise
             self.exercise_index += 1
-
-            # if there is one, initialize state
             if self.exercise_index < len(self.exercises):
-                exercise = self.exercises[self.exercise_index]
-                print(f'exercise_index: {self.exercise_index}')
-                print(f'   loading fen: {exercise["FEN"]}')
-                self.board = chess.Board(exercise['FEN'])
-                self.line = split_line_string(exercise['LINE'])
-                print(f'  loading line: {self.line}')
-                self.halfmove_index = 0
+                self.load_current_exercise()
 
                 self.initialize_chessboard(cboard)
 
@@ -186,6 +187,16 @@ class FollowVariationsProblemState(ProblemState):
                     self.board.push_san(reply)
                     cboard.move_glide(reply)
                     self.halfmove_index += 1
+
+    def load_current_exercise(self):
+        exercise = self.exercises[self.exercise_index]
+        fen = exercise["FEN"]
+        self.board = chess.Board(fen)
+        self.line = split_line_string(exercise['LINE'])
+        self.halfmove_index = 0
+        print(f'exercise_index: {self.exercise_index}')
+        print(f'   loading fen: {fen}')
+        print(f'  loading line: {self.line}')
 
     def is_done(self):
         return self.exercise_index >= len(self.exercises)
