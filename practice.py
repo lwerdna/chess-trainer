@@ -84,7 +84,7 @@ def post_problem_interaction(cboard):
     due_times = leitner.calc_due_times(box)
 
     # pop up dialog
-    dlg = DoneDialog(cboard, due_times)
+    dlg = DoneDialog(cboard, box, due_times)
 
     text = problem['BACK']
     text = text.replace('\\n', '\n')
@@ -95,27 +95,28 @@ def post_problem_interaction(cboard):
     result = dlg.result
     print(f'got click result: {result}')
 
-    match result:
-        case 'terrible':
-            due_epoch = due_times[0]
-        case 'bad':
-            due_epoch = due_times[1]
-        case 'ok':
-            due_epoch = due_times[2]
-        case 'good':
-            due_epoch = due_times[3]
-        case 'easy':
-            due_epoch = due_times[4]
+    if result != None:
+        match result:
+            case 'terrible':
+                due_epoch = due_times[0]
+            case 'bad':
+                due_epoch = due_times[1]
+            case 'ok':
+                due_epoch = due_times[2]
+            case 'good':
+                due_epoch = due_times[3]
+            case 'easy':
+                due_epoch = due_times[4]
 
-    time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
-    print(f'next due date: {time_str}')
+        time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
+        print(f'next due date: {time_str}')
 
-    problem['LEITNER'] = box, due_epoch
+        problem['LEITNER'] = box, due_epoch
 
-    # save any edited text
-    text = dlg.textEdit.toPlainText()
-    text = text.replace('\n', '\\n') # actual newline to '\', 'n'
-    dbinfo[problem_index]['BACK'] = text
+        # save any edited text
+        text = dlg.textEdit.toPlainText()
+        text = text.replace('\n', '\\n') # actual newline to '\', 'n'
+        dbinfo[problem_index]['BACK'] = text
 
 # callbacks
 def on_move_request(board, move):
@@ -234,7 +235,7 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent, due_times):
+    def __init__(self, parent, current_box, due_times):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
