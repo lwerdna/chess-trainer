@@ -1,0 +1,55 @@
+[Event "Morphy-Meek 1857: Chapter 1"]
+[Site "New York"]
+[Date "2018.06.23"]
+[Round ""]
+[White ""]
+[Black ""]
+[Result "*"]
+[ECO "A43"]
+[Variant "Standard"]
+[Opening "Benoni Defense: French Benoni"]
+
+	   1.	e4    	e6    
+	   2.	d4    	c5?   
+    ( 2...d5 {c5 gives white an advantage in the center} )
+
+	   3.	d5    	e5    
+    {This closes the position. Morphy ordinarily wouldn't have done this, 
+    but black's odd response (c5) prompts Morphy to bag his time advantage
+    and launch into the game.}
+
+	   4.	f4    	d6    
+	   5.	Nf3   	Bg4   
+	   6.	fxe5  	Bxf3  
+	   7.	Qxf3  
+    {recaptures and develops a piece}
+	   7.	...        	dxe5  
+	   8.	Bb5+  	Nd7   
+	   9.	Nc3   	Nf6   
+    ( 9...a5 )
+
+	  10.	Bg5   	Be7   
+	  11.	d6!   
+    {pawn sac. classic morphy. let's see the point:}
+	  11.	...        	Bxd6  
+	  12.	O-O-O 
+    {black resigns. Too much pressure!}
+	  12.	...        	Qe7   
+    ( 12...Be7 13.Bxf6 Bxf6 14.Rxd7 )
+    ( 12...Ke7 13.Bxd7 {remove a future protector of f6} 
+        ( 13.Nd5+ )
+    13...Qxd7 
+        ( 13...Kxd7 14.Nb5 )
+    14.Nd5+ Kf8 
+        ( 14...Kd8 15.Bxf6+ gxf6 16.Qxf6+ )
+    15.Nxf6 gxf6 16.Qxf6 {possible since black queen removed from d8} )
+    ( 12...a6 13.Bxd7+ Qxd7 14.Bxf6 gxf6 15.Qxf6 {double attack R@h8 and 
+    B@d6} )
+
+	  13.	Bxf6  	gxf6  
+    ( 13...Qxf6 14.Qxf6 gxf6 15.Rxd6 )
+
+	  14.	Nd5   	Qe6   
+	  15.	Nxf6+ 
+*
+

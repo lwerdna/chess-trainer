@@ -1,0 +1,26 @@
+[Event "New Orleans"]
+[Site "New Orleans, LA USA"]
+[Date "1849.??.??"]
+[Round "?"]
+[White "Paul Morphy"]
+[Black "Alonzo Morphy"]
+[Result "1-0"]
+[ECO "C51"]
+[PlyCount "41"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.b4 
+    {#EvansGambit}
+4...Bxb4 5.c3 Bc5 6.d4 exd4 7.cxd4 Bb6 8.O-O Na5 9.Bd3 d5 10.exd5 Qxd5 11.
+Ba3 Be6 12.Nc3 Qd7 
+    {#PawnCenter}
+13.d5 
+    ( 13.Re1 O-O-O )
+13...Bxd5 14.Nxd5 Qxd5 15.Bb5+ 
+    ( 15.Re1+ Kd8 
+        ( 15...Kd7 16.Bb5+ {loses queen} )
+    16.Be4 {#AttackThePin} 16...Qxd1 17.Raxd1+ Kc8 
+        ( 17...Ke8 18.Bc6# )
+    18.Bf5+ Kb8 19.Rd8# )
+15...Qxb5 16.Re1+ Ne7 17.Rb1 Qa6 18.Rxe7+ Kf8 19.Qd5 Qc4 20.Rxf7+ Kg8 21.
+Rf8# 1-0
+

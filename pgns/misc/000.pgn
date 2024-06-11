@@ -1,0 +1,12 @@
+[Event "SomeEvent"]
+[Site "SomeSite"]
+[Date "????.??.??"]
+[Round "?"]
+[White "WhitePlayer"]
+[Black "BlackPlayer"]
+[Result "*"]
+[FEN "6k1/5ppp/5bb1/3B4/1B6/1P1p1Q1P/2q2PP1/6K1 w - - 0 1"]
+
+1.Bxf7+ Kxf7 ( 1...Bxf7 2.Qa8+ ) 2.Qd5+ Ke8 3.Qe6+ Kd8 4.Ba5+ {Weak back 
+rank, despite all the guarding pieces.} *
+

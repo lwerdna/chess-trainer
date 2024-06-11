@@ -1,0 +1,13 @@
+[Event "Position"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FlipB "1"]
+[FEN "5qk1/2Q2pb1/4rn1p/p5p1/6P1/2N3P1/4BPK1/7R b - - 0 1"]
+
+1...Ne8 2.Qxa5 Bxc3 3.Qxc3 Rxe2 {White's pieceblob had a Q -> N -> B 
+chain. By taking the middle of the chain, the end was left undefended.} *
+
