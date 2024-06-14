@@ -1,11 +1,12 @@
 [FEN "6k1/8/p7/r1r2Pp1/3R2Pp/1p6/1P4P1/3R2K1 w - - 0 1"]
-1.Rd8+ Kg7
+{<2> game comment maybe}
+1.Rd8+ {<0 Q="Hey there"> first move comment} Kg7 {first move reply comment}
 2.R1d7+ Kf6
 	(2...Kh6
-	 3.Rh8#
+	 3.Rh8# {</0>}
 	)
 3.Rf8+ Ke5
-4.Re8+ Kf4
+4.Re8+ {<1>} Kf4
 	(4...Kf6
 	 5.Re6#
 	)

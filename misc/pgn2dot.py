@@ -36,8 +36,16 @@ if __name__ == '__main__':
     for node in nodes:
         print(f'\t{id(node)} [label=""]')
 
+    for n in nodes:
+        if n.comment:
+            comment_label = n.comment.replace('"', '\\"')
+            print(f'\t{id(n.comment)} [label="{comment_label}" shape="box"]')
+
     print('\t//edges')
     for src in nodes:
+        if src.comment:
+            print(f'\t{id(src.comment)} -> {id(src)} [style="dashed"];')
+
         for dst in src.variations:
             # X.turn is the color *TO* move at state X
             if src.turn() == chess.WHITE:
