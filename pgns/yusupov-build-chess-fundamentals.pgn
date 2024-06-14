@@ -307,3 +307,63 @@
 1. Qd8+ Kxd8 2. Bg5+ Kc7 3. Bd8# *
 
 
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-9: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/lmg4FOI3"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1b1k2r/ppp3pp/1qp5/2b1Pp2/3Qn3/5N2/PPPBNPPP/3RK2R w Kkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:55:36"]
+
+1. Qd8+ Kxd8 2. Bg5+ Ke8 3. Rd8+ Kf7 4. e6+ Kxe6 (4... Kg6 5. Nf4#) 5. Nf4+ Kf7 6. Ne5# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-10: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/XqjFLy7j"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "3rk2r/pp3p1p/6n1/2Qnp3/8/P1Pq4/R3NPPP/2B1K2R b Kk - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:58:18"]
+
+1... Qd1+ 2. Kxd1 Ne3+ 3. Ke1 Rd1# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-11: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/04EBQ1Ax"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r2q1rk1/pb3pbp/np4pQ/3p4/1P1N4/P2BP3/1B3PPP/R3K2R w KQ - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:59:04"]
+
+1. Qxg7+ Kxg7 2. Nf5+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-12: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/3O0ZTS02"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "3r3k/6p1/3b4/2pb2qp/8/1P2Pr1P/PB1pQPP1/R2N1NK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:59:50"]
+
+1... Qxg2+ 2. Kxg2 Rg3+ 3. Kh2 Rg2+ 4. Kh1 Rh2+ 5. Kg1 Rh1# *
+
+
