@@ -1,0 +1,309 @@
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-1: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/BgjCEpbV"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/1p6/8/1Pk5/8/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:15:16"]
+
+{ [%csl Ga3,Gb3,Gc3] }
+1. b4 { [%csl Ga3,Gb3,Gc3] } 1... Kxb4 { [%csl Ga3,Gb3,Gc3] } (1... Kc4 { [%csl Ga3,Gb3,Gc3] } 2. Kc2 { opposition, kept away from key squares } { [%csl Ga3,Gb3,Gc3] } 2... Kxb4 { [%csl Ga3,Gb3,Gc3] } 3. Kb2 { [%csl Ga3,Gb3,Gc3] }) (1... Kd4 { [%csl Ga3,Gb3,Gc3] } 2. Kb2 { distant opposition } { [%csl Ga3,Gb3,Gc3] } 2... Kc4 { [%csl Ga3,Gb3,Gc3] } 3. Kc2 { [%csl Ga3,Gb3,Gc3] } 3... Kxb4 { [%csl Ga3,Gb3,Gc3] } 4. Kb2 { [%csl Ga3,Gb3,Gc3] }) 2. Kb2 { opposition acquired, key squares defended } { [%csl Ga3,Gb3,Gc3] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-2: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/X7CD2CQf"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/3kp3/8/8/8/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:19:32"]
+
+1. Ke1! { Black cannot keep opposition since e5 is occupied! } { [%csl Gd3,Ge3,Gf3] } 1... Kd4 { [%csl Gd3,Ge3,Gf3] } (1... Ke4 { [%csl Gd3,Ge3,Gf3] } 2. Ke2 { [%csl Gd3,Ge3,Gf3] }) (1... e4 { [%csl Gd3,Ge3,Gf3] } 2. Kd1 { [%csl Gd3,Ge3,Gf3] } 2... Kd4 { [%csl Gd3,Ge3,Gf3] } 3. Kd2 { [%csl Gd3,Ge3,Gf3] } 3... Kd5 { [%csl Gd3,Ge3,Gf3] } 4. Ke3 { [%csl Gd3,Ge3,Gf3] } 4... Ke5 { [%csl Gd3,Ge3,Gf3] } 5. Ke2 { again, playing that e4 square - black cannot use it to acquire opposition } { [%csl Gd3,Ge3,Gf3] }) 2. Kd2 { [%csl Gd3,Ge3,Gf3] } 2... Ke4 { [%csl Gd3,Ge3,Gf3] } (2... e4 { [%csl Gd3,Ge3,Gf3] } 3. Ke2 { Again, using the fact that the corresponding square e4 is occupied. } { [%csl Gd3,Ge3,Gf3] } 3... Kd5 { [%csl Gd3,Ge3,Gf3] } 4. Kd1 { [%csl Gd3,Ge3,Gf3] }) 3. Ke2 { [%csl Gd3,Ge3,Gf3] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-3: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/03Gpdb1T"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5k2/8/8/8/1P6/8/8/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:26:57"]
+
+{ [%csl Ga6,Gb6,Gc6,Gd1] }
+1. Kc2 { [%csl Ga6,Gb6,Gc6] } 1... Ke7 { [%csl Ga6,Gb6,Gc6] } 2. Kb3 { Right! White will win race to key squares! } { [%csl Gb6,Ga6,Gc6][%cal Gd1c2,Gc2b3,Gb3a4,Ga4a5,Gf8e7,Ge7d6,Gd6c6] } (2. Kc3 { Wrong! Black king wins race to key squares! } { [%csl Gc6,Gb6,Ga6][%cal Gd1c2,Gc2c3,Gc3c4,Gf8e7,Ge7d6,Gd6c6] }) 2... Kd6 { [%csl Ga6,Gb6,Gc6] } 3. Ka4 { [%csl Ga6,Gb6,Gc6] } 3... Kc6 { [%csl Ga6,Gb6,Gc6] } 4. Ka5 { [%csl Ga6,Gb6,Gc6] } 4... Kb7 { [%csl Ga6,Gb6,Gc6] } (4... Kc7 { [%csl Ga6,Gb6,Gc6] } 5. Ka6 { Redeem opposition for key squares! } (5. Kb5 { Wrong! } { [%csl Ga6,Gb6,Gc6] } 5... Kb7 { [%csl Ga6,Gb6,Gc6] })) 5. Kb5 { Easy opposition acquired. } { [%csl Ga6,Gb6,Gc6] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-4: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/haGdRHa8"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/7p/4K2P/8/5k2/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:32:33"]
+
+{ [%csl Gg8,Gg7] }
+1. Kf6 { White must #Shoulder the king so he can take h7 and occupy g8 without his opponent blocking g8. Black wants to #KingTail white so after g7 falls, he can play Kf7 and control the key squares. } { [%csl Gg7,Gg8] } (1. Kf7 { [%csl Gg7,Gg8] } 1... Kf5 { WRONG! Now the king can follow too close with opposition, and white cannot take h7 and get to g8. } { [%csl Gg7,Gg8] } 2. Kg7 { [%csl Gg7,Gg8] } 2... Ke6 { [%csl Gg7,Gg8] } 3. Kxh7 { [%csl Gg7,Gg8] } 3... Kf7 { [%csl Gg7,Gg8] }) 1... Ke4 { [%csl Gg7,Gg8] } 2. Kg7 { [%csl Gg7,Gg8] } 2... Ke5 { [%csl Gg7,Gg8] } 3. Kxh7 { [%csl Gg7,Gg8] } 3... Kf6 { [%csl Gg7,Gg8] } 4. Kg8 { [%csl Gg8,Gg7] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-5: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/Svl5IHwK"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/1k6/8/K7/6P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:43:46"]
+
+{ [%csl Gf4,Gg4,Gh4] }
+1. Kb3 { [%csl Gf4,Gg4,Gh4] } 1... Kc5 { [%csl Gf4,Gg4,Gh4] } 2. Kc3 { [%csl Gf4,Gg4,Gh4] } 2... Kd5 { [%csl Gf4,Gg4,Gh4] } 3. Kd3 { [%csl Gf4,Gg4,Gh4] } 3... Ke5 { [%csl Gf4,Gg4,Gh4] } 4. Ke3 { [%csl Gf4,Gg4,Gh4] } 4... Kf5 { [%csl Gf4,Gg4,Gh4] } 5. Kf3 { [%csl Gf4,Gg4,Gh4] } 5... Kg5 { [%csl Gf4,Gg4,Gh4] } 6. Kg3 { [%csl Gf4,Gg4,Gh4] } 6... Kh5 { [%csl Gh4,Gg4,Gf4] } 7. Kf4 { [%csl Gf4,Gg4,Gh4] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-6: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/35K1DUAo"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "k7/8/1p6/8/1P6/5K2/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:47:23"]
+
+1. b5 { Gives the turn, blocks a6, c6, and maintains distant opposition! } { [%csl Rc6,Ra6] } 1... Kb7 (1... Kb8 2. Ke4 Kc8 3. Ke5) (1... Ka7 2. Ke4 { Quickly calculating that ...Ka8, ...Kb7, ...Kb8 all have opposition-preserving replies. }) 2. Ke4 Kc8 (2... Kc7 3. Ke5 Kd7 4. Kd5 Kc7 5. Ke6 { Since corresponding square c6 is off limits! }) 3. Ke5 Kd7 4. Kd5 Kc7 5. Ke6 Kc8 6. Kd6 Kb7 7. Kd7 Ka7 8. Kc7 Ka8 9. Kxb6 Kb8 10. Ka6 Ka8 11. b6 Kb8 12. b7 { Squeeze! } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-7: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/NWx20BK0"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/7p/8/4kpPP/8/8/8/5K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "02:03:55"]
+
+1. h6 { 1. Creates a two-on-one passer threat: g6!
+2. Black is now three moves from g5 and white will make it to f4 in time.
+3. White holds opposition since corresponding f5 is occupied. } (1. Ke1 { WRONG, } 1... f4) 1... Ke4 (1... f4 2. g6 Kf6 3. gxh7) (1... Kf4 2. g6) 2. g6 *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-8: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/eoWtQuXs"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/3p4/k7/P1P5/p7/2K5/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "02:35:58"]
+
+{ [%csl Gc4,Gd4,Ge4] }
+1. Kb3 { [%csl Gc4,Gd4,Ge4] } (1. c5 { [%csl Gc4,Gd4,Ge4] } 1... dxc5 { [%csl Gb3,Gc3,Gd3] } 2. Kb3 { [%csl Gb3,Gc3,Gd3] } 2... a2 3. Kxa2 (3. Kb2 Kb4 4. a5 Kxa5) 3... Kxa4) 1... a2 { [%csl Gc4,Gd4,Ge4] } 2. Kb2 { [%csl Gc4,Gd4,Ge4] } (2. Kxa2?? Kxa4) 2... Kxa4 { [%csl Gc4,Gd4,Ge4] } 3. c5 { [%csl Gc4,Gd4,Ge4] } (3. Kxa2?? { Black king reaches key squares! } { [%csl Gc4,Gd4,Ge4] }) 3... dxc5 { [%csl Gb3,Gc3,Gd3] } 4. Kxa2 { Capture with opposition! } { [%csl Gb3,Gc3,Gd3] } 4... Kb4 { [%csl Gb3,Gc3,Gd3] } 5. Kb2 { draw } { [%csl Gb3,Gc3,Gd3] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-9: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/KIJ5Z4Ud"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/3p4/2k5/4P3/8/8/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "02:46:39"]
+
+{ White can't stop black for getting to the key squares as they lay. So he must move the key squares instead. } { [%csl Gc4,Gd4,Ge4] }
+1. e5 { [%csl Gc4,Gd4,Ge4] } 1... dxe5 { [%csl Gd3,Ge3,Gf3] } (1... d5 { [%csl Gc3,Gd3,Ge3] } 2. e6 { [%csl Gc3,Gd3,Ge3] } 2... Kd6 { [%csl Gc3,Gd3,Ge3] } 3. e7 { [%csl Gc3,Gd3,Ge3] } 3... Kxe7 { [%csl Gc3,Gd3,Ge3] } 4. Kc2 Kd6 5. Kd3 { Knowing black can't access d5. }) 2. Kc1 { [%csl Gd3,Ge3,Gf3] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-10: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/4v9BXiKX"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/7k/5Pp1/8/5K2/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "03:25:39"]
+
+1. Kg5 Kh8 (1... Kg8 2. Kxg6 Kh8 (2... Kf8 3. f7 { Squeeze! }) 3. Kf7 Kh7 4. Ke7) 2. Kh6 (2. Kxg6??) 2... Kg8 3. Kxg6 Kh8 (3... Kf8 4. f7 { Squeeze! }) 4. Kf7 Kh7 5. Ke7 { Path claiming! } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-11: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/Eui4j97B"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "1k6/1p6/1P1K4/2P5/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "03:31:17"]
+
+1. Kd7 Ka8 2. c6 bxc6 (2... Kb8 3. c7+ Ka8 4. c8=Q#) 3. Kc7 { #Escort } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 4-12: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/1eJVblGw"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/7p/2K5/8/6kP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "03:34:32"]
+
+{ [%csl Gg2,Gg1] }
+1. h4 { [%csl Gg2,Gg1] } 1... Kg3 { [%csl Gg2,Gg1] } 2. Kd3 { [%csl Gg2,Gg1] } 2... Kxh4 { [%csl Gg2,Gg1] } 3. Ke2 { [%csl Gg2,Gg1] } 3... Kg3 { [%csl Gg2,Gg1] } 4. Kf1 { And white controls the two #KeySquares. } { [%csl Gg2,Gg1] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-1: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/wyF63x0S"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "3r1n1k/3P3p/pp3q2/2pQp3/P1P3B1/3b2R1/1P5P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:35:08"]
+
+1. Qg8+ Kxg8 2. Be6+ Kh8 3. Rg8# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-2: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/K5MoDoDE"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r4rk1/8/p5n1/1p3b2/2q5/P1N1B1Q1/1PPR2PP/5RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:36:34"]
+
+1... Qxf1+ 2. Kxf1 Bd3+ 3. Kg1 Rf1# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-3: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/SpGuF7Ju"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r4nkr/p3b2p/1pp1p1qB/5Q2/2BP4/2P3P1/P4P1P/4R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:37:39"]
+
+1. Rxe6 Qxf5 (1... Nxe6 2. Bxe6+ Qxe6 3. Qxe6#) (1... Qxe6 2. Bxe6+ Nxe6 3. Qxe6#) 2. Rg6# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-4: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/b8WlTlGb"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "6r1/p4rkp/3RQ1n1/1pp1p1B1/2p1P3/2P3R1/P4qPK/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:41:13"]
+
+1. Qxe5+ Nxe5 2. Bf6+ Kf8 (2... Kh6 3. Bg7+ Kh5 4. Rh6#) 3. Rd8# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-5: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/fqkJwqXc"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "rnb1k2r/pp2ppbp/2p5/3Q4/8/5N2/P1qB1PPP/3RKB1R w Kkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:45:45"]
+
+1. Qd8+ Kxd8 2. Ba5+ Ke8 3. Rd8# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-6: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/c0KSS8OB"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r2r2k1/5p2/3p2p1/1N2p1q1/2P2n1p/4N1n1/5RPP/3RQBK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:47:15"]
+
+1... Nh3+ 2. gxh3 Ne2+ 3. Kh1 Qg1# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-7: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/nRGqteCf"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1b2r1k/pp3p1p/2n2NpB/q2pQ3/8/7P/PPP3P1/2K4R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:48:05"]
+
+1. Bg7+ Kxg7 2. Ne8+ Kh6 (2... Kg8 3. Qg7#) 3. Qf4+ Kh5 (3... g5 4. Qf6+ Kh5 5. Ng7+ Kh4 6. Qf2#) 4. Ng7# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 5-8: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/TVE0WFfT"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "rnb1kb1r/pp3ppp/2p5/4q3/4n3/3Q4/PPPB1PPP/2KR1BNR w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:51:53"]
+
+1. Qd8+ Kxd8 2. Bg5+ Kc7 3. Bd8# *
+
+
