@@ -367,3 +367,231 @@
 1... Qxg2+ 2. Kxg2 Rg3+ 3. Kh2 Rg2+ 4. Kh1 Rh2+ 5. Kg1 Rh1# *
 
 
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22 - Fortress I"]
+[Site "https://lichess.org/study/vmzEymCY/43JMXoZ1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "7k/8/8/6KP/4B3/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:19:03"]
+
+{ [%csl Gg7,Gg8] }
+1. Kf6 { [%csl Gg7,Gg8] } 1... Kg8 { [%csl Gg7,Gg8] } 2. h6 { [%csl Gg7,Gg8] } 2... Kh8 { [%csl Gg7,Gg8] } 3. h7 { [%csl Gg7,Gg8] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22: Example 1"]
+[Site "https://lichess.org/study/vmzEymCY/HXyE9Siy"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5k2/8/7P/8/8/8/8/1B2K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:20:28"]
+
+1. Ba2 { To prevent black from reaching the corner! } (1. Bh7?? Kf7 2. Kf2 Kf6 3. Be4 (3. Kg3 Kg5) 3... Kf7 4. Bh7 Kf6 { repetition }) 1... Ke7 2. h7 *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22: Diagram 22-4"]
+[Site "https://lichess.org/study/vmzEymCY/25Z5XGRN"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/8/p7/k7/b2K4/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:26:08"]
+
+{ [%csl Ga1] }
+1. Kc2 (1. Kc3 Bb1) 1... Bb3+ 2. Kb1 { [%csl Ga1] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-1: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/U0gKMFQK"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/k7/8/4K3/7p/7b/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:20:17"]
+
+{ [%csl Gg2,Gg3,Gg1] }
+1... Bg3 { [%csl Gg2,Gf2,Ge1] } 2. Kf3 { [%csl Gg2,Gf2,Ge1] } 2... Bh4 { [%csl Gg2,Gg3,Gf2,Ge1] } 3. Kg4 { [%csl Gg3,Gg2,Gf2,Ge1] } (3. Ke2 { [%csl Gg3,Gg2,Gf2,Ge1] } 3... h2) 3... h2 *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-2: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/1GeOKEgF"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/1p1p3b/2k5/P1p1K3/8/8/8/3B4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:21:54"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-3: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/wZjlHBwI"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "4k3/1p4K1/5P2/P7/2b5/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:23:07"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-4: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/5qoGQwAJ"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/2bk4/8/8/7p/8/4K1P1/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:23:42"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-5: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/1w0Tegzw"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "7k/5Ppp/3b4/4N3/8/8/8/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:24:05"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-6: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/Mm2DQbqP"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/8/1p2k3/8/b1PK4/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:24:30"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-7: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/UpQyTDSX"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/3k4/8/p7/7b/8/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:25:34"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-8: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/Chxy7OhL"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "1N6/p7/3k4/8/1pb5/8/PK6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:26:00"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-9: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/BENQ54XN"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/5k2/ppP5/8/8/8/3BK2b w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:26:21"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-10: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/cMcPwh1z"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/2K5/p3k3/8/8/1P6/3b4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:26:48"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-11: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/FfXHiBb5"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "3N4/8/1p1k4/8/8/1b6/8/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:52:52"]
+
+ *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 22-12: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/hZr7c9DM"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/8/8/2k5/7P/K2B4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:50:01"]
+
+1. h4 Kd4 2. h5 Ke5 3. h6 { [%csl Gg7] } 3... Kf6 { [%csl Gg7] } 4. Bh5 { [%csl Gg7,Gg6,Gf7,Ge8] } *
+
+

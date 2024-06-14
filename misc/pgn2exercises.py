@@ -38,8 +38,9 @@ if __name__ == '__main__':
 
     # collect all problem start nodes
     problem_nodes = {}
+    problem_questions = {}
     for node in nodes:
-        if m := re.search(r'<(\d+)(?: Q="(.*)")?>', node.comment):
+        for m in re.finditer(r'<(\d+)(?: Q="(.*)")?>', node.comment):
             problem_id, question = m.group(1, 2)
             problem_id = int(problem_id)
 
@@ -47,6 +48,7 @@ if __name__ == '__main__':
                 raise Exception(f'problem {problem_id} start tag appears twice in tree')
 
             problem_nodes[problem_id] = node
+            problem_questions[problem_id] = question
 
     # collect corresponding end nodes
     problems = {}
@@ -54,9 +56,10 @@ if __name__ == '__main__':
     # {
     # 'start': start node of problem x
     # 'end': [end nodes of problem x]
+    # 'question': question text (optional)
     # }
     for problem_id, ancestor in problem_nodes.items():
-        problems[problem_id] = { 'start':ancestor, 'end':[] }
+        problems[problem_id] = { 'start':ancestor, 'end':[], 'question':problem_questions[problem_id] }
 
         for node in collect_nodes(ancestor):
             if m := re.search(r'</(\d+)>', node.comment):
@@ -77,6 +80,10 @@ if __name__ == '__main__':
         print(f'   end(s):')
         for end in entry['end']:
             print(f'        {repr(end)}')
+        if entry['question']:
+            print(f' question:')
+            print(f'        {entry["question"]}')
+
         print(f'    paths:')
 
         a = entry['start']
