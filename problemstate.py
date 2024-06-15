@@ -213,3 +213,4 @@ def create_problem_state_from_db_data(entry):
         return PlayBestProblemState(entry, moves)
 
     raise Exception('unknown problem type: ' + entry['TYPE'])
+

@@ -5,6 +5,9 @@ import sys
 import chess
 import chess.pgn
 
+sys.path.append('..')
+import common
+
 def assign_fullmove(node, current):
     node.fullmove = current
     for child in node.variations:
@@ -47,11 +50,7 @@ if __name__ == '__main__':
             print(f'\t{id(src.comment)} -> {id(src)} [style="dashed"];')
 
         for dst in src.variations:
-            # X.turn is the color *TO* move at state X
-            if src.turn() == chess.WHITE:
-                move_label = f'{dst.fullmove}.{dst.san()}'
-            else:
-                move_label = f'{dst.fullmove}...{dst.san()}'
+            move_label = common.node_to_san(dst)
             print(f'\t{id(src)} -> {id(dst)} [label="{move_label}"]')
 
     print('}')

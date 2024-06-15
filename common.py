@@ -128,6 +128,14 @@ def assign_fullmove(node, current):
     for child in node.variations:
         assign_fullmove(child, current if node.turn() == chess.WHITE else current+1)
 
+# return list of nodes between a and b, inclusive
+def search_path(a, b):
+    if a == b:
+        return [b]
+    for child in a.variations:
+        if subresult := search_path(child, b):
+            return [a] + subresult
+
 # collect all nodes in a variation tree
 def collect_nodes(node):
     result = [node]
@@ -174,43 +182,6 @@ def node_chain_to_san(node):
 
     return ''.join(tokens)
 
-# convert a list of GameNode/ChildNode
-# to a string like "1.Rd8+ Kf7 2.R1d7+ Kf6 3.Rf8+ Ke5 4.Re8+ Kf4 5.Rd4+ Kg3 6.Re3#"
-#
-# ignore children (held in .variations) and instead use the list as ancestry
-def node_list_to_san(nodes):
-    tokens = []
-
-    for i, node in enumerate(nodes):
-        first = (i == 0)
-        last = (i == len(nodes)-1)
-
-        if first:
-            tokens.append(f'{node.fullmove}' + ('.' if node.turn() == chess.WHITE else '...'))
-        elif node.turn() == chess.WHITE and not last:
-            tokens.append(f'{node.fullmove}.')
-
-        if i < len(nodes)-1:
-            tokens.append(nodes[i+1].san())
-        if i < len(nodes)-2:
-            tokens.append(' ')
-
-        first = False
-
-    return ''.join(tokens)
-
-def generate_variation_exercises_worker(node, line):
-    result = []
-    if node.is_end():
-        result.append(line + [node])
-    else:
-        for i, child in enumerate(node.variations):
-            if i==0:
-                result.extend(generate_variation_exercises_worker(child, line+[node])) # left descent continues current line
-            else:
-                result.extend(generate_variation_exercises_worker(child, [node])) # non-left descent starts new
-    return result
-
 # fen:        starting board state
 # variations: text describes lines
 def generate_variation_exercises(fen, variations):
@@ -228,6 +199,18 @@ def generate_variation_exercises(fen, variations):
         line_str = node_list_to_san(nodes)
         result.append({'FEN':fen, 'LINE':line_str})
 
+    return result
+
+def generate_variation_exercises_worker(node, line):
+    result = []
+    if node.is_end():
+        result.append(line + [node])
+    else:
+        for i, child in enumerate(node.variations):
+            if i==0:
+                result.extend(generate_variation_exercises_worker(child, line+[node])) # left descent continues current line
+            else:
+                result.extend(generate_variation_exercises_worker(child, [node])) # non-left descent starts new
     return result
 
 def moves_to_dot(fen, variations):
@@ -253,3 +236,59 @@ def moves_to_dot(fen, variations):
             print(f'\t{id(src)} -> {id(dst)} [label="{move_label}"]')
 
     print('}')
+
+# convert a GameNode/ChildNode tree to a SAN line, like:
+# "1...Rxf3 2.gxf3 Nd4+ 3.Kh1 (3.Rg2 Nxf3+ 4.Kh1 Rd1+ 5.Rg1 Rxg1#) Nxf3 4.Rg2 Rd1+ 5.Rg1 Rxg1#"
+def tree_to_san_line(node, whitelist=None):
+    result = tree_to_san_line_worker(node, whitelist)
+    result = re.sub(r'[^(]\d+\.\.\.', ' ', result)
+    return result
+
+def tree_to_san_line_worker(node, whitelist=None, include_root=True):
+    result = ''
+
+    def append(stuff):
+        nonlocal result
+        if result and result[-1] != ' ':
+            result += ' '
+        result += stuff
+
+    if include_root:
+        if type(node) == chess.pgn.ChildNode:
+            # if a whitelist is given, require node be in it
+            if not whitelist or node in whitelist:
+                append(node_to_san(node))
+
+    # if a whitelist is given, require child to be in it
+    children = [n for n in node.variations if (not whitelist or n in whitelist)]
+
+    if len(children) == 1:
+        append(tree_to_san_line_worker(children[0], whitelist))
+    elif len(children) > 1:
+        # include the first move
+        append(node_to_san(children[0]))
+
+        # then all variations
+        for child in children[1:]:
+            append('(')
+            result += tree_to_san_line_worker(child, whitelist)
+            result += ')'
+
+        # then remaining moves
+        append(tree_to_san_line_worker(children[0], whitelist, False))
+
+    return result
+
+# convert a GameNode/ChildNode to a SAN, like:
+# "1...Rxf3"
+def node_to_san(node, numbered=True):
+    parent_board = node.parent.board()
+
+    if numbered:
+        return '{}{}{}'.format(
+            parent_board.fullmove_number,
+            '.' if parent_board.turn == chess.WHITE else '...',
+            parent_board.san(node.move)
+        )
+    else:
+        return parent_board.san(node.move)
