@@ -4,7 +4,7 @@ import os
 
 from common import *
 
-def get_problems_from_game(game):
+def get_problems_from_game(game, pgn_path=None):
     nodes = collect_nodes(game)
 
     # collect all problem start nodes
@@ -19,12 +19,16 @@ def get_problems_from_game(game):
                 raise Exception(f'problem {problem_index} start tag appears twice in tree')
 
             problem_nodes[problem_index] = node
-            problem_questions[problem_index] = question
+            if question:
+                problem_questions[problem_index] = question
 
     problems = []
 
     for problem_index, ancestor in problem_nodes.items():
         entry = {}
+        if not pgn_path is None:
+            entry['pgn_path'] = pgn_path
+
         if problem_index in problem_questions:
             entry['question'] = problem_questions[problem_index]
 
@@ -58,23 +62,23 @@ def get_pgns(path='./pgns'):
     result = []
     for root, dirs, fnames in os.walk(path):
         for dir in dirs:
-            #print os.path.join(path, dir)
+            #print os.path.join(root, dir)
             pass
         for fname in fnames:
-            fpath = os.path.join(path, fname)
+            fpath = os.path.join(root, fname)
             result.append(fpath)
     return result
 
 def get_problems():
     problems = []
 
-    #for fpath in get_pgns():
+    for fpath in get_pgns():
     #for fpath in ['./misc/two-rook-mate-with-variations.pgn']:
-    for fpath in ['./pgns/all-openings.pgn']:
+    #for fpath in ['./pgns/all-openings.pgn']:
         with open(fpath) as fp:
             game = chess.pgn.read_game(fp)
 
-        for problem in get_problems_from_game(game):
+        for problem in get_problems_from_game(game, fpath):
             problems.append(problem)
 
     return problems

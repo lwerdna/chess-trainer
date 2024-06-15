@@ -116,16 +116,16 @@ class CheckmateOrPromoteToQueenProblemState(ProblemState):
         return False
 
 class FollowVariationsProblemState(ProblemState):
-    def __init__(self, dbentry):
-        self.dbentry = dbentry
+    def __init__(self, problem):
+        self.problem = problem
 
         # parse problem
-        fen, line = (dbentry[k] for k in ['FEN', 'LINE'])
-        self.board = chess.Board(fen)
+        self.fen, line = (problem[k] for k in ['fen', 'line'])
+        self.board = chess.Board(self.fen)
         self.player_color = self.board.turn
 
         # generate the exercises
-        self.exercises = generate_variation_exercises(fen, line)
+        self.exercises = generate_variation_exercises(self.fen, line)
         assert len(self.exercises) >= 1
         for i,exercise in enumerate(self.exercises):
             print(f'exercise {i}: FEN: {exercise["FEN"]} LINE: {exercise["LINE"]}')

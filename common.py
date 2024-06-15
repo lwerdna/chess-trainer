@@ -195,8 +195,9 @@ def generate_variation_exercises(fen, variations):
     temp = generate_variation_exercises_worker(game, [])
 
     for nodes in generate_variation_exercises_worker(game, []):
-        fen = nodes[0].board().fen()
-        line_str = node_list_to_san(nodes)
+        a = nodes[0]
+        fen = a.board().fen()
+        line_str = tree_to_san_line(a, set(nodes))
         result.append({'FEN':fen, 'LINE':line_str})
 
     return result

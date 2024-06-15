@@ -8,8 +8,7 @@ import chess
 import chess.engine
 
 import debug
-import leitner
-import database
+import spaced_repetition
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
@@ -17,6 +16,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBo
 from cboard import ChessBoard
 
 import pgnfile
+
+import problem_finder
 from problemstate import *
 from common import *
 
@@ -25,98 +26,76 @@ from common import *
 #------------------------------------------------------------------------------
 
 window = None
-dbinfo = None
-
-problem_index = None
+problems = None
 problem_state = None
 
 def select_problem(replay=False):
     global window
-    global problem_index
+    global problems
     global problem_state
 
-    # collect problems that are ue
-    due_indices = []
-    now = int(time.time())
-    for i, entry in enumerate(dbinfo):
-        if leitner.is_due(entry['LEITNER']):
-            due_indices.append(i)
-
-    print(f'due indices: {due_indices}')
-    if not due_indices:
-        return False
-
     # grab one at random
-    problem_index = random.choice(due_indices)
-    problem = dbinfo[problem_index]
+    problem = random.choice(problems)
 
     #print(f'selected problem from line number: {problem["lineNum"]}')
-    window.frame.frontText.setText(problem['FRONT'])
+    if 'question' in problem:
+        window.frame.frontText.setText(problem['question'])
 
-    problem_state = create_problem_state_from_db_data(problem)
+    problem_state = FollowVariationsProblemState(problem)
 
     cboard = window.frame.board
 
     problem_state.initialize_chessboard(cboard)
 
-    #if 'AUTO_PROMOTE' in problem.headers:
-    #    board.auto_promote_to = chess.Piece.from_symbol(problem.headers['AUTO_PROMOTE']).piece_type
-    #else:
-    #    board.auto_promote_to = None
-
-    #board.set_fen(problem.headers['FEN'])
-    #board.update_view()
-
     return True
 
 def post_problem_interaction(cboard):
-    global dbinfo
-    global problem_index
-
-    problem = dbinfo[problem_index]
+    global problems
+    global problem_state
 
     # restore the cboard to the original problem state
-    cboard.set_fen(problem['FEN'])
+    cboard.set_fen(problem_state.problem['fen'])
     cboard.update_view()
 
     # calculate new times
-    box, due = problem['LEITNER']
-    due_times = leitner.calc_due_times(box)
+
+    boxes, due_times = spaced_repetition.calc_due_times(problem)
 
     # pop up dialog
-    dlg = DoneDialog(cboard, box, due_times)
+    dlg = DoneDialog(cboard, due_times)
 
-    text = problem['BACK']
-    text = text.replace('\\n', '\n')
-
-    dlg.textEdit.setPlainText(text)
     dlg.exec()
 
     result = dlg.result
-    print(f'got click result: {result}')
+    print(f'got result: {result}')
 
     if result != None:
         match result:
             case 'terrible':
+                box = boxes[0]
                 due_epoch = due_times[0]
             case 'bad':
+                box = boxes[1]
                 due_epoch = due_times[1]
             case 'ok':
+                box = boxes[2]
                 due_epoch = due_times[2]
             case 'good':
+                box = boxes[3]
                 due_epoch = due_times[3]
             case 'easy':
+                box = boxes[4]
                 due_epoch = due_times[4]
 
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
 
-        problem['LEITNER'] = box, due_epoch
+        spaced_repetition.update_problem(problem_state.problem, box, due_epoch)
 
-        # save any edited text
-        text = dlg.textEdit.toPlainText()
-        text = text.replace('\n', '\\n') # actual newline to '\', 'n'
-        dbinfo[problem_index]['BACK'] = text
+    # now filter the problems that are due (possibly getting rid of this current one)
+    problems = [p for p in problems if spaced_repetition.is_due(p)]
+
+    problem_state = None
 
 # callbacks
 def on_move_request(board, move):
@@ -141,82 +120,8 @@ def on_move_complete(cboard, move):
         if not problems_remaining:
             print(f'TODO: close app, problems done!')
 
-def on_move_complete2(board, move):
-    global problem_index
-    global problem_state
-
-    #print(f'MOVE COMPLETE: {move} board state: {board.get_fen()}')
-
-    problem_type = problem_state['type']
-
-    # GAME ENDED!
-    outcome = board.model.outcome()
-    if outcome == None:
-        pass
-    elif outcome.termination == chess.Termination.CHECKMATE:
-        # in all problem types, achieving checkmate is considered success
-        if outcome.winner == problem_state['player_color']:
-            print('SUCCESS: checkmate detected')
-            problem_state['stage'] = 'SUCCESS'
-    else:
-        if problem_type == 'checkmate_or_promote_to_queen':
-            print('FAILURE: non-checkmate outcome detected')
-            board.model.pop()
-            return
-
-
-
-    # EVALUATION-DEPENDENT WIN/LOSS CONDITIONS
-#    bcopy = board.model.copy()
-#    debug.breakpoint()
-#    bcopy.pop() # undo user move
-#    reply, score = evaluation.best_reply_to(bcopy, move)
-#
-
-    if problem_type == 'checkmate_or_promote_to_queen':
-        # select opponent reply
-        reply_move = evaluation.bestmove(board.model)
-        reply_san = move_as_san(board.model, reply_move)
-        print(f'evaluation.evaluate() returned {reply_san}')
-        board.move_glide(reply_san)
-
-#    if problem_type == 'draw_kk_or_repetition':
-#        if not evaluation.is_even(score):
-#            print('FAILURE: non-drawing board detected')
-#            print(f'{board.get_fen()} has evaluation {score} after {reply}')
-#            #debug.breakpoint()
-#            state = 'FAILURE'
-#        elif only_kings(board.model):
-#            print('SUCCESS: draw with only kings')
-#            state = 'SUCCESS'
-#        elif board.model.can_claim_threefold_repetition():
-#            print(f'SUCCESS: draw by threefold repetition')
-#            state = 'SUCCESS'
-#        else:
-#            # player continues
-#            pass
-#    elif problem_type == 'checkmate_or_promote_to_queen':
-#        if not is_winning(score):
-#            print('FAILURE: non-winning board detected')
-#    elif m := re.match(r'^PlayBest(\d+)$', problem_type):
-#        moves_needed = int(m.group(1))
-#    else:
-#        debug.breakpoint()
-
-    #print(f'logic state: {state}')
-    if problem_state['stage'] == 'SUCCESS':
-        post_problem_interaction(board)
-        problems_remaining = select_problem()
-        if not problems_remaining:
-            print(f'TODO: close app, problems done!')
-
 def on_board_init(board):
-    global dbinfo
-
     evaluation.init()
-
-    path = sys.argv[1] if sys.argv[1:] else 'database.txt'
-    dbinfo = database.read(path)
 
     board.set_mode('game')
     board.set_move_request_callback(on_move_request)
@@ -224,10 +129,8 @@ def on_board_init(board):
 
 
 def on_exit():
-    global dbinfo
     print('on_exit')
-    path = sys.argv[1] if sys.argv[1:] else 'database.txt'
-    database.write(dbinfo, path)
+    spaced_repetition.store()
     evaluation.exit()
 
 #------------------------------------------------------------------------------
@@ -235,7 +138,7 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent, current_box, due_times):
+    def __init__(self, parent, due_times):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
@@ -250,7 +153,7 @@ class DoneDialog(QDialog):
         hLayout = QHBoxLayout()
 
         now = int(time.time())
-        durstrs = [leitner.duration_string(dt - now) for dt in due_times]
+        durstrs = [spaced_repetition.duration_string(dt - now) for dt in due_times]
 
         b = QPushButton(f'terrible ({durstrs[0]})', self)
         b.clicked.connect(self.clickedTerrible)
@@ -352,6 +255,25 @@ def except_hook(cls, exception, traceback):
 #------------------------------------------------------------------------------
 
 if __name__ == '__main__':
+    if 0:
+        foo = {'key': {'leitner':'whatever', 'due':'whatever'}}
+        import json
+        with open('srs.json', 'w') as fp:
+            fp.write(json.dumps(foo, indent=4))
+        sys.exit(0)
+
+    spaced_repetition.load()
+
+    # load all problems
+    problems = problem_finder.get_problems()
+
+    # ensure they're all tracked in our SRS
+    for problem in problems:
+        spaced_repetition.add_problem(problem)
+
+    # now filter the problems that are due
+    problems = [p for p in problems if spaced_repetition.is_due(p)]
+
     sys.excepthook = except_hook
     app = QApplication(sys.argv)
     window = MyWindow()
@@ -359,5 +281,4 @@ if __name__ == '__main__':
     select_problem()
 
     sys.exit(app.exec_())  # Start main event loop
-
 
