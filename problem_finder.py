@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import sys
 
 from common import *
 
@@ -69,24 +70,35 @@ def get_pgns(path='./pgns'):
             result.append(fpath)
     return result
 
-def get_problems():
+def get_problems(fpath=None):
     problems = []
 
-    for fpath in get_pgns():
+    if fpath:
+        pgn_paths = [fpath]
+    else:
+        pgn_paths = get_pgns()
+
+    for fpath in pgn_paths:
     #for fpath in ['./misc/two-rook-mate-with-variations.pgn']:
     #for fpath in ['./pgns/all-openings.pgn']:
         with open(fpath) as fp:
-            game = chess.pgn.read_game(fp)
+            while True:
+                game = chess.pgn.read_game(fp)
+                if game is None:
+                    break
 
-        for problem in get_problems_from_game(game, fpath):
-            problems.append(problem)
+                for problem in get_problems_from_game(game, fpath):
+                    problems.append(problem)
 
     return problems
 
 if __name__ == '__main__':
     print('\n'.join(get_pgns()))
 
-    problems = get_problems()
+    if sys.argv[1:]:
+        problems = get_problems(sys.argv[1])
+    else:
+        problems = get_problems()
     
     import pprint
     pprint.pprint(problems)

@@ -15,8 +15,6 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBo
 
 from cboard import ChessBoard
 
-import pgnfile
-
 import problem_finder
 from problemstate import *
 from common import *
@@ -246,8 +244,16 @@ def except_hook(cls, exception, traceback):
 if __name__ == '__main__':
     history.load()
 
-    # load all problems
-    problems = problem_finder.get_problems()
+    pgn_path = None
+    if sys.argv[1:]:
+        if sys.argv[1].endswith('.pgn'):
+            pgn_path = sys.argv[1]
+
+    # load problems
+    if pgn_path:
+        problems = problem_finder.get_problems(pgn_path)
+    else:
+        problems = problem_finder.get_problems()
 
     # ensure they're all tracked in our SRS
     for problem in problems:

@@ -122,12 +122,6 @@ def last_move_as_san(board):
 def move_as_san(board, move):
     return board.san(move)
 
-# assign a fullmove number to nodes in a variation tree
-def assign_fullmove(node, current):
-    node.fullmove = current
-    for child in node.variations:
-        assign_fullmove(child, current if node.turn() == chess.WHITE else current+1)
-
 # return list of nodes between a and b, inclusive
 def search_path(a, b):
     if a == b:
@@ -190,14 +184,16 @@ def generate_variation_exercises(fen, variations):
     # have chess parse it
     pgn = io.StringIO(f'[FEN "{fen}"]\n{variations}')
     game = chess.pgn.read_game(pgn)
-    assign_fullmove(game, 1)
 
     temp = generate_variation_exercises_worker(game, [])
 
-    for nodes in generate_variation_exercises_worker(game, []):
-        a = nodes[0]
+    for path in generate_variation_exercises_worker(game, []):
+        if len(path) < 2:
+            continue
+
+        a = path[0]
         fen = a.board().fen()
-        line_str = tree_to_san_line(a, set(nodes))
+        line_str = tree_to_san_line(a, set(path))
         result.append({'FEN':fen, 'LINE':line_str})
 
     return result
@@ -217,7 +213,6 @@ def generate_variation_exercises_worker(node, line):
 def moves_to_dot(fen, variations):
     pgn = io.StringIO(f'[FEN "{fen}"]\n{variations}')
     game = chess.pgn.read_game(pgn)
-    assign_fullmove(game, 1)
 
     print('digraph g {')
 
@@ -240,8 +235,10 @@ def moves_to_dot(fen, variations):
 
 # convert a GameNode/ChildNode tree to a SAN line, like:
 # "1...Rxf3 2.gxf3 Nd4+ 3.Kh1 (3.Rg2 Nxf3+ 4.Kh1 Rd1+ 5.Rg1 Rxg1#) Nxf3 4.Rg2 Rd1+ 5.Rg1 Rxg1#"
+#
+# NB: node.move is the preceeding move that produced this node.fen
 def tree_to_san_line(node, whitelist=None):
-    result = tree_to_san_line_worker(node, whitelist)
+    result = tree_to_san_line_worker(node, whitelist, False)
     result = re.sub(r'[^(]\d+\.\.\.', ' ', result)
     return result
 

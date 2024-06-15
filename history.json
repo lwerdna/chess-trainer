@@ -13,5 +13,41 @@
     },
     "6k1/5ppp/5bb1/3B4/1B6/1P1p1Q1P/2q2PP1/6K1 w - - 0 1 1.Bxf7+ Kxf7 (1...Bxf7 2.Qa8+) 2.Qd5+ Ke8 3.Qe6+ Kd8 4.Ba5+": {
         "due": "2024-08-05 21:00:24"
+    },
+    "3r1n1k/3P3p/pp3q2/2pQp3/P1P3B1/3b2R1/1P5P/6K1 w - - 0 1 1.Qg8+ Kxg8 2.Be6+ Kh8 3.Rg8#": {
+        "due": "2024-06-22 01:39:28"
+    },
+    "r4rk1/8/p5n1/1p3b2/2q5/P1N1B1Q1/1PPR2PP/5RK1 b - - 0 1 1...Qxf1+ 2.Kxf1 Bd3+ 3.Kg1 Rf1#": {
+        "due": "2024-07-13 01:38:18"
+    },
+    "r4nkr/p3b2p/1pp1p1qB/5Q2/2BP4/2P3P1/P4P1P/4R1K1 w - - 0 1 1.Rxe6 Qxf5 (1...Nxe6 2.Bxe6+ Qxe6 3.Qxe6#) (1...Qxe6 2.Bxe6+ Nxe6 3.Qxe6#) 2.Rg6#": {
+        "due": "2024-06-22 01:38:00"
+    },
+    "6r1/p4rkp/3RQ1n1/1pp1p1B1/2p1P3/2P3R1/P4qPK/8 w - - 0 1 1.Qxe5+ Nxe5 2.Bf6+ Kf8 (2...Kh6 3.Bg7+ Kh5 4.Rh6#) 3.Rd8#": {
+        "due": "2024-06-22 01:35:19"
+    },
+    "rnb1k2r/pp2ppbp/2p5/3Q4/8/5N2/P1qB1PPP/3RKB1R w Kkq - 0 1 1.Qd8+ Kxd8 2.Ba5+ Ke8 3.Rd8#": {
+        "due": "2024-07-13 01:38:24"
+    },
+    "r2r2k1/5p2/3p2p1/1N2p1q1/2P2n1p/4N1n1/5RPP/3RQBK1 b - - 0 1 1...Nh3+ 2.gxh3 Ne2+ 3.Kh1 Qg1#": {
+        "due": "2024-06-22 01:39:01"
+    },
+    "r1b2r1k/pp3p1p/2n2NpB/q2pQ3/8/7P/PPP3P1/2K4R w - - 0 1 1.Bg7+ Kxg7 2.Ne8+ Kh6 (2...Kg8 3.Qg7#) 3.Qf4+ Kh5 (3...g5 4.Qf6+ Kh5 5.Ng7+ Kh4 6.Qf2#) 4.Ng7#": {
+        "due": "2024-06-22 01:36:54"
+    },
+    "rnb1kb1r/pp3ppp/2p5/4q3/4n3/3Q4/PPPB1PPP/2KR1BNR w kq - 0 1 1.Qd8+ Kxd8 2.Bg5+ Kc7 3.Bd8#": {
+        "due": "2024-07-13 01:38:35"
+    },
+    "r1b1k2r/ppp3pp/1qp5/2b1Pp2/3Qn3/5N2/PPPBNPPP/3RK2R w Kkq - 0 1 1.Qd8+ Kxd8 2.Bg5+ Ke8 3.Rd8+ Kf7 4.e6+ Kxe6 (4...Kg6 5.Nf4#) 5.Nf4+ Kf7 6.Ne5#": {
+        "due": "2024-06-22 01:33:08"
+    },
+    "3rk2r/pp3p1p/6n1/2Qnp3/8/P1Pq4/R3NPPP/2B1K2R b Kk - 0 1 1...Qd1+ 2.Kxd1 Ne3+ 3.Ke1 Rd1#": {
+        "due": "2024-06-22 01:34:27"
+    },
+    "r2q1rk1/pb3pbp/np4pQ/3p4/1P1N4/P2BP3/1B3PPP/R3K2R w KQ - 0 1 1.Qxg7+ Kxg7 2.Nf5+": {
+        "due": "2024-07-13 01:38:08"
+    },
+    "3r3k/6p1/3b4/2pb2qp/8/1P2Pr1P/PB1pQPP1/R2N1NK1 b - - 0 1 1...Qxg2+ 2.Kxg2 Rg3+ 3.Kh2 Rg2+ 4.Kh1 Rh2+ 5.Kg1 Rh1#": {
+        "due": "2024-06-22 01:39:19"
     }
 }
