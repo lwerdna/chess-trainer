@@ -10,7 +10,8 @@
 [UTCDate "2024.06.15"]
 [UTCTime "13:43:19"]
 
-1. Ne7+ { <0> } 1... Kh8 2. Qxh7+ Kxh7 3. Rh1# { #AnastasiaMate } *
+{ <0> }
+1. Ne7+ Kh8 2. Qxh7+ Kxh7 3. Rh1# { #AnastasiaMate } *
 
 
 [Event "Yusupov, Build Up Your Chess: Fundamentals: 1-2: Mating Motifs"]
@@ -796,5 +797,199 @@
 [UTCTime "04:50:01"]
 
 1. h4 Kd4 2. h5 Ke5 3. h6 { [%csl Gg7] } 3... Kf6 { [%csl Gg7] } 4. Bh5 { [%csl Gg7,Gg6,Gf7,Ge8] } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-1: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/xWcslFd1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1b2rk1/p1p2p1p/2p1pB2/8/3P4/P7/1PP2PqP/R2QK2R w KQq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:20:12"]
+
+{ <0> }
+1. Qf3 Qg6 2. O-O-O { The threat of #PillsburyMate wins the queen. } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-2: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/uWOqiTmf"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "rn3r1k/ppp3pp/8/4bP1Q/2BqN3/8/PP3p1P/2R2K1R w Kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:26:17"]
+
+{ <0> }
+1. Ng5 h6 2. Qg6 hxg5 3. Qh5# { #GrecosMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-3: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/RWlpuBWL"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "1q1r1r2/1bb2pk1/pN1pp3/4n1p1/1PPQP3/1N2BPp1/P5P1/2RR1B1K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:28:02"]
+
+{ <0> }
+1... Rh8+ 2. Kg1 Rh1+ 3. Kxh1 Rh8+ 4. Kg1 Rh1+ 5. Kxh1 Qh8+ 6. Kg1 Qh2# { #DamianosMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-4: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/mnvSXEpY"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r4r1k/5p1p/p2p1Pp1/2p3Q1/q1P1P3/7P/1P4P1/1R3R1K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:28:54"]
+
+{ <0> }
+1. Rf4 (1. Qh6?? Rg8 2. Rf4 g5) 1... Rg8 2. Rh4 Rg7 3. fxg7+ { </0>
+Threat of #LollisMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-5: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/2UunDjND"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "1rb1nrk1/5p1p/p1q1p1p1/1pbp2N1/2P2P2/PP1BP3/1B4PP/1R1QK2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:31:09"]
+
+{ <0> }
+1. Qh5 gxh5 (1... h6 2. Qxh6 Nf6 3. Bxf6) (1... Nf6 2. Bxf6) 2. Bxh7# { #BlackburnsMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-6: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/l5SKnKIK"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bq1rk1/pp1pb1p1/2n1p3/4P1P1/3P4/2P5/P4PP1/R1BQK2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:33:22"]
+
+{ <0> }
+1. Rh8+ Kxh8 (1... Kf7 2. Qh5+ g6 3. Qh7+ Ke8 4. Qxg6#) 2. Qh5+ Kg8 3. g6 Rf6 4. Qh7+ Kf8 5. Qh8# { #DamianosMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-7: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/5EjFlAgl"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bqk2r/ppp1nppp/2np4/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:39:07"]
+
+{ <0> }
+1. Ng5 O-O 2. Qh5 h6 3. Nxf7 Rxf7 4. Qxf7+ Kh7 5. Bg5 Qg8 *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-8: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/lHdcUaVg"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "6k1/1b5p/pp1pPqp1/2p1r3/8/8/PPQ2PPP/3R1RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:49:52"]
+
+{ <0> }
+1... Qf3 2. gxf3 Rg5+ 3. Kh1 Bxf3# { #PillsburysMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-9: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/rPaymWX7"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bq1rk1/ppn3bp/2p1p1p1/3pN1Nn/P2P1P1P/3B4/1PP3P1/R1BQK2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:50:44"]
+
+{ <0> }
+1. Qxh5 gxh5 2. Bxh7+ Kh8 3. Ng6# { #BlacksburnesMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-10: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/1zu2C1pt"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r2qkb1r/pp2nppp/3p4/2pNp1B1/2BnP1b1/3P1N2/PPP2PPP/R2QK2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:51:30"]
+
+{ <0 Q="Play as if black will cooperate with a Legal's mate.">
+<1 Q="Play a more optimal line than the one leading to Legal's mate."> }
+1. Nxe5 (1. Nxd4 Bxd1 { Forfeits control of the queenside light squares! } (1... cxd4 2. Qxg4 { </1> }) 2. Bb5+ { Pounce on the queenside light squares! } 2... Qd7 3. Bxd7+ Kxd7 4. Bxe7 { Keeps the outposted knight! } 4... Bxe7 (4... exd4 5. Bxf8 Bxc2 (5... Rhxf8 6. Rxd1 { </1> }) 6. Bxg7 { </1> }) 5. Nf5 { </1> }) 1... Bxd1 2. Nf6+ gxf6 3. Bxf7# { </0> } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-11: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/5kBbkFX6"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bq2rk/5p1p/2np1PpQ/pnp1p3/1p2P2N/2PP2P1/PP4BP/R2N1RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "17:01:40"]
+
+{ <0> }
+1. Nf3 Qf8 (1... Qxf6 2. Ng5 Qg7 3. Nxf7+ Qxf7 4. Rxf7) (1... g5 2. Nxg5 Rxg5 3. Qxg5) 2. Ng5 Qxh6 3. Nxf7# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 2-12: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/HjA1oGbg"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bn1rk1/ppp1q1pp/1b1p1n2/3Pp1B1/4N2N/2P4P/PP2BPP1/R2QK2R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "17:07:57"]
+
+{ <0> }
+1... Nxe4 2. Bxe7 Bxf2+ 3. Kf1 Ng3# { The threat of Legal's mate allows dynamic unpinning. } *
 
 
