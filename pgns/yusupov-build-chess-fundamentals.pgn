@@ -1,3 +1,194 @@
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-1: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/YIdHRMmv"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "3r1rk1/pp3ppp/3pn3/1qpN4/5PP1/P5PQ/1PP5/1K1R4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:43:19"]
+
+1. Ne7+ { <0> } 1... Kh8 2. Qxh7+ Kxh7 3. Rh1# { #AnastasiaMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-2: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/E5yL1z6O"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "6R1/2p1qr1k/1p1p1r1p/p3p3/2P1P3/2P3Q1/PP3P2/2K3R1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:43:47"]
+
+{ <0> }
+1. Rh8+ Kxh8 2. Qg8# { #Attraction } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-3: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/MBs3KnVX"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "2kr2nr/pp1n1ppp/2p1p3/8/1P1P1B2/2N2Q1P/1PPKBPP1/7q w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:44:17"]
+
+{ <0> }
+1. Qxc6+ bxc6 2. Ba6# { #BodensMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-4: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/3MrQH7jO"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5r2/p3Qnkp/1p3Np1/2p3P1/3q4/5P2/PP3R1r/4R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:44:40"]
+
+{ <0> }
+1. Qxf8+ Kxf8 2. Re8+ Kg7 3. Rg8# { #Attraction #ArabianMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-5: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/4Ub1eqw1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1b2r1k/ppb2ppB/3q4/8/2PN1n1Q/PP6/1B3PPP/R4RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:45:32"]
+
+{ <0> }
+1. Bg6+ Kg8 2. Qh7# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-6: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/QZyk7DlR"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5r1k/6p1/p2p1rRp/2pPpq1Q/8/PPp1P3/5P1R/K7 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:45:52"]
+
+{ <0> }
+1. Qxh6+ gxh6 2. Rhxh6# { Sacrifice to what Yusupov calls an #OpenLinesMate mate. } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-7: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/D0yltzLK"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1n3k1/pp2q2p/2ppr1pQ/4p3/8/2N4R/PPP3PP/5RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:46:12"]
+
+{ <0> }
+1. Rf8+ Qxf8 2. Qxh7# { Threaten a #KillBox mate to get a regular queen supported mate! } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-8: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/4OJzih0f"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "4rr1k/p4pb1/5R1p/1p2q3/3p4/3P2R1/PP1Q2BP/7K w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:46:36"]
+
+{ <0> }
+1. Qxh6+ Bxh6 (1... Kg8 2. Qxg7#) 2. Rxh6# { Sacrifice for #OpenLinesMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-9: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/b9RCtlLH"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r4r1k/ppn4p/2p2N2/4P3/2pP1N2/5K2/PPP5/6R1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:47:00"]
+
+{ <0> }
+1. Ng6+ Kg7 (1... hxg6 2. Rh1+ Kg7 3. Rh7#) 2. Nxf8+ { The threat of the #ArabianMate wins the rook! } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-10: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/yKRMCWNF"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "k1r5/1p4pq/p7/5n2/3nQ3/P7/RPP2PPP/2B2RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:47:17"]
+
+{ <0> }
+1... Ng3 2. Re1 (2. Qxh7 Nde2#) (2. hxg3 Qxe4) (2. fxg3 Qxe4) 2... Nxe4 { A #DiscoveredAttack combined with a #DoubleKnightMate } *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-11: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/cKC7WyM6"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5r1k/1p1br2p/pqnbpp2/3p4/3P4/P1NQ1N2/1PB2PPP/R3R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:47:39"]
+
+{ <0> }
+1. Nxd5 exd5 2. Rxe7 Bxe7 3. Qxh7# *
+
+
+[Event "Yusupov, Build Up Your Chess: Fundamentals: 1-12: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/qIK0k3Am"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "2kr1r2/pp1n3p/2p1bp2/8/5B2/8/PP2BP1P/2R1K1R1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:47:57"]
+
+{ <0> }
+1. Rxc6+ bxc6 2. Ba6# { #BodensMate } *
+
+
 [Event "Yusupov, Build Up Your Chess: Fundamentals: 4-1: Simple Pawn Endings"]
 [Site "https://lichess.org/study/vmzEymCY/BgjCEpbV"]
 [Result "*"]
