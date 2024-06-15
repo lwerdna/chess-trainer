@@ -8,7 +8,7 @@ import chess
 import chess.engine
 
 import debug
-import spaced_repetition
+import history
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
@@ -57,43 +57,35 @@ def post_problem_interaction(cboard):
     cboard.set_fen(problem_state.problem['fen'])
     cboard.update_view()
 
-    # calculate new times
-
-    boxes, due_times = spaced_repetition.calc_due_times(problem)
-
     # pop up dialog
-    dlg = DoneDialog(cboard, due_times)
+    dlg = DoneDialog(cboard)
 
     dlg.exec()
 
     result = dlg.result
     print(f'got result: {result}')
 
+    now = int(time.time())
     if result != None:
         match result:
-            case 'terrible':
-                box = boxes[0]
-                due_epoch = due_times[0]
-            case 'bad':
-                box = boxes[1]
-                due_epoch = due_times[1]
-            case 'ok':
-                box = boxes[2]
-                due_epoch = due_times[2]
-            case 'good':
-                box = boxes[3]
-                due_epoch = due_times[3]
-            case 'easy':
-                box = boxes[4]
-                due_epoch = due_times[4]
+            case 'minute':
+                due_epoch = now + 60
+            case 'day':
+                due_epoch = now + 24*60*60
+            case 'week':
+                due_epoch = now + 7*24*60*60
+            case 'month':
+                due_epoch = now + 4*7*24*60*60
+            case 'year':
+                due_epoch = now + 365*24*60*60
 
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
 
-        spaced_repetition.update_problem(problem_state.problem, box, due_epoch)
+        history.update_problem(problem_state.problem, due_epoch)
 
     # now filter the problems that are due (possibly getting rid of this current one)
-    problems = [p for p in problems if spaced_repetition.is_due(p)]
+    problems = [p for p in problems if history.is_due(p)]
 
     problem_state = None
 
@@ -130,7 +122,7 @@ def on_board_init(board):
 
 def on_exit():
     print('on_exit')
-    spaced_repetition.store()
+    history.store()
     evaluation.exit()
 
 #------------------------------------------------------------------------------
@@ -138,7 +130,7 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent, due_times):
+    def __init__(self, parent):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
@@ -146,29 +138,26 @@ class DoneDialog(QDialog):
         vLayout = QVBoxLayout()
 
         # text edit
-        self.textEdit = QTextEdit(self)
-        vLayout.addWidget(self.textEdit)
+        #self.textEdit = QTextEdit(self)
+        #vLayout.addWidget(self.textEdit)
 
         # the buttons
         hLayout = QHBoxLayout()
 
-        now = int(time.time())
-        durstrs = [spaced_repetition.duration_string(dt - now) for dt in due_times]
-
-        b = QPushButton(f'terrible ({durstrs[0]})', self)
-        b.clicked.connect(self.clickedTerrible)
+        b = QPushButton(f'1 minute', self)
+        b.clicked.connect(self.clickedMinute)
         hLayout.addWidget(b)
-        b = QPushButton(f'bad ({durstrs[1]})', self)
-        b.clicked.connect(self.clickedBad)
+        b = QPushButton(f'1 day', self)
+        b.clicked.connect(self.clickedDay)
         hLayout.addWidget(b)
-        b = QPushButton(f'ok ({durstrs[2]})', self)
-        b.clicked.connect(self.clickedOk)
+        b = QPushButton(f'1 week', self)
+        b.clicked.connect(self.clickedWeek)
         hLayout.addWidget(b)
-        b = QPushButton(f'good ({durstrs[3]})', self)
-        b.clicked.connect(self.clickedGood)
+        b = QPushButton(f'1 month', self)
+        b.clicked.connect(self.clickedMonth)
         hLayout.addWidget(b)
-        b = QPushButton(f'easy ({durstrs[4]})', self)
-        b.clicked.connect(self.clickedEasy)
+        b = QPushButton(f'1 year', self)
+        b.clicked.connect(self.clickedYear)
         hLayout.addWidget(b)
 
         vLayout.addLayout(hLayout)
@@ -179,24 +168,24 @@ class DoneDialog(QDialog):
         #
         self.result = None
 
-    def clickedTerrible(self, text):
-        self.result = 'terrible'
+    def clickedMinute(self, text):
+        self.result = 'minute'
         self.close()
 
-    def clickedBad(self, text):
-        self.result = 'bad'
+    def clickedDay(self, text):
+        self.result = 'day'
         self.close()
 
-    def clickedOk(self, text):
-        self.result = 'ok'
+    def clickedWeek(self, text):
+        self.result = 'week'
         self.close()
 
-    def clickedGood(self, text):
-        self.result = 'good'
+    def clickedMonth(self, text):
+        self.result = 'month'
         self.close()
 
-    def clickedEasy(self, text):
-        self.result = 'easy'
+    def clickedYear(self, text):
+        self.result = 'year'
         self.close()
 
 class TestFrame(QFrame):
@@ -255,24 +244,17 @@ def except_hook(cls, exception, traceback):
 #------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    if 0:
-        foo = {'key': {'leitner':'whatever', 'due':'whatever'}}
-        import json
-        with open('srs.json', 'w') as fp:
-            fp.write(json.dumps(foo, indent=4))
-        sys.exit(0)
-
-    spaced_repetition.load()
+    history.load()
 
     # load all problems
     problems = problem_finder.get_problems()
 
     # ensure they're all tracked in our SRS
     for problem in problems:
-        spaced_repetition.add_problem(problem)
+        history.add_problem(problem)
 
     # now filter the problems that are due
-    problems = [p for p in problems if spaced_repetition.is_due(p)]
+    problems = [p for p in problems if history.is_due(p)]
 
     sys.excepthook = except_hook
     app = QApplication(sys.argv)
