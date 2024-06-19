@@ -185,9 +185,10 @@ def generate_variation_exercises(fen, variations):
     pgn = io.StringIO(f'[FEN "{fen}"]\n{variations}')
     game = chess.pgn.read_game(pgn)
 
-    temp = generate_variation_exercises_worker(game, [])
+    # whose turn to move?
+    player = game.turn()
 
-    for path in generate_variation_exercises_worker(game, []):
+    for path in generate_variation_exercises_worker(game, player, []):
         if len(path) < 2:
             continue
 
@@ -198,16 +199,20 @@ def generate_variation_exercises(fen, variations):
 
     return result
 
-def generate_variation_exercises_worker(node, line):
+def generate_variation_exercises_worker(node, player, line):
     result = []
     if node.is_end():
         result.append(line + [node])
     else:
         for i, child in enumerate(node.variations):
+            # mistakes by the player should not be tested
+            if chess.pgn.NAG_MISTAKE in child.nags or chess.pgn.NAG_BLUNDER in child.nags:
+                continue
+
             if i==0:
-                result.extend(generate_variation_exercises_worker(child, line+[node])) # left descent continues current line
+                result.extend(generate_variation_exercises_worker(child, player, line+[node])) # left descent continues current line
             else:
-                result.extend(generate_variation_exercises_worker(child, [node])) # non-left descent starts new
+                result.extend(generate_variation_exercises_worker(child, player, [node])) # non-left descent starts new
     return result
 
 def moves_to_dot(fen, variations):

@@ -34,9 +34,12 @@ def select_problem(replay=False):
     global problem_state
 
     # grab one at random
-    problem = random.choice(problems)
+    if not problems:
+        print('ERROR: no problems!')
+        return;
+    else:
+        problem = random.choice(problems)
 
-    #print(f'selected problem from line number: {problem["lineNum"]}')
     if 'question' in problem:
         window.frame.frontText.setText(problem['question'])
 
@@ -52,12 +55,14 @@ def post_problem_interaction(cboard):
     global problems
     global problem_state
 
+    problem = problem_state.problem
+
     # restore the cboard to the original problem state
-    cboard.set_fen(problem_state.problem['fen'])
+    cboard.set_fen(problem['fen'])
     cboard.update_view()
 
     # pop up dialog
-    url = problem_state.problem.get('url')
+    url = problem.get('url')
     dlg = DoneDialog(cboard, url)
 
     dlg.exec()
@@ -82,10 +87,11 @@ def post_problem_interaction(cboard):
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
 
-        history.update_problem(problem_state.problem, due_epoch)
+        history.update_problem(problem, due_epoch)
 
-    # now filter the problems that are due (possibly getting rid of this current one)
-    problems = [p for p in problems if history.is_due(p)]
+    # remove this problem if it's no longer due
+    if not history.is_due(problem):
+        problems.remove(problem)
 
     problem_state = None
 
@@ -271,7 +277,10 @@ if __name__ == '__main__':
         history.add_problem(problem)
 
     # now filter the problems that are due
-    problems = [p for p in problems if history.is_due(p)]
+    if '--force' in sys.argv[1:]:
+        pass
+    else:
+        problems = [p for p in problems if history.is_due(p)]
 
     sys.excepthook = except_hook
     app = QApplication(sys.argv)
