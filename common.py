@@ -189,7 +189,9 @@ def generate_variation_exercises(fen, variations):
     player = game.turn()
 
     for path in generate_variation_exercises_worker(game, player, []):
-        if len(path) < 2:
+        # does the path contain a turn for the player to make? if not, skip it
+        # eg: 1.e4 e5 (2...a5? {dubious}) there is no white move in the variation
+        if not [p for p in path if (p.turn() == player and not p.is_end())]:
             continue
 
         a = path[0]
