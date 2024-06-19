@@ -10,6 +10,7 @@ import chess.engine
 import debug
 import history
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
 
@@ -56,7 +57,8 @@ def post_problem_interaction(cboard):
     cboard.update_view()
 
     # pop up dialog
-    dlg = DoneDialog(cboard)
+    url = problem_state.problem.get('url')
+    dlg = DoneDialog(cboard, url)
 
     dlg.exec()
 
@@ -128,12 +130,21 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent):
+    def __init__(self, parent, url):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
 
         vLayout = QVBoxLayout()
+
+        # the url
+        if url:
+            label = QLabel()
+            label.setText(f'<a href="{url}">{url}</a>')
+            label.setTextFormat(Qt.RichText)
+            label.setTextInteractionFlags(Qt.TextBrowserInteraction)
+            label.setOpenExternalLinks(True)
+            vLayout.addWidget(label)
 
         # text edit
         #self.textEdit = QTextEdit(self)
