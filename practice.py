@@ -36,8 +36,7 @@ def select_problem(replay=False):
     problem = random.choice(problems)
 
     #print(f'selected problem from line number: {problem["lineNum"]}')
-    if 'question' in problem:
-        window.frame.frontText.setText(problem['question'])
+    window.frame.frontText.setText(problem.get('question', ''))
 
     problem_state = FollowVariationsProblemState(problem)
 
