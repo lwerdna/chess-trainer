@@ -10,6 +10,7 @@ import chess.engine
 import debug
 import history
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFrame, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLineEdit, QDialog, QDialogButtonBox, QLabel, QPlainTextEdit, QSizePolicy, QTextEdit
 
@@ -33,10 +34,19 @@ def select_problem(replay=False):
     global problem_state
 
     # grab one at random
-    problem = random.choice(problems)
+    if not problems:
+        print('ERROR: no problems!')
+        return;
+    else:
+        problem = random.choice(problems)
 
+<<<<<<< HEAD
     #print(f'selected problem from line number: {problem["lineNum"]}')
     window.frame.frontText.setText(problem.get('question', ''))
+=======
+    if 'question' in problem:
+        window.frame.frontText.setText(problem['question'])
+>>>>>>> 7f355d7f27a67d4c2c12dff1c082c6b452f98a74
 
     problem_state = FollowVariationsProblemState(problem)
 
@@ -50,12 +60,15 @@ def post_problem_interaction(cboard):
     global problems
     global problem_state
 
+    problem = problem_state.problem
+
     # restore the cboard to the original problem state
-    cboard.set_fen(problem_state.problem['fen'])
+    cboard.set_fen(problem['fen'])
     cboard.update_view()
 
     # pop up dialog
-    dlg = DoneDialog(cboard)
+    url = problem.get('url')
+    dlg = DoneDialog(cboard, url)
 
     dlg.exec()
 
@@ -79,10 +92,11 @@ def post_problem_interaction(cboard):
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
 
-        history.update_problem(problem_state.problem, due_epoch)
+        history.update_problem(problem, due_epoch)
 
-    # now filter the problems that are due (possibly getting rid of this current one)
-    problems = [p for p in problems if history.is_due(p)]
+    # remove this problem if it's no longer due
+    if not history.is_due(problem):
+        problems.remove(problem)
 
     problem_state = None
 
@@ -127,12 +141,21 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent):
+    def __init__(self, parent, url):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
 
         vLayout = QVBoxLayout()
+
+        # the url
+        if url:
+            label = QLabel()
+            label.setText(f'<a href="{url}">{url}</a>')
+            label.setTextFormat(Qt.RichText)
+            label.setTextInteractionFlags(Qt.TextBrowserInteraction)
+            label.setOpenExternalLinks(True)
+            vLayout.addWidget(label)
 
         # text edit
         #self.textEdit = QTextEdit(self)
@@ -259,7 +282,10 @@ if __name__ == '__main__':
         history.add_problem(problem)
 
     # now filter the problems that are due
-    problems = [p for p in problems if history.is_due(p)]
+    if '--force' in sys.argv[1:]:
+        pass
+    else:
+        problems = [p for p in problems if history.is_due(p)]
 
     sys.excepthook = except_hook
     app = QApplication(sys.argv)

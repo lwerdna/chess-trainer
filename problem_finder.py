@@ -55,6 +55,10 @@ def get_problems_from_game(game, pgn_path=None):
 
         entry['line'] = tree_to_san_line(ancestor, whitelist)
 
+        if event := game.headers.get('Site'):
+            if event.startswith('http'):
+                entry['url'] = event
+
         problems.append(entry)
 
     return problems
