@@ -3,9 +3,15 @@
 import re
 import os
 import sys
+import time
 import uuid
 
 import chess
+
+def epochToISO8601(epoch: float):
+    timeStruct = time.localtime(epoch)
+    timeString = time.strftime('%Y-%m-%d', timeStruct)
+    return timeString
 
 if len(sys.argv) < 2:
     print(f'supply FEN')
@@ -28,6 +34,12 @@ if True:
     print(f'writing: "{fname}"')
 
     with open(fname, 'w') as fp:
+        fp.write('---\n')
+        fp.write(f'DATE_CREATED: {epochToISO8601(time.time())}\n')
+        fp.write('---\n')
+
+        fp.write('---\n')
+
         if board.turn == chess.WHITE:
             fp.write('What\'s white\'s best move/line?\n')
         else:
