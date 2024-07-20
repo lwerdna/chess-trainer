@@ -26,3 +26,12 @@ If the freeze is available and is not taken, you could lose. If white plays a5 (
 fen: 8/1p6/p6k/7P/P6K/8/8/8 w - - 0 1
 moves: Kg4 b5
 ```
+
+There're also attributes of the deep freeze for larger groups of pawns. Here, two pawns might freeze three:
+
+```chess
+fen: 8/5pp1/p6p/P1k5/2P3PP/2K5/8/8 w - - 0 1
+moves: h5 g6 g5
+```
+
+And if hxg5 then g6 and if gxh5 gxh6
