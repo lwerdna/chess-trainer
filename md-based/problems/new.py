@@ -38,8 +38,6 @@ if True:
         fp.write(f'DATE_CREATED: {epochToISO8601(time.time())}\n')
         fp.write('---\n')
 
-        fp.write('---\n')
-
         if board.turn == chess.WHITE:
             fp.write('What\'s white\'s best move/line?\n')
         else:
@@ -53,3 +51,7 @@ if True:
             fp.write('orientation: black\n')
 
         fp.write('```\n')
+        fp.write('\n')
+        fp.write('<!-- divider -->\n')
+        fp.write('\n')
+
