@@ -25,50 +25,44 @@ from common import *
 #------------------------------------------------------------------------------
 
 window = None
-problems = None
+pgn_paths = None
 problem_state = None
 
-def select_problem(replay=False):
+def select_pgn(replay=False):
     global window
-    global problems
+    global pgn_paths
     global problem_state
 
     # grab one at random
-    if not problems:
-        print('ERROR: no problems!')
+    if not pgn_paths:
+        print('ERROR: no pgn paths!')
         return;
     else:
-        problem = random.choice(problems)
+        pgn = random.choice(pgn_paths)
 
-<<<<<<< HEAD
-    #print(f'selected problem from line number: {problem["lineNum"]}')
-    window.frame.frontText.setText(problem.get('question', ''))
-=======
-    if 'question' in problem:
-        window.frame.frontText.setText(problem['question'])
->>>>>>> 7f355d7f27a67d4c2c12dff1c082c6b452f98a74
+    # create the problem state
+    problem_state = VanillaPgnProblemState(pgn)
 
-    problem_state = FollowVariationsProblemState(problem)
-
+    # update the chessboard on the UI
     cboard = window.frame.board
-
     problem_state.initialize_chessboard(cboard)
+
+    # update the text
+    window.frame.frontText.setText(problem_state.get_message())
 
     return True
 
 def post_problem_interaction(cboard):
-    global problems
+    global window
+    global pgn_paths
     global problem_state
 
-    problem = problem_state.problem
-
     # restore the cboard to the original problem state
-    cboard.set_fen(problem['fen'])
-    cboard.update_view()
+    cboard = window.frame.board
+    problem_state.initialize_chessboard(cboard)
 
     # pop up dialog
-    url = problem.get('url')
-    dlg = DoneDialog(cboard, url)
+    dlg = DoneDialog(cboard, problem_state.pgn_path)
 
     dlg.exec()
 
@@ -92,11 +86,11 @@ def post_problem_interaction(cboard):
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
 
-        history.update_problem(problem, due_epoch)
+        history.update_pgn(problem_state.pgn_path, due_epoch)
 
     # remove this problem if it's no longer due
     if not history.is_due(problem):
-        problems.remove(problem)
+        pgn_paths.remove(problem)
 
     problem_state = None
 
@@ -119,8 +113,8 @@ def on_move_complete(cboard, move):
     # is problem finished?
     if problem_state.is_done():
         post_problem_interaction(cboard)
-        problems_remaining = select_problem()
-        if not problems_remaining:
+        remaining = select_pgn()
+        if not remaining:
             print(f'TODO: close app, problems done!')
 
 def on_board_init(board):
@@ -271,27 +265,30 @@ if __name__ == '__main__':
         if sys.argv[1].endswith('.pgn'):
             pgn_path = sys.argv[1]
 
-    # load problems
+    # load pgn's
     if pgn_path:
-        problems = problem_finder.get_problems(pgn_path)
+        pgn_paths = [pgn_path]
     else:
-        problems = problem_finder.get_problems()
+        pgn_paths = [os.path.join('.', 'problems', x) for x in os.listdir('./problems') if x.endswith('.pgn')]
+
+    print('pgn paths:')
+    print('\n'.join(pgn_paths))
 
     # ensure they're all tracked in our SRS
-    for problem in problems:
-        history.add_problem(problem)
+    for pgn in pgn_paths:
+        history.add_pgn(pgn)
 
-    # now filter the problems that are due
+    # now filter the pgn_paths that are due
     if '--force' in sys.argv[1:]:
         pass
     else:
-        problems = [p for p in problems if history.is_due(p)]
+        pgn_paths = [p for p in pgn_paths if history.is_due(p)]
 
     sys.excepthook = except_hook
     app = QApplication(sys.argv)
     window = MyWindow()
 
-    select_problem()
+    select_pgn()
 
     sys.exit(app.exec_())  # Start main event loop
 

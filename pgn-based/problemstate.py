@@ -19,6 +19,9 @@ class ProblemState():
     def update_move(self, move_san, cboard):
         pass
 
+    def get_message(self):
+        return ''
+
     def is_done(self):
         pass
 
@@ -114,6 +117,121 @@ class CheckmateOrPromoteToQueenProblemState(ProblemState):
 
         # neither? not done
         return False
+
+class VanillaPgnProblemState(ProblemState):
+    def __init__(self, fpath):
+
+        self.pgn_path = fpath
+        self.game = chess.pgn.read_game(open(fpath))
+        self.user_color = self.game.turn()
+
+        # stack elements are (GameNode/ChildNode, index) of what we're EXPECTING, what comes NEXT
+        # so (Father, 0) means nothing has been expanded yet.
+        # changes to (Father, 1) when (Son, 0) is made
+        self.stack = [(self.game, 0)]
+
+    # we override the parent to set the perspective to the root position
+    def initialize_chessboard(self, cboard):
+        node, vidx = self.stack[-1]
+        board = node.board()
+        cboard.set_fen(board.fen())
+        cboard.setPerspective(board.turn)
+        cboard.update_view()
+
+    # test if a player move is correct
+    # move is san, like "Ke4"
+    def test_move(self, move):
+        node, vidx = self.stack[-1]
+        assert node.board().turn != self.user_color
+
+        nodea = node
+        nodeb = node.variations[vidx]
+
+        # TODO: allow multiple user moves
+        expect_move = node.board().san(nodeb.move)
+
+        if move == expect_move:
+            return True
+        else:
+            print(f'{move} was wrong, expected {expect_move}')
+            self.correct = False
+            return False
+
+    def next_variation(self, node, index):
+        if not node.variations or index >= len(node.variations):
+            return None
+        return node.variations[index]
+
+    def backtrack(self):
+
+    # enter player move (assuming it's tested as correct)
+    def update_move(self, move, cboard):
+        assert self.test_move(move)
+
+        # consume the current move
+        parent, vidx = self.stack.pop()
+
+        child = self.next_variation(parent, vidx)
+        if not child:
+            self.backtrack()
+            return
+
+        # append the child
+        self.stack.push((parent, vidx+1))
+        self.stack.push((child, 0))
+
+        # if the current state has an opponent move, make it
+        parent, vidx = self.stack[-1]
+        if parent.board.turn() != self.user_color:
+            if child := self.next_variation(parent, vidx)
+                self.stack.pop()
+                reply = parent.board().san(child.move)
+                cboard.move_glide(reply)
+                self.stack.push((parent, vidx+1))
+                self.stack.push((child, 0))
+
+        # 
+            child = parent.variations[0]
+            self.stack.append((child, 0))
+            pushed = True
+
+        parent, vidx = self.stack[-1]
+        if not parent.variations:
+            while True:
+                self.stack.pop()
+                parent, vidx = self.stack[-1]
+                if parent.board().turn == self.vidx+1 < len(parent.variations):
+                    self.stack.pop()
+                    self.stack.push((parent, vidx+1))
+                    break
+
+        if not parent.variations or vidx + 1
+
+        self.initialize_chessboard(cboard)
+        # ascend
+        else:
+            # are there alternative moves for user?
+            if vidx+1 < len(parent.variations):
+                self.stack.pop()
+                self.stack.append((parent, vidx+1))
+            else:
+                
+            
+        debug.breakpoint()
+
+        self.halfmove_index += 1
+        self.board.push_san(move)
+
+    def is_node_exhausted(node, index=0):
+        l = len(node.variations)
+        return l==0 or index>=l
+
+    def is_done(self):
+        return len(self.stack) > 0
+
+    def get_message(self):
+        node, child_idx = self.stack[-1]
+        return node.comment
 
 class FollowVariationsProblemState(ProblemState):
     def __init__(self, problem):
