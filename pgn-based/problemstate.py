@@ -118,6 +118,147 @@ class CheckmateOrPromoteToQueenProblemState(ProblemState):
         # neither? not done
         return False
 
+def traverse(node):
+    result = []
+
+    if node.variations:
+        for v in node.variations:
+            result.append(node)
+            result.extend(traverse(v))
+    else:
+        return [node]
+
+
+class NodeAgent():
+    def __init__(self, node):
+        self.current = node
+
+        # x is in lookup if we've taken a move (descended beyond) x
+        self.lookup = {} # map node -> indices we've gone to
+        self.player = node.turn()
+        self.direction = 'DOWN'
+
+    def step(self, move=None):
+        # are we at a leaf? special handling!
+        if not bool(self.current.variations):
+            if type(self.current) == chess.GameNode:
+                return 'DONE'
+            if self.direction == 'DOWN':
+                self.direction = 'UP'
+                self.current = self.current.parent
+                return 'ASCENDED'
+            raise Exception('no variations found on node while ascending, something\'s wrong')
+
+        # not at leaf
+
+        # ascending?
+        if self.direction == 'UP':
+            visited_idxs = self.lookup[self.current]
+
+            # have we exhausted all variations?
+            if len(visited_idxs) == len(self.current.variations):
+                if type(self.current) == chess.GameNode:
+                    return 'DONE'
+                self.current = self.current.parent
+                return 'ASCENDED'
+
+            # no, more variations to go!
+
+            # user must enter a valid move!
+            if self.current.turn() == self.player:
+                self.direction = 'DOWN'
+                return 'WAITING'
+
+            # pick next variation for opponent
+            for vidx in range(len(self.variations)):
+                if not vidx in visited_idxs:
+                    self.lookup[self.current].add(vidx)
+                    self.current = self.variations[vidx]
+                    self.direction = 'DOWN'
+                    return 'DESCENDED'
+            raise Exception('tested descendable, but unable to find unvisited variation')
+
+        # descending
+        if self.current.turn() == self.player:
+            if move is None:
+                return 'WAITING'
+            okmoves = self.get_accepted_moves()
+            vidx = okmoves.index(move)
+            self.lookup[self.current].add(vidx)
+            self.current = self.current.variations[vidx]
+            return 'DESCENDED'
+
+        # opponent move, descend
+        if 
+
+    def is_waiting(self):
+
+    def has_moves(self):
+        node = self.current
+        return bool(node.variations)
+
+    def get_expected_move(self):
+        if not self.has_moves():
+            return None
+
+        node = self.current
+        vidx = self.lookup.get(node)
+        if vidx is None:
+            # we haven't descended yet, expect the move of the 0'th variation
+            return node.board().san(node.variations[0].move)
+        else:
+            assert vidx+1 < len(node.variations)
+            return node.board().san(node.variations[vidx+1].move)
+            
+    def get_accepted_moves(self):
+        node = self.current
+        board = node.board
+        return [board.san(v.move) for v in node.variations]
+
+    def turn(self):
+        return self.current.board.turn()
+
+    def traverse(self):
+        node = self.current
+
+        # we've been here before!
+        if node in self.lookup:
+        
+
+        vidx = self.lookup.get(node)
+        traversed = False
+
+        # is this our first descent from this node?
+        if vidx is None:
+            if node.variations:
+                self.lookup[node] = 0
+                self.current = node.variations[0]
+                traversed = True
+        #
+        else:
+            if vidx+1 < len(node.variations):
+                self.lookup[node] = vidx+1
+                self.current = node.variations[vidx+1]
+                traversed = True
+
+        return descended
+    
+    def ascend(self)
+
+        # if the current state has an opponent move, make it
+        node = self.current
+        assert node.board.turn() != self.user_color
+        if node.variations:
+            
+            if child := self.next_variation(parent, vidx)
+                self.stack.pop()
+                reply = parent.board().san(child.move)
+                cboard.move_glide(reply)
+                self.stack.push((parent, vidx+1))
+                self.stack.push((child, 0))
+
+
+
 class VanillaPgnProblemState(ProblemState):
     def __init__(self, fpath):
 
@@ -125,15 +266,11 @@ class VanillaPgnProblemState(ProblemState):
         self.game = chess.pgn.read_game(open(fpath))
         self.user_color = self.game.turn()
 
-        # stack elements are (GameNode/ChildNode, index) of what we're EXPECTING, what comes NEXT
-        # so (Father, 0) means nothing has been expanded yet.
-        # changes to (Father, 1) when (Son, 0) is made
-        self.stack = [(self.game, 0)]
+        self.current = self.game
 
     # we override the parent to set the perspective to the root position
     def initialize_chessboard(self, cboard):
-        node, vidx = self.stack[-1]
-        board = node.board()
+        board = self.current.board()
         cboard.set_fen(board.fen())
         cboard.setPerspective(board.turn)
         cboard.update_view()
@@ -141,8 +278,8 @@ class VanillaPgnProblemState(ProblemState):
     # test if a player move is correct
     # move is san, like "Ke4"
     def test_move(self, move):
-        node, vidx = self.stack[-1]
-        assert node.board().turn != self.user_color
+        node = self.current
+        assert node.board().turn == self.user_color
 
         nodea = node
         nodeb = node.variations[vidx]
@@ -157,32 +294,32 @@ class VanillaPgnProblemState(ProblemState):
             self.correct = False
             return False
 
-    def next_variation(self, node, index):
-        if not node.variations or index >= len(node.variations):
-            return None
-        return node.variations[index]
-
-    def backtrack(self):
-
-    # enter player move (assuming it's tested as correct)
     def update_move(self, move, cboard):
         assert self.test_move(move)
 
-        # consume the current move
-        parent, vidx = self.stack.pop()
+        node = self.current
 
-        child = self.next_variation(parent, vidx)
-        if not child:
-            self.backtrack()
-            return
+        rewindable = True
 
-        # append the child
-        self.stack.push((parent, vidx+1))
-        self.stack.push((child, 0))
+        # consume the current move by descending
+        vidx = self.lookup.get(node)
+        # is this our first descent from this node?
+        if vidx is None:
+            if node.variations:
+                self.lookup[node] = 0
+                self.current = node.variations[0]
+        #
+        else:
+            if vidx+1 < len(node.variations):
+                self.lookup[node] = vidx+1
+                self.current = node.variations[vidx+1]
 
+        
         # if the current state has an opponent move, make it
-        parent, vidx = self.stack[-1]
-        if parent.board.turn() != self.user_color:
+        node = self.current
+        assert node.board.turn() != self.user_color
+        if node.variations:
+            
             if child := self.next_variation(parent, vidx)
                 self.stack.pop()
                 reply = parent.board().san(child.move)

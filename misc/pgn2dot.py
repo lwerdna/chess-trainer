@@ -5,7 +5,7 @@ import sys
 import chess
 import chess.pgn
 
-sys.path.append('..')
+sys.path.append('../pgn-based')
 import common
 
 def assign_fullmove(node, current):
@@ -37,7 +37,8 @@ if __name__ == '__main__':
     print('\t//nodes')
     nodes = collect_nodes(game)
     for node in nodes:
-        print(f'\t{id(node)} [label=""]')
+        cattrs = ' fillcolor=grey50, style=filled' if node.turn() == chess.BLACK else ''
+        print(f'\t{id(node)} [label=""{cattrs}]')
 
     for n in nodes:
         if n.comment:
