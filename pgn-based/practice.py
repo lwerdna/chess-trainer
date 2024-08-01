@@ -26,10 +26,12 @@ from common import *
 
 window = None
 pgn_paths = None
+current_pgn = None
 problem_state = None
 
 def select_pgn(replay=False):
     global window
+    global pgn_path
     global pgn_paths
     global problem_state
 
@@ -38,10 +40,11 @@ def select_pgn(replay=False):
         print('ERROR: no pgn paths!')
         return;
     else:
-        pgn = random.choice(pgn_paths)
+        pgn_path = random.choice(pgn_paths)
 
     # create the problem state
-    problem_state = VanillaPgnProblemState(pgn)
+    current_pgn = os.path.basename(pgn_path)
+    problem_state = VanillaPgnProblemState(pgn_path)
 
     # update the chessboard on the UI
     cboard = window.frame.board
@@ -54,6 +57,7 @@ def select_pgn(replay=False):
 
 def post_problem_interaction(cboard):
     global window
+    global pgn_path
     global pgn_paths
     global problem_state
 
@@ -62,7 +66,7 @@ def post_problem_interaction(cboard):
     problem_state.initialize_chessboard(cboard)
 
     # pop up dialog
-    dlg = DoneDialog(cboard, problem_state.pgn_path)
+    dlg = DoneDialog(cboard, pgn_path)
 
     dlg.exec()
 
@@ -86,12 +90,13 @@ def post_problem_interaction(cboard):
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
 
-        history.update_pgn(problem_state.pgn_path, due_epoch)
+        history.update_pgn(pgn_path, due_epoch)
 
     # remove this problem if it's no longer due
-    if not history.is_due(problem):
-        pgn_paths.remove(problem)
+    if not history.is_due(pgn_path):
+        pgn_paths.remove(pgn_path)
 
+    pgn_path = None
     problem_state = None
 
 # callbacks
@@ -106,7 +111,7 @@ def on_move_complete(cboard, move):
 
     # consume move
     if problem_state.test_move(move):
-        problem_state.update_move(move, cboard)
+        problem_state.update_move(move, cboard, lambda msg: window.frame.frontText.setText(msg))
     else:
         cboard.undo_glide()
 
@@ -135,21 +140,25 @@ def on_exit():
 #------------------------------------------------------------------------------
 
 class DoneDialog(QDialog):
-    def __init__(self, parent, url):
+    def __init__(self, parent, pgn_path):
         super().__init__(parent)
 
         self.setWindowTitle("Review")
 
         vLayout = QVBoxLayout()
 
-        # the url
-        if url:
-            label = QLabel()
-            label.setText(f'<a href="{url}">{url}</a>')
-            label.setTextFormat(Qt.RichText)
-            label.setTextInteractionFlags(Qt.TextBrowserInteraction)
-            label.setOpenExternalLinks(True)
-            vLayout.addWidget(label)
+        self.pgn_path = None
+        if pgn_path:
+            self.pgn_path = pgn_path
+            #label = QLabel()
+            #label.setText(f'<a href="{url}">{url}</a>')
+            #label.setTextFormat(Qt.RichText)
+            #label.setTextInteractionFlags(Qt.TextBrowserInteraction)
+            #label.setOpenExternalLinks(True)
+
+            b = QPushButton(pgn_path, self)
+            b.clicked.connect(self.clickedPgn)
+            vLayout.addWidget(b)
 
         # text edit
         #self.textEdit = QTextEdit(self)
@@ -181,6 +190,9 @@ class DoneDialog(QDialog):
 
         #
         self.result = None
+
+    def clickedPgn(self, text):
+        os.system('/Applications/chessx.app/Contents/MacOS/chessx ' + self.pgn_path)
 
     def clickedMinute(self, text):
         self.result = 'minute'

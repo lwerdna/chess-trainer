@@ -1,3 +1,4 @@
+import time
 import chess
 
 from common import *
@@ -16,7 +17,7 @@ class ProblemState():
 
     def test_move(self, move_san):
         pass
-    def update_move(self, move_san, cboard):
+    def update_move(self, move_san, cboard, message):
         pass
 
     def get_message(self):
@@ -41,7 +42,7 @@ class PlayBestProblemState(ProblemState):
         else:
             print(f'wrong move {player_move_san}, expected: {best_move_san}')
 
-    def update_move(self, move, cboard):
+    def update_move(self, move, cboard, message):
         assert self.test_move(move)
 
         self.board.push_san(move)
@@ -87,7 +88,7 @@ class CheckmateOrPromoteToQueenProblemState(ProblemState):
         return result
 
     # enter player move (assuming it's tested as correct)
-    def update_move(self, move, cboard):
+    def update_move(self, move, cboard, message):
         assert self.test_move(move)
 
         self.board.push_san(move)
@@ -118,257 +119,130 @@ class CheckmateOrPromoteToQueenProblemState(ProblemState):
         # neither? not done
         return False
 
-def traverse(node):
-    result = []
-
-    if node.variations:
-        for v in node.variations:
-            result.append(node)
-            result.extend(traverse(v))
-    else:
-        return [node]
-
-
 class NodeAgent():
     def __init__(self, node):
         self.current = node
 
-        # x is in lookup if we've taken a move (descended beyond) x
-        self.lookup = {} # map node -> indices we've gone to
+        # map nodes to the variation indices we've travelled
+        self.lookup = {n: set() for n in collect_nodes(node)}
+
         self.player = node.turn()
-        self.direction = 'DOWN'
 
     def step(self, move=None):
-        # are we at a leaf? special handling!
-        if not bool(self.current.variations):
-            if type(self.current) == chess.GameNode:
+        if self.exhausted():
+            if type(self.current) == chess.pgn.Game:
                 return 'DONE'
-            if self.direction == 'DOWN':
-                self.direction = 'UP'
-                self.current = self.current.parent
-                return 'ASCENDED'
-            raise Exception('no variations found on node while ascending, something\'s wrong')
+            self.current = self.current.parent
+            return 'ASCENDED'
 
-        # not at leaf
-
-        # ascending?
-        if self.direction == 'UP':
-            visited_idxs = self.lookup[self.current]
-
-            # have we exhausted all variations?
-            if len(visited_idxs) == len(self.current.variations):
-                if type(self.current) == chess.GameNode:
-                    return 'DONE'
-                self.current = self.current.parent
-                return 'ASCENDED'
-
-            # no, more variations to go!
-
-            # user must enter a valid move!
-            if self.current.turn() == self.player:
-                self.direction = 'DOWN'
-                return 'WAITING'
-
-            # pick next variation for opponent
-            for vidx in range(len(self.variations)):
-                if not vidx in visited_idxs:
-                    self.lookup[self.current].add(vidx)
-                    self.current = self.variations[vidx]
-                    self.direction = 'DOWN'
-                    return 'DESCENDED'
-            raise Exception('tested descendable, but unable to find unvisited variation')
-
-        # descending
+        # not exhausted
         if self.current.turn() == self.player:
             if move is None:
                 return 'WAITING'
-            okmoves = self.get_accepted_moves()
+            okmoves = self.acceptable_moves()
             vidx = okmoves.index(move)
             self.lookup[self.current].add(vidx)
             self.current = self.current.variations[vidx]
             return 'DESCENDED'
-
-        # opponent move, descend
-        if 
-
-    def is_waiting(self):
-
-    def has_moves(self):
-        node = self.current
-        return bool(node.variations)
-
-    def get_expected_move(self):
-        if not self.has_moves():
-            return None
-
-        node = self.current
-        vidx = self.lookup.get(node)
-        if vidx is None:
-            # we haven't descended yet, expect the move of the 0'th variation
-            return node.board().san(node.variations[0].move)
         else:
-            assert vidx+1 < len(node.variations)
-            return node.board().san(node.variations[vidx+1].move)
-            
-    def get_accepted_moves(self):
+            visited_idxs = self.lookup[self.current]
+
+            # pick next variation for opponent
+            for vidx in range(len(self.current.variations)):
+                if not vidx in visited_idxs:
+                    self.lookup[self.current].add(vidx)
+                    self.current = self.current.variations[vidx]
+                    return 'DESCENDED'
+            raise Exception('tested descendable, but unable to find unvisited variation')
+
+    def acceptable_moves(self):
         node = self.current
-        board = node.board
-        return [board.san(v.move) for v in node.variations]
+        visited = self.lookup[node]
+        board = node.board()
+        return [board.san(v.move) for i,v in enumerate(node.variations) if not i in visited]
+
+    # have we exhausted all paths from this node?
+    def exhausted(self):
+        if not self.current.variations:
+            return True
+
+        if not self.current in self.lookup:
+            return False
+
+        visited_idxs = self.lookup[self.current]
+        return len(visited_idxs) >= len(self.current.variations)
+
+    def done(self):
+        return type(self.current) == chess.pgn.Game and self.exhausted()
 
     def turn(self):
-        return self.current.board.turn()
-
-    def traverse(self):
-        node = self.current
-
-        # we've been here before!
-        if node in self.lookup:
-        
-
-        vidx = self.lookup.get(node)
-        traversed = False
-
-        # is this our first descent from this node?
-        if vidx is None:
-            if node.variations:
-                self.lookup[node] = 0
-                self.current = node.variations[0]
-                traversed = True
-        #
-        else:
-            if vidx+1 < len(node.variations):
-                self.lookup[node] = vidx+1
-                self.current = node.variations[vidx+1]
-                traversed = True
-
-        return descended
-    
-    def ascend(self)
-
-        # if the current state has an opponent move, make it
-        node = self.current
-        assert node.board.turn() != self.user_color
-        if node.variations:
-            
-            if child := self.next_variation(parent, vidx)
-                self.stack.pop()
-                reply = parent.board().san(child.move)
-                cboard.move_glide(reply)
-                self.stack.push((parent, vidx+1))
-                self.stack.push((child, 0))
-
-
+        return self.current.turn()
 
 class VanillaPgnProblemState(ProblemState):
     def __init__(self, fpath):
-
         self.pgn_path = fpath
         self.game = chess.pgn.read_game(open(fpath))
         self.user_color = self.game.turn()
-
-        self.current = self.game
+        self.agent = NodeAgent(self.game)
 
     # we override the parent to set the perspective to the root position
     def initialize_chessboard(self, cboard):
-        board = self.current.board()
+        board = self.game.board()
         cboard.set_fen(board.fen())
-        cboard.setPerspective(board.turn)
+        cboard.setPerspective(self.user_color)
         cboard.update_view()
 
     # test if a player move is correct
     # move is san, like "Ke4"
     def test_move(self, move):
-        node = self.current
-        assert node.board().turn == self.user_color
-
-        nodea = node
-        nodeb = node.variations[vidx]
-
-        # TODO: allow multiple user moves
-        expect_move = node.board().san(nodeb.move)
-
-        if move == expect_move:
+        moves = self.agent.acceptable_moves()
+        if move in moves:
             return True
-        else:
-            print(f'{move} was wrong, expected {expect_move}')
-            self.correct = False
-            return False
+        print(f'{move} was wrong, expected one of {moves}')
+        return False
 
-    def update_move(self, move, cboard):
+    def update_move(self, move, cboard, message):
         assert self.test_move(move)
+        assert self.agent.current.turn() == self.user_color
+        assert not self.agent.exhausted()
 
-        node = self.current
+        assert self.agent.step(move) == 'DESCENDED'
+        if comment := self.agent.current.comment:
+            message(comment)
 
-        rewindable = True
+        assert self.agent.turn() != self.user_color
 
-        # consume the current move by descending
-        vidx = self.lookup.get(node)
-        # is this our first descent from this node?
-        if vidx is None:
-            if node.variations:
-                self.lookup[node] = 0
-                self.current = node.variations[0]
-        #
-        else:
-            if vidx+1 < len(node.variations):
-                self.lookup[node] = vidx+1
-                self.current = node.variations[vidx+1]
+        # if an opponent reply is there, move it
+        if not self.agent.exhausted():
+            preboard = self.agent.current.board()
+            assert self.agent.step() == 'DESCENDED'
+            if comment := self.agent.current.comment:
+                message(comment)
+            move = preboard.san(self.agent.current.move)
+            print(f'auto-playing move {move}')
+            cboard.move_glide(move)
 
-        
-        # if the current state has an opponent move, make it
-        node = self.current
-        assert node.board.turn() != self.user_color
-        if node.variations:
-            
-            if child := self.next_variation(parent, vidx)
-                self.stack.pop()
-                reply = parent.board().san(child.move)
-                cboard.move_glide(reply)
-                self.stack.push((parent, vidx+1))
-                self.stack.push((child, 0))
+        # if the traversal bottomed out, back it out
+        while self.agent.exhausted() and not self.agent.done():
+            assert self.agent.step() == 'ASCENDED'
+            time.sleep(.300)
+            cboard.undo_glide()
 
-        # 
-            child = parent.variations[0]
-            self.stack.append((child, 0))
-            pushed = True
-
-        parent, vidx = self.stack[-1]
-        if not parent.variations:
-            while True:
-                self.stack.pop()
-                parent, vidx = self.stack[-1]
-                if parent.board().turn == self.vidx+1 < len(parent.variations):
-                    self.stack.pop()
-                    self.stack.push((parent, vidx+1))
-                    break
-
-        if not parent.variations or vidx + 1
-
-        self.initialize_chessboard(cboard)
-        # ascend
-        else:
-            # are there alternative moves for user?
-            if vidx+1 < len(parent.variations):
-                self.stack.pop()
-                self.stack.append((parent, vidx+1))
-            else:
-                
-            
-        debug.breakpoint()
-
-        self.halfmove_index += 1
-        self.board.push_san(move)
-
-    def is_node_exhausted(node, index=0):
-        l = len(node.variations)
-        return l==0 or index>=l
+        # if an opponent reply is there, move it
+        if self.agent.turn() != self.user_color:
+            preboard = self.agent.current.board()
+            assert self.agent.step() == 'DESCENDED'
+            move = preboard.san(self.agent.current.move)
+            print(f'auto-playing move {move}')
+            cboard.move_glide(move)
+            if comment := self.agent.current.comment:
+                message(comment)
 
     def is_done(self):
-        return len(self.stack) > 0
+        return self.agent.done()
 
     def get_message(self):
-        node, child_idx = self.stack[-1]
-        return node.comment
+        return self.agent.current.comment
 
 class FollowVariationsProblemState(ProblemState):
     def __init__(self, problem):
