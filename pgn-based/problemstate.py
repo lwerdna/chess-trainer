@@ -139,8 +139,8 @@ class NodeAgent():
         if self.current.turn() == self.player:
             if move is None:
                 return 'WAITING'
-            okmoves = self.acceptable_moves()
-            vidx = okmoves.index(move)
+            allmoves = self.all_moves()
+            vidx = allmoves.index(move)
             self.lookup[self.current].add(vidx)
             self.current = self.current.variations[vidx]
             return 'DESCENDED'
@@ -155,11 +155,15 @@ class NodeAgent():
                     return 'DESCENDED'
             raise Exception('tested descendable, but unable to find unvisited variation')
 
-    def acceptable_moves(self):
+    def all_moves(self):
         node = self.current
         visited = self.lookup[node]
         board = node.board()
-        return [board.san(v.move) for i,v in enumerate(node.variations) if not i in visited]
+        return [board.san(v.move) for v in node.variations]
+
+    def accepted_moves(self):
+        visited = self.lookup[self.current]
+        return [m for i,m in enumerate(self.all_moves()) if not i in visited]
 
     # have we exhausted all paths from this node?
     def exhausted(self):
@@ -195,13 +199,16 @@ class VanillaPgnProblemState(ProblemState):
     # test if a player move is correct
     # move is san, like "Ke4"
     def test_move(self, move):
-        moves = self.agent.acceptable_moves()
-        if move in moves:
+        okmoves = self.agent.accepted_moves()
+        if move in okmoves:
+            print(f'test_move({move}) returns True')
             return True
-        print(f'{move} was wrong, expected one of {moves}')
+        print(f'{move} was wrong, expected one of {okmoves}')
+        print(f'test_move({move}) returns False')
         return False
 
     def update_move(self, move, cboard, message):
+        print(f'update_move({move})')
         assert self.test_move(move)
         assert self.agent.current.turn() == self.user_color
         assert not self.agent.exhausted()
@@ -225,7 +232,7 @@ class VanillaPgnProblemState(ProblemState):
         # if the traversal bottomed out, back it out
         while self.agent.exhausted() and not self.agent.done():
             assert self.agent.step() == 'ASCENDED'
-            time.sleep(.300)
+            #time.sleep(.300)
             cboard.undo_glide()
 
         # if an opponent reply is there, move it

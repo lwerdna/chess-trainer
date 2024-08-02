@@ -1,17 +1,19 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-1: The Wrong Bishop"]
 [Site "https://lichess.org/study/vmzEymCY/U0gKMFQK"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/8/k7/8/4K3/7p/7b/8 b - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "22:20:17"]
+[Variant "Standard"]
 
-{ <0>
-
-This is an #OOOWAll, but the pawn can be attacked, so it must evolve! } { [%csl Gg2,Gg3,Gg1] }
-1... Bg3 { [%csl Gg2,Gf2,Ge1] } 2. Kf3 { [%csl Gg2,Gf2,Ge1] } 2... Bh4 { [%csl Gg2,Gg3,Gf2,Ge1] } 3. Kg4 { [%csl Gg3,Gg2,Gf2,Ge1] } (3. Ke2 { [%csl Gg3,Gg2,Gf2,Ge1] } 3... h2) 3... h2 *
+{ This is an #OOOWall, but the pawn can be attacked, so it must evolve! } { 
+[%csl Gg2,Gg3,Gg1] } 1... Bg3 {  [%csl Gg2,Gf2,Ge1]}  2. Kf3 {  [%csl
+Gg2,Gf2,Ge1]}  2... Bh4 {  [%csl Gg2,Gg3,Gf2,Ge1]}  3. Kg4 {  [%csl
+Gg3,Gg2,Gf2,Ge1]}  ( 3. Ke2 {  [%csl Gg3,Gg2,Gf2,Ge1]}  3... h2 )3... h2  *
 
