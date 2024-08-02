@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-3: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/03Gpdb1T"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5k2/8/8/8/1P6/8/8/3K4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:26:57"]
+
+{ <0> } { [%csl Ga6,Gb6,Gc6,Gd1] }
+1. Kc2 { [%csl Ga6,Gb6,Gc6] } 1... Ke7 { [%csl Ga6,Gb6,Gc6] } 2. Kb3 { Right! White will win race to key squares! } { [%csl Gb6,Ga6,Gc6][%cal Gd1c2,Gc2b3,Gb3a4,Ga4a5,Gf8e7,Ge7d6,Gd6c6] } (2. Kc3 { Wrong! Black king wins race to key squares! } { [%csl Gc6,Gb6,Ga6][%cal Gd1c2,Gc2c3,Gc3c4,Gf8e7,Ge7d6,Gd6c6] }) 2... Kd6 { [%csl Ga6,Gb6,Gc6] } 3. Ka4 { [%csl Ga6,Gb6,Gc6] } 3... Kc6 { [%csl Ga6,Gb6,Gc6] } 4. Ka5 { [%csl Ga6,Gb6,Gc6] } 4... Kb7 { [%csl Ga6,Gb6,Gc6] } (4... Kc7 { [%csl Ga6,Gb6,Gc6] } 5. Ka6 { Redeem opposition for key squares! } (5. Kb5 { Wrong! } { [%csl Ga6,Gb6,Gc6] } 5... Kb7 { [%csl Ga6,Gb6,Gc6] })) 5. Kb5 { Easy opposition acquired. } { [%csl Ga6,Gb6,Gc6] } *
+

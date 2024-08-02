@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-6: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/35K1DUAo"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "k7/8/1p6/8/1P6/5K2/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:47:23"]
+
+{ <0> }
+1. b5 { Gives the turn, blocks a6, c6, and maintains distant opposition! } { [%csl Rc6,Ra6] } 1... Kb7 (1... Kb8 2. Ke4 Kc8 3. Ke5) (1... Ka7 2. Ke4 { Quickly calculating that ...Ka8, ...Kb7, ...Kb8 all have opposition-preserving replies. }) 2. Ke4 Kc8 (2... Kc7 3. Ke5 Kd7 4. Kd5 Kc7 5. Ke6 { Since corresponding square c6 is off limits! }) 3. Ke5 Kd7 4. Kd5 Kc7 5. Ke6 Kc8 6. Kd6 Kb7 7. Kd7 Ka7 8. Kc7 Ka8 9. Kxb6 Kb8 10. Ka6 Ka8 11. b6 Kb8 12. b7 { Squeeze! } *
+

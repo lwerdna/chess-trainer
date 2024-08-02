@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-12: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/qIK0k3Am"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "2kr1r2/pp1n3p/2p1bp2/8/5B2/8/PP2BP1P/2R1K1R1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:47:57"]
+
+{ <0> }
+1. Rxc6+ bxc6 2. Ba6# { #BodensMate } *
+

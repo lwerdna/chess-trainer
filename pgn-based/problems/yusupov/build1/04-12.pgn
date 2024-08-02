@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-12: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/1eJVblGw"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/7p/2K5/8/6kP/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "03:34:32"]
+
+{ <0> } { [%csl Gg2,Gg1] }
+1. h4 { [%csl Gg2,Gg1] } 1... Kg3 { [%csl Gg2,Gg1] } 2. Kd3 { [%csl Gg2,Gg1] } 2... Kxh4 { [%csl Gg2,Gg1] } 3. Ke2 { [%csl Gg2,Gg1] } 3... Kg3 { [%csl Gg2,Gg1] } 4. Kf1 { And white controls the two #KeySquares. } { [%csl Gg2,Gg1] } *
+

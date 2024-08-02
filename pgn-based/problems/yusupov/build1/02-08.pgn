@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-8: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/lHdcUaVg"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "6k1/1b5p/pp1pPqp1/2p1r3/8/8/PPQ2PPP/3R1RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:49:52"]
+
+{ <0> }
+1... Qf3 2. gxf3 Rg5+ 3. Kh1 Bxf3# { #PillsburysMate } *
+

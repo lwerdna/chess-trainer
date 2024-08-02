@@ -1,0 +1,18 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22 - Fortress I"]
+[Site "https://lichess.org/study/vmzEymCY/43JMXoZ1"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "7k/8/8/7P/4B2K/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:19:03"]
+[Variant "Standard"]
+
+{ [%csl Gg7,Gg8] } 1... Kg8 {  [%csl Gg7,Gg8]}  2. Kg5 {  [%csl Gg7,Gg8]}  2...
+Kh8 {  [%csl Gg7,Gg8]}  3. Kf6 {  [%csl Gg7,Gg8]}  3... Kg8 {  [%csl Gg7,Gg8]} 
+4. h6 {  [%cal Gg7f7,Gf7g7][%csl Gg7,Gf7]}  4... Kh8 {  [%csl Gg7,Gg8]}   *
+

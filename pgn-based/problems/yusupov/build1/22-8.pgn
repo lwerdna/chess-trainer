@@ -1,0 +1,17 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-8: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/Chxy7OhL"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "1N6/p7/3k4/8/1pb5/8/PK6/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:26:00"]
+
+{ <0>
+
+White knight is dominated. }
+1. Na6 (1. a3?? a5 2. Kc2) 1... Bxa6 2. a3 *
+

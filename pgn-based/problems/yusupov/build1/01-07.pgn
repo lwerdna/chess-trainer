@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-7: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/D0yltzLK"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1n3k1/pp2q2p/2ppr1pQ/4p3/8/2N4R/PPP3PP/5RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:46:12"]
+
+{ <0> }
+1. Rf8+ Qxf8 2. Qxh7# { Threaten a #KillBox mate to get a regular queen supported mate! } *
+

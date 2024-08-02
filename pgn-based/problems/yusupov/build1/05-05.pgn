@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-5: Double Check"]
+[Site "https://lichess.org/study/vmzEymCY/fqkJwqXc"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "rnb1k2r/pp2ppbp/2p5/3Q4/8/5N2/P1qB1PPP/3RKB1R w Kkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "03:45:45"]
+
+{ <0> }
+1. Qd8+ Kxd8 2. Ba5+ Ke8 3. Rd8# *
+

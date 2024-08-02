@@ -1,4 +1,5 @@
 import os
+import re
 
 import time
 import json
@@ -35,20 +36,20 @@ def store():
 
 def add_pgn(pgn_path):
     global database
-    pgn_name = os.path.basename(pgn_path)
-    if not pgn_name in database:
-        database[pgn_name] = {}
-        database[pgn_name]['due'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()-1))
+    key = re.match(r'^.*problems/(.*)$', pgn_path).group(1)
+    if not key in database:
+        database[key] = {}
+        database[key]['due'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()-1))
 
 def update_pgn(pgn_path, due_epoch):
-    pgn_name = os.path.basename(pgn_path)
+    key = re.match(r'^.*problems/(.*)$', pgn_path).group(1)
     global database
-    database[pgn_name]['due'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
+    database[key]['due'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
 
 def is_due(pgn_path):
     global database
-    pgn_name = os.path.basename(pgn_path)
-    entry = database[pgn_name]
+    key = re.match(r'^.*problems/(.*)$', pgn_path).group(1)
+    entry = database[key]
     struct_time = time.strptime(entry['due'], '%Y-%m-%d %H:%M:%S')
     now = int(time.time())
     return now > int(time.mktime(struct_time))

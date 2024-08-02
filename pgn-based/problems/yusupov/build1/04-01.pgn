@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-1: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/BgjCEpbV"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/8/1p6/8/1Pk5/8/1K6 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "01:15:16"]
+
+{ <0> } { [%csl Ga3,Gb3,Gc3] }
+1. b4 { [%csl Ga3,Gb3,Gc3] } 1... Kxb4 { [%csl Ga3,Gb3,Gc3] } (1... Kc4 { [%csl Ga3,Gb3,Gc3] } 2. Kc2 { opposition, kept away from key squares } { [%csl Ga3,Gb3,Gc3] } 2... Kxb4 { [%csl Ga3,Gb3,Gc3] } 3. Kb2 { [%csl Ga3,Gb3,Gc3] }) (1... Kd4 { [%csl Ga3,Gb3,Gc3] } 2. Kb2 { distant opposition } { [%csl Ga3,Gb3,Gc3] } 2... Kc4 { [%csl Ga3,Gb3,Gc3] } 3. Kc2 { [%csl Ga3,Gb3,Gc3] } 3... Kxb4 { [%csl Ga3,Gb3,Gc3] } 4. Kb2 { [%csl Ga3,Gb3,Gc3] }) 2. Kb2 { opposition acquired, key squares defended } { [%csl Ga3,Gb3,Gc3] } *
+

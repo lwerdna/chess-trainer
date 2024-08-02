@@ -1,0 +1,16 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-1: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/xWcslFd1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1b2rk1/p1p2p1p/2p1pB2/8/3P4/P7/1PP2PqP/R2QK2R w KQq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:20:12"]
+
+{ <0> }
+1. Qf3 Qg6 2. O-O-O { The threat of #PillsburyMate wins the queen. } *
+
+

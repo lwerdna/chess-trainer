@@ -1,0 +1,20 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-10: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/cMcPwh1z"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/2K5/p3k3/8/8/1P6/3b4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:26:48"]
+[Variant "Standard"]
+
+{ <0> } 1. b3 {  vacating b2 for future king path to corner and eliminating the
+rook pawn's transformation}  ( 1. Kb5 $4 a4 {  now any of white's pawns moves
+let the rook pawn transform into a b pawn, and the b pawn will block white's
+path to the corner}  2. Kb4 Kd4 3. Ka3 Bb3 )1... Bxb3 2. Kb5 a4 3. Kb4 Kd4 4.
+Ka3 Kd3 5. Kb2 Kd4 6. Ka1  *
+

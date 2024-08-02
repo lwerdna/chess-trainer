@@ -1,0 +1,15 @@
+[Event ""]
+[Site ""]
+[Date ""]
+[Round ""]
+[White ""]
+[Black ""]
+[Result "*"]
+[FEN "r6k/3nQ1pp/4pp2/1ppq4/4N3/3P4/1PP2PPP/4R1K1 w - - 0 1"]
+
+1. Nd6 {  #Interference, kind of
+#RemovingTheDefender}  1... Nf8 {  attempts to double defend e6}  ( 1... Qc6 2.
+Ne8 {  the most important feature of the position was the #MateThreat, not
+winning the N}  )2. Ne8 {  combined #matethreat on g7 and #Interference between
+R and N}  2... Rxe8 3. Qxe8  *
+

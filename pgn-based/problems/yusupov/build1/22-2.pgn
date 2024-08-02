@@ -1,0 +1,14 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-2: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/1GeOKEgF"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/1p1p3b/2k5/P1p1K3/8/8/8/3B4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "22:21:54"]
+
+{ <0> }
+1. Ba4+ { White can eliminate the c, d pawns and turn the b pawn into an a pawn! } 1... Kc7 2. Bxd7 (2. Kd5 d6) 2... Kxd7 3. a6 (3. Kd5?? { Black's king will be too close when we try to trade the a pawn. } 3... c4 4. Kxc4 Kc6 { Too close! } 5. a6 b6 6. a7 Kb7 7. a8=Q+ Kxa8 8. Kb5 Kb7 { And we're dead. }) 3... bxa6 4. Kd5 Kc7 5. Kxc5 a5 (5... Bd3 6. Kb4 a5+ 7. Ka3) *

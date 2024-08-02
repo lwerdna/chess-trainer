@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-7: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/5EjFlAgl"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bqk2r/ppp1nppp/2np4/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:39:07"]
+
+{ <0> }
+1. Ng5 O-O 2. Qh5 h6 3. Nxf7 Rxf7 4. Qxf7+ Kh7 5. Bg5 Qg8 *
+

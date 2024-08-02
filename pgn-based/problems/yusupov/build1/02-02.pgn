@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-2: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/uWOqiTmf"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "rn3r1k/ppp3pp/8/4bP1Q/2BqN3/8/PP3p1P/2R2K1R w Kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:26:17"]
+
+{ <0> }
+1. Ng5 h6 2. Qg6 hxg5 3. Qh5# { #GrecosMate } *
+

@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-10: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/yKRMCWNF"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "k1r5/1p4pq/p7/5n2/3nQ3/P7/RPP2PPP/2B2RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:47:17"]
+
+{ <0> }
+1... Ng3 2. Re1 (2. Qxh7 Nde2#) (2. hxg3 Qxe4) (2. fxg3 Qxe4) 2... Nxe4 { A #DiscoveredAttack combined with a #DoubleKnightMate } *
+

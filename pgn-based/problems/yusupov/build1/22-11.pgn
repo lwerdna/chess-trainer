@@ -1,0 +1,21 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-11: The Wrong Bishop"]
+[Site "https://lichess.org/study/vmzEymCY/FfXHiBb5"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "3N4/8/1p1k4/8/8/1b6/8/4K3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.14"]
+[UTCTime "04:52:52"]
+[Variant "Standard"]
+
+{  <0> } 1. Nb7+ {  the only move! otherwise Kc7 wins the half-dominated N[%csl
+Rd6]}  1... Kc6 ( 1... Kd5 2. Kd2 b5 ( 2... Kd4 3. Kc1 Kc3 ( 3... b5 4. Kb2 )
+4. Nd6 {  #NControlPath}  4... Kb4 5. Kb2 {  #KBlockadeAndDance}  )3. Kc3 Bc4
+4. Kb4 {  #KBlockadeAndDance}  4... Kc6 5. Na5+ Kd5 6. Nb7 )2. Na5+ bxa5 ( 2...
+Kb5 3. Nxb3 )3. Kd2 {  white takes dark squares to a1 for the #WrongBishop
+draw}  3... Kc5 4. Kc1 Kb4 5. Kb2 a4 6. Ka1 a3 7. Kb1 Kc3 8. Ka1  *
+

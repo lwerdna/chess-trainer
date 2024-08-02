@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-6: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/l5SKnKIK"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r1bq1rk1/pp1pb1p1/2n1p3/4P1P1/3P4/2P5/P4PP1/R1BQK2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:33:22"]
+
+{ <0> }
+1. Rh8+ Kxh8 (1... Kf7 2. Qh5+ g6 3. Qh7+ Ke8 4. Qxg6#) 2. Qh5+ Kg8 3. g6 Rf6 4. Qh7+ Kf8 5. Qh8# { #DamianosMate } *
+

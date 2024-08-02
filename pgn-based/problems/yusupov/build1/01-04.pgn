@@ -1,0 +1,15 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-4: Mating Motifs"]
+[Site "https://lichess.org/study/vmzEymCY/3MrQH7jO"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "5r2/p3Qnkp/1p3Np1/2p3P1/3q4/5P2/PP3R1r/4R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "13:44:40"]
+
+{ <0> }
+1. Qxf8+ Kxf8 2. Re8+ Kg7 3. Rg8# { #Attraction #ArabianMate } *
+

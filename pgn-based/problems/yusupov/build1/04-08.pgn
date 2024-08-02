@@ -1,0 +1,16 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-8: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/eoWtQuXs"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/8/3p4/k7/P1P5/p7/2K5/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "02:35:58"]
+
+{ <0> } { [%csl Gc4,Gd4,Ge4] }
+1. Kb3 { [%csl Gc4,Gd4,Ge4] } (1. c5 { [%csl Gc4,Gd4,Ge4] } 1... dxc5 { [%csl Gb3,Gc3,Gd3] } 2. Kb3 { [%csl Gb3,Gc3,Gd3] } 2... a2 3. Kxa2 (3. Kb2 Kb4 4. a5 Kxa5) 3... Kxa4) 1... a2 { [%csl Gc4,Gd4,Ge4] } 2. Kb2 { [%csl Gc4,Gd4,Ge4] } (2. Kxa2?? Kxa4) 2... Kxa4 { [%csl Gc4,Gd4,Ge4] } 3. c5 { [%csl Gc4,Gd4,Ge4] } (3. Kxa2?? { Black king reaches key squares! } { [%csl Gc4,Gd4,Ge4] }) 3... dxc5 { [%csl Gb3,Gc3,Gd3] } 4. Kxa2 { Capture with opposition! } { [%csl Gb3,Gc3,Gd3] } 4... Kb4 { [%csl Gb3,Gc3,Gd3] } 5. Kb2 { </0>
+draw } { [%csl Gb3,Gc3,Gd3] } *
+

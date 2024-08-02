@@ -1,0 +1,16 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-10: Mating Motifs 2"]
+[Site "https://lichess.org/study/vmzEymCY/1zu2C1pt"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r2qkb1r/pp2nppp/3p4/2pNp1B1/2BnP1b1/3P1N2/PPP2PPP/R2QK2R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "16:51:30"]
+
+{ <0 Q="Play as if black will cooperate with a Legal's mate.">
+<1 Q="Play a more optimal line than the one leading to Legal's mate."> }
+1. Nxe5 (1. Nxd4 Bxd1 { Forfeits control of the queenside light squares! } (1... cxd4 2. Qxg4 { </1> }) 2. Bb5+ { Pounce on the queenside light squares! } 2... Qd7 3. Bxd7+ Kxd7 4. Bxe7 { Keeps the outposted knight! } 4... Bxe7 (4... exd4 5. Bxf8 Bxc2 (5... Rhxf8 6. Rxd1 { </1> }) 6. Bxg7 { </1> }) 5. Nf5 { </1> }) 1... Bxd1 2. Nf6+ gxf6 3. Bxf7# { </0> } *
+

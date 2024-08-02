@@ -1,0 +1,17 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-7: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/NWx20BK0"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/7p/8/4kpPP/8/8/8/5K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "02:03:55"]
+
+{ <0> }
+1. h6 { 1. Creates a two-on-one passer threat: g6!
+2. Black is now three moves from g5 and white will make it to f4 in time.
+3. White holds opposition since corresponding f5 is occupied. } (1. Ke1 { WRONG, } 1... f4) 1... Ke4 (1... f4 2. g6 Kf6 3. gxh7 { </0> }) (1... Kf4 2. g6 { </0> }) 2. g6 { </0> } *
+

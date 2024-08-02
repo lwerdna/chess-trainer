@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 import sys
 import time
 import random
@@ -43,6 +44,7 @@ def select_pgn(replay=False):
         pgn_path = random.choice(pgn_paths)
 
     # create the problem state
+    print(f'loading PGN: {pgn_path}')
     current_pgn = os.path.basename(pgn_path)
     problem_state = VanillaPgnProblemState(pgn_path)
 
@@ -281,7 +283,12 @@ if __name__ == '__main__':
     if pgn_path:
         pgn_paths = [pgn_path]
     else:
-        pgn_paths = [os.path.join('.', 'problems', x) for x in os.listdir('./problems') if x.endswith('.pgn')]
+        pgn_paths = []
+        for root, dirnames, filenames in os.walk('./problems'):
+            for filename in filenames:
+                if filename.endswith('.pgn'):
+                    fpath = os.path.join(root, filename)
+                    pgn_paths.append(fpath)
 
     print('pgn paths:')
     print('\n'.join(pgn_paths))

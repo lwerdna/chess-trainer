@@ -1,0 +1,18 @@
+[Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-10: Simple Pawn Endings"]
+[Site "https://lichess.org/study/vmzEymCY/4v9BXiKX"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "8/7k/5Pp1/8/5K2/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.13"]
+[UTCTime "03:25:39"]
+[Variant "Standard"]
+
+{  <0> } 1. Kg5 Kh8 ( 1... Kg8 2. Kxg6 Kh8 ( 2... Kf8 3. f7 {  </0> Squeeze!} 
+)3. Kf7 Kh7 4. Ke7 {  </0>}  )2. Kh6 Kg8 3. Kxg6 Kh8 ( 3... Kf8 4. f7 { 
+Squeeze!}  )4. Kf7 Kh7 5. Ke7 {  </0> Path claiming!}   *
+
