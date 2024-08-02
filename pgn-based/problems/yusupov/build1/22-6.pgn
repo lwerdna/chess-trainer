@@ -1,15 +1,22 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-6: The Wrong Bishop"]
 [Site "https://lichess.org/study/vmzEymCY/Mm2DQbqP"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/8/8/8/1p2k3/8/b1PK4/8 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "22:24:30"]
+[Variant "Standard"]
 
-{ <0> } { [%csl Rb3,Rb1] }
-1. c3 { [%csl Rb3,Rb1] } 1... b3 { [%csl Rb1,Rc2] } 2. Kc1 { [%csl Rc2,Rb1] } 2... Kd3 { [%csl Rb1,Rc2] } 3. Kb2 { [%csl Rb1] } (3. c4?? Kc3 { Denied entry, and c5 doesn't work with b2 coming. } { [%csl Rb1,Rb2] }) 3... Kc4 { Almost a Fortress II since c pawn can't move and he can't take without stalemating! } { [%csl Rb1] } 4. Ka1 Kb5 5. Kb2 (5. c4+ Kb4 6. Kb2 Bb1 7. Kxb1 Kxc4 8. Kb2 (8. Kc1??)) 5... Ka4 6. c4 (6. Ka1?? { The fortress doesn't work if you have other moves! }) 6... Kb4 7. c5 Kxc5 *
+{ <0>  [%csl Rb3,Rb1] } 1. c3 { [%csl Rb3,Rb1] } ( 1. Kc1 $4 { black can
+maneuver and pile on the c2 pawn } 1... Kd4 2. Kb2 Bd5 3. Kc1 Kc3 4. Kd1 Be4 ) 1... b3 { [%csl Rb1,Rc2] } 2. Kc1 { [%csl Rc2,Rb1] } 2... Kd3 { [%csl
+Rb1,Rc2] } 3. Kb2 { [%csl Rb1] } ( 3. c4 $4 Kc3 { [%csl Rb1,Rb2] } ) 3... Kc4 { [%csl Rb1] } 4. Ka1 Kb5 5. Kb2 Ka4 6. c4 ( 6. Ka1 $4 { no fortress with
+reserve moves! } 6... Ka3 ) 6... Kb4 7. c5 { discard reserve moves, activate
+fortress! } 7... Kxc5 { Remember #WrongColorBishop had two fortresses:
+I: get to corner against rook pawn and bishop
+II: get to corner against trapped bishop and b/g pawn } *
 

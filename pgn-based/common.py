@@ -297,3 +297,27 @@ def node_to_san(node, numbered=True):
         )
     else:
         return parent_board.san(node.move)
+
+def nags_to_string(nags):
+    result = ''
+    for nag in nags:
+        match nag:
+            case chess.pgn.NAG_GOOD_MOVE:
+                result += '!'
+                break
+            case chess.pgn.NAG_MISTAKE:
+                result += '?'
+                break
+            case chess.pgn.NAG_BRILLIANT_MOVE:
+                result += '!!'
+                break
+            case chess.pgn.NAG_BLUNDER:
+                result += '??'
+                break
+            case chess.pgn.NAG_SPECULATIVE_MOVE:
+                result += '!?'
+                break
+            case chess.pgn.NAG_DUBIOUS_MOVE:
+                result += '?!'
+                break
+    return result

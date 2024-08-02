@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-5: Mating Motifs 2"]
 [Site "https://lichess.org/study/vmzEymCY/2UunDjND"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "16:31:09"]
 
-{ <0> }
-1. Qh5 gxh5 (1... h6 2. Qxh6 Nf6 3. Bxf6) (1... Nf6 2. Bxf6) 2. Bxh7# { #BlackburnsMate } *
+{ <0> } 1. Qh5 gxh5 ( 1... h6 2. Qxh6 Nf6 3. Bxf6 ) ( 1... Nf6 2. Bxf6 ) 2. Bxh7# { #BlackburnsMate (bishop pair and N vs. castled king) } *
 

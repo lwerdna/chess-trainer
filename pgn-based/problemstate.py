@@ -129,52 +129,69 @@ class NodeAgent():
         self.player = node.turn()
 
     def step(self, move=None):
+        result = ''
+
         if self.exhausted():
             if type(self.current) == chess.pgn.Game:
                 return 'DONE'
             self.current = self.current.parent
             return 'ASCENDED'
-
-        # not exhausted
-        if self.current.turn() == self.player:
-            if move is None:
-                return 'WAITING'
-            allmoves = self.all_moves()
-            vidx = allmoves.index(move)
-            self.lookup[self.current].add(vidx)
-            self.current = self.current.variations[vidx]
-            return 'DESCENDED'
         else:
-            visited_idxs = self.lookup[self.current]
-
-            # pick next variation for opponent
-            for vidx in range(len(self.current.variations)):
-                if not vidx in visited_idxs:
+            # not exhausted
+            if self.current.turn() == self.player:
+                if move is None:
+                    result = 'WAITING'
+                else:
+                    allmoves = self.all_moves()
+                    vidx = allmoves.index(move)
                     self.lookup[self.current].add(vidx)
                     self.current = self.current.variations[vidx]
-                    return 'DESCENDED'
-            raise Exception('tested descendable, but unable to find unvisited variation')
+                    result = 'DESCENDED'
+            else:
+                visited_idxs = self.lookup[self.current]
 
+                # pick next variation for opponent
+                for vidx in range(len(self.current.variations)):
+                    if not vidx in visited_idxs:
+                        self.lookup[self.current].add(vidx)
+                        self.current = self.current.variations[vidx]
+                        result = 'DESCENDED'
+                        break
+                else:
+                    raise Exception('tested descendable, but unable to find unvisited variation')
+
+        if self.all_moves() == ['Kxa2', 'Kb2']:
+            debug.breakpoint()
+
+        self.all_moves()
+
+        #print(f'step returns, current node is: {self.current}')
+        #print(f'all_moves() returns: {self.all_moves()}')
+        #print(f'remaining_moves() returns: {self.remaining_moves()}')
+        return result
+
+    # return the moves (edges) that can be traversed
     def all_moves(self):
         node = self.current
-        visited = self.lookup[node]
         board = node.board()
-        return [board.san(v.move) for v in node.variations]
+        result = []
+        for v in node.variations:
+            # do not require ? and ?? moves made by player
+            if board.turn == self.player:
+                if v.nags.intersection({chess.pgn.NAG_MISTAKE, chess.pgn.NAG_BLUNDER}):
+                    continue
+            #
+            result.append(board.san(v.move))
+        return result
 
-    def accepted_moves(self):
+    # return the moves (edges) yet to be traversed
+    def remaining_moves(self):
         visited = self.lookup[self.current]
         return [m for i,m in enumerate(self.all_moves()) if not i in visited]
 
     # have we exhausted all paths from this node?
     def exhausted(self):
-        if not self.current.variations:
-            return True
-
-        if not self.current in self.lookup:
-            return False
-
-        visited_idxs = self.lookup[self.current]
-        return len(visited_idxs) >= len(self.current.variations)
+        return self.remaining_moves() == []
 
     def done(self):
         return type(self.current) == chess.pgn.Game and self.exhausted()
@@ -199,12 +216,12 @@ class VanillaPgnProblemState(ProblemState):
     # test if a player move is correct
     # move is san, like "Ke4"
     def test_move(self, move):
-        okmoves = self.agent.accepted_moves()
+        okmoves = self.agent.remaining_moves()
         if move in okmoves:
-            print(f'test_move({move}) returns True')
+            #print(f'test_move({move}) returns True')
             return True
-        print(f'{move} was wrong, expected one of {okmoves}')
-        print(f'test_move({move}) returns False')
+        #print(f'{move} was wrong, expected one of {okmoves}')
+        #print(f'test_move({move}) returns False')
         return False
 
     def update_move(self, move, cboard, message):

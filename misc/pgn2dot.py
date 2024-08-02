@@ -52,6 +52,7 @@ if __name__ == '__main__':
 
         for dst in src.variations:
             move_label = common.node_to_san(dst)
+            move_label += common.nags_to_string(dst.nags)
             print(f'\t{id(src)} -> {id(dst)} [label="{move_label}"]')
 
     print('}')

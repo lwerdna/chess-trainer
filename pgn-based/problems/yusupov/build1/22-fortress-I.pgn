@@ -12,7 +12,7 @@
 [UTCTime "04:19:03"]
 [Variant "Standard"]
 
-{ [%csl Gg7,Gg8] } 1... Kg8 {  [%csl Gg7,Gg8]}  2. Kg5 {  [%csl Gg7,Gg8]}  2...
-Kh8 {  [%csl Gg7,Gg8]}  3. Kf6 {  [%csl Gg7,Gg8]}  3... Kg8 {  [%csl Gg7,Gg8]} 
-4. h6 {  [%cal Gg7f7,Gf7g7][%csl Gg7,Gf7]}  4... Kh8 {  [%csl Gg7,Gg8]}   *
+{ [%csl Gg7,Gg8] } 1... Kg8 { [%csl Gg7,Gg8] } 2. Kg5 { [%csl Gg7,Gg8] } 2... Kh8 { [%csl Gg7,Gg8] } 3. Kf6 { [%csl Gg7,Gg8] } 3... Kg8 { [%csl Gg7,Gg8] } 4. h6 { [%cal Gg7f7,Gf7g7][%csl Gg7,Gf7] } 4... Kh8 { [%csl Gg7,Gg8]
+
+When opponent has #WrongColorBishop and a rook pawn, the K can just occupy the corner. } *
 
