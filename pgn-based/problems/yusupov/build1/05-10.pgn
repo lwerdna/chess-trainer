@@ -1,15 +1,22 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-10: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/XqjFLy7j"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "3rk2r/pp3p1p/6n1/2Qnp3/8/P1Pq4/R3NPPP/2B1K2R b Kk - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "03:58:18"]
+[Variant "Standard"]
 
-{ <0> }
-1... Qd1+ 2. Kxd1 Ne3+ 3. Ke1 Rd1# *
+1... Qd1+ 2. Kxd1 Ne3+ 3. Ke1 Rd1# { Line1
+Line2
+Line3
+
+One two three
+
+Can I add something here? } *
 

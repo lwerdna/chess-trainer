@@ -149,22 +149,45 @@ class DoneDialog(QDialog):
 
         vLayout = QVBoxLayout()
 
-        self.pgn_path = None
-        if pgn_path:
-            self.pgn_path = pgn_path
-            #label = QLabel()
-            #label.setText(f'<a href="{url}">{url}</a>')
-            #label.setTextFormat(Qt.RichText)
-            #label.setTextInteractionFlags(Qt.TextBrowserInteraction)
-            #label.setOpenExternalLinks(True)
+        self.pgn_path = os.path.abspath(pgn_path)
 
-            b = QPushButton(pgn_path, self)
-            b.clicked.connect(self.clickedPgn)
-            vLayout.addWidget(b)
+        # path to PGN
+        text_pgn_path = QLineEdit(self)
+        text_pgn_path.setReadOnly(True);
+        text_pgn_path.setText(self.pgn_path)
+        #text_pgn_path.setEnabled(False)
+        vLayout.addWidget(text_pgn_path)
+
+        text_fen_string = QLineEdit(self)
+        text_fen_string.setReadOnly(True)
+        game = chess.pgn.read_game(open(self.pgn_path))
+        text_fen_string.setText(game.board().fen())
+        vLayout.addWidget(text_fen_string)
+
+        #label = QLabel()
+        #label.setText(f'<a href="{url}">{url}</a>')
+        #label.setTextFormat(Qt.RichText)
+        #label.setTextInteractionFlags(Qt.TextBrowserInteraction)
+        #label.setOpenExternalLinks(True)
+
+        b = QPushButton('Open in ChessX', self)
+        b.clicked.connect(self.clickedChessX)
+        vLayout.addWidget(b)
+
+        b = QPushButton('Open in VIM', self)
+        b.clicked.connect(self.clickedVim)
+        vLayout.addWidget(b)
 
         # text edit
-        #self.textEdit = QTextEdit(self)
-        #vLayout.addWidget(self.textEdit)
+        self.lastComment = QPlainTextEdit(self)
+        #self.lastComment = QTextEdit(self)
+        vLayout.addWidget(self.lastComment)
+
+        #
+        node = game
+        while node.variations:
+            node = node.variations[0]
+        self.lastComment.setPlainText(node.comment)
 
         # the buttons
         hLayout = QHBoxLayout()
@@ -193,8 +216,18 @@ class DoneDialog(QDialog):
         #
         self.result = None
 
-    def clickedPgn(self, text):
-        os.system('/Applications/chessx.app/Contents/MacOS/chessx ' + self.pgn_path)
+    def clickedChessX(self, text):
+        #os.system('/Applications/chessx.app/Contents/MacOS/chessx ' + self.pgn_path)
+        arg0 = '/Applications/chessx.app/Contents/MacOS/chessx'
+        arg1 = self.pgn_path
+        print(f'launching {arg0} {arg1}')
+        os.spawnv(os.P_NOWAIT, arg0, [arg0, arg1])
+
+    def clickedVim(self, text):
+        arg0 = '/Applications/MacVim.app/Contents/bin/gvim'
+        arg1 = self.pgn_path
+        print(f'launching {arg0} {arg1}')
+        os.spawnv(os.P_NOWAIT, arg0, [arg0, arg1])
 
     def clickedMinute(self, text):
         self.result = 'minute'
@@ -215,6 +248,22 @@ class DoneDialog(QDialog):
     def clickedYear(self, text):
         self.result = 'year'
         self.close()
+
+    def closeEvent(self, event):
+        if self.lastComment.document().isModified():
+            print(f'writing to {self.pgn_path}')
+            # reopen the PGN
+            game = chess.pgn.read_game(open(self.pgn_path))
+            # skip to last node
+            node = game
+            while node.variations:
+                node = node.variations[0]
+            # set the comment
+            node.comment = self.lastComment.toPlainText()
+            # write
+            print(game, file=open(self.pgn_path, 'w'), end='\n\n')
+        else:
+            print(f'no changes to {self.pgn_path}')
 
 class TestFrame(QFrame):
     def __init__(self, parent):
@@ -298,7 +347,7 @@ if __name__ == '__main__':
         history.add_pgn(pgn)
 
     # now filter the pgn_paths that are due
-    if '--force' in sys.argv[1:]:
+    if '--force' in sys.argv[1:] or (sys.argv[1:] and sys.argv[1].endswith('.pgn')):
         pass
     else:
         pgn_paths = [p for p in pgn_paths if history.is_due(p)]
