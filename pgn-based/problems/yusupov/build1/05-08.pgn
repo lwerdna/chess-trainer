@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-8: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/TVE0WFfT"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "03:51:53"]
 
-{ <0> }
-1. Qd8+ Kxd8 2. Bg5+ Kc7 3. Bd8# *
+{ <0> } 1. Qd8+ Kxd8 2. Bg5+ Kc7 3. Bd8# { Beautiful! The #DoubleCheck leads to a double threat of #RetisMate and #OperaMate } *
 

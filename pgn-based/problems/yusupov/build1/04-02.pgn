@@ -1,15 +1,23 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-2: Simple Pawn Endings"]
 [Site "https://lichess.org/study/vmzEymCY/X7CD2CQf"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/8/8/3kp3/8/8/8/3K4 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.13"]
 [UTCTime "01:19:32"]
+[Variant "Standard"]
 
-{ <0> }
-1. Ke1! { Black cannot keep opposition since e5 is occupied! } { [%csl Gd3,Ge3,Gf3] } 1... Kd4 { [%csl Gd3,Ge3,Gf3] } (1... Ke4 { [%csl Gd3,Ge3,Gf3] } 2. Ke2 { [%csl Gd3,Ge3,Gf3] }) (1... e4 { [%csl Gd3,Ge3,Gf3] } 2. Kd1 { [%csl Gd3,Ge3,Gf3] } 2... Kd4 { [%csl Gd3,Ge3,Gf3] } 3. Kd2 { [%csl Gd3,Ge3,Gf3] } 3... Kd5 { [%csl Gd3,Ge3,Gf3] } 4. Ke3 { [%csl Gd3,Ge3,Gf3] } 4... Ke5 { [%csl Gd3,Ge3,Gf3] } 5. Ke2 { again, playing that e4 square - black cannot use it to acquire opposition } { [%csl Gd3,Ge3,Gf3] }) 2. Kd2 { [%csl Gd3,Ge3,Gf3] } 2... Ke4 { [%csl Gd3,Ge3,Gf3] } (2... e4 { [%csl Gd3,Ge3,Gf3] } 3. Ke2 { Again, using the fact that the corresponding square e4 is occupied. } { [%csl Gd3,Ge3,Gf3] } 3... Kd5 { [%csl Gd3,Ge3,Gf3] } 4. Kd1 { [%csl Gd3,Ge3,Gf3] }) 3. Ke2 { [%csl Gd3,Ge3,Gf3] } *
+{  <0> } 1. Ke1 $1 {  [%csl Gd3,Ge3,Gf3]}  1... Kd4 {  [%csl Gd3,Ge3,Gf3]}  (
+1... Ke4 {  [%csl Gd3,Ge3,Gf3]}  2. Ke2 {  [%csl Gd3,Ge3,Gf3]}  )( 1... e4 { 
+[%csl Gd3,Ge3,Gf3]}  2. Kd1 {  [%csl Gd3,Ge3,Gf3]}  2... Kd4 {  [%csl
+Gd3,Ge3,Gf3]}  3. Kd2 {  [%csl Gd3,Ge3,Gf3]}  3... Kd5 {  [%csl Gd3,Ge3,Gf3]} 
+4. Kd1 e3 5. Ke2 Kd4 6. Ke1 Kd3 7. Kd1 )2. Kd2 {  [%csl Gd3,Ge3,Gf3]}  2... Ke4
+{  [%csl Gd3,Ge3,Gf3]}  ( 2... e4 {  [%csl Gd3,Ge3,Gf3]}  3. Ke2 {  [%csl
+Gd3,Ge3,Gf3]}  3... Kd5 {  [%csl Gd3,Ge3,Gf3]}  4. Kd1 {  [%csl Gd3,Ge3,Gf3]} 
+)3. Ke2 {  [%csl Gd3,Ge3,Gf3]}   *
 

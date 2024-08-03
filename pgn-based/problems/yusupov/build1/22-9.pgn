@@ -1,15 +1,24 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-9: The Wrong Bishop"]
 [Site "https://lichess.org/study/vmzEymCY/BENQ54XN"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/8/5k2/ppP5/8/8/8/3BK2b w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "22:26:21"]
+[Variant "Standard"]
 
-{ <0> }
-1. c6 (1. Ba4?? b4) 1... Bxc6 { Lead to poisoned square! } (1... Ke7 2. c7 { [%csl Rd7,Rd8] } 2... Kd7 { Lead to poisoned square! } 3. Ba4) 2. Ba4 bxa4 { Rook pawns only! But you still have to avoid being walled! } 3. Kd2 { [%csl Rb3] } (3. Kd1?? { [%csl Rb3] } 3... Be4 { [%csl Rd3,Rc2,Rb1,Rb3] } 4. Kc1 { [%csl Rd3,Rc2,Rb1,Rb3] } 4... a3 { [%csl Rb2,Rb1,Rc2,Rd3] }) 3... a3 { [%csl Rb2] } 4. Kc3 { [%csl Rb2] } 4... a2 { [%csl Rb1] } 5. Kb2 { [%csl Rb1] } *
+{  <0> } 1. c6 ( 1. Ba4 $4 b4 2. c6 Ke7 3. c7 Bb7 )1... Bxc6 {  Lead to poisoned
+square!}  ( 1... Ke7 2. c7 {  [%csl Rd7,Rd8]}  2... Kd7 {  Lead to poisoned
+square!}  3. Ba4 )2. Ba4 bxa4 {  Rook pawns only! But you still have to avoid
+being walled!}  3. Kd2 {  [%csl Rb3]}  ( 3. Kd1 $4 {  [%csl Rb3]}  3... Be4 { 
+[%csl Rd3,Rc2,Rb1,Rb3]}  4. Kc1 {  [%csl Rd3,Rc2,Rb1,Rb3]}  4... a3 {  [%csl
+Rb2,Rb1,Rc2,Rd3]}  )3... a3 {  [%csl Rb2]}  4. Kc2 {  [%csl Rb2]}  ( 4. Kc3 $4
+{  [%csl Rb2]}  4... Bd5 {  [%csl Rb2,Ra2,Rb3]}  )4... a2 ( 4... Bd5 {  [%csl
+Ra2,Rb2,Rb3]}  5. Kb1 {  [%csl Ra2,Rb2,Rb3]}  5... a2+ 6. Ka1 )5. Kb2 Bd5 6.
+Ka1  *
 

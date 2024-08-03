@@ -220,7 +220,7 @@ class VanillaPgnProblemState(ProblemState):
         if move in okmoves:
             #print(f'test_move({move}) returns True')
             return True
-        #print(f'{move} was wrong, expected one of {okmoves}')
+        print(f'{move} was wrong, expected one of {okmoves}')
         #print(f'test_move({move}) returns False')
         return False
 

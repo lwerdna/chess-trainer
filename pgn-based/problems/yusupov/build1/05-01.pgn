@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-1: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/wyF63x0S"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "03:35:08"]
 
-{ <0> }
-1. Qg8+ Kxg8 2. Be6+ Kh8 3. Rg8# *
+{ <0> } 1. Qg8+ Kxg8 2. Be6+ Kh8 3. Rg8# { Easy #DoubleCheck to #MayetsMate } *
 

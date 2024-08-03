@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-9: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/lmg4FOI3"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "03:55:36"]
 
-{ <0> }
-1. Qd8+ Kxd8 2. Bg5+ Ke8 3. Rd8+ Kf7 4. e6+ Kxe6 (4... Kg6 5. Nf4#) 5. Nf4+ Kf7 6. Ne5# *
+{ <0> } 1. Qd8+ Kxd8 2. Bg5+ Ke8 3. Rd8+ Kf7 4. e6+ Kxe6 ( 4... Kg6 5. Nf4# ) 5. Nf4+ Kf7 6. Ne5# { Cool, just a little calculation needed. } *
 

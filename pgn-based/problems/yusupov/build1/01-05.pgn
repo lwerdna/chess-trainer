@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-5: Mating Motifs"]
 [Site "https://lichess.org/study/vmzEymCY/4Ub1eqw1"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "13:45:32"]
 
-{ <0> }
-1. Bg6+ Kg8 2. Qh7# *
+{ <0> } 1. Bg6+ Kg8 2. Qh7# { Too easy } *
 

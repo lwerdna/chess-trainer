@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-2: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/K5MoDoDE"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "03:36:34"]
 
-{ <0> }
-1... Qxf1+ 2. Kxf1 Bd3+ 3. Kg1 Rf1# *
+{ <0> } 1... Qxf1+ 2. Kxf1 Bd3+ 3. Kg1 Rf1# { #DoubleCheck leading to double threat of #MayetsMate and #OperateMate } *
 

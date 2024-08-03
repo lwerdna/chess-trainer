@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import re
 
@@ -36,21 +38,54 @@ def store():
 
 def add_pgn(pgn_path):
     global database
-    key = re.match(r'^.*problems/(.*)$', pgn_path).group(1)
+    key = make_key(pgn_path)
     if not key in database:
         database[key] = {}
         database[key]['due'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()-1))
 
 def update_pgn(pgn_path, due_epoch):
-    key = re.match(r'^.*problems/(.*)$', pgn_path).group(1)
+    key = make_key(pgn_path)
     global database
     database[key]['due'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
 
 def is_due(pgn_path):
     global database
-    key = re.match(r'^.*problems/(.*)$', pgn_path).group(1)
-    entry = database[key]
+    entry = access(pgn_path)
     struct_time = time.strptime(entry['due'], '%Y-%m-%d %H:%M:%S')
     now = int(time.time())
     return now > int(time.mktime(struct_time))
 
+def make_key(pgn_path):
+    return re.match(r'^.*problems/(.*)$', pgn_path).group(1)
+
+def access(pgn_path):
+    global database
+    key = make_key(pgn_path)
+    return database[key]
+
+if __name__ == '__main__':
+    (RED, GREEN, YELLOW, NORMAL) = ('\x1B[31m', '\x1B[32m', '\x1B[33m', '\x1B[0m')
+
+    pgn_paths = []
+    for root, dirnames, filenames in os.walk('./problems'):
+        for filename in filenames:
+            if filename.endswith('.pgn'):
+                fpath = os.path.join(root, filename)
+                pgn_paths.append(fpath)
+
+    total_ok, total_due = 0, 0
+    now = int(time.time())
+    load()
+    for pgn_path in pgn_paths:
+        epoch = time.mktime(time.strptime(access(pgn_path)['due'], '%Y-%m-%d %H:%M:%S'))
+        if is_due(pgn_path):
+            delta = now - epoch
+            descr = f'{RED}due {duration_string(delta)} ago{NORMAL}'
+            total_due += 1
+        else:
+            delta = epoch - now
+            descr = f'{GREEN}{duration_string(delta)} until due{NORMAL}'
+            total_ok += 1
+        print(f'{pgn_path} {descr}')
+
+    print(f'total {total_ok} ok, {total_due} due')

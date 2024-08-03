@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-3: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/SpGuF7Ju"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "03:37:39"]
 
-{ <0> }
-1. Rxe6 Qxf5 (1... Nxe6 2. Bxe6+ Qxe6 3. Qxe6#) (1... Qxe6 2. Bxe6+ Nxe6 3. Qxe6#) 2. Rg6# *
+{ <0> } 1. Rxe6 Qxf5 ( 1... Nxe6 2. Bxe6+ Qxe6 3. Qxe6# ) ( 1... Qxe6 2. Bxe6+ Nxe6 3. Qxe6# ) 2. Rg6# { Have to see that the setup for #DoubleCheck is more valuable than losing your queen. } *
 

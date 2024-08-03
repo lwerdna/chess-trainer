@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-4: Mating Motifs 2"]
 [Site "https://lichess.org/study/vmzEymCY/mnvSXEpY"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,7 +14,8 @@
 [UTCDate "2024.06.15"]
 [UTCTime "16:28:54"]
 
-{ <0> }
-1. Rf4 (1. Qh6?? Rg8 2. Rf4 g5) 1... Rg8 2. Rh4 Rg7 3. fxg7+ { </0>
-Threat of #LollisMate } *
+{ <0> } 1. Rf4 ( 1. Qh6 $4 Rg8 2. Rf4 g5 ) 1... Rg8 2. Rh4 Rg7 3. fxg7+ { Careful threat of #LollisMate.
+
+Immediate 1.Qh6 is blocked by 1...Rg8.
+1.Rf4 Rg8 2.Qg6 is blocked by 2...g5 } *
 

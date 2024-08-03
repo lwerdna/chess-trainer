@@ -1,15 +1,16 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22: Diagram 22-4"]
 [Site "https://lichess.org/study/vmzEymCY/25Z5XGRN"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/8/8/8/p7/k7/b2K4/8 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "04:26:08"]
+[Variant "Standard"]
 
-{ [%csl Ga1] }
-1. Kc2 (1. Kc3 Bb1) 1... Bb3+ 2. Kb1 { [%csl Ga1] } *
+{ [%csl Ga1] } 1. Kc2 ( 1. Kc3 $4 Bb1 ) 1... Bb3+ 2. Kb1 { A little calculation to get to #FortressI from #WrongColorBishop chapter. } *
 

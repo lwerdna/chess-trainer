@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-12: The Wrong Bishop"]
 [Site "https://lichess.org/study/vmzEymCY/hZr7c9DM"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,7 @@
 [UTCDate "2024.06.14"]
 [UTCTime "04:50:01"]
 
-{ <0> }
-1. h4 Kd4 2. h5 Ke5 3. h6 { [%csl Gg7] } 3... Kf6 { [%csl Gg7] } 4. Bh5 { [%csl Gg7,Gg6,Gf7,Ge8] } *
+{ <0> } 1. h4 Kd4 2. h5 Ke5 3. h6 { [%csl Gg7] } 3... Kf6 { [%csl Gg7] } 4. Bh5 { [%csl Gg7,Gg6,Gf7,Ge8]
+
+Easy calculation to keep K out of the corner. } *
 

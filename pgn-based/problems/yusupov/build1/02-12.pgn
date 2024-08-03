@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-12: Mating Motifs 2"]
 [Site "https://lichess.org/study/vmzEymCY/HjA1oGbg"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,7 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "17:07:57"]
 
-{ <0> }
-1... Nxe4 2. Bxe7 Bxf2+ 3. Kf1 Ng3# { The threat of Legal's mate allows dynamic unpinning. } *
-
+{ <0> } 1... Nxe4 2. Bxe7 Bxf2+ 3. Kf1 Ng3# { The threat of #LegalsMate allows dynamic unpinning. } *
 

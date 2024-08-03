@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-11: Mating Motifs"]
 [Site "https://lichess.org/study/vmzEymCY/cKC7WyM6"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "13:47:39"]
 
-{ <0> }
-1. Nxd5 exd5 2. Rxe7 Bxe7 3. Qxh7# *
+{ <0> } 1. Nxd5 exd5 2. Rxe7 Bxe7 3. Qxh7# { Easy. The supported queen mate is impossible due to the rook. The rook can't be eliminated 'cause it's shielded by the pawn. But that pawn also guards d5. So, Nxd5! } *
 

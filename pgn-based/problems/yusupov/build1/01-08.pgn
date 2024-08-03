@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-8: Mating Motifs"]
 [Site "https://lichess.org/study/vmzEymCY/4OJzih0f"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,7 @@
 [UTCDate "2024.06.15"]
 [UTCTime "13:46:36"]
 
-{ <0> }
-1. Qxh6+ Bxh6 (1... Kg8 2. Qxg7#) 2. Rxh6# { Sacrifice for #OpenLinesMate } *
+{ <0> } 1. Qxh6+ Bxh6 ( 1... Kg8 2. Qxg7# ) 2. Rxh6# { Sacrifice for #OpenLinesMate
+
+Rxh6+ doesn't work! Kg8 and safety is found. It must be the queen so Kg8 is met with Qxg7#. } *
 

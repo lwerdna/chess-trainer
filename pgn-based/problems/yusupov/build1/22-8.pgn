@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-8: The Wrong Bishop"]
 [Site "https://lichess.org/study/vmzEymCY/Chxy7OhL"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -12,6 +16,5 @@
 
 { <0>
 
-White knight is dominated. }
-1. Na6 (1. a3?? a5 2. Kc2) 1... Bxa6 2. a3 *
+White knight is dominated. } 1. Na6 ( 1. a3 $4 a5 2. Kc2 ) 1... Bxa6 2. a3 { Easy to see white is down, and by converting the b pawn to a rook pawn, he can achieve #FortressI from the #WrongColorBishop chapter. } *
 

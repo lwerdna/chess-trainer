@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-11: Mating Motifs 2"]
 [Site "https://lichess.org/study/vmzEymCY/5kBbkFX6"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "17:01:40"]
 
-{ <0> }
-1. Nf3 Qf8 (1... Qxf6 2. Ng5 Qg7 3. Nxf7+ Qxf7 4. Rxf7) (1... g5 2. Nxg5 Rxg5 3. Qxg5) 2. Ng5 Qxh6 3. Nxf7# *
+{ <0> } 1. Nf3 Qf8 ( 1... Qxf6 2. Ng5 Qg7 3. Nxf7+ Qxf7 4. Rxf7 ) ( 1... g5 2. Nxg5 Rxg5 3. Qxg5 ) 2. Ng5 Qxh6 3. Nxf7# { Not easy, but all the pieces and attacks near the K make everything likely. } *
 

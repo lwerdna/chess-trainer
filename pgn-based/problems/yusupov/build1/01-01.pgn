@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 1-1: Mating Motifs"]
 [Site "https://lichess.org/study/vmzEymCY/YIdHRMmv"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "13:43:19"]
 
-{ <0> }
-1. Ne7+ Kh8 2. Qxh7+ Kxh7 3. Rh1# { #AnastasiaMate } *
+{ <0> } 1. Ne7+ Kh8 2. Qxh7+ Kxh7 3. Rh1# { Easy #AnastasiaMate } *
 

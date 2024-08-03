@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22: Example 1"]
 [Site "https://lichess.org/study/vmzEymCY/HXyE9Siy"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,5 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "04:20:28"]
 
-1. Ba2 { To prevent black from reaching the corner! } (1. Bh7?? Kf7 2. Kf2 Kf6 3. Be4 (3. Kg3 Kg5) 3... Kf7 4. Bh7 Kf6 { repetition }) 1... Ke7 2. h7 *
+1. Ba2 { To prevent black from reaching the corner! } ( 1. Bh7 $4 Kf7 2. Kf2 Kf6 3. Be4 ( 3. Kg3 Kg5 ) 3... Kf7 4. Bh7 Kf6 { repetition } ) 1... Ke7 2. h7 { Keep him from the corner, forming a #FortressI } *
 

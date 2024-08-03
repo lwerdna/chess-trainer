@@ -1,15 +1,17 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 22-5: The Wrong Bishop"]
 [Site "https://lichess.org/study/vmzEymCY/1w0Tegzw"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "7k/5Ppp/3b4/4N3/8/8/8/1K6 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "22:24:05"]
+[Variant "Standard"]
 
-{ <0> }
-1. f8=Q+ Bxf8 2. Nf7+ Kg8 3. Nh6+ gxh6 (3... Kh8 { Leads to perpetual! }) 4. Kc1 { To the corner! } *
+{ <0> } 1. f8=Q+ Bxf8 2. Nf7+ Kg8 3. Nh6+ gxh6 ( 3... Kh8 { Leads to
+perpetual! } 4. Nf7+ Kg8 5. Nh6+ Kh8 6. Nf7+ ) 4. Kc1 { Uses the #FortressI from the #WrongColorBishop chapter. } *
 

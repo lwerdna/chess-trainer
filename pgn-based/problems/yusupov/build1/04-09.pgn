@@ -1,17 +1,19 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-9: Simple Pawn Endings"]
 [Site "https://lichess.org/study/vmzEymCY/KIJ5Z4Ud"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/8/3p4/2k5/4P3/8/8/1K6 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.13"]
 [UTCTime "02:46:39"]
+[Variant "Standard"]
 
-{ <0>
-
-White can't stop black for getting to the key squares as they lay. So he must move the key squares instead. } { [%csl Gc4,Gd4,Ge4] }
-1. e5 { [%csl Gc4,Gd4,Ge4] } 1... dxe5 { [%csl Gd3,Ge3,Gf3] } (1... d5 { [%csl Gc3,Gd3,Ge3] } 2. e6 { [%csl Gc3,Gd3,Ge3] } 2... Kd6 { [%csl Gc3,Gd3,Ge3] } 3. e7 { [%csl Gc3,Gd3,Ge3] } 3... Kxe7 { [%csl Gc3,Gd3,Ge3] } 4. Kc2 Kd6 5. Kd3 { Knowing black can't access d5. }) 2. Kc1 { [%csl Gd3,Ge3,Gf3] } *
+{ <0>  White can't stop black for getting to the key squares as they lay. So he
+must move the key squares instead. } {  [%csl Gc4,Gd4,Ge4] } 1. e5 {  [%csl
+Gc4,Gd4,Ge4]}  1... dxe5 {  [%csl Gd3,Ge3,Gf3]}  ( 1... d5 {  [%csl
+Gc3,Gd3,Ge3]}  2. Kc2 Kc4 3. e6 )2. Kc1 {  [%csl Gd3,Ge3,Gf3]}   *
 

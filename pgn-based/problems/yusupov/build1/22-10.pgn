@@ -12,9 +12,8 @@
 [UTCTime "22:26:48"]
 [Variant "Standard"]
 
-{ <0> } 1. b3 {  vacating b2 for future king path to corner and eliminating the
-rook pawn's transformation}  ( 1. Kb5 $4 a4 {  now any of white's pawns moves
+{ <0> } 1. b3 { vacating b2 for future king path to corner and eliminating the
+rook pawn's transformation } ( 1. Kb5 $4 a4 { now any of white's pawns moves
 let the rook pawn transform into a b pawn, and the b pawn will block white's
-path to the corner}  2. Kb4 Kd4 3. Ka3 Bb3 )1... Bxb3 2. Kb5 a4 3. Kb4 Kd4 4.
-Ka3 Kd3 5. Kb2 Kd4 6. Ka1  *
+path to the corner } 2. Kb4 Kd4 3. Ka3 Bb3 ) 1... Bxb3 2. Kb5 a4 3. Kb4 Kd4 4. Ka3 Kd3 5. Kb2 Kd4 6. Ka1 { If pawn is left on b2 and black gets to play a4, then ANY pawn move lets black transform his rook pawn into a b/g pawn and the #FortressI is lost. } *
 

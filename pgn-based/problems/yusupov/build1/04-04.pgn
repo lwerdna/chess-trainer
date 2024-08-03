@@ -1,15 +1,19 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 4-4: Simple Pawn Endings"]
 [Site "https://lichess.org/study/vmzEymCY/haGdRHa8"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "8/7p/4K2P/8/5k2/8/8/8 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.13"]
 [UTCTime "01:32:33"]
+[Variant "Standard"]
 
-{ <0> } { [%csl Gg8,Gg7] }
-1. Kf6 { White must #Shoulder the king so he can take h7 and occupy g8 without his opponent blocking g8. Black wants to #KingTail white so after g7 falls, he can play Kf7 and control the key squares. } { [%csl Gg7,Gg8] } (1. Kf7 { [%csl Gg7,Gg8] } 1... Kf5 { WRONG! Now the king can follow too close with opposition, and white cannot take h7 and get to g8. } { [%csl Gg7,Gg8] } 2. Kg7 { [%csl Gg7,Gg8] } 2... Ke6 { [%csl Gg7,Gg8] } 3. Kxh7 { [%csl Gg7,Gg8] } 3... Kf7 { [%csl Gg7,Gg8] }) 1... Ke4 { [%csl Gg7,Gg8] } 2. Kg7 { [%csl Gg7,Gg8] } 2... Ke5 { [%csl Gg7,Gg8] } 3. Kxh7 { [%csl Gg7,Gg8] } 3... Kf6 { [%csl Gg7,Gg8] } 4. Kg8 { </0> } { [%csl Gg8,Gg7] } *
+{ <0>  [%csl Gg8,Gg7] } 1. Kf6 { [%csl Gg7,Gg8] } ( 1. Kf7 $4 { [%csl
+Gg7,Gg8] } 1... Kf5 { [%csl Gg7,Gg8] } 2. Kg7 { [%csl Gg7,Gg8] } 2... Ke6 { [%csl Gg7,Gg8] } 3. Kxh7 { [%csl Gg7,Gg8] } 3... Kf7 { [%csl Gg7,Gg8] } ) 1... Ke4 { [%csl Gg7,Gg8] } 2. Kg7 { [%csl Gg7,Gg8] } 2... Ke5 { [%csl Gg7,Gg8] } 3. Kxh7 { [%csl Gg7,Gg8] } 3... Kf6 { [%csl Gg7,Gg8] } 4. Kg8 { Eyes should be on controlling g7,g8 and preventing the stalking K from getting too close.
+
+[%csl Gg8,Gg7] } *
 

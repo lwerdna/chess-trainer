@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 2-3: Mating Motifs 2"]
 [Site "https://lichess.org/study/vmzEymCY/RWlpuBWL"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.15"]
 [UTCTime "16:28:02"]
 
-{ <0> }
-1... Rh8+ 2. Kg1 Rh1+ 3. Kxh1 Rh8+ 4. Kg1 Rh1+ 5. Kxh1 Qh8+ 6. Kg1 Qh2# { #DamianosMate } *
+{ <0> } 1... Rh8+ 2. Kg1 Rh1+ 3. Kxh1 Rh8+ 4. Kg1 Rh1+ 5. Kxh1 Qh8+ 6. Kg1 Qh2# { The prototypical #DamianosMate } *
 

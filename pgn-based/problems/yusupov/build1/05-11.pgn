@@ -1,5 +1,9 @@
 [Event "Ch 1, 2, 4, 5, 22 of Yusupov, Build Up Your Chess: Fundamentals: 5-11: Double Check"]
 [Site "https://lichess.org/study/vmzEymCY/04EBQ1Ax"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,6 +14,5 @@
 [UTCDate "2024.06.14"]
 [UTCTime "03:59:04"]
 
-{ <0> }
-1. Qxg7+ Kxg7 2. Nf5+ *
+{ <0> } 1. Qxg7+ Kxg7 2. Nf5+ { Easy #Attraction to #DoubleCheck } *
 
