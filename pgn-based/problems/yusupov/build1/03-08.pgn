@@ -1,14 +1,18 @@
 [Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 3-8: Basic opening principles"]
 [Site "https://lichess.org/study/xZeQlybz/M83HjDID"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "r2qk2r/2nbpp1p/p2p1bp1/2pP4/P1p5/2N5/1PP1BPPP/R1BQ1RK1 w q - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.15"]
 [UTCTime "18:21:57"]
+[Variant "Standard"]
 
- *
+1. Bh6 { preventing castling, not what engine prefers } 1... Rb8 2. Bxc4 Rxb2 3. Ne4 { hitting the "tail" of the discovered attack } 3... Be5 { renewing
+the discovered attack } 4. Re1 { defending tactically as Nxd6# if black plays
+Bxa1 } 4... Rb4 { the only target for the discovery } 5. Qd3 { defending } 5... Bf5 { threatening to remove the tactical defense, followed by Bxa1 } 6. c3 { Defending the queenside attack with tactics, holding the advantage. } *
 

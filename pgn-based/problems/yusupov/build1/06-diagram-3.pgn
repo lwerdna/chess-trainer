@@ -1,5 +1,9 @@
 [Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: Diagram 6-3"]
 [Site "https://lichess.org/study/xZeQlybz/dKE4KO00"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,5 +14,5 @@
 [UTCDate "2024.06.18"]
 [UTCTime "21:10:43"]
 
-1. g3 { Threatens Qxh4# and controls f4 for future mate patterns. } 1... hxg3 (1... a6 2. Qxh4# { #DovetailMate }) 2. hxg3 Kh6 (2... Kh5 3. Qh7+ Kg4 (3... Qh6 4. Qf5+ Qg5 5. Qh3+ { [%csl Ge4,Gf5,Gg6,Gh7] }) 4. Be2+ Kg5 (4... Kxg3 5. Qh2# { #DovetailMate } { [%csl Gf3,Gg4,Gh5] }) 5. Qh5# { #SwallowstailMate } { [%csl Gf4] }) (2... Qh6+ 3. Kg2 c5 4. Qf5#) (2... a6 3. Qh4# { #DovetailMate } { [%csl Ge4,Gf5,Gg6,Gh7] }) 3. Qh7+ Kg5 4. Qh4# { #SwallowstailMate } { [%csl Ge4,Gf5,Gg6,Gh7] } *
+1. g3 { Threatens Qxh4# and controls f4 for future mate patterns. } 1... hxg3 ( 1... a6 2. Qxh4# { #DovetailMate } ) 2. hxg3 Kh6 ( 2... Kh5 3. Qh7+ Kg4 ( 3... Qh6 4. Qf5+ Qg5 5. Qh3+ { [%csl Ge4,Gf5,Gg6,Gh7] } ) 4. Be2+ Kg5 ( 4... Kxg3 5. Qh2# { #DovetailMate [%csl Gf3,Gg4,Gh5] } ) 5. Qh5# { #SwallowstailMate [%csl Gf4] } ) ( 2... Qh6+ 3. Kg2 c5 4. Qf5# ) ( 2... a6 3. Qh4# { #DovetailMate [%csl Ge4,Gf5,Gg6,Gh7] } ) 3. Qh7+ Kg5 4. Qh4# { #MateThreat and #DovetailMate and #SwallowstailMate [%csl Ge4,Gf5,Gg6,Gh7] } *
 

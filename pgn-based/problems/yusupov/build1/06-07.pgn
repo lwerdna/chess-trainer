@@ -1,0 +1,17 @@
+[Event "Yusupov Chess 2: Chapter 6 Exercise 7"]
+[Site "https://lichess.org/study/jNH7TA11/HXBAFNyR"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/okei"]
+[FEN "7r/P1pq4/2p5/1k5p/5p2/3P1P2/Q5PK/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.06.08"]
+[UTCTime "21:26:09"]
+[Variant "Standard"]
+
+1. Qb2+ Ka6 {  [%cal Gb2h8,Gh8h5]}  2. Qb8 ( 2. Qxh8 $4 Kxa7 3. Qxh5 Qxd3 $10
+)2... Rxb8 ( 2... Qxd3 3. a8=Q# )3. axb8=N+ Kb5 4. Nxd7  *
+

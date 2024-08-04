@@ -12,7 +12,7 @@
 [UTCTime "21:52:14"]
 [Variant "Standard"]
 
-1... Ne5 2. Rxf6 ( 2. dxe5 Rd7+ 3. Ke1 Qxc3+ 4. Kf2 Rd2+ 5. Kg3 Qxe5+ 6. Qf4
-Qxf4+ 7. Kxf4 hxg6 )2... Nc4+ 3. Kd3 Nxe3+ 4. Kxe3 Qxc3+ 5. Ke4 Bb7+ 6. Ke5
-Qa5+ 7. Kf4 Qd2+ 8. Kg3 Rg7+ 9. Qxg7+ Kxg7  *
+1... Ne5 2. Rxf6 ( 2. dxe5 Rd7+ 3. Ke1 Qxc3+ 4. Kf2 Rd2+ 5. Kg3 Qxe5+ 6. Qf4 Qxf4+ 7. Kxf4 hxg6 ) 2... Nc4+ 3. Kd3 ( 3. Ke2 Qxc3 4. Rxf7 ( 4. Kf2 Qd2+ 5. Kg3 Rg7+ 6. Qxg7+ ( 6. Kh4 Qxh2# ) 6... Kxg7 ) 4... Qd2+ 5. Kf1 Nxe3+ 6. Kg1 Qg2# ) 3... Nxe3+ 4. Kxe3 Qxc3+ 5. Ke4 Bb7+ 6. Ke5 Qa5+ 7. Kf4 Qd2+ 8. Kg3 Rg7+ 9. Qxg7+ Kxg7 { The king is very exposed, so Ne5 isn't the easiest to find.
+
+But knowing all the checks will lead to an advantage after dxe5 or Rxf6 is very very difficult. } *
 

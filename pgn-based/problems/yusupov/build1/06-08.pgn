@@ -1,0 +1,17 @@
+[Event "Yusupov Chess 2: Chapter 6 Exercise 8"]
+[Site "https://lichess.org/study/jNH7TA11/Xt6TPF0i"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/okei"]
+[FEN "8/8/8/8/7p/1b3N1P/8/Qqk3K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.06.08"]
+[UTCTime "21:26:09"]
+[Variant "Standard"]
+
+1. Nd2 Qxa1 2. Nxb3+ Kb1 3. Nxa1 Kxa1 4. Kf2 Kb2 5. Kf3 Kc3 6. Kg4 Kd4 7. Kxh4
+Ke5 8. Kg5  *
+

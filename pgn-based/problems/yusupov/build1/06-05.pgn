@@ -1,5 +1,9 @@
 [Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 6-5: The value of the pieces"]
 [Site "https://lichess.org/study/xZeQlybz/6WGI709s"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,5 +14,5 @@
 [UTCDate "2024.06.18"]
 [UTCTime "21:53:21"]
 
-1. Qe2 h3 (1... Kg3 2. Qg2# { Kind of a #SwallowstailMate }) 2. Kh2 { #Zugzwang } 2... Kh4 3. Qxf3 *
+1. Qe2 h3 ( 1... Kg3 2. Qg2# { Kind of a #SwallowstailMate } ) 2. Kh2 { #Zugzwang } 2... Kh4 3. Qxf3 { Forced unbonding via Zugzwang. } *
 

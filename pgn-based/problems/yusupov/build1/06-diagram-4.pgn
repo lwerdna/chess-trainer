@@ -1,5 +1,9 @@
 [Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: Diagram 6-4"]
 [Site "https://lichess.org/study/xZeQlybz/wHimX5Lj"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -10,5 +14,8 @@
 [UTCDate "2024.06.18"]
 [UTCTime "21:39:24"]
 
-1. Nxg7 Kxg7 2. Nd4 { The f3 knight gets to f5 with #TempoDash } 2... Qc8 3. Nf5+ Kg8 4. Qg3+ Ng4 5. Qxg4+ Bg5 (5... Rg6 6. Nxe7+) 6. Ne7+ *
+1. Nxg7 Kxg7 2. Nd4 { The f3 knight gets to f5 with #TempoDash } 2... Qc8 3. Nf5+ Kg8 4. Qg3+ Ng4 5. Qxg4+ Bg5 ( 5... Rg6 6. Nxe7+ ) 6. Ne7+ { Very difficult but a cool concept.
+
+Nd4 obviously threatens the Q, but then what?
+Instead, Nxg7 first, and then Nd4  #ThreatTeleport to f5, replacing the other. } *
 

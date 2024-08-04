@@ -1,0 +1,17 @@
+[Event "Yusupov Chess 2: Chapter 6 Exercise 10"]
+[Site "https://lichess.org/study/jNH7TA11/JnzsZ6RW"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/okei"]
+[FEN "6k1/2p3pp/p7/1p1q4/3N4/1P2K3/PB1N2PP/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2018.06.08"]
+[UTCTime "21:26:09"]
+[Variant "Standard"]
+
+{  [%csl Ge5][%cal Gd5e5] } 1... Qe5+ 2. Kd3 c5 3. N2f3 Qf6 {  Qd4, Qd5 work
+just as well. Beautiful #XrayToPin!}   *
+

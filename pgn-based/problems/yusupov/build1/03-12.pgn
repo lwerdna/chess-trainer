@@ -1,14 +1,19 @@
 [Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 3-12: Basic opening principles"]
 [Site "https://lichess.org/study/xZeQlybz/O8KuDUcH"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "rnb2k1r/pppp1ppp/5n2/8/5N1q/2P2B2/PPP1QP1P/R1B1K2R w q - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.15"]
 [UTCTime "18:23:23"]
+[Variant "Standard"]
 
- *
+1. Qc4 Ng4 2. Bxg4 Qxg4 3. Qxc7 {  Tough. Queen looks trapped but it's a dead
+end. Qc4 hits the soft c7 square and threatens the discovery. We know black's
+undeveloped, it's just hard to synthesize an immediate threat, but Qc4 does it!
+Beautiful #XrayToDiscovery!}   *
 

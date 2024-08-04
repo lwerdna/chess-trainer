@@ -2,7 +2,7 @@
 [Site "https://lichess.org/study/xZeQlybz/g8Nqrfm9"]
 [Date "????.??.??"]
 [Round "?"]
-[White "?"]
+[White "?'"]
 [Black "?"]
 [Result "*"]
 [Annotator "https://lichess.org/@/chandrewl"]
@@ -12,5 +12,6 @@
 [UTCTime "18:22:51"]
 [Variant "Standard"]
 
-1. cxd5 Nb8 ( 1... cxd5 2. Qc6 ) ( 1... exd5 2. Qxc6 ) 2. dxe6 Bxe6 { The piece blob has Type 1 undefended pieces on a8 and d6. } *
+1. cxd5 Nb8 ( 1... cxd5 2. Qc6 )( 1... exd5 2. Qxc6 )( 1... Nxd5 2. Qxc6 )2.
+dxe6 Bxe6 {  The piece blob has Type 1 undefended pieces on a8 and d6.}   *
 

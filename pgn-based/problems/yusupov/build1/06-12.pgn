@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/p2p2k1/3P2pp/2PN1p2/r4P1P/2K5/6P1/8 w - - 0 1"]
+[SetUp "1"]
+
+1. c6 Ra6 2. Nb4 ( 2. c7 Rc6+ 3. Kb3 Rxd6 4. c8=Q Rxd5 )2... Rb6 ( 2... dxc6 3.
+Nxa6 )3. c7 Rxd6 4. c8=Q  *
+
