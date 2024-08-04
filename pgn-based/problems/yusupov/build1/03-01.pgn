@@ -1,0 +1,16 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 3-1: Basic opening principles"]
+[Site "https://lichess.org/study/xZeQlybz/C9oCKOdF"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "rnbqk1nr/ppp2ppp/3b4/8/8/2N5/PPPPP1PP/R1BQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "18:19:21"]
+[Variant "Standard"]
+
+1... Qh4+ 2. g3 Bxg3+ 3. hxg3 Qxg3# { easy } *
+

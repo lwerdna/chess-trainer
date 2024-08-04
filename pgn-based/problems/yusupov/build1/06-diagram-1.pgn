@@ -1,0 +1,18 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: Diagram 6-1"]
+[Site "https://lichess.org/study/xZeQlybz/GHFqayVa"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "6b1/5p2/2B2K2/7k/8/6P1/8/8 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.18"]
+[UTCTime "03:35:44"]
+
+{ Equal material, but white wins, because black's pieces are very badly placed. [%csl Gh4,Gg5,Gg6,Gg7] } 1. Bf3+ { [%csl Gh4,Gg5,Gg6,Gg7,Gg4] } 1... Kh6 { [%csl Gg7,Gg6,Gg5,Gg4,Gh4] } 2. g4 { [%csl Gg7,Gg6,Gg5,Gh5] } 2... Kh7 { [%csl Gg7,Gg6,Gg5,Gh5] } ( 2... Bh7 { [%csl Gg7,Gg6,Gg5,Gh5] } 3. g5# { [%csl Gg7,Gg6,Gh5,Gh6] } ) 3. g5 { [%csl Gh6,Gg6,Gg7,Gh5] } 3... Kh8 { [%csl Gh6,Gg6,Gg7] } 4. Be4 { [%csl Gh6,Gg6,Gg7,Gh7] } 4... Bh7 { [%csl Gh6,Gg6,Gg7] } 5. Bxh7 Kxh7 { And a standard KP vs. K endgame with a knight pawn follows. } 6. Kxf7 Kh8 7. Kg6 Kg8 8. Kh6 Kh8 9. g6 Kg8 10. g7 { Cool, easy-medium calculation. } *
+

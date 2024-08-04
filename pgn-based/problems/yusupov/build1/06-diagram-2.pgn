@@ -1,0 +1,17 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: Diagram 6-2"]
+[Site "https://lichess.org/study/xZeQlybz/NalXwO9Q"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "n1r1n1k1/1pr1q1pp/p3p3/P1NpNp2/3P1P2/1QR1P3/1P3P1P/2R2K2 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.18"]
+[UTCTime "03:43:21"]
+[Variant "Standard"]
+
+{ #RookInvasion } 1. Nxb7 Rxb7 ( 1... Rxc3 2. Rxc3 Rxc3 3. bxc3 Nac7 4. Qb6 h6 5. Nc5 ) 2. Qxb7 Qxb7 3. Rxc8 Kf8 4. Rb8 $1 { Enabled by the ideally outposted
+knight. } 4... Qe7 ( 4... Qa7 5. Rxe8+ Kxe8 6. Rc8+ Ke7 7. Nc6+ ) 5. Rxa8 g6 6. Rcc8 Kg7 7. Rxe8 { Hard. All the activity on the queenside though. Sac the queen for rook activity. Crazy how much damage it leads to.... } *
+

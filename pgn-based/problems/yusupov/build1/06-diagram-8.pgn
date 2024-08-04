@@ -1,0 +1,18 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: Diagram 6-8"]
+[Site "https://lichess.org/study/xZeQlybz/x7gHZ7H6"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "4rrk1/ppp2pq1/7p/2P3p1/8/P4PPB/2QB2KP/4R3 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.18"]
+[UTCTime "21:47:35"]
+[Variant "Standard"]
+
+1. Bc3 f6 ( 1... Rxe1 2. Bxg7 Kxg7 3. Qc3+ )( 1... Qg6 2. Bf5 Qc6 3. Bh7# )2.
+Be6+ Kh8 3. Qf5 {  defending e6 and attacking f6}  3... c6 4. Rd1 Re7 5. Rd6 { 
+With plans to pile on the f6 pawn.}  5... h5 6. Bc4  *
+

@@ -1,0 +1,16 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 3-7: Basic opening principles"]
+[Site "https://lichess.org/study/xZeQlybz/T0glkzUl"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r5k1/1b2qpbp/3p4/1B2p3/1N6/2P2P2/1P4PP/3QK2R b KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "18:21:27"]
+[Variant "Standard"]
+
+1... d5 2. Be2 { One Type1 undefended piece in the piece blob, the B at b5. Thus d5 gives the queen the ability to fork if white castles. You must calculate why d5 is allowed. } ( 2. Nxd5 Bxd5 3. Qxd5 Ra1+ ) ( 2. O-O Qc5+ ) *
+

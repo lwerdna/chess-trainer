@@ -1,0 +1,18 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 6-3: The value of the pieces"]
+[Site "https://lichess.org/study/xZeQlybz/kuhajagN"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "7k/p1p2r1p/bpn1ppRQ/8/3P4/q1P1PP2/P1PK3P/R7 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.18"]
+[UTCTime "21:52:14"]
+[Variant "Standard"]
+
+1... Ne5 2. Rxf6 ( 2. dxe5 Rd7+ 3. Ke1 Qxc3+ 4. Kf2 Rd2+ 5. Kg3 Qxe5+ 6. Qf4
+Qxf4+ 7. Kxf4 hxg6 )2... Nc4+ 3. Kd3 Nxe3+ 4. Kxe3 Qxc3+ 5. Ke4 Bb7+ 6. Ke5
+Qa5+ 7. Kf4 Qd2+ 8. Kg3 Rg7+ 9. Qxg7+ Kxg7  *
+

@@ -1,0 +1,17 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: 3-4: Basic opening principles"]
+[Site "https://lichess.org/study/xZeQlybz/HBbz9LWc"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "r3k1nr/pppq1ppp/1b2b3/n7/3P4/B1NB1N2/P4PPP/R2Q1RK1 w Qkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.15"]
+[UTCTime "18:20:39"]
+[Variant "Standard"]
+
+1. d5 Bg4 ( 1... Bxd5 2. Bb5 c6 3. Nxd5 cxb5 4. Re1+ Kd8 5. Ne5 )2. Qe1+ { 
+break the pin}  2... Ne7 3. Ne5 Qd8 4. Nxg4  *
+

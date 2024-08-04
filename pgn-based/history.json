@@ -5,13 +5,13 @@
     "yusupov/build1/01-03.pgn": {
         "due": "2025-08-02 18:18:59"
     },
-    "yusupov/build1/22-9.pgn": {
-        "due": "2024-08-03 17:56:26"
+    "yusupov/build1/22-09.pgn": {
+        "due": "2024-08-10 23:35:40"
     },
     "yusupov/build1/01-01.pgn": {
         "due": "2025-08-02 17:18:33"
     },
-    "yusupov/build1/22-8.pgn": {
+    "yusupov/build1/22-08.pgn": {
         "due": "2024-08-30 22:31:39"
     },
     "yusupov/build1/01-04.pgn": {
@@ -81,7 +81,7 @@
         "due": "2024-08-09 00:00:15"
     },
     "yusupov/build1/02-05.pgn": {
-        "due": "2024-08-03 15:03:08"
+        "due": "2024-08-31 23:54:06"
     },
     "yusupov/build1/02-11.pgn": {
         "due": "2024-08-09 15:30:08"
@@ -114,9 +114,9 @@
         "due": "2024-08-08 21:47:25"
     },
     "yusupov/build1/05-08.pgn": {
-        "due": "2024-08-03 16:54:44"
+        "due": "2024-08-31 23:54:34"
     },
-    "yusupov/build1/22-3.pgn": {
+    "yusupov/build1/22-03.pgn": {
         "due": "2024-08-09 11:17:10"
     },
     "yusupov/build1/22-example-1.pgn": {
@@ -131,7 +131,7 @@
     "yusupov/build1/04-06.pgn": {
         "due": "2024-08-09 22:28:11"
     },
-    "yusupov/build1/22-2.pgn": {
+    "yusupov/build1/22-02.pgn": {
         "due": "2024-08-03 18:09:52"
     },
     "yusupov/build1/01-08.pgn": {
@@ -155,10 +155,10 @@
     "yusupov/build1/01-09.pgn": {
         "due": "2024-08-30 17:25:15"
     },
-    "yusupov/build1/22-1.pgn": {
+    "yusupov/build1/22-01.pgn": {
         "due": "2024-08-08 23:58:03"
     },
-    "yusupov/build1/22-5.pgn": {
+    "yusupov/build1/22-05.pgn": {
         "due": "2024-08-09 16:43:21"
     },
     "yusupov/build1/22-11.pgn": {
@@ -168,12 +168,12 @@
         "due": "2024-08-30 22:36:29"
     },
     "yusupov/build1/22-10.pgn": {
-        "due": "2024-08-03 18:00:15"
+        "due": "2024-08-10 23:50:32"
     },
-    "yusupov/build1/22-4.pgn": {
+    "yusupov/build1/22-04.pgn": {
         "due": "2024-08-30 17:31:12"
     },
-    "yusupov/build1/22-6.pgn": {
+    "yusupov/build1/22-06.pgn": {
         "due": "2024-08-09 15:18:49"
     },
     "yusupov/build1/22-12.pgn": {
@@ -183,15 +183,90 @@
         "due": "2024-08-03 18:18:48"
     },
     "yusupov/build1/04-03.pgn": {
-        "due": "2024-08-03 18:21:06"
+        "due": "2024-08-05 00:00:34"
     },
-    "yusupov/build1/22-7.pgn": {
-        "due": "2024-08-03 17:24:19"
+    "yusupov/build1/22-07.pgn": {
+        "due": "2024-08-10 23:53:18"
     },
     "test.pgn": {
         "due": "2024-08-01 21:54:38"
     },
     "misc0000.pgn": {
         "due": "2024-08-30 15:47:27"
+    },
+    "openings/fried-liver.pgn": {
+        "due": "2024-08-31 12:03:33"
+    },
+    "openings/ponziani.pgn": {
+        "due": "2024-08-04 12:05:50"
+    },
+    "yusupov/build1/03-07.pgn": {
+        "due": "2024-08-05 00:10:31"
+    },
+    "yusupov/build1/03-06.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-12.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-04.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-10.pgn": {
+        "due": "2024-08-03 23:35:31"
+    },
+    "yusupov/build1/03-11.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-05.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-01.pgn": {
+        "due": "2025-08-04 00:00:52"
+    },
+    "yusupov/build1/03-02.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-03.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-diagram-4.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-diagram-3.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-diagram-2.pgn": {
+        "due": "2024-08-10 23:59:17"
+    },
+    "yusupov/build1/06-diagram-1.pgn": {
+        "due": "2024-08-10 23:46:41"
+    },
+    "yusupov/build1/06-diagram-8.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-02.pgn": {
+        "due": "2024-08-10 23:48:54"
+    },
+    "yusupov/build1/06-03.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-01.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-04.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-08.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/03-09.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-05.pgn": {
+        "due": "2024-08-03 23:30:36"
+    },
+    "yusupov/build1/06-06.pgn": {
+        "due": "2024-08-10 23:47:34"
     }
 }

@@ -1,0 +1,14 @@
+[Event "Ch 3 of Yusupov, Build Up Your Chess: Fundamentals: Diagram 6-4"]
+[Site "https://lichess.org/study/xZeQlybz/wHimX5Lj"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[Annotator "https://lichess.org/@/chandrewl"]
+[FEN "4r1k1/4bpp1/1r2qn1p/p4N2/1pp1PQ2/1P3N1P/P4PP1/R3R1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2024.06.18"]
+[UTCTime "21:39:24"]
+
+1. Nxg7 Kxg7 2. Nd4 { The f3 knight gets to f5 with #TempoDash } 2... Qc8 3. Nf5+ Kg8 4. Qg3+ Ng4 5. Qxg4+ Bg5 (5... Rg6 6. Nxe7+) 6. Ne7+ *
+
