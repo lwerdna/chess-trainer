@@ -12,5 +12,13 @@
 [UTCTime "18:20:39"]
 [Variant "Standard"]
 
-1. d5 Bg4 ( 1... Bxd5 2. Bb5 c6 3. Nxd5 cxb5 4. Re1+ Kd8 5. Ne5 ) 2. Qe1+ { break the pin } 2... Ne7 3. Ne5 Qd8 4. Nxg4 { Pretty tough, maybe revise. } *
+1. d5 Bg4 ( 1... Bf5 2. Ne5 { #RemoveTheDefender } 2... Qd8 3. Bxf5 ) ( 1... Bxd5 2. Nxd5 Qxd5 3. Re1+ Kd8 4. Bc4 Qxd1 5. Raxd1+ Kc8 6. Re8# ) 2. Qe1+ { break the pin } 2... Ne7 3. Ne5 Qd8 4. Nxg4 { There are several ideas here.
+With a #PawnCenter, pushing those pawns should be at the top of the candidates list.
+With the K in the center #Underdeveloped, we should trying to open the center.
+
+The push 1.d5 makes only three choices for the bishop:
+
+1...Bg4 2.Qe1+ X 3.Ne5 #RemoveTheDefender to win B
+1...Bf5 2.Ne5 #RemoveTheDefender to win B
+1...Bxd5 2.Nxd5 Qxd5 3.Re1+ Kd8 4.Bb5+ and Rd1 is coming. } *
 

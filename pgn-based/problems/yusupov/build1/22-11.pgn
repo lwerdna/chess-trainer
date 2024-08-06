@@ -15,7 +15,7 @@
 { <0> } 1. Nb7+ { the only move! otherwise Kc7 wins the half-dominated N[%csl
 Rd6] } 1... Kc6 ( 1... Kc7 2. Na5 Bd5 3. Kd2 Kd6 4. Kc2 ( 4. Kc3 $4 Kc5 { #Zugzwang as the evaluation is even when black to play! } 5. Nb3+ ( 5. Kb2 $4 Kb4 ) ( 5. Kc2 $4 Kb4 ) 5... Bxb3 6. Kxb3 Kb5 ) 4... Kc5 5. Kc3 { Ready to dark
 square highway to a1 if b pawn becomes a rook pawn, or to support the N escape
-to b3, provided black doesn't get opposition after. } ) 2. Na5+ bxa5 3. Kd2 { white takes dark squares to a1 for the #WrongBishop draw } 3... Kc5 4. Kc1 Kb4 5. Kb2 a4 6. Ka1 a3 7. Kb1 Kc3 8. Ka1 { That Kc2 instead of Kc3 is very hard to find.
+to b3, provided black doesn't get opposition after. } ) 2. Na5+ bxa5 3. Kd2 { white takes dark squares to a1 for the #WrongBishop draw } 3... Kc5 4. Kc1 Kb4 5. Kb2 a4 6. Ka1 a3 7. Kb1 Kc3 8. Ka1 { That Kc2 instead of Kc3 is very hard. You must make sure when the N is saved from being dominated, you don't give him opposition.
 
-1.Kc2 Kc4 and } *
+With the K@d2, you can take one (Kc3) or two (Kc2, Kc3) moves to get to the meeting spot. } *
 

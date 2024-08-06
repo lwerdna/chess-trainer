@@ -1,0 +1,12 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/8/6p1/2b2r1p/7P/3k2P1/R4P2/5K2 b - - 0 1"]
+[SetUp "1"]
+
+1... Bxf2 2. Rxf2 Ke3 3. Rxf5 gxf5 4. Kg2 Ke2 5. Kg1 Kf3 6. Kh2 Kf2 7. Kh3 Kg1 8. g4 fxg4+ 9. Kg3 Kh1 10. Kf2 Kh2 { Cool unexpected inbetween move. Another demonstration of the "lane view" of opposition. Black can push westward towards b6 with impunity. } *
+

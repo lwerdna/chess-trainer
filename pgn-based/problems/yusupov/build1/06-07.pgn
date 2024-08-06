@@ -12,6 +12,8 @@
 [UTCTime "21:26:09"]
 [Variant "Standard"]
 
-1. Qb2+ Ka6 {  [%cal Gb2h8,Gh8h5]}  2. Qb8 ( 2. Qxh8 $4 Kxa7 3. Qxh5 Qxd3 $10
-)2... Rxb8 ( 2... Qxd3 3. a8=Q# )3. axb8=N+ Kb5 4. Nxd7  *
+1. Qb2+ ( 1. Qb3+ Ka5 2. Qc3+ Ka6 ) 1... Ka6 { to stop promotion[%cal
+Gb2h8,Gh8h5] } ( 1... Ka5 2. Qxh8 Qxd3 3. a8=Q+ ) ( 1... Kc5 2. Qxh8 Qe7 3. Qc3+ { guard e1 to #PreventPertual } 3... Kd6 4. a8=Q ) 2. Qb8 ( 2. Qxh8 $4 Kxa7 3. Qxh5 Qxd3 $10 ) 2... Rxb8 ( 2... Qxd3 3. a8=Q# ) ( 2... Rh7 3. a8=Q# ) 3. axb8=N+ Kb5 4. Nxd7 { 1.Qb2+ to get the rook only evens the game.
+
+You must also redeem that pawn for it's maximum value (Q) if you're to win. And black takes out the promotion threat with 1....Ka6 there's a surprise move to win. } *
 

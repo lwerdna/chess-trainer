@@ -14,5 +14,7 @@
 
 1... e4 { [%cal Gc6e5,Ge5d3] } 2. Ke2 ( 2. Qc5 Ne5 3. Qc7 ( 3. Qxe5 Qh1+ 4. Ke2 Qxc1 ) 3... Nd3+ ) ( 2. Rc2 Qh1+ 3. Qf1 Rd1+ 4. Kxd1 Qxf1+ ) ( 2. f3 Ne5 ) ( 2. Ra1 Ne5 3. Qf1 Nd3+ 4. Ke2 Qc7 5. Qd1 Qc4 6. f3 Nxb2+ 7. Ke1 Nxd1 ) 2... Qh5+ 3. Ke1 ( 3. f3 exf3+ 4. gxf3 Qh2+ 5. Ke1 Rd2 6. Qf1 { [%csl Gd2] } 6... Rxb2 7. Rd1 Qxg3+ 8. Qf2 Qxf2# ) 3... Ne5 4. Qc7 Nd3+ 5. Kd2 Rd5 6. Qc8+ Ka7 7. Qc4 Nxc1+ 8. Kxc1 Qd1# { This is very positional, you must recognize the pattern where, if a knight attacks a pawn forward it, then when that pawn advances, it controls a square the knight can get to in two moves.
 
-So the plan is e4, Ne5, Nd3! } *
+So the plan is e4, Ne5, Nd3!
+
+The last Qc7 is hard to find, but the N controls c8 and d8 is controlled via #XrayToDefend. } *
 

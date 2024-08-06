@@ -1,0 +1,12 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "1R1r2k1/Q4pp1/7p/8/8/2n2BP1/3q1PKP/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Qe3 Qd6 ( 1... Qxe3 2. Rxd8+ Kh7 3. fxe3 ) 2. Rxd8+ Qxd8 3. Qxc3 { Very cool #Zwischencheck, you must notice the #WeakBackRank. } *
+

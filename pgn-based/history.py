@@ -61,7 +61,7 @@ def make_key(pgn_path):
 def access(pgn_path):
     global database
     key = make_key(pgn_path)
-    return database[key]
+    return database.get(key)
 
 if __name__ == '__main__':
     (RED, GREEN, YELLOW, NORMAL) = ('\x1B[31m', '\x1B[32m', '\x1B[33m', '\x1B[0m')
@@ -77,7 +77,10 @@ if __name__ == '__main__':
     now = int(time.time())
     load()
     for pgn_path in pgn_paths:
-        epoch = time.mktime(time.strptime(access(pgn_path)['due'], '%Y-%m-%d %H:%M:%S'))
+        entry = access(pgn_path)
+        if not entry:
+            continue
+        epoch = time.mktime(time.strptime(entry['due'], '%Y-%m-%d %H:%M:%S'))
         if is_due(pgn_path):
             delta = now - epoch
             descr = f'{RED}due {duration_string(delta)} ago{NORMAL}'

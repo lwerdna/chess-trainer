@@ -12,5 +12,11 @@
 [UTCTime "18:21:27"]
 [Variant "Standard"]
 
-1... d5 2. Be2 { One Type1 undefended piece in the piece blob, the B at b5. Thus d5 gives the queen the ability to fork if white castles. You must calculate why d5 is allowed. } ( 2. Nxd5 Bxd5 3. Qxd5 Ra1+ ) ( 2. O-O Qc5+ ) *
+1... d5 2. Be2 { One Type1 undefended piece in the piece blob, the B at b5.
+Thus d5 gives the queen the ability to fork if white castles. You must
+calculate why d5 is allowed. } ( 2. Nxd5 Bxd5 3. Qxd5 Ra1+ ) ( 2. O-O Qc5+ ) 2... Qc5 { One Type1 undefended piece in the piece blob, the B@b5. Thus d5 gives the queen the ability to fork if white castles.
+
+You must notice features of the whole board (paticularly the back rank, if the queen were to leave) to calculate why d5 works, requiring a #Look3.
+
+1.d5 Nxd5 2.Bxd5 Qxd5 3.Ra1+ X 4.Rxh1 } *
 

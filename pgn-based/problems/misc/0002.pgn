@@ -1,0 +1,12 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/8/8/ppk4p/7P/P1K5/8/8 b - - 0 1"]
+[SetUp "1"]
+
+1... Kd5 ( 1... b4+ $4 2. axb4+ axb4+ 3. Kb2 Kd4 4. Kb3 Ke4 5. Kxb4 Kf4 6. Kc3 Kg4 7. Kd3 Kxh4 8. Ke2 Kg3 9. Kf1 Kh2 ) 2. Kb3 Ke4 3. Kc3 Kf4 4. Kd4 Kg4 5. Kc5 b4 6. axb4 axb4 7. Kxb4 Kxh4 { Remember the connected pawns are pretty self sufficient, even with an enemy pawn ahead! } *
+

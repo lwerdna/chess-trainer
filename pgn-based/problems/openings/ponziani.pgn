@@ -7,10 +7,5 @@
 [Result "*"]
 [ECO "C44"]
 
-{ Play the Ponziani opening! } 1. e4 e5 2. Nf3 Nc6 3. c3 d6 ( 3... Nf6 4. d4
-Nxe4 ( 4... exd4 5. e5 Nd5 ( 5... Ne4 6. Qe2 f5 7. exf6 d5 8. Nbd2 Qxf6 9. Nxe4
-dxe4 10. Qxe4+ Be7 ) 6. cxd4 Bb4+ 7. Bd2 Bxd2+ 8. Qxd2 d6 )5. d5 Ne7 6. Nxe5
-Ng6 7. Qd4 )( 3... d5 4. Qa4 Bd6 ( 4... Bd7 5. exd5 )( 4... dxe4 5. Nxe5 Qd6 (
-5... Bd7 6. Nxd7 Qxd7 7. Qxe4+ ) 6. Nxc6 bxc6 ( 6... Qxc6 7. Bb5 ) )( 4... f6
-5. Bb5 Ne7 )5. exd5 )4. d4 exd4 5. cxd4  *
+{ Play the Ponziani opening! } 1. e4 e5 2. Nf3 Nc6 3. c3 d6 ( 3... Nf6 4. d4 Nxe4 ( 4... exd4 5. e5 Nd5 ( 5... Ne4 6. Qe2 f5 7. exf6 d5 8. Nbd2 Qxf6 9. Nxe4 dxe4 10. Qxe4+ Be7 ) 6. cxd4 Bb4+ 7. Bd2 Bxd2+ 8. Qxd2 d6 ) 5. d5 Ne7 6. Nxe5 Ng6 7. Qd4 ) ( 3... d5 4. Qa4 Bd6 ( 4... Bd7 5. exd5 Nd4 ( 5... Nb4 6. Qb3 e4 7. Ne5 Qe7 ) 6. Qd1 Nxf3+ 7. Qxf3 Nf6 8. c4 ) ( 4... dxe4 5. Nxe5 Qd6 ( 5... Bd7 6. Nxd7 Qxd7 7. Qxe4+ ) 6. Nxc6 bxc6 ( 6... Qxc6 7. Bb5 ) ) ( 4... f6 5. Bb5 Ne7 ) 5. exd5 ) 4. d4 exd4 5. cxd4 { Ponzianniiiiii! } *
 

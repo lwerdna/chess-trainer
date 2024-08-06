@@ -1,0 +1,12 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "4k2r/pp1rppbp/5np1/2Q3N1/6q1/2N1B3/PPP3PP/R4RK1 w k - 0 1"]
+[SetUp "1"]
+
+1. Rxf6 O-O ( 1... Bxf6 2. Qc8+ Rd8 3. Qxg4 ) ( 1... exf6 2. Qc8+ Rd8 ( 2... Ke7 3. Bc5+ Rd6 4. Nd5# ) 3. Qxg4 ) 2. Rf2 { Easy as the right move starts with a check, visualize 1...Rd8 2.Qxg4 but then 2...Nxg4. So is it better to eliminate the N with Rxf6? } *
+

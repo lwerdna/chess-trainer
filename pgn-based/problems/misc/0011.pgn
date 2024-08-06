@@ -1,0 +1,14 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "1b2r1k1/pR3ppp/1n3nq1/5Q2/2p1B3/P1N1B2P/1P2KP2/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Rxb8 Rxb8 2. Qf4 ( 2. Qe5 $4 Qh5+ ) 2... Rb7 3. Bxg6 { You must notice a few ideas. There's a #WeakBackRank, and potential to be neutralized by a forced queen trade.
+
+Only requires a #Look2. } *
+
