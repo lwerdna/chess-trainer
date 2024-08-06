@@ -12,6 +12,7 @@
 [UTCTime "21:26:09"]
 [Variant "Standard"]
 
-1. Nd2 Qxa1 2. Nxb3+ Kb1 3. Nxa1 Kxa1 4. Kf2 Kb2 5. Kf3 Kc3 6. Kg4 Kd4 7. Kxh4
-Ke5 8. Kg5  *
+1. Nd2 Qxa1 2. Nxb3+ Kb1 3. Nxa1 Kxa1 4. Kf2 Kb2 5. Kf3 Kc3 6. Kg4 Kd4 7. Kxh4 Ke5 8. Kg5 { Tough. Must calculate that after 1.Qxb2 Kxb2 2.Nd2+ X 3.Nxb3 Kxb3 and the K can make it to the corner h8.
+
+Instead, Nd2 #AttackTheTail of the discovered attack and leads to the combination that leaves the K on a1. } *
 

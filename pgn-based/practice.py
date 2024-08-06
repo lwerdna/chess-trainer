@@ -77,17 +77,23 @@ def post_problem_interaction(cboard):
 
     now = int(time.time())
     if result != None:
+        minute = 60
+        hour = 60*minute
+        day = 24*hour
+        week = 7*day
+        month = 4*week
+        year = 365*day
         match result:
             case 'minute':
-                due_epoch = now + 60
+                due_epoch = now + minute
             case 'day':
-                due_epoch = now + 24*60*60
+                due_epoch = now + 24*hour + random.randint(-hour, hour)
             case 'week':
-                due_epoch = now + 7*24*60*60
+                due_epoch = now + 7*day + random.randint(-day, day)
             case 'month':
-                due_epoch = now + 4*7*24*60*60
+                due_epoch = now + 4*week + random.randint(-3*day, 3*day)
             case 'year':
-                due_epoch = now + 365*24*60*60
+                due_epoch = now + year + random.randint(-month, month)
 
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(due_epoch))
         print(f'next due date: {time_str}')
