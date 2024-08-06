@@ -1,0 +1,14 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r1b2rk1/1pp2ppp/p3p3/q3P3/4B3/2P2Q2/6PP/3R1RK1 w - - 0 1"]
+[SetUp "1"]
+
+1. Qxf7+ Rxf7 2. Rd8+ Rf8 3. Rdxf8# { This is very hard for me to see, so keep training it!
+
+But since Qxf7+ is both a check and capture, it must have been considered and after quick lookahead of 1.5 there's obviously #WeakBackRank and dead king. } *
+

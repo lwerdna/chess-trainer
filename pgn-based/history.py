@@ -66,16 +66,20 @@ def access(pgn_path):
 if __name__ == '__main__':
     (RED, GREEN, YELLOW, NORMAL) = ('\x1B[31m', '\x1B[32m', '\x1B[33m', '\x1B[0m')
 
+    load()
+
     pgn_paths = []
     for root, dirnames, filenames in os.walk('./problems'):
         for filename in filenames:
             if filename.endswith('.pgn'):
                 fpath = os.path.join(root, filename)
+                # if this file isn't currently in the DB, add it
+                if access(fpath) is None:
+                    add_pgn(fpath)
                 pgn_paths.append(fpath)
 
     total_ok, total_due = 0, 0
     now = int(time.time())
-    load()
     for pgn_path in pgn_paths:
         entry = access(pgn_path)
         if not entry:

@@ -1,0 +1,12 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/1p1k4/p1p4p/2Pp1p2/P4P2/1PK4P/2P5/8 b - - 0 1"]
+[SetUp "1"]
+
+{ [%csl Rg5,Re5,Rd6,Yg4,Ye4,Yc4,Yb5][%cal Rc3a5,Ra5b6] } 1... a5 ( 1... Ke6 2. Kb4 Kd7 3. Ka5 Kc7 4. b4 h5 5. h4 d4 6. b5 axb5 7. axb5 cxb5 8. Kxb5 Kb8 9. c6 Kc7 10. cxb7 Kxb7 11. Kc5 Kc7 12. Kxd4 Kc6 13. Kc4 Kd6 14. Kd4 Kc6 15. Ke5 ) 2. Kd4 Ke6 3. Ke3 h5 4. h4 { Must recognize the battle lines and not let white penetrate into b4. } *
+
