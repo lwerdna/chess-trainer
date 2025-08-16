@@ -1,0 +1,23 @@
+[Event "Kiev"]
+[Site "Kiev URS"]
+[Date "1959.04.05"]
+[Round "7"]
+[White "Yuri V Nikolaevsky"]
+[Black "Efim Geller"]
+[Result "0-1"]
+[ECO "B88"]
+[EventDate "1959.03.27"]
+[PlyCount "92"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Bc4 e6 7. Be3 Be7 { 
+closest to "Be2 Classical development" from exeterchessclub's Sicilian Jungle
+doc}  8. Bb3 O-O 9. O-O Nxd4 10. Bxd4 b5 11. a3 Bb7 12. Qd3 a6 13. Rad1 Qc7 14.
+f4 e5 15. Be3 Rac8 16. Kh1 Rfd8 17. f5 Qb8 18. Bg5 {  intending to transition
+to #GoodKnightVsBadBishop and #KnightOnD5}  18... Rxc3 {  the #ExchangeSacOnC3}
+ ( 18... Kh8 19. Bxf6 Bxf6 20. Bd5 Bxd5 21. Nxd5 {  and now it looks like the
+Smyslov example}  )19. bxc3 Bxe4 20. Qe2 Qb7 21. c4 Bc6 22. Bxf6 Bxf6 23. Rb1
+Qa7 24. Rfd1 Qc5 25. cxb5 axb5 26. c4 bxc4 27. Qxc4 Qxc4 28. Bxc4 Be4 29. Rb5
+h5 30. a4 Bc2 31. Ra1 Rc8 32. Bb3 Bxf5 33. h3 Bd3 34. Rb7 e4 35. Re1 Rc5 36.
+Rxf7 Kh7 37. Rd7 Be5 38. Re7 Bg3 39. Ra1 Bf2 40. a5 Bd4 41. Ra4 Rc1+ 42. Kh2
+Bg1+ 43. Kg3 Rc3 44. a6 Bc2+ 45. Kf4 Be3+ 46. Kf5 Rc5+  0-1
+

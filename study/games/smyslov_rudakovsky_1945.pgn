@@ -1,0 +1,25 @@
+[Event "USSR Championship"]
+[Site "Moscow URS"]
+[Date "1945.06.??"]
+[Round "2"]
+[White "Vasily Smyslov"]
+[Black "Iosif Rudakovsky"]
+[Result "1-0"]
+[ECO "B83"]
+[EventDate "1945.??.??"]
+[PlyCount "57"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Be2 Be7 7. O-O O-O 8. Be3
+Nc6 9. f4 Qc7 {  "Be2 Classical development" from exeterchessclub's Sicilian
+Jungle PDF}  10. Qe1 Nxd4 11. Bxd4 e5 12. Be3 Be6 13. f5 Bc4 {  A chance to
+transition to #GoodKnightVsBadBishop and place a #KnightOnD5}  ( 13... Bd7 { 
+[%cal Gd7c6]} )14. Bxc4 Qxc4 15. Bg5 Rfe8 16. Bxf6 Bxf6 17. Nd5 {  transition
+complete}  17... Bd8 ( 17... Qxc2 18. Rf2 Qc5 19. Rc1 Qd4 20. Nc7 )18. c3 b5
+19. b3 Qc5+ 20. Kh1 Rc8 21. Rf3 {  #MultiPurpose defending and migrating
+kingside for attack}  21... Kh8 22. f6 gxf6 ( 22... Bxf6 23. Nxf6 gxf6 24. Qh4
+{  white wins}  )( 22... g6 23. Qh4 h5 24. Qg5 Kh7 25. Rh3 Rg8 26. Rxh5+ gxh5
+27. Qxh5# )23. Qh4 Rg8 24. Nxf6 ( 24. Rh3 Rg7 {  stuck}  )24... Rg7 ( 24...
+Bxf6 25. Qxf6+ Rg7 26. Rg3 Rg8 27. Rd1 {  Q is #MultiPurpose, holding two rooks
+and attacking d6}  )25. Rg3 Bxf6 26. Qxf6 Rg8 27. Rd1 d5 28. Rxg7 {  set up the
+weak back rank first}  28... Rxg7 29. Rxd5  1-0
+
