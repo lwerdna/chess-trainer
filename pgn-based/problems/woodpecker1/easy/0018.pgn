@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 18"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 18"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/3q3Uxsg3"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "rn1qk1nr/ppp2ppp/8/2b1p3/2B1P1b1/5N2/PPPP2PP/RNBQK2R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "03:41:50"]
+[ChapterMode "gamebook"]
+
+1. Bxf7+ Kxf7 2. Nxe5+ { [%cal Ge5g4,Ge5f7] } *
+
+

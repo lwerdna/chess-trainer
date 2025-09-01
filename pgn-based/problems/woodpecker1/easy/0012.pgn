@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 13"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 13"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/Mn8kfQAR"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "4rrk1/ppp3pp/3p2n1/3Ppqb1/nPP5/6P1/P1NBQP1P/2R1NRK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "03:16:24"]
+[ChapterMode "gamebook"]
+
+1... Nc3 2. Bxc3 Bxc1 *
+
+

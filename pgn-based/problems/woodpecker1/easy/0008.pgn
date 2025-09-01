@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 8"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 8"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/bmNQH09b"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r3k2r/p1ppbppp/1pn1q3/4P3/2BP2n1/5NB1/1PP1Q1PP/R4K1R b kq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "03:01:36"]
+[ChapterMode "gamebook"]
+
+1... Qxc4 2. Qxc4 Ne3+ { [%cal Ge3c4,Ge3f1] } *
+
+

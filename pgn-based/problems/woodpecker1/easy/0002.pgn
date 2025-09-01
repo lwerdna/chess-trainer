@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no.2"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no.2"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/zXJP4Ikp"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "rnb3kr/ppp4p/3b3B/3Pp2n/2BP4/3K1Rp1/PPP3q1/RN1Q4 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "02:16:26"]
+[ChapterMode "gamebook"]
+
+1. Rf8+! Bxf8 2. d6+ { [%cal Gc4g8,Gh6f8] } 2... Be6 3. Bxe6# { [%cal Ge6g8,Gh6f8] } *
+
+

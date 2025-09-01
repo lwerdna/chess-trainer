@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 32"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 32"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/ctNAOBVn"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2q4k/5Qp1/4B2p/p1p5/1P6/6PK/r4P1P/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:24:53"]
+[ChapterMode "gamebook"]
+
+1... Rxf2 2. Qxf2 Qxe6+ *
+
+

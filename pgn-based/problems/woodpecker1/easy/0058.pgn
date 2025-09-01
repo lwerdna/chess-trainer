@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 58"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 58"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/puaakoKF"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r4rk1/pp2bppp/1qp1p3/4Pb2/Q1P1nB2/2N5/PP1RBPPP/5RK1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "09:28:52"]
+[ChapterMode "gamebook"]
+
+1. Nxe4 Bxe4 2. c5 { [%cal Gc5b6,Ga4e4] } *
+
+

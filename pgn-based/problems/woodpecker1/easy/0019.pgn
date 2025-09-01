@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 19"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 19"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/INBryy4v"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "1k2r3/2p3p1/p4p2/1p3q1p/1n6/PQ2P3/1P2B2P/2KR4 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:02:43"]
+[ChapterMode "gamebook"]
+
+1... Rxe3 2. Qxe3 Qc2# *
+
+

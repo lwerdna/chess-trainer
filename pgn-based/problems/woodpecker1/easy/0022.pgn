@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no.22"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no.22"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/CRFS6nzT"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "rnbqkb1r/pp1p2pp/2p2p2/4p3/2B5/2P2N2/PPP2PPP/RNBQ1RK1 w Qkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:06:58"]
+[ChapterMode "gamebook"]
+
+1. Nxe5 fxe5 2. Qh5+ g6 3. Qxe5+ { [%cal Ge5e8,Ge5h8] } *
+
+

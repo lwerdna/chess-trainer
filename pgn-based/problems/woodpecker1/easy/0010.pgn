@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 10"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 10"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/BNFTHxXm"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2b5/4Q1pp/pp3n1k/3p3q/P2P1P2/BP1B2P1/7P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "03:06:41"]
+[ChapterMode "gamebook"]
+
+1. Qxf6+ gxf6 2. Bf8# { [%cal Gf8h6,Gd3h7,Gf4g5] } *
+
+

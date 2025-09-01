@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 33"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 33"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/YXoobKx3"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "5Rnk/pp1q4/7p/3p2rN/3Pp1Q1/2P5/PP5P/6K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:25:51"]
+[ChapterMode "gamebook"]
+
+1. Qxg5 hxg5 2. Rxg8+ Kxg8 3. Nf6+ Kf7 4. Nxd7 *
+
+

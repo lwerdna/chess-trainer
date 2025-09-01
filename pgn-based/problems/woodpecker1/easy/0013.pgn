@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 14"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 14"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/i8DUZZW1"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2kr3r/p4pp1/2p4p/4p3/2n4q/1NPPnP1P/PP2Q2P/R1K2B1R b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "03:19:59"]
+[ChapterMode "gamebook"]
+
+1... Rxd3!! 2. Qxd3 Qe1+ 3. Qd1 Qxd1# *
+
+

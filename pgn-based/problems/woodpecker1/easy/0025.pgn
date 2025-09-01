@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no.25"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no.25"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/qq6gtHbE"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "8/1p3q1k/2p3pp/4P1r1/8/4Q3/PP5P/3R3K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:14:27"]
+[ChapterMode "gamebook"]
+
+1... Rxe5 2. Qxe5 Qf3+ 3. Kg1 Qxd1+ *
+
+

@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 15"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 15"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/3tjOLUVl"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "6k1/5pp1/p1n1r2p/2NQ4/1P1p4/P6P/1B1bqPP1/5RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "03:22:57"]
+[ChapterMode "gamebook"]
+
+1... Qxf1+ 2. Kxf1 Re1# *
+
+

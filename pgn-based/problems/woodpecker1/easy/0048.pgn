@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 48"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 48"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/G3V0A8Lq"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2bq1r2/4bpk1/4pp1N/7Q/1p1p4/3B4/PP3PPP/R5K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "07:39:00"]
+[ChapterMode "gamebook"]
+
+1. Nxf7 Rxf7 2. Qh7+ Kf8 3. Qh8# *
+
+

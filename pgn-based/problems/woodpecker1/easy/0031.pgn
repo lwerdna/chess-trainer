@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 31"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 31"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/ci1nzQV8"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "4k3/1bp4r/p7/1p1P4/2P3pN/1P2r1P1/1BP2RPK/8 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:20:53"]
+[ChapterMode "gamebook"]
+
+1... Rxh4+ 2. gxh4 g3+ 3. Kg1 gxf2+ *
+
+

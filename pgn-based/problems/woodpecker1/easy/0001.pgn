@@ -1,0 +1,19 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 1"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 1"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/CWl2Wv5T"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r6r/1pp3k1/1b6/p2P1p2/P1N1pn2/2P2PP1/BP5P/4RR1K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "02:13:41"]
+[ChapterMode "gamebook"]
+
+{ How to do the Woodpecker Training? See here: https://lichess.org/study/oW1b5eCo }
+1... Rxh2+!! 2. Kxh2 Rh8# { [%cal Gh8h1,Gf4g2,Gb6g1] } *
+
+

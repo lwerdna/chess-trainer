@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no.28"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no.28"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/QoBjZVww"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r5r1/p1p1k3/3q3B/5p2/4p3/1P6/P1P1QPP1/R4RK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:17:29"]
+[ChapterMode "gamebook"]
+
+1... Rxg2+ 2. Kxg2 Rg8+ 3. Kh1 Qxh6+ 4. Qh5 Qxh5# *
+
+

@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 7"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 7"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/sL0uQmqR"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2r1k2r/1b1p2q1/p4p2/4p3/PpB1Pp1p/7P/1PPRQPP1/4R1K1 b k - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "02:32:37"]
+[ChapterMode "gamebook"]
+
+1... f3! 2. Qxf3 Rxc4 *
+
+

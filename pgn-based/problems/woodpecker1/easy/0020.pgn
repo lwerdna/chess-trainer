@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no.20"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no.20"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/QMDVfpdY"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r1bqkbnr/pppp3p/2n2p2/6p1/2BPPp2/5N2/PPP3PP/RNBQK2R w KQkq - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "05:03:49"]
+[ChapterMode "gamebook"]
+
+1. Nxg5 fxg5 2. Qh5+ Ke7 3. Qf7+ Kd6 4. e5+ Nxe5 5. Qd5+ Ke7 6. Qxe5# *
+
+
