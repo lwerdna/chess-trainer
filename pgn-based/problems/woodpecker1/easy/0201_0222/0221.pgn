@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 221"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 221"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 221. Magnus Carlsen – Teimour Radjabov, Wijk aan Zee 2015 }
-1. Bg7+ Qxg7 2. Qxe8+ { ✔ With a winning advantage due to the two pawns, Black’s exposed king and the pawn-like bishop on b6. You don’t have to see any further. } *
-
+{ 221. Magnus Carlsen – Teimour Radjabov, Wijk aan Zee 2015 } 1. Bg7+ Qxg7 2. Qxe8+ *
 

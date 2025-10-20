@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 213"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 213"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ Magnus Carlsen  @@StartBlockQuote@@Contrary to many young colleagues, I do believe that it makes sense to study the classics.@@EndBlockQuote@@213. Ivan Sokolov – Magnus Carlsen, Hoogeveen 2004  White wins a pawn by exploiting the potential pin on the eighth rank, either by: }
-1. Nxc6 { Or the almost equally good   1.Ra1  threatening Ra1-a6, so  1...Nd5  2.Nxc6  with the same theme but having given away ...Nf6-d5. } 1... Rxc6 2. Rb8 Kh7 3. Rxd8 { ✔ } *
-
+{ Magnus Carlsen  @@StartBlockQuote@@Contrary to many young colleagues, I do believe that it makes sense to study the classics.@@EndBlockQuote@@213. Ivan Sokolov – Magnus Carlsen, Hoogeveen 2004  White wins a pawn by exploiting the potential pin on the eighth rank, either by: } 1. Nxc6 { Or the almost equally good   1.Ra1  threatening Ra1-a6, so  1...Nd5  2.Nxc6  with the same theme but having given away ...Nf6-d5. } 1... Rxc6 2. Rb8 Kh7 3. Rxd8 { Cool, a weak back rank but not because of checkmate. } *
 

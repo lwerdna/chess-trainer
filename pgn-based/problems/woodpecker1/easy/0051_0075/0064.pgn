@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 64"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "09:54:28"]
 [ChapterMode "gamebook"]
 
-1. Bg6!! fxg6?? 2. Qxg6# { Part 2: https://lichess.org/study/KicQp8vU } { [%cal Gg6e8,Gd6f8] } *
-
+1. Bg6 $3 fxg6 $4 2. Qxg6# { missed! thought Nxf7 but didn't see Nxc2 } *
 

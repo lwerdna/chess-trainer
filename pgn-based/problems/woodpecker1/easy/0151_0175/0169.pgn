@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 169"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,7 @@
 [UTCTime "14:27:06"]
 [ChapterMode "gamebook"]
 
-1... Qxc5 2. Bxc5 Ra1+ 3. Qe1 Rxe1# *
+1... Qxc5 2. Bxc5 Ra1+ 3. Qe1 Rxe1# { PASS: easy #WeakBackRank
 
+FAIL: Tried Bxd4 instead of more forceful Qxc5 } *
 

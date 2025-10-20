@@ -1,18 +1,20 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 4"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 1)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 4"]
 [ChapterURL "https://lichess.org/study/4xLfA0En/BhM6hKE2"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "2kr4/1pp4p/1p1r4/5Pp1/1P2q3/2P1R2P/P3KP2/1Q1R4 b - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 1)"]
 [UTCDate "2025.08.29"]
 [UTCTime "02:24:45"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1... Rd2+!! 2. Ke1 Rxd1+ 3. Qxd1 Rxd1+ *
-
+1... Rd2+ 2. Rxd2 ( 2. Ke1 Qh1# )2... Rxd2+ 3. Kxd2 Qxb1  *
 

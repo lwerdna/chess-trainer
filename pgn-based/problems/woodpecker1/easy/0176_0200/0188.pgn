@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 188"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,7 @@
 [UTCTime "15:21:44"]
 [ChapterMode "gamebook"]
 
-1. e4 Be7 2. Bb5+ Kd8 3. Bxe7+ Kxe7 4. exf5 *
+1. e4 Be7 2. Bb5+ Kd8 3. Bxe7+ Kxe7 4. exf5 { FAIL: care needed to pick up both bishops
 
+FAIL: same } *
 

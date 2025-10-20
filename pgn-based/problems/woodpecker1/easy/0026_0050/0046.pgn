@@ -1,18 +1,20 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 46"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 1)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 46"]
 [ChapterURL "https://lichess.org/study/4xLfA0En/rzmwcX5P"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "r1b1k2r/2qp1ppp/ppnbpn2/8/2PNP3/P1N1BP2/1P4PP/2RQKB1R w Kkq - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 1)"]
 [UTCDate "2025.08.29"]
 [UTCTime "06:44:15"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1. Ndb5 axb5 *
-
+1. Ndb5 axb5 2. Nxb5 Qb8 3. Nxd6+  *
 

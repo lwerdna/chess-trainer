@@ -1,18 +1,20 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 32"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 1)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 32"]
 [ChapterURL "https://lichess.org/study/4xLfA0En/ctNAOBVn"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "2q4k/5Qp1/4B2p/p1p5/1P6/6PK/r4P1P/8 b - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 1)"]
 [UTCDate "2025.08.29"]
 [UTCTime "05:24:53"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1... Rxf2 2. Qxf2 Qxe6+ *
-
+1... Rxf2 2. Qxf2 Qxe6+ 3. g4 cxb4 { Taking the bishop comes with check! } *
 

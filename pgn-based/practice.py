@@ -323,27 +323,41 @@ def except_hook(cls, exception, traceback):
     sys.__excepthook__(cls, exception, traceback)
 
 #------------------------------------------------------------------------------
+# 
+#------------------------------------------------------------------------------
+
+def pgns_from_dir(dpath):
+    result = []
+
+    for root, dirnames, filenames in os.walk(dpath):
+        for filename in filenames:
+            if filename.endswith('.pgn'):
+                fpath = os.path.join(root, filename)
+                result.append(fpath)
+
+    return result
+
+#------------------------------------------------------------------------------
 # MAIN
 #------------------------------------------------------------------------------
 
 if __name__ == '__main__':
     history.load()
 
-    pgn_path = None
+    material = None
     if sys.argv[1:]:
-        if sys.argv[1].endswith('.pgn'):
-            pgn_path = sys.argv[1]
-
+        material = sys.argv[1]
+    
     # load pgn's
-    if pgn_path:
-        pgn_paths = [pgn_path]
+    if material:
+        if os.path.isfile(material):
+            pgn_paths = [material]
+        elif os.path.isdir(material):
+            pgn_paths = pgns_from_dir(material)
+        else:
+            breakpoint()
     else:
-        pgn_paths = []
-        for root, dirnames, filenames in os.walk('./problems'):
-            for filename in filenames:
-                if filename.endswith('.pgn'):
-                    fpath = os.path.join(root, filename)
-                    pgn_paths.append(fpath)
+        pgn_paths = pgns_from_dir('./problems')
 
     print('pgn paths:')
     print('\n'.join(pgn_paths))
@@ -353,10 +367,10 @@ if __name__ == '__main__':
         history.add_pgn(pgn)
 
     # now filter the pgn_paths that are due
-    if '--force' in sys.argv[1:] or (sys.argv[1:] and sys.argv[1].endswith('.pgn')):
-        pass
-    else:
-        pgn_paths = [p for p in pgn_paths if history.is_due(p)]
+    #if '--force' in sys.argv[1:] or (sys.argv[1:] and sys.argv[1].endswith('.pgn')):
+    #    pass
+    #else:
+    #    pgn_paths = [p for p in pgn_paths if history.is_due(p)]
 
     sys.excepthook = except_hook
     app = QApplication(sys.argv)

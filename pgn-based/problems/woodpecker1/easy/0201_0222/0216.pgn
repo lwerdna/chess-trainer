@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 216"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 216"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 216. Sergey Erenburg – Magnus Carlsen, Reykjavik  (blitz)  2006 }
-1... Re1+ { A discovered attack. } 2. Rxe1 Rxe1+ 3. Rxe1 Qxd3 { ✔ } *
-
+{ 216. Sergey Erenburg – Magnus Carlsen, Reykjavik  (blitz)  2006 } 1... Re1+ { A discovered attack. } 2. Rxe1 Rxe1+ 3. Rxe1 Qxd3 *
 

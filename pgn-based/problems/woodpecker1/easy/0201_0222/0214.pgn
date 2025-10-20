@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 214"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 214"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 214. Gata Kamsky – Magnus Carlsen, Khanty-Mansiysk  (2)  2005 }
-1. b6 { The pawn queens after   1...Rxf7  2.bxa7+–  ✔  And the threat on the rook leaves White a piece up after   1...Qxb6  2.Qxe7  ✔ } *
-
+{ 214. Gata Kamsky – Magnus Carlsen, Khanty-Mansiysk  (2)  2005 } 1. b6 { Hard to see that the position-perturbing move b6 ends up covering b7, c7, d7 too, meaning the queen can't protect the rook at e7. } *
 

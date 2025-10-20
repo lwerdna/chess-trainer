@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 204"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 204"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 204. Rustam Kasimdzhanov – Mohamad Al Modiahki, Teheran 1998 }
-1. Rxd7 { 1–0 Winning another pawn and exchanging some pieces. Too kind is   1.Bg4  Bxg4  2.hxg4  ± } 1... Qxd7 2. Bg4 Qd8 3. Bxc8 Qxc8 4. Qxb5 { ✔ } *
-
+{ 204. Rustam Kasimdzhanov – Mohamad Al Modiahki, Teheran 1998 } 1. Rxd7 { 1–0 Winning another pawn and exchanging some pieces. Too kind is   1.Bg4  Bxg4  2.hxg4  ± } 1... Qxd7 2. Bg4 Qd8 3. Bxc8 Qxc8 4. Qxb5 { A little tough. Have to try the position-perturbing Rxd7 Qxd7 and see that the rook and queen are in a danger shape, susceptible to the bishop. } *
 

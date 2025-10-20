@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 206"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 206"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 206. Rustam Kasimdzhanov – Andrei Volokitin, Germany 2003 }
-1... Qxh1+ { Forcing a winning endgame.  Not   1...Qh2+  2.Rxh2  gxh2+  3.Kh1  Rg1+  4.Qxg1  hxg1=Q+  5.Kxg1  ∓ } 2. Kxh1 g2+ 3. Kg1 Bd4 { The game ended swiftly } 4. Qxd4+ cxd4 5. Nxd6 Ng5 *
-
+{ 206. Rustam Kasimdzhanov – Andrei Volokitin, Germany 2003 } 1... Qxh1+ { Forcing a winning endgame.  Not   1...Qh2+  2.Rxh2  gxh2+  3.Kh1  Rg1+  4.Qxg1  hxg1=Q+  5.Kxg1  ∓ } 2. Kxh1 g2+ 3. Kg1 Bd4 { The game ended swiftly } 4. Qxd4+ cxd4 5. Nxd6 Ng5 { Ng5 at end defends against Nf7 and threatens Nxf6+ or Nh6+ to clear the promotion square. You don't have to worry about Kxg2 because then you have a discovered attack with the N. } *
 

@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 157"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "12:16:44"]
 [ChapterMode "gamebook"]
 
-1. Rg8+ Kxg8 2. Qxf6 *
-
+1. Rg8+ Kxg8 2. Qxf6 { easy #RemoveTheDefender } *
 

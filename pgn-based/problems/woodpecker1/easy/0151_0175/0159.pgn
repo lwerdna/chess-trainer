@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 159"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,7 @@
 [UTCTime "12:24:55"]
 [ChapterMode "gamebook"]
 
-1. Qxg6 hxg6 2. Rh4 Bc8 3. Rh8# *
+1. Qxg6 hxg6 2. Rh4 Bc8 3. Rh8# { FAIL: Fuck just like the previous one I did, I failed to see the #CorridorCreation
 
+FAIL: Failed to see it again :) } *
 

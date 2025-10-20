@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 151"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,7 +18,5 @@
 [UTCTime "12:05:34"]
 [ChapterMode "gamebook"]
 
-{ Part 3: https://lichess.org/study/fIfq3LZR }
-1... Ng3+ 2. hxg3 Ra8 3. Rd1 Rh8# *
-
+{ Part 3: https://lichess.org/study/fIfq3LZR } 1... Ng3+ 2. hxg3 Ra8 3. Rd1 Rh8# { FAIL: I saw 1.Ng3+ Qxg3 2.Rxb1 but I didn't know what happens after 1.Ng3 hxg3 ... Rx8 going after the corridor is crazy } *
 

@@ -1,20 +1,18 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 222"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 222"]
 [Result "*"]
-[FEN "2R5/4bppk/1p1p4/5R1P/4PQ2/5P2/r4q1P/7K w - - 0 1"]
-[Variant "From Position"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "Woodpecker Method easy (201-222)"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[ChapterMode "gamebook"]
 [ChapterName "Easy Exercises - Exercise 222"]
 [ChapterURL "https://lichess.org/study/Cw7kju9J/oB9mvxBd"]
-[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[FEN "2R5/4bppk/1p1p4/5R1P/4PQ2/5P2/r4q1P/7K w - - 0 1"]
 [SetUp "1"]
-[ChapterMode "gamebook"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[Variant "From Position"]
 
-{ 222. Magnus Carlsen – Sergey Karjakin, New York  (rapid 4)  2016 }
-1. Qh6+ { ✔ What a way to finish a World Championship! It’s mate in one however Black takes back. } *
-
+{ 222. Magnus Carlsen â Sergey Karjakin, New York (rapid 4) 2016 } 1. Qh6+ gxh6 ( 1... Kxh6 2. Rh8# ) 2. Rxf7# *
 

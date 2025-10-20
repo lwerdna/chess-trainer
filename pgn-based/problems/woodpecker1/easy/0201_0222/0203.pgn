@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 203"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 203"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 203. Rustam Kasimdzhanov – Y.M.A. Kalandar Khaled, Macau 1996 }
-1. Qd8+ { An X-ray/reloader theme supported by the strongly-placed bishop on e4. } 1... Rxd8 { 1...Qf8  2.Bh7+  +- ✔ } 2. Rxd8+ Qf8 3. Bh7+ { Or   3.Red1  Rc7  4.Bh7+  ± } 3... Kxh7 4. Rxf8 { ✔  (1–0, 30 moves) } *
-
+{ 203. Rustam Kasimdzhanov – Y.M.A. Kalandar Khaled, Macau 1996 } 1. Qd8+ { An X-ray/reloader theme supported by the strongly-placed bishop on e4. } 1... Rxd8 { 1...Qf8  2.Bh7+  +- ✔ } 2. Rxd8+ Qf8 3. Bh7+ { Or   3.Red1  Rc7  4.Bh7+  ± } 3... Kxh7 4. Rxf8 *
 

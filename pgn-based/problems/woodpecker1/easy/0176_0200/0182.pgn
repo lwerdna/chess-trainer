@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 182"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "15:15:02"]
 [ChapterMode "gamebook"]
 
-1. Rxb3 Nxb3 2. Qe6+ Kb8 3. Qxb3 *
-
+1. Rxb3 Nxb3 2. Qe6+ Kb8 3. Qxb3 { Easy position-perturbing trade that results in an undefended piece. } *
 

@@ -1,20 +1,19 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 215"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 215"]
 [Result "*"]
-[FEN "2r3k1/4bpp1/4pn1p/1p6/q1r5/2BR1BP1/PQ2PPKP/3R4 b - - 0 1"]
-[Variant "From Position"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "Woodpecker Method easy (201-222)"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[ChapterMode "gamebook"]
 [ChapterName "Easy Exercises - Exercise 215"]
 [ChapterURL "https://lichess.org/study/Cw7kju9J/9FZY8fZt"]
-[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[FEN "2r3k1/4bpp1/4pn1p/1p6/q1r5/2BR1BP1/PQ2PPKP/3R4 b - - 0 1"]
 [SetUp "1"]
-[ChapterMode "gamebook"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[Variant "From Position"]
 
-{ 215. Hannes Stefansson – Magnus Carlsen, Reykjavik  (blitz)  2006 }
-1... Rxc3 { The rook on d3 is overloaded:   2.Rxc3  Rxc3  3.Qxc3  Qxd1–+  ✔ } *
-
+{  215. Hannes Stefansson â Magnus Carlsen, Reykjavik (blitz) 2006 } 1... Rxc3
+2. Rxc3 Rxc3 3. Qxc3 Qxd1  *
 

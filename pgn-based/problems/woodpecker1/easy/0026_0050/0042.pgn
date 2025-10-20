@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 42"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "05:36:45"]
 [ChapterMode "gamebook"]
 
-1. Nd6+ cxd6 2. Bg6 *
-
+1. Nd6+ cxd6 2. Bg6 { Easy KQ danger shape } *
 

@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 31"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "05:20:53"]
 [ChapterMode "gamebook"]
 
-1... Rxh4+ 2. gxh4 g3+ 3. Kg1 gxf2+ *
-
+1... Rxh4+ 2. gxh4 g3+ 3. Kg1 gxf2+ { difficult } *
 

@@ -1,18 +1,22 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 41"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 1)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 41"]
 [ChapterURL "https://lichess.org/study/4xLfA0En/9H4UxVXZ"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "3k4/p1p2prr/1p5N/3PRPP1/b1P5/4B3/P4K2/8 w - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 1)"]
 [UTCDate "2025.08.29"]
 [UTCTime "05:33:21"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1. f6 Rg6 2. Bf4 *
-
+1. f6 ( 1. Nxf7+ {  NOT this path which leads to near equality}  1... Rxf7 2. g6
+Rxf5+ 3. Rxf5 Rg7 )1... Rg6 {  trapping both rooks or the f-pawn falls and you
+have connected passers}   *
 

@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 212"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 212"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 212. Gata Kamsky – Veselin Topalov, Nice  (blindfold)  2009 }
-1... Nxf3 2. gxf3 Bxf3+ { ✔ Winning the queen. } *
-
+{ 212. Gata Kamsky – Veselin Topalov, Nice  (blindfold)  2009 } 1... Nxf3 2. gxf3 Bxf3+ *
 

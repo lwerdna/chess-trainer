@@ -1,18 +1,20 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 178"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 4)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 178"]
 [ChapterURL "https://lichess.org/study/z5vB3TII/bwYGWMXH"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "5k1r/ppq3b1/8/3Pp2p/3n4/7Q/PP3PPP/3RR1K1 w - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 4)"]
 [UTCDate "2025.08.30"]
 [UTCTime "15:08:42"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1. Rxd4 exd4 2. Qf5+ Qf7 3. Qc8+ Qe8 4. Qxe8# *
-
+1. Rxd4 exd4 2. Qf5+ Qf7 ( 2... Kg8 3. Re8+ Bf8 4. Rxf8+ Kg7 5. Qf6+ Kh7 6. Rxh8# ) 3. Qc8+ Qe8 4. Qxe8# { #Mate.KillBox } *
 

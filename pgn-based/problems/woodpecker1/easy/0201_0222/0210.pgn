@@ -1,20 +1,21 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 210"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 210"]
 [Result "*"]
-[FEN "4rrk1/p2pB1pp/2p5/2P1R3/3QN3/Pq2n3/1P4PP/2KR4 w - - 0 1"]
-[Variant "From Position"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "Woodpecker Method easy (201-222)"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[ChapterMode "gamebook"]
 [ChapterName "Easy Exercises - Exercise 210"]
 [ChapterURL "https://lichess.org/study/Cw7kju9J/E5yiv1mO"]
-[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[FEN "4rrk1/p2pB1pp/2p5/2P1R3/3QN3/Pq2n3/1P4PP/2KR4 w - - 0 1"]
 [SetUp "1"]
-[ChapterMode "gamebook"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[Variant "From Position"]
 
-{ 210. Veselin Topalov – Miguel Illescas Cordoba, Cala Galdana 1999 }
-1. Nf6+ { ✔ Getting rid of the pesky knight on e3 with tempo, leaving White totally winning. } *
-
+{  210. Veselin Topalov â Miguel Illescas Cordoba, Cala Galdana 1999 } 1. Nf6+
+{  Getting rid of the pesky knight on e3 with tempo, leaving White totally
+winning.}  ( 1. Qxe3 {  NOT because it comes with check!}  1... Qxe3+ )1...
+Rxf6 2. Rxe3 Qf7 3. Bxf6 Rxe3 4. Qxe3 Qxf6  *
 

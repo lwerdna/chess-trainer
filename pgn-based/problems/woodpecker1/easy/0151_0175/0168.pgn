@@ -1,18 +1,22 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 168"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 4)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 168"]
 [ChapterURL "https://lichess.org/study/z5vB3TII/yX0DcR5v"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "1k1r1q1r/2p2ppp/Qp6/3b1N2/8/P5P1/1P3P1P/2R2RK1 w - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 4)"]
 [UTCDate "2025.08.30"]
 [UTCTime "14:25:45"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1. Rxc7 Kxc7 2. Qa7+ *
-
+1. Rxc7 Kxc7 2. Qa7+ Bb7 3. Rc1+ Kd7 4. Qxb7+ {  FAIL: hard to see that giving
+up the rook is worth all the trouble created for black - there's no obvious
+piece win-back}   *
 

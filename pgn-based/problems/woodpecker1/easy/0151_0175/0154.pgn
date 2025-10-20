@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 154"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,7 @@
 [UTCTime "12:09:47"]
 [ChapterMode "gamebook"]
 
-1. Qxd5 Qxd5 2. Bh6+ Ke7 3. Rxd5 *
+1. Qxd5 Qxd5 2. Bh6+ Ke7 3. Rxd5 { FAIL: 1.Bh6+ Ke7 2.Rxd5 Rxe2+ 3.Qxe2 leaves the R@d5 without a defender. You must take with the queen first. I saw the discovery, but order matters. Always try to reorder your combinations.
 
+FAIL: Bc4+ at the end allows him to block with Q and get an extra B while Bh6+ lets you collect the full Q } *
 

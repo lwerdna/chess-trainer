@@ -1,18 +1,21 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no.6"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 1)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no.6"]
 [ChapterURL "https://lichess.org/study/4xLfA0En/3o4F65Pp"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "r2k3r/pp1b3p/1qn1p1p1/1B1pPn2/Q7/P4N2/1P1BNPPP/2R3K1 w - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 1)"]
 [UTCDate "2025.08.29"]
 [UTCTime "02:29:28"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1. Rxc6!! (1. Bxc6 { It doesn't work because after Bxc6 our queen is also under attack. }) 1... Bxc6 2. Ba5 { [%cal Ga5d8] } *
-
+1. Rxc6 $3 ( 1. Bxc6 {  NOT It doesn't work because after Bxc6 our queen is also
+under attack.} )1... Bxc6 2. Ba5 {  [%cal Ga5d8]}   *
 

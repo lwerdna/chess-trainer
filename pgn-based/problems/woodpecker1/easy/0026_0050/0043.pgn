@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 43"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "05:38:08"]
 [ChapterMode "gamebook"]
 
-1. Rxb6 Rxb6 2. Nxd5 { [%cal Gd5e7,Gd5b6] } 2... Ree6 3. Nxb6 Rxb6 *
-
+1. Rxb6 Rxb6 2. Nxd5 { [%cal Gd5e7,Gd5b6] } 2... Ree6 3. Nxb6 Rxb6 { Easy geometry to spot. Give RN, get RNP } *
 

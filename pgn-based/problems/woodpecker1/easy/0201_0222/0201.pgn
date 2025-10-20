@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 201"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 201"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 201. Rustam Kasimdzhanov – Eduard Grinshpun, Tashkent 1993 }
-1. Qxh7+ Qxh7 2. Nxf6+ { ✔ White wins a piece. } *
-
+{ 201. Rustam Kasimdzhanov – Eduard Grinshpun, Tashkent 1993 } 1. Qxh7+ Qxh7 2. Nxf6+ *
 

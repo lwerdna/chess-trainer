@@ -5,14 +5,14 @@
 [White "?"]
 [Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
 [Annotator "https://lichess.org/@/chandrewl"]
 [FEN "6r1/p4rkp/3RQ1n1/1pp1p1B1/2p1P3/2P3R1/P4qPK/8 w - - 0 1"]
 [SetUp "1"]
 [UTCDate "2024.06.14"]
 [UTCTime "03:41:13"]
+[Variant "Standard"]
 
-{ <0> } 1. Qxe5+ Nxe5 2. Bf6+ Kf8 ( 2... Kh6 3. Bg7+ Kh5 4. Rh6# ) 3. Rd8# *
+{ <0> } 1. Qxe5+ Nxe5 2. Bf6+ ( 2. Bh6+ $4 Kh8 3. Rxg8+ Kxg8 4. Rd8+ Rf8 5. Rxf8+ Qxf8 6. Bxf8 Kxf8 ) 2... Kf8 ( 2... Kh6 3. Bg7+ Kh5 4. Rh6# ) 3. Rd8# { Notice the R #XRay the king through the B and N. What would make the N leave? Well it had to product e5.
+
+So Qxe5! } *
 

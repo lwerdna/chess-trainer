@@ -1,18 +1,20 @@
 [Event "The Woodpecker Method (Part 4): Puzzle no. 198"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
-[Variant "Standard"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "The Woodpecker Method (Part 4)"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[ChapterMode "gamebook"]
 [ChapterName "Puzzle no. 198"]
 [ChapterURL "https://lichess.org/study/z5vB3TII/EGKJn0X5"]
-[Annotator "https://lichess.org/@/Aarush1311"]
 [FEN "6rk/7p/8/1p3R2/pN6/P1n2B1P/4brPK/4R3 b - - 0 1"]
 [SetUp "1"]
+[StudyName "The Woodpecker Method (Part 4)"]
 [UTCDate "2025.08.30"]
 [UTCTime "15:49:53"]
-[ChapterMode "gamebook"]
+[Variant "Standard"]
 
-1... Bxf3 2. Rxf3 Rgxg2+ 3. Kh1 Rh2+ 4. Kg1 Ne2+ *
-
+1... Bxf3 2. Rxf3 Rgxg2+ 3. Kh1 Rh2+ 4. Kg1 Ne2+ 5. Rxe2 Rxe2 { Can't get stuck on mate search here! } *
 

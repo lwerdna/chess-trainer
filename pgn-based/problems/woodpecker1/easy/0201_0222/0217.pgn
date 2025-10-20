@@ -1,5 +1,7 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 217"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 217"]
 [Result "*"]
@@ -14,7 +16,5 @@
 [SetUp "1"]
 [ChapterMode "gamebook"]
 
-{ 217. Goran Todorovic - Magnus Carlsen, Internet 2006 }
-1... Bxh3 { 0-1. Black is up too much material after } 2. gxh3 Qxh3+ 3. Kg1 Qg3+ 4. Kh1 Qf3+ 5. Kg1 Qxf6 { ✔. } *
-
+{ 217. Goran Todorovic - Magnus Carlsen, Internet 2006 } 1... Bxh3 { 0-1. Black is up too much material after } 2. gxh3 Qxh3+ 3. Kg1 Qg3+ 4. Kh1 Qf3+ 5. Kg1 Qxf6 { Easy to spot with the undefended B@f6. Harder is to see #Pendulum that gets an extra pawn. } *
 

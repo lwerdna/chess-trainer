@@ -1,20 +1,20 @@
 [Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 218"]
+[Site "?"]
 [Date "????.??.??"]
+[Round "?"]
 [White "Easy Exercises"]
 [Black "Exercise 218"]
 [Result "*"]
-[FEN "1r5k/6pp/2p1r3/1R1p4/pn1P1q2/3Q1P2/PP3BPP/3R2K1 w - - 0 1"]
-[Variant "From Position"]
-[ECO "?"]
-[Opening "?"]
-[StudyName "Woodpecker Method easy (201-222)"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[ChapterMode "gamebook"]
 [ChapterName "Easy Exercises - Exercise 218"]
 [ChapterURL "https://lichess.org/study/Cw7kju9J/uwn1AGAY"]
-[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[FEN "1r5k/6pp/2p1r3/1R1p4/pn1P1q2/3Q1P2/PP3BPP/3R2K1 w - - 0 1"]
 [SetUp "1"]
-[ChapterMode "gamebook"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[Variant "From Position"]
 
-{ 218. Magnus Carlsen – Laurent Fressinet, Cap d’Agde 2006 }
-1. Qf5 { ✔ Black is back-rank mated or loses the rook on e6. } *
-
+{  218. Magnus Carlsen â Laurent Fressinet, Cap dâAgde 2006 } 1. Qf5 { 
+Black is back-rank mated or loses the rook on e6.}  1... Rxb5 ( 1... Qxf5 2.
+Rxb8+ Re8 3. Rxe8+ Qf8 4. Rxf8# )( 1... Qd6 2. Rxb8+ Qxb8 3. Qxe6 )2. Qxf4  *
 

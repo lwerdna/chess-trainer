@@ -1,4 +1,9 @@
 [Event "The Woodpecker Method (Part 1): Puzzle no. 11"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
 [Result "*"]
 [Variant "Standard"]
 [ECO "?"]
@@ -13,6 +18,5 @@
 [UTCTime "03:40:49"]
 [ChapterMode "gamebook"]
 
-1. Be4 Qxe4 2. Bf6+ Bxf6 3. Qxf6+ Kg8 4. Qf7+ *
-
+1. Be4 Qxe4 2. Bf6+ Bxf6 3. Qxf6+ Kg8 4. Qf7+ { stupid perpetual } *
 
