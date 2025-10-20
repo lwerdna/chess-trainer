@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 214"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 214"]
+[Result "*"]
+[FEN "5r1k/q3bQpp/2B5/1P2p3/4P3/p1P5/5PPP/5RK1 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 214"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/6VkwNlHT"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 214. Gata Kamsky – Magnus Carlsen, Khanty-Mansiysk  (2)  2005 }
+1. b6 { The pawn queens after   1...Rxf7  2.bxa7+–  ✔  And the threat on the rook leaves White a piece up after   1...Qxb6  2.Qxe7  ✔ } *
+
+

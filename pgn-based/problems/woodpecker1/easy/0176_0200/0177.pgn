@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 177"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 177"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/kh7k76Qt"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "8/1R3pbp/4p1k1/5p2/8/2N2P2/1P1r1P1P/4K3 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:07:35"]
+[ChapterMode "gamebook"]
+
+1... Rxb2 2. Rxb2 Bxc3+ 3. Kd1 Bxb2 *
+
+

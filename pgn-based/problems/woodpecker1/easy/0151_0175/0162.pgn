@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 162"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 162"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/M3Y2xXYw"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2b4k/p3q2p/2p1p3/2PpPpr1/3P3Q/4P2B/3b1B1P/R6K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "12:28:10"]
+[ChapterMode "gamebook"]
+
+1... Bxe3 2. Bxe3 Rg1+ 3. Bxg1 Qxh4 *
+
+

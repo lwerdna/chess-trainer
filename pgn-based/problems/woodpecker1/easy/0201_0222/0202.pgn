@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 202"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 202"]
+[Result "*"]
+[FEN "4r2k/p4rp1/1pb3qp/3NB3/2P1Q2n/1P1R4/1P4PP/4R1K1 b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 202"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/ya3c6ysw"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 202. Andranik Matikozian – Rustam Kasimdzhanov, Szeged 1994 }
+1... Rxe5 { The white queen is doubly pinned and is needed to protect g2. } 2. Qxh4 { 2.Qxe5  Qxg2#  ✔   or  2...Qxd3–+  And   2.Qxg6  Rxe1#  ✔   or  2...Nxg6–+ } 2... Rxe1+ { Or   2...Qxd3–+ } 3. Qxe1 Qxd3 { ✔ } *
+
+

@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 212"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 212"]
+[Result "*"]
+[FEN "1qr1r1k1/2b2ppp/Bpb1p3/4n3/P7/2N1BP2/1PP3PP/3RR1QK b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 212"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/ut02WznA"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 212. Gata Kamsky – Veselin Topalov, Nice  (blindfold)  2009 }
+1... Nxf3 2. gxf3 Bxf3+ { ✔ Winning the queen. } *
+
+

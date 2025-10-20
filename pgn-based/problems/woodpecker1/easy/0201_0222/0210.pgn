@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 210"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 210"]
+[Result "*"]
+[FEN "4rrk1/p2pB1pp/2p5/2P1R3/3QN3/Pq2n3/1P4PP/2KR4 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 210"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/E5yiv1mO"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 210. Veselin Topalov – Miguel Illescas Cordoba, Cala Galdana 1999 }
+1. Nf6+ { ✔ Getting rid of the pesky knight on e3 with tempo, leaving White totally winning. } *
+
+

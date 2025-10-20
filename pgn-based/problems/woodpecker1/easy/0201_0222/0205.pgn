@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 205"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 205"]
+[Result "*"]
+[FEN "r6k/7p/1Qp2rpq/p3p3/2B1P3/2B2P1n/P5PK/1R6 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 205"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/wVLwh5DR"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 205. Rustam Kasimdzhanov – Mikhail Golubev, Germany 2002 }
+1. Qb8+ { The breathing hole on g7 is not enough, neither is either of the two possible blocks on f8.   1.Bxe5?  Ng5+  2.Kg1   2.Kg3  Nxe4+  3.fxe4  Qg5+  –+  2...Nxf3+  –+ } 1... Rxb8 2. Rxb8+ Kg7 { 2...Rf8  3.Bxe5+   3.Rxf8+  Qxf8  4.Bxe5+  +–  3...Qg7  4.Rxf8#  ✔   2...Qf8  3.Rxf8+  Rxf8  4.Bxe5+  Rf6  5.Bxf6#  ✔ } 3. Rg8# { ✔ } *
+
+

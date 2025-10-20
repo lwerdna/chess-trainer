@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 220"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 220"]
+[Result "*"]
+[FEN "2k1r3/p1pbbpp1/1p5p/2pNP3/2P3P1/1P3PBP/P5K1/3R4 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 220"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/jvy6yBKt"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 220. Fabiano Caruana – Magnus Carlsen, Shamkir 2014 }
+1. Nxc7 Kxc7 { Instead the game saw   1...Rd8  2.Nd5±  when White had simply won a pawn, also stabilizing the knight on d5. } 2. e6+ { ✔ White’s rook will penetrate to the seventh rank with devastating effect. } *
+
+

@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 201"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 201"]
+[Result "*"]
+[FEN "3r2k1/pp4qn/3p1ppQ/2pPp3/4P1N1/1P2P2R/1PP3PP/6K1 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 201"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/mFhQ2Mio"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 201. Rustam Kasimdzhanov – Eduard Grinshpun, Tashkent 1993 }
+1. Qxh7+ Qxh7 2. Nxf6+ { ✔ White wins a piece. } *
+
+

@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 216"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 216"]
+[Result "*"]
+[FEN "4r1k1/5p2/p5pp/P1p2q2/3Nr3/3Q4/5PPP/1RR3K1 b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 216"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/6ekO1lYq"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 216. Sergey Erenburg – Magnus Carlsen, Reykjavik  (blitz)  2006 }
+1... Re1+ { A discovered attack. } 2. Rxe1 Rxe1+ 3. Rxe1 Qxd3 { ✔ } *
+
+

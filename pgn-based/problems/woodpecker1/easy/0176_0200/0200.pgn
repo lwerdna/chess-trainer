@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 200"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 200"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/IEXltdZB"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r3r1k1/p2q1pbp/6p1/3Q2B1/8/5P2/PP4PP/R2R2K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:51:57"]
+[ChapterMode "gamebook"]
+
+1... Re1+ 2. Rxe1 Qxd5 { Part 5: https://lichess.org/study/k6kRDIK1 } *
+
+

@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 180"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 180"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/9j4pui0M"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "3r2k1/1b3p1p/pp4p1/4PqP1/3NpP2/1P2Q2P/P6K/2R5 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:12:02"]
+[ChapterMode "gamebook"]
+
+1... Rxd4 2. Qxd4 Qxf4+ 3. Kg1 Qxc1+ *
+
+

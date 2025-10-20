@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 206"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 206"]
+[Result "*"]
+[FEN "6rk/p6n/3p4/2pPb2q/4N3/P2BQPp1/6K1/7R b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 206"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/UE3fnj21"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 206. Rustam Kasimdzhanov – Andrei Volokitin, Germany 2003 }
+1... Qxh1+ { Forcing a winning endgame.  Not   1...Qh2+  2.Rxh2  gxh2+  3.Kh1  Rg1+  4.Qxg1  hxg1=Q+  5.Kxg1  ∓ } 2. Kxh1 g2+ 3. Kg1 Bd4 { The game ended swiftly } 4. Qxd4+ cxd4 5. Nxd6 Ng5 *
+
+

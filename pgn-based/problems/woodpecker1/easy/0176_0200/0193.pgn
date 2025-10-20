@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 193"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 193"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/suoE3FIE"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2r2rk1/p4ppp/1p6/2b5/5Pn1/1Q2PR1P/P5P1/R1B1qBK1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:44:40"]
+[ChapterMode "gamebook"]
+
+1... Nxe3 2. Bxe3 Bxe3+ 3. Qxe3 Qxa1 *
+
+

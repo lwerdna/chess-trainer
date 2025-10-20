@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 164"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 164"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/ByCRXYXQ"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "1r1r4/5ppk/1p5p/2b1Pp1Q/8/q7/3B1PPP/2RR2K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "14:12:35"]
+[ChapterMode "gamebook"]
+
+1... Rxd2 2. Rxd2 Qxc1+ *
+
+

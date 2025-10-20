@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 161"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 161"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/3Ym3sjkP"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "4r2k/3n2bB/2p1NqQ1/2Pp4/5B2/r6P/5PP1/4R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "12:27:42"]
+[ChapterMode "gamebook"]
+
+1... Rxe6 2. Rxe6 Ra1+ 3. Kh2 Qxf4+ *
+
+

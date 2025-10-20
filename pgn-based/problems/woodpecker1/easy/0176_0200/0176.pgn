@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 176"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 176"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/DTJ5RaVB"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r2r2k1/1p1n1bpp/1pp1pp2/8/Pb1PP1P1/1BNRBP1P/1P3K2/2R5 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:06:38"]
+[ChapterMode "gamebook"]
+
+1... Nc5 2. dxc5 Rxd3 *
+
+

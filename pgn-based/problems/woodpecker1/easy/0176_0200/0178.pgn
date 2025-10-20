@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 178"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 178"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/bwYGWMXH"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "5k1r/ppq3b1/8/3Pp2p/3n4/7Q/PP3PPP/3RR1K1 w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:08:42"]
+[ChapterMode "gamebook"]
+
+1. Rxd4 exd4 2. Qf5+ Qf7 3. Qc8+ Qe8 4. Qxe8# *
+
+

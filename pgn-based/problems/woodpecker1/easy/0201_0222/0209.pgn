@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 209"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 209"]
+[Result "*"]
+[FEN "4r1k1/2BR3p/8/5Rp1/4n1K1/4P1P1/1P2P2P/5r2 b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 209"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/aSXRbHel"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ Veselin Topalov  @@StartBlockQuote@@I started to find things for him... London Chess Classic @@StartBracket@@2016@@EndBracket@@@@EndBlockQuote@@209. Jan Timman – Veselin Topalov, Sarajevo 1999 }
+1... h5+ { Deflecting the king from the defence of the rook.   1...Nf6+?  2.Rxf6  Rxf6  and all the pawns make up for the exchange. } 2. Kxh5 Rxf5 { ✔ } *
+
+

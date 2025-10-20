@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 169"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 169"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/4EOw1CHa"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "6k1/4qp2/1B4pp/2R1b3/P2Nb3/1P2Q3/r4PPP/6K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "14:27:06"]
+[ChapterMode "gamebook"]
+
+1... Qxc5 2. Bxc5 Ra1+ 3. Qe1 Rxe1# *
+
+

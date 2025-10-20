@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 219"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 219"]
+[Result "*"]
+[FEN "r2r2k1/1bqp1ppp/ppnbpn2/8/2PNP3/P1N1BP2/1P2B1PP/2RQ1R1K w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 219"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/itMAHVQG"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 219. Vassily Ivanchuk – Magnus Carlsen, Monte Carlo  (blindfold)  2011 }
+1. Ndb5 { ✔ Winning a pawn, with the bishop pair and d6-square, gives a decisive advantage.  Somewhat weaker is winning the b6-pawn with:   1.Ncb5  Qb8  2.Nxd6  Qxd6  3.Nxc6  Qxc6  4.Qd4+– } *
+
+

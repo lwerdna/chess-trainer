@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 1): Puzzle no. 51"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 1)"]
+[ChapterName "Puzzle no. 51"]
+[ChapterURL "https://lichess.org/study/4xLfA0En/ey5YFcyO"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "5rk1/ppp2ppp/6q1/2b1P3/3r4/2N1BQ1b/PP3PPP/R3R1K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.29"]
+[UTCTime "09:16:11"]
+[ChapterMode "gamebook"]
+
+1... Bxg2 2. Qxg2 Rg4 { [%cal Gg6g4,Gg4g1,Gg6g1] } *
+
+

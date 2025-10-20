@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 171"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 171"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/kHgC4TDh"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "2rr4/pp4kp/6p1/3nNp2/2B5/2n3P1/P2R1PKP/R7 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "14:28:51"]
+[ChapterMode "gamebook"]
+
+1... Ne3+ 2. fxe3 Rxd2+ *
+
+

@@ -1,0 +1,19 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 151"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 151"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/Xyt0uEE0"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "8/6k1/1P1p2p1/3Ppn2/3q4/8/6PP/rR2QB1K b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "12:05:34"]
+[ChapterMode "gamebook"]
+
+{ Part 3: https://lichess.org/study/fIfq3LZR }
+1... Ng3+ 2. hxg3 Ra8 3. Rd1 Rh8# *
+
+

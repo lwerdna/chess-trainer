@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 188"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 188"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/q0kIZrWu"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "r3k1r1/p4p1p/3bpBp1/3p1b2/5P2/3BP2P/PP4P1/1K1R3R w - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "15:21:44"]
+[ChapterMode "gamebook"]
+
+1. e4 Be7 2. Bb5+ Kd8 3. Bxe7+ Kxe7 4. exf5 *
+
+

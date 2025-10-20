@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 221"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 221"]
+[Result "*"]
+[FEN "4r1qk/2p4n/1b3pQB/p1p5/2P1P3/1P1R3P/P5P1/6K1 w - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 221"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/1GsCgSWH"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 221. Magnus Carlsen – Teimour Radjabov, Wijk aan Zee 2015 }
+1. Bg7+ Qxg7 2. Qxe8+ { ✔ With a winning advantage due to the two pawns, Black’s exposed king and the pawn-like bishop on b6. You don’t have to see any further. } *
+
+

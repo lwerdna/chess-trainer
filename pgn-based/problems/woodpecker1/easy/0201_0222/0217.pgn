@@ -1,0 +1,20 @@
+[Event "Woodpecker Method easy (201-222): Easy Exercises - Exercise 217"]
+[Date "????.??.??"]
+[White "Easy Exercises"]
+[Black "Exercise 217"]
+[Result "*"]
+[FEN "2r3k1/5p2/p3bBp1/1p5p/4P3/1P4qP/P5P1/1B1RR2K b - - 0 1"]
+[Variant "From Position"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "Woodpecker Method easy (201-222)"]
+[ChapterName "Easy Exercises - Exercise 217"]
+[ChapterURL "https://lichess.org/study/Cw7kju9J/QYjCOxsa"]
+[Annotator "https://lichess.org/@/VentureChess_Academy"]
+[SetUp "1"]
+[ChapterMode "gamebook"]
+
+{ 217. Goran Todorovic - Magnus Carlsen, Internet 2006 }
+1... Bxh3 { 0-1. Black is up too much material after } 2. gxh3 Qxh3+ 3. Kg1 Qg3+ 4. Kh1 Qf3+ 5. Kg1 Qxf6 { ✔. } *
+
+

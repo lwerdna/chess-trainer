@@ -1,0 +1,18 @@
+[Event "The Woodpecker Method (Part 4): Puzzle no. 152"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "?"]
+[Opening "?"]
+[StudyName "The Woodpecker Method (Part 4)"]
+[ChapterName "Puzzle no. 152"]
+[ChapterURL "https://lichess.org/study/z5vB3TII/ZEujGseb"]
+[Annotator "https://lichess.org/@/Aarush1311"]
+[FEN "8/7R/2r5/8/P3n3/8/3nk1PP/R5K1 b - - 0 1"]
+[SetUp "1"]
+[UTCDate "2025.08.30"]
+[UTCTime "12:07:14"]
+[ChapterMode "gamebook"]
+
+1... Nf3+ 2. gxf3 Rg6+ 3. Kh1 Nf2# *
+
+
